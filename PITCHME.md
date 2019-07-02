@@ -425,6 +425,49 @@ Intel® Firmware Support Package (Intel® FSP) includes:
  An IDE configuration tool / Boot Setting File (BSF) 
 
 
+---
+@title[Board Package Structure ]
+<p align="right"><span class="gold" >@size[1.1](<b>Board Package Structure </b>)</span><span style="font-size:0.8em;" ><br>- `MinPlatformPkg`</span></p>
+
+@snap[north-west span-45 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-45 ]
+<br>
+<br>
+<p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>
+@color[cyan](MinPlatformPkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<BasicCommonFeature>/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInit<br>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >@color[yellow](&lt;BasicCommonFeature&gt; ): The basic features to support OS boot, such as ACPI, flash, and FspWrapper. It also includes the basic security features such as HSTI. </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](Include ): The include file as the package interface. All interfaces defined in MinPlatformPkg.dec are put to here.  </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](Library ): It only contains feature independent library, such as PeiLib. If a library is related to a feature, this library is put to <Feature>/Library folder, instead of root Library folder. </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](PlatformInit ): The common platform initialization module. There is PreMemPEI, PostMemPEI, DXE and SMM version. These modules control boot flow and provide some hook point to let board code do initialization. </span> </li>
+</ul>
+@snapend
+
+@snap[north span-25 fragment]
+<br>
+<br>
+<br>
+<br>
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Basic Common Features<br><br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+
+
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
 <p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
