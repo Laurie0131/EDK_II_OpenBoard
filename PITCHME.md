@@ -49,9 +49,89 @@ Note:
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
 <ul style="list-style-type:none">
- <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II Open board platforms infrastructure <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & focus areas</span> </li>
- <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II Open board platforms </span></li>
+ <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II Open board platforms <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;infrastructure  & focus areas</span> </li>
+ <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II Open board<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;platforms </span></li>
 </ul>
+
+---
+@title[Current Issues ]
+<p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
+<span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
+
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.75em;" >Developers need a way to turn on and off of a feature <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.75em;" >Developers need a way to get the platform configuration data  <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.75em;" >Developers need to do porting work from an existing board to a new board   <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.75em;" >Developers might need to work on a different board  <br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+Before an open source IA firmware appeared, there were many closed source IA firmware solutions in the world. We did research on the UEFI firmware examples of Intel ATOM based small core, Intel Core-i7 based big core client, and Intel XEON based big core servers. We came across some common issues, including: 
+
+1) Developers need a way to turn on and off of a feature. 
+For example, the Trusted Platform Module (TPM) or UEFI Secure Boot may need to be supported. In principle it is valuable to provide this class of capability, but the problem is too many configurations are often provided. In fact, we observed that one BIOS provides more than 100 configurations exposed for the developers to control. Regrettably, some configurations of those various controls do not even work. 
+This often leads to the request of having a minimal BIOS to boot, and to do so, how to select among these 100 configurations? 
+
+
+2) Developers need a way to get the platform configuration data. 
+For example, one configuration choice can include “is VT enabled by the end user?” Another control can include “is the TSEG SMRAM size 1M, 8M or 16M,” or “is there an Embedded Controller (EC) or DOCK attached on the board?” The EDKII BIOS provides many choices on the source of the configuration data. For example, the UEFI specification defines UEFI Variables; the UEFI PI specification defines PCD; the Intel FSP defines UPD; silicon reference code defines the policy HOB, policy PPI, and policy protocol; silicon specific code has a signed static configuration data blob; and even legacy CMOS region exists. People may ask: which interface should I use in my platform code? 
+
+3)
+Developers need to do porting work from an existing board to a new board. 
+There might be GPIO routing differences, or alternate component choices, such as SIO differences. However, some older platform code may use a “switch-case” mechanisms to check the board type, with such “switch-case” usages is scattered across many platform drivers. These platform elements include AcpiPlatform, SmmPlatform, PlatformInit, EC, ASL code, VFR pages, etc. In order to add a new board on update a existing platform, a developer has to find out all the places to make the change. 
+People may think: How can I know how many modules I need to port, and when have I finished updating all required modules? 
+
+
+4) Developers might need to work on a different board. 
+For example, there might be an ATOM based on a server, a Core-i7 based server, or a XEON based server. However, the BIOS from different segments are different. We once compared an ATOM based firwmare with a Core-i7 based firmware. There are ~20 directories under Platform. Only 2 are same, which are “Include”, and “Library”. People might require significant time to ramp up again to get familiar with the new platform structure. 
+Why can’t the platform tree structures bear more similarity? 
+
+
+---
+@title[Goals]
+<p align="right"><span class="gold" >@size[1.1](<b>GOALS</b>)</span><br>
+<span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-30 ]
+<br>
+<br>
+<br>
+@box[bg-green_pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Simple</b><br>&nbsp;</span></p>)
+@box[bg-green_pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Portable</b><br>&nbsp;</span></p>)
+@box[bg-green_pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Consistent</b><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-60 ]
+<br>
+<br>
+<br>
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Code structure should be obvious so that the firmware developer can easily turn on or turn off a significant feature</span></p>)
+<br>
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board. </span></p>)
+<br>
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware code structure should be similar, no matter  the chipset / processor based architecture, i.e. embedded platform, a workstation or server </span></p>)
+@snapend
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Design open source EDK II  IA firmware<br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+### Goals 
+There is an existing myth that IA firmware is complex and hard to port or enable for a new platform. 
+Goal is to provide some guidance on how to design open source EDK II  IA firmware solution
+
+
+
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
