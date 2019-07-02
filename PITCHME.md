@@ -67,32 +67,32 @@ gPlatformModuleTokenSpaceGuid.PcdBootStage
 <br>
 <table id="recTable">
 	<tr>
-		<td bgcolor="#121212"><span style="font-size:0.56em" >Stage 1&nbsp;</span></td>
-		<td bgcolor="#121212"><p style="line-height:40%"><span style="font-size:0.56em" >Enable Debug &nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 1&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Enable Debug &nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#323232"><span style="font-size:0.56em" >Stage 2&nbsp;</span></td>
-		<td bgcolor="#323232"><p style="line-height:40%"><span style="font-size:0.56em" >Memory Initialization</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 2&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Memory Initialization</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212"><span style="font-size:0.56em" >Stage 3&nbsp;</span></td>
-		<td bgcolor="#121212"><p style="line-height:40%"><span style="font-size:0.56em" >Boot to UEFI Shell only &nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 3&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Boot to UEFI Shell only &nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#323232"><span style="font-size:0.56em" >Stage 4&nbsp;</span></td>
-		<td bgcolor="#323232"><p style="line-height:40%"><span style="font-size:0.56em" >Boot ot OS</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 4&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Boot ot OS</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212"><span style="font-size:0.56em" >Stage 5&nbsp;</span></td>
-		<td bgcolor="#121212"><p style="line-height:40%"><span style="font-size:0.56em" >Boot ot OS w/ Security enabled&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 5&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Boot ot OS w/ Security enabled&nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#323232"><span style="font-size:0.56em" >Stage 6&nbsp;</span></td>
-		<td bgcolor="#323232"><p style="line-height:40%"><span style="font-size:0.56em" >Advanced Feature Selection</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 6&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Advanced Feature Selection</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212"><span style="font-size:0.56em" >Stage 7&nbsp;</span></td>
-		<td bgcolor="#121212"><p style="line-height:40%"><span style="font-size:0.56em" >Performance Opetimizations &nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 7&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Performance Opetimizations &nbsp;</span></p></td>
 	</tr>
 </table>
 <br>
