@@ -371,6 +371,11 @@ It is the EDK II repo to include any open platform modules which is in a binary 
   <li><span style="font-size:0.65em" >@color[yellow](&lt;Generation&gt;SiliconBinPkg ):It is the silicon generation specific binary package. For example, CPU Microcode or the silicon binary FVs</span> </li>
 </ul>
 
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Ideally, Only &lt;Generation&gt;OpenBoardPkg needs updating<br><br>&nbsp;</span></p>)
+@snapend
+
 Note:
 - edk2-platform: EDK II repo to include any open source platform code, which has an  EDK II compatible license.
   - Platform folder: It contains the platform specific modules.
@@ -382,7 +387,42 @@ Note:
 - edk2-non-osi: It is the EDKII repo to include any open platform modules which is in a binary format, such as FSP binary, or CPU microcode.
   - <Generation>SiliconBinPkg: It is the silicon generation specific binary package. For example, CPU Microcode or the silicon binary FVs.
 
+---
+@title[FSP Directory Description]
+<p align="right"><span class="gold" >@size[1.1](<b>FSP Directory Description</b>)</span></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>FSP: </b>Intel FSP  repo includes FSP binary platform code </span></p>
 
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >@color[yellow](Platform folder Pkg ): Each FSP project will be hosted in a separate directory</span> </li>
+  <li><span style="font-size:0.65em" >ApolloLakeFspBinPkg Intel® Atom™ processor E3900 product family </span> </li>
+  <li><span style="font-size:0.65em" >. . . </span> </li>
+  <li><span style="font-size:0.65em" >CoffeeLakeFspBinPkg - 8th Generation Intel® Core™ processors and chipsets (formerly Coffee Lake and Whiskey Lake) </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](KabylakeFspBinPkg ): 7th Generation Intel® Core™ processors and chipsets</span> </li>
+  <ul style="list-style-type:disc; line-height:0.7;">
+    <li><span style="font-size:0.65em" >Include </span> </li>
+    <ul style="list-style-type:disc; line-height:0.7;">
+       <li><span style="font-size:0.65em" >FSP UPD structure and related definitions used with EDK II build </span> </li>
+	</ul>
+    <li><span style="font-size:0.65em" >Doc - Integration Guide .PDF documentation </span> </li>
+    <li><span style="font-size:0.65em" >@color[yellow](FSP.fd ) -Binary to be included with flash device image </span> </li>
+    <li><span style="font-size:0.65em" >FSP.bsf - Configuration File with IDE configuration tool </span> </li>
+
+  </ul>
+
+</ul>
+
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">FSP each project based on Intel Architecture <br><br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+Intel® Firmware Support Package (Intel® FSP) includes: 
+ A binary file 
+ An integration guide 
+ A rebasing tool 
+ An IDE configuration tool / Boot Setting File (BSF) 
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
