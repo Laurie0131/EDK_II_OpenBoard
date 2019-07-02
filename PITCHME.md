@@ -131,7 +131,7 @@ There is an existing myth that IA firmware is complex and hard to port or enable
 Goal is to provide some guidance on how to design open source EDK II  IA firmware solution
 
 ---?image=assets/images/slides/Slide5.JPG
-@title[Focus Areas]
+@title[Four Focus Areas Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1](<b>Four Focus Areas</b>)</span></span></p>
 
@@ -156,6 +156,7 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 </ul>
 <br>
 <br>
+<br>
 @snapend
 
 @snap[south-east span-20 fragment]
@@ -165,6 +166,8 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
   <li><span style="font-size:0.65em" >SIO </span> </li>
   <li><span style="font-size:0.65em" >ACPI </span> </li>
 </ul>
+<br>
+<br>
 <br>
 <br>
 @snapend
@@ -180,7 +183,63 @@ In order to provide suggestions on the problem statements earilier, we need to f
 - Tree Structure. What does an EDKII platform package look like? 
 
 
+---?image=assets/images/slides/Slide6.JPG
+@title[Tree Structure Section]
+<br>
+<p align="left"><span class="gold" >@size[1.1](<b>Tree Structure</b>)</span></span></p>
 
+
+Note:
+Tree Structure. What does an EDK II platform package look like? 
+
+
+This is the directory structure of our EDK II platform in relationship to the whole and other areas, such as the boot flow, or kernel, or core.
+
+---?image=assets/images/slides/Slide7.JPG
+@title[Organization]
+<br>
+<p align="left"><span class="gold" >@size[1.1](<b>Organization</b>)</span></span></p>
+
+@snap[north-west span-30 ]
+<br>
+<br>
+@box[bg-lt-orange text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
+@box[bg-lt-orange text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
+@box[bg-lt-orange text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board</b><br><br>&nbsp;</span></p>)
+@box[bg-lt-orange text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north span-30 ]
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-65 ]
+<br>
+<br>
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >No direct HW requirements<br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >enable a specific platform's capabilities <br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >board specific code <br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >Hardware specific code </span></p>)
+@snapend
+
+
+Note:
+The architecture makes use of four primary classifications of code that are generally instantiated in different EDK II packages.
+- Common (EDK II) is code that does not have any direct HW requirements other than the basics required to execute machine code on the processor (stack, memory, IA registers, etc).
+   - Producer(s): TianoCore.org
+
+
+- Platform defines the actions needed to enable a specific platform's capabilities. In this architecture, capabilities are divided into mandatory and advanced features. Mandatory features are enabled in stages prior to Stage VI. Advanced features are enabled in Stage VI and later.
+  - Minimum Platform Producer(s): TianoCore.org
+  - Advance Feature Producer(s): TianoCore.org, OEM, BIOS vendor
+  - Board packages contains board specific code for one or more motherboards.
+  - Producer(s): Device manufacturer, BIOS vendor, Board user
+
+- Silicon, also often called hardware code, has some tie to a specific class of physical hardware. Sometimes governed by industry standards, sometimes proprietary. Silicon or hardware code is usually not intended to have multiple implementations for the same hardware.
+  - Producer(s): Silicon vendor
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
