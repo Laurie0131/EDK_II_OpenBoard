@@ -316,7 +316,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
 &nbsp;&nbsp;
-@color[yellow](edk2-platforms)/  <a href="https://github.com/tianocore/edk2-platforms"> github/edk2-platforms</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+@color[yellow](edk2-platforms)/  <a href="https://github.com/tianocore/edk2-platforms"> github.com/edk2-platforms</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
   Platform/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        AdvancedFeaturePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -329,16 +329,60 @@ The architecture is designed to support a maintainer ownership model. For exampl
        KabylakeSiliconPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        . . ./<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        Vlv2DeviceRefCodePkg/<br>&nbsp;&nbsp;
-@color[yellow](edk2-non-osi)/<a href="https://github.com/tianocore/edk2-non-osi/tree/devel-MinPlatform">github/edk2-non-osi</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+@color[yellow](edk2-non-osi)/<a href="https://github.com/tianocore/edk2-non-osi/tree/devel-MinPlatform">github.com/edk2-non-osi</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;
-@color[yellow](FSP)/<a href="https://github.com/IntelFsp/FSP">github/Intel/FSP</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+@color[yellow](FSP)/<a href="https://github.com/IntelFsp/FSP">github.com/Intel/FSP</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
    . . ./<br>&nbsp;&nbsp;
 </span></p>
 @snapend
 
 
 Note:
+This is an example of the MinPlatform for the Intel Architecture (IA)
+With Kabylake and  Vlv2TbltDevicePkg (Minnowboard MAX) as examples
+
+
+Notice the 3 different repositories for the different sources align similarly to the COMMON, PLATFORM, BOARD & SILICON layout
+
+Not shown is the edk2 repository since this should always be considered as common
+
+---
+@title[Directory Description]
+<p align="right"><span class="gold" >@size[1.1](<b>Directory Description</b>)</span></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>edk2-platform: </b>EDK II repo includes open source platform code </span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >@color[yellow](Platform folder ): contains the platform specific modules by architecture</span> </li>
+  <ul style="list-style-type:disc; line-height:0.7;">
+    <li><span style="font-size:0.65em" >@color[yellow](MinPlatformPkg ): generic platform instance to control the boot flow.  </span> </li>
+    <li><span style="font-size:0.65em" >@color[yellow](AdvancedFeaturePkg ): package to hold the advanced platform features </span> </li>
+    <li><span style="font-size:0.65em" >@color[yellow](&lt;Generation&gt;OpenBoardPkg ): the silicon generation specific board package. All of the boards based upon this silicon generation can be located here </span> </li>
+ </ul>
+  <li><span style="font-size:0.65em" >@color[yellow](Silicon folder ): contains the silicon specific modules </span> </li>
+  <ul style="list-style-type:disc; line-height:0.7;">
+    <li><span style="font-size:0.65em" >@color[yellow](&lt;Generation&gt;SiliconPkg ): the silicon generation specific silicon package </span> </li>
+  </ul>
+</ul>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>edk2-non-osi:</b> 
+It is the EDK II repo to include any open platform modules which is in a binary format, such as FSP binary, or CPU microcode</span></p>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >@color[yellow](&lt;Generation&gt;SiliconBinPkg ):It is the silicon generation specific binary package. For example, CPU Microcode or the silicon binary FVs</span> </li>
+</ul>
+
+Note:
+- edk2-platform: EDK II repo to include any open source platform code, which has an  EDK II compatible license.
+  - Platform folder: It contains the platform specific modules.
+    - MinPlatformPkg: It is a generic platform instance to control the boot flow.
+    - AdvancedFeaturePkg: It is a package to hold the advanced platform features. These features are not required for a basic OS boot, but they may be needed to provide a full feature platform firmware.
+    - <Generation>OpenBoardPkg: It is the silicon generation specific board package. All of the boards based upon this silicon generation can be located here.
+  - Silicon folder: It contains the silicon specific modules.
+    - <Generation>SiliconPkg: It is the silicon generation specific silicon package.
+- edk2-non-osi: It is the EDKII repo to include any open platform modules which is in a binary format, such as FSP binary, or CPU microcode.
+  - <Generation>SiliconBinPkg: It is the silicon generation specific binary package. For example, CPU Microcode or the silicon binary FVs.
+
+
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
