@@ -53,7 +53,7 @@ Note:
  <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II Open board platforms </span></li>
 </ul>
 
----?image=assets/images/slides/Slide_TableDHote.JPG
+---?image=assets/images/slides/Slide_TableDHote1.JPG
 @title[Staged Approach by Features]
 <p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 @snap[north-west span-70 ]
