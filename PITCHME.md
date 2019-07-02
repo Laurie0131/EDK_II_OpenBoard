@@ -465,6 +465,38 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 
 Note:
 
+---
+@title[Advanced Feature Package ]
+<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+
+@snap[north-west span-45 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+@color[cyan](AdvancedFeaturePkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &lt;AdvancedFeatureCommonFeature&gt;/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Include
+</span></p>
+<br>
+<br>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >@color[yellow](&lt;AdvancedCommonFeature&gt; ): The advanced features, such as SMBIOS table, IPMI </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](Include ): The include file as the package interface.   </span> </li>
+</ul>
+@snapend
+
+
+
+Note:
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
