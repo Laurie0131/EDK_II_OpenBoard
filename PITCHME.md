@@ -200,6 +200,13 @@ This is the directory structure of our EDK II platform in relationship to the wh
 <br>
 <p align="left"><span class="gold" >@size[1.1](<b>Organization</b>)</span></span></p>
 
+@snap[north span-45 ]
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
 @snap[north-west span-30 ]
 <br>
 <br>
@@ -209,19 +216,14 @@ This is the directory structure of our EDK II platform in relationship to the wh
 @box[bg-lt-orange text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north span-35 ]
-<br>
-<br>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
-@snapend
 
 
 @snap[north-east span-65 ]
 <br>
 <br>
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >No direct HW requirements<br><br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >enable a specific platform's <br>capabilities <br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >board specific code <br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >No direct HW <br>requirements<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >enable a specific <br>platform's capabilities <br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >board specific code <br><br><br><br> </span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >Hardware specific code </span></p>)
 @snapend
 
