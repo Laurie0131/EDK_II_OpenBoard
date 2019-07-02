@@ -327,13 +327,13 @@ The architecture is designed to support a maintainer ownership model. For exampl
   Silicon/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        KabylakeSiliconPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       . . ./<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;. &nbsp;. &nbsp;./<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        Vlv2DeviceRefCodePkg/<br>&nbsp;&nbsp;
 @color[yellow](edk2-non-osi)/<a href="https://github.com/tianocore/edk2-non-osi/tree/devel-MinPlatform">github.com/edk2-non-osi</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;
 @color[yellow](FSP)/<a href="https://github.com/IntelFsp/FSP">github.com/Intel/FSP</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
-   . . ./<br>&nbsp;&nbsp;
+   &nbsp;. &nbsp;. &nbsp;./<br>&nbsp;&nbsp;
 </span></p>
 @snapend
 
@@ -372,8 +372,8 @@ It is the EDK II repo to include any open platform modules which is in a binary 
 </ul>
 
 
-@snap[south span-85 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Ideally, Only &lt;Generation&gt;OpenBoardPkg needs updating<br><br>&nbsp;</span></p>)
+@snap[south span-95 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">&nbsp;Ideally, Only &lt;Generation&gt;OpenBoardPkg needs updating<br><br>&nbsp;</span></p>)
 @snapend
 
 Note:
@@ -392,16 +392,16 @@ Note:
 <p align="right"><span class="gold" >@size[1.1](<b>FSP Directory Description</b>)</span></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>FSP: </b>Intel FSP  repo includes FSP binary platform code </span></p>
 
-<ul style="list-style-type:disc; line-height:0.7;">
+<ul style="list-style-type:disc; line-height:0.8;">
   <li><span style="font-size:0.65em" >@color[yellow](Platform folder Pkg ): Each FSP project will be hosted in a separate directory</span> </li>
   <li><span style="font-size:0.65em" >ApolloLakeFspBinPkg Intel® Atom™ processor E3900 product family </span> </li>
-  <li><span style="font-size:0.65em" >. . . </span> </li>
-  <li><span style="font-size:0.65em" >CoffeeLakeFspBinPkg - 8th Generation Intel® Core™ processors and chipsets (formerly Coffee Lake and Whiskey Lake) </span> </li>
+  <li><span style="font-size:0.65em" >&nbsp;. &nbsp;. &nbsp;. </span> </li>
+  <li><span style="font-size:0.65em" >CoffeeLakeFspBinPkg - 8th Generation Intel® Core™ processors and chipsets @size[.7em]( - formerly Coffee Lake and Whiskey Lake)<br> </span> </li>
   <li><span style="font-size:0.65em" >@color[yellow](KabylakeFspBinPkg ): 7th Generation Intel® Core™ processors and chipsets</span> </li>
   <ul style="list-style-type:disc; line-height:0.7;">
     <li><span style="font-size:0.65em" >Include </span> </li>
-    <ul style="list-style-type:disc; line-height:0.7;">
-       <li><span style="font-size:0.65em" >FSP UPD structure and related definitions used with EDK II build </span> </li>
+    <ul style="list-style-type:none; line-height:0.7;">
+       <li><span style="font-size:0.65em" > - FSP UPD structure and related definitions used with EDK II build </span> </li>
 	</ul>
     <li><span style="font-size:0.65em" >Doc - Integration Guide .PDF documentation </span> </li>
     <li><span style="font-size:0.65em" >@color[yellow](FSP.fd ) -Binary to be included with flash device image </span> </li>
