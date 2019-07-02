@@ -243,7 +243,7 @@ The architecture makes use of four primary classifications of code that are gene
   - Producer(s): Silicon vendor
 
 
----
+---?image=assets/images/slides/Slide7.JPG
 @title[Open Source EDK II Workspace]
 <p align="right"><span class="gold" >@size[1.1](<b>Open Source EDK II Workspace</b>)</span></span></p>
 
@@ -257,10 +257,10 @@ The architecture makes use of four primary classifications of code that are gene
 @snap[north span-30 ]
 <br>
 <br>
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -271,19 +271,19 @@ The architecture makes use of four primary classifications of code that are gene
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
 &nbsp;MyWorkSpace/<br>&nbsp;&nbsp;
 @color[yellow](edk2)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  - "@color[#FFC000](edk2 Common)"<br>&nbsp;&nbsp;
+  - "@color[#FFC000](<font face="Arial">edk2 Common</font>)"<br>&nbsp;&nbsp;
 @color[yellow](edk2-platforms)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Platform/ "@color[#FFC000](Platform)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ "@color[#FFC000](<font face="Arial">Platform</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          BoardX/ “@color[#FFC000](Board)”<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Silicon/ "@color[#FFC000](Silicon)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          BoardX/ “@color[#FFC000](<font face="Arial">Board</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ "@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/<br>&nbsp;&nbsp;
 @color[yellow](edk2-non-osi)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;
-@color[yellow](FSP)/"@color[#FFC000](Silicon)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
+@color[yellow](FSP)/"@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
    . . ./<br>&nbsp;&nbsp;
 </span></p>
 @snapend
