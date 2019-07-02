@@ -59,14 +59,14 @@ Note:
 <span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
 
 
-@snap[north-west span-100 ]
+@snap[north span-80 ]
 <br>
 <br>
 <br>
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.75em;" >Developers need a way to turn on and off of a feature <br>&nbsp;</span></p>)
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.75em;" >Developers need a way to get the platform configuration data  <br>&nbsp;</span></p>)
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.75em;" >Developers need to do porting work from an existing board to a new board   <br>&nbsp;</span></p>)
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.75em;" >Developers might need to work on a different board  <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >Developers need a way to turn on and off of a feature <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >Developers need a way to get the platform configuration data  <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >Developers need to do porting work from an existing board to a new board   <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >Developers might need to work on a different board  <br>&nbsp;</span></p>)
 @snapend
 
 
@@ -103,8 +103,10 @@ Why can’t the platform tree structures bear more similarity?
 <br>
 <br>
 <br>
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Simple</b><br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Simple</b><br><br>&nbsp;</span></p>)
+<br>
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Portable</b><br><br>&nbsp;</span></p>)
+<br>
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Consistent</b><br><br>&nbsp;</span></p>)
 @snapend
 
