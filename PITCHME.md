@@ -105,6 +105,11 @@ gPlatformModuleTokenSpaceGuid.PcdBootStage
 @snapend
 
 
+@snap[south-east span-70 ]
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+PCD Is tested within .FDF to see which modules to include 
+</span></p>
+@snapend
 
 ---
 @title[EDK II Infrastructure]
