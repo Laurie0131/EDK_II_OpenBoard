@@ -435,12 +435,11 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-west span-45 ]
+@snap[north-west span-100 ]
 <br>
-<br>
-<p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>
+<p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 @color[cyan](MinPlatformPkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-<BasicCommonFeature>/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &lt;BasicCommonFeature&gt;/<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
   PlatformInit<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -456,12 +455,13 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 </ul>
 @snapend
 
-@snap[north span-25 fragment]
+@snap[north-east span-40 fragment]
 <br>
 <br>
 <br>
 <br>
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Basic Common Features<br><br>&nbsp;</span></p>)
+<br>
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:80%"><span style="font-size:0.8em">Basic Common Features<br><br>&nbsp;</span></p>)
 @snapend
 
 Note:
