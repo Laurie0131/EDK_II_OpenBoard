@@ -133,10 +133,12 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 ---?image=assets/images/slides/Slide5.JPG
 @title[Focus Areas]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Focus Areas</b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1](<b>Four Focus Areas</b>)</span></span></p>
 
 @snap[north-east span-35 fragment]
 <br>
+<br>
+
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >Minimal /Full BIOS </span> </li>
   <li><span style="font-size:0.65em" >Feature ON/OFF </span> </li>
@@ -152,6 +154,8 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
   <li><span style="font-size:0.65em" >PCD </span> </li>
   <li><span style="font-size:0.65em" >Policy Hob/PPI/Protocol </span> </li>
 </ul>
+<br>
+<br>
 @snapend
 
 @snap[south-east span-20 fragment]
@@ -161,6 +165,8 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
   <li><span style="font-size:0.65em" >SIO </span> </li>
   <li><span style="font-size:0.65em" >ACPI </span> </li>
 </ul>
+<br>
+<br>
 @snapend
 
 
