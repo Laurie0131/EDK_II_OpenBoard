@@ -254,7 +254,7 @@ The architecture makes use of four primary classifications of code that are gene
 @snapend
 
 
-@snap[north-east span-30 ]
+@snap[north span-30 ]
 <br>
 <br>
 @box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
