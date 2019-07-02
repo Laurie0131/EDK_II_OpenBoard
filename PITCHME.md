@@ -55,8 +55,10 @@ Note:
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
-<p align="right"><span class="gold" ><b>Staged Approach by Features</b></span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 @snap[north-east span-50 ]
+<br>
+<br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >PCD Variable:<br></span>
 <span style="font-size:0.5em; font-family:Consolas;">
 gPlatformModuleTokenSpaceGuid.PcdBootStage
