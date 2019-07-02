@@ -220,10 +220,10 @@ This is the directory structure of our EDK II platform in relationship to the wh
 @snap[north-east span-65 ]
 <br>
 <br>
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >No direct HW requirements<br><br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >enable a specific <br>platform's capabilities <br><br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >board specific code <br><br><br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >Hardware specific code </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- No direct HW requirements<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- Enable a specific <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- Board specific code <br><br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- Hardware specific code </span></p>)
 @snapend
 
 
@@ -241,6 +241,63 @@ The architecture makes use of four primary classifications of code that are gene
 
 - Silicon, also often called hardware code, has some tie to a specific class of physical hardware. Sometimes governed by industry standards, sometimes proprietary. Silicon or hardware code is usually not intended to have multiple implementations for the same hardware.
   - Producer(s): Silicon vendor
+
+
+---
+@title[Open Source EDK II Workspace]
+<p align="right"><span class="gold" >@size[1.1](<b>Open Source EDK II Workspace</b>)</span></span></p>
+
+@snap[north-west span-50 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-30 ]
+<br>
+<br>
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-west span-60 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+MyWorkSpace/<br>&nbsp;&nbsp;
+edk2/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  - “edk2 Common”<br>&nbsp;&nbsp;
+edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ “Platform”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          BoardX/ “Board”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ “Silicon”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/<br>&nbsp;&nbsp;
+edk2-non-osi/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;
+FSP/“Silicon”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   . . ./<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+Note:
+The build process creates
+   this directory -> Build/
+MyWorkSpace – directory from the “git” of repositories
+
+Build –p .dsc from the BOARD Directory
+
+The architecture is designed to support a maintainer ownership model. For example, board developers should not directly modify (fork) the platform, silicon, or common code. More details on conventional usage of the package classifications can be found in supplemental literature from UEFI Forum, TianoCore.org, and others.
+
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
