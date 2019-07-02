@@ -116,7 +116,7 @@ Why can’t the platform tree structures bear more similarity?
 <br>
 <br>
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Code structure should be obvious so that the firmware developer can easily turn on or turn off a significant feature<br><br></span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br><br><br> </span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware code structure should be similar, no matter  the chipset / processor based architecture, i.e. embedded platform, a workstation or server </span></p>)
 @snapend
 
@@ -129,6 +129,50 @@ Note:
 ### Goals 
 There is an existing myth that IA firmware is complex and hard to port or enable for a new platform. 
 Goal is to provide some guidance on how to design open source EDK II  IA firmware solution
+
+---?image=assets/images/slides/Slide5.JPG
+@title[Focus Areas]
+<br>
+<p align="left"><span class="gold" >@size[1.1](<b>Focus Areas</b>)</span></span></p>
+
+@snap[north-east span-35 fragment]
+<br>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >Minimal /Full BIOS </span> </li>
+  <li><span style="font-size:0.65em" >Feature ON/OFF </span> </li>
+  <li><span style="font-size:0.65em" >Smbios/TPM/SecureBoot/ </span> </li>
+  <li><span style="font-size:0.65em" >. . . </span> </li>
+</ul>
+@snapend
+
+@snap[south-west span-30 fragment]
+<br>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >Setup Variable</span> </li>
+  <li><span style="font-size:0.65em" >PCD </span> </li>
+  <li><span style="font-size:0.65em" >Policy Hob/PPI/Protocol </span> </li>
+</ul>
+@snapend
+
+@snap[south-east span-20 fragment]
+<br>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >GPIO </span> </li>
+  <li><span style="font-size:0.65em" >SIO </span> </li>
+  <li><span style="font-size:0.65em" >ACPI </span> </li>
+</ul>
+@snapend
+
+
+
+Note:
+In order to provide suggestions on the problem statements earilier, we need to focus on the following four areas: 
+
+- Feature. How does a BIOS provide the feature selection option to a developer? 
+- Configuration. From which interface can a platform module get the configuration data? 
+- Porting. Where are the modules to be ported for a new board? 
+- Tree Structure. What does an EDKII platform package look like? 
+
 
 
 
