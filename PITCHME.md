@@ -432,7 +432,7 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 @snap[north-west span-45 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-west span-100 ]
@@ -459,9 +459,8 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 <br>
 <br>
 <br>
-<br>
-<br>
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:80%"><span style="font-size:0.8em">Basic Common Features<br><br>&nbsp;</span></p>)
+
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:80%"><span style="font-size:0.8em">Basic Common Features<br>&nbsp;</span></p>)
 @snapend
 
 Note:
