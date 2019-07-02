@@ -121,7 +121,7 @@ Why can’t the platform tree structures bear more similarity?
 @snapend
 
 @snap[south span-85 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Design open source EDK II  IA firmware<br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Design open source EDK II  IA firmware<br><br>&nbsp;</span></p>)
 @snapend
 
 Note:
