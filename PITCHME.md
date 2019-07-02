@@ -269,21 +269,21 @@ The architecture makes use of four primary classifications of code that are gene
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
-MyWorkSpace/<br>&nbsp;&nbsp;
-edk2/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  - “edk2 Common”<br>&nbsp;&nbsp;
-edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Platform/ “Platform”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;MyWorkSpace/<br>&nbsp;&nbsp;
+@color[yellow](edk2)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  - "@color[#FFC000](edk2 Common)"<br>&nbsp;&nbsp;
+@color[yellow](edk2-platforms)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ "@color[#FFC000](Platform)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          BoardX/ “Board”<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Silicon/ “Silicon”<br>&nbsp;&nbsp;&nbsp;&nbsp;
-     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          BoardX/ “@color[#FFC000](Board)”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ "@color[#FFC000](Silicon)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/<br>&nbsp;&nbsp;
-edk2-non-osi/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+@color[yellow](edk2-non-osi)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;
-FSP/“Silicon”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+@color[yellow](FSP)/"@color[#FFC000](Silicon)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
    . . ./<br>&nbsp;&nbsp;
 </span></p>
 @snapend
