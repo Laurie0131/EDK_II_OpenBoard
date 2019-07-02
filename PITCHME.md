@@ -56,43 +56,43 @@ Note:
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
 <p align="right"><span class="gold" ><b>Staged Approach by Features</b></span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
-
-<p style="line-height:70%" ><span style="font-size:0.8em;" >PCD Variable:<br></span>
+<p style="line-height:70%" align="right" ><span style="font-size:0.8em;" >PCD Variable:<br></span>
 <span style="font-size:0.65em; font-family:Consolas;">
 gPlatformModuleTokenSpaceGuid.PcdBootStage
 &nbsp;</span></p>
+
 @snap[north-west span-60 ]
 <br>
 <br>
 <br>
 <table id="recTable">
 	<tr>
-		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 1&nbsp;</span></p></td>
-		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Enable Debug &nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 1&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Enable Debug &nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 2&nbsp;</span></p></td>
-		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Memory Initialization</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 2&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Memory Initialization</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 3&nbsp;</span></p></td>
-		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Boot to UEFI Shell only &nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 3&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Boot to UEFI Shell only &nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 4&nbsp;</span></p></td>
-		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Boot ot OS</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 4&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Boot ot OS</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 5&nbsp;</span></p></td>
-		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Boot ot OS w/ Security enabled&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 5&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Boot ot OS w/ Security enabled&nbsp;</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 6&nbsp;</span></p></td>
-		<td bgcolor="#323232"><p style="line-height:20%"><span style="font-size:0.56em" >Advanced Feature Selection</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 6&nbsp;</span></p></td>
+		<td bgcolor="#323232"><p style="line-height:10%"><span style="font-size:0.56em" >Advanced Feature Selection</span></p></td>
 	</tr>
 	<tr>
-		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Stage 7&nbsp;</span></p></td>
-		<td bgcolor="#121212"><p style="line-height:20%"><span style="font-size:0.56em" >Performance Opetimizations &nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Stage 7&nbsp;</span></p></td>
+		<td bgcolor="#121212"><p style="line-height:10%"><span style="font-size:0.56em" >Performance Opetimizations &nbsp;</span></p></td>
 	</tr>
 </table>
 <br>
