@@ -299,6 +299,47 @@ Build –p .dsc from the BOARD Directory
 The architecture is designed to support a maintainer ownership model. For example, board developers should not directly modify (fork) the platform, silicon, or common code. More details on conventional usage of the package classifications can be found in supplemental literature from UEFI Forum, TianoCore.org, and others.
 
 
+---?image=assets/images/slides/Slide7.JPG
+@title[Open Board Tree Structure]
+<p align="right"><span class="gold" >@size[1.1](<b>Open Board Tree Structure</b>)</span></span></p>
+
+@snap[north-west span-75 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-west span-70 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+&nbsp;&nbsp;
+edk2-platforms/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       AdvancedFeaturePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          KabylakeRvp3/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       Vlv2TbltDevicePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeSiliconPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       . . ./<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       Vlv2DeviceRefCodePkg/<br>&nbsp;&nbsp;
+edk2-non-osi/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;
+FSP/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   . . ./<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+Note:
+
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
