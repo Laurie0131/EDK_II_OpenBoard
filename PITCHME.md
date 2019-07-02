@@ -105,8 +105,8 @@ gPlatformModuleTokenSpaceGuid.PcdBootStage
 @snapend
 
 
-@snap[south-east span-50 ]
-<p style="line-height:70%" align="left" ><span style="font-size:0.6em;" >
+@snap[south-east span-45 ]
+<p style="line-height:50%" align="left" ><span style="font-size:0.6em;" >
 PCD Is tested within .FDF to see which modules to include 
 </span></p>
 @snapend
