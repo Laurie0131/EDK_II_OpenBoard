@@ -1695,9 +1695,9 @@ typedef struct {
 
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
  OemSkuTokenSpaceGuid.PcdSetupData|{0x0}|\<br>&nbsp;&nbsp;
- SYSTEM_CONFIGURATION|0x000F0001 &lbrace; &nbsp;&nbsp;
-    &nbsp;&nbsp;   &lt;HeaderFiles&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      Guid/SetupVariable.h  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ @color[yellow](SYSTEM_CONFIGURATION)|0x000F0001 &lbrace; <br>&nbsp;&nbsp;
+    &lt;HeaderFiles&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Guid/@color[yellow](SetupVariable.h)  <br>&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;Packages&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       MdePkg/MdePkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PurleyRcPkg/RcPkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1712,7 +1712,7 @@ typedef struct {
    UINT8    WakeOnLanSupport;<br>&nbsp;&nbsp;&nbsp;&nbsp;
    UINT8    Use1GPageTable;<br>&nbsp;&nbsp;&nbsp;&nbsp;
    UINT8    CloudProfile;<br>&nbsp;&nbsp;
-} SYSTEM_CONFIGURATION;
+} @color[yellow](SYSTEM_CONFIGURATION);
 </span></p> 
 @snapend
 
@@ -1724,16 +1724,16 @@ typedef struct {
 <br>
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 gOemSkuTokenSpaceGuid.PcdSetupData.\<br>&nbsp;&nbsp;
-CloudProfile|0x0 <br>
+@color[#ff0000](CloudProfile)|0x0 <br>
 <br>&nbsp;&nbsp;
 gOemSkuTokenSpaceGuid.PcdSetupData.\<br>&nbsp;&nbsp;
-Use1GPageTable|0x1<br>
+@color[#ff0000](Use1GPageTable)|0x1<br>
 <br>&nbsp;&nbsp;
 gOemSkuTokenSpaceGuid.PcdSetupData.\<br>&nbsp;&nbsp;
-FanPwmOffset|0x0 <br>
+@color[#ff0000](FanPwmOffset)|0x0 <br>
 <br>&nbsp;&nbsp;
 gOemSkuTokenSpaceGuid.PcdSetupData.\<br>&nbsp;&nbsp;
-WakeOnLanSupport|0x0
+@color[#ff0000](WakeOnLanSupport)|0x0
 <br>&nbsp;&nbsp;
 . &nbsp;. &nbsp;.
 
