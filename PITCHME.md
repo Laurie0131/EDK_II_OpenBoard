@@ -631,7 +631,7 @@ The KabylakeRvp3 folder contains all RVP3 related settings, such as GPIO, High D
 @snap[north-west span-100 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -639,7 +639,7 @@ The KabylakeRvp3 folder contains all RVP3 related settings, such as GPIO, High D
 @snap[north-west span-35 ]
 <br>
 <p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+Vlv2TbltDevicePkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
    AcpiPlatform/<br>&nbsp;&nbsp;&nbsp;&nbsp;
    Application /<br>&nbsp;&nbsp;&nbsp;&nbsp;
    BootScriptSaveDxe /<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -652,7 +652,7 @@ KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
    Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;
    Logo /<br>&nbsp;&nbsp;&nbsp;&nbsp;
    Metronome /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   MonoStatusCode
+   MonoStatusCode /
 </span></p>
 @snapend
 
@@ -686,7 +686,7 @@ KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   UiApp /<br>&nbsp;&nbsp;
   VlvPlatformInitDxe /<br>&nbsp;&nbsp;
   Wpce791 /<br>&nbsp;&nbsp;
-<br>
+<br>&nbsp;&nbsp;
   PlatformPkg.dec  <br>&nbsp;&nbsp;
   PlatformPkg.dsc  <br>&nbsp;&nbsp;
   PlatformPkg.fdf
@@ -694,10 +694,7 @@ KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east span-55 fragment]
-<br>
-<br>
-<br>
+@snap[north-east span-30 fragment]
 <br>
 <p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
   <br>
@@ -721,6 +718,7 @@ KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 Note:
+This introduces issues when the developer wants to find a  particular driver. 
 
 
 
