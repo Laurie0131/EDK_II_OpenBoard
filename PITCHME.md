@@ -780,9 +780,9 @@ In order to provide suggestions on the problem statements above, we would like t
 <br>
 <br>
 <br>
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- UEFI, ACPI, PlatformInit<br><br><br></span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- SMBIOS, S3, OPAL <br> <br><br><br> </span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- TXT, AMT, CSM <br><br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;&nbsp;&nbsp;- UEFI, ACPI, PlatformInit<br><br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;&nbsp;&nbsp;- SMBIOS, S3, OPAL <br> <br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;&nbsp;&nbsp;- TXT, AMT, CSM <br><br><br><br> </span></p>)
 
 @snapend
 
