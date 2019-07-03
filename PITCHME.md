@@ -1563,7 +1563,108 @@ BKM is to set the desired value in the Platform Specific .DSC file
   -  gEfiIchTokenSpaceGuid.PcdIchAcpiIoPortBaseAddress|0x400
   -  gNewProjectTokenSpaceGuid.PcdFlashAreaBaseAddress|0xFFF00000
   - gNewProjectTokenSpaceGuid.PcdFlashAreaSize|0x100000
+
+
  
+---?image=/assets/images/slides/Slide34.JPG
+@title[How to Map PCD ]
+<p align="right"><span class="gold" >@size[1.1](<b>How to Map PCD to Configuration Data</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+Using "@color[yellow](Callback)" mechanism to convert PCD to Configuration data
+</span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
+No examples currently available
+</span></p>
+
+
+
+Note:
+
+A PCD driver can provide a callback function on PcdSet(). 
+A platform may introduce a “ConfigConvert” module (GREEN box). The logic runs early and calls PcdSet() to convert other storage data (variable, signed data blob, policy hob) to the PCD database. 
+
+Then the rest of PlatformInit code (YELLOW box) can just call PcdGet() to get the policy data. 
+
+If the Platform driver wants to update a PCD value by calling PcdSet() later, the “ConfigConvert” can register a PCD callback function to redirect setting to other source (for example, variable). 
+
+The gist of configuration conversion is that any other platform driver should use PcdGet() to retrieve policy data, and PcdSet() to update policy data. 
+
+KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data, but this might be used for other real platforms. 
+
+
+---
+@title[“C” Data Structure as PCDs ]
+<p align="right"><span class="gold" >@size[1.1](<b>“C” Data Structure as PCDs</b>)</span><span style="font-size:0.8em;" ></span></p>
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<br>
+
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-100 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+Example: `AdvancedFeaturePkg.dec`  for SMBIOS type 0 data structure
+</span></p>
+
+<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation| \<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {0x0}|SMBIOS_TABLE_TYPE0|0x80010000 {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <HeaderFiles><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       IndustryStandard/SmBios.h<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    <Packages><br>&nbsp;&nbsp;&nbsp;&nbsp;
+       MdePkg/MdePkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       AdvancedFeaturePkg/AdvancedFeaturePkg.dec<br>&nbsp;&nbsp;
+}<br>&nbsp;&nbsp;
+gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation.Vendor|0x1<br>&nbsp;&nbsp;
+gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation.BiosVersion|0x2<br>&nbsp;&nbsp;
+gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation.BiosSegment|0xF000<br>&nbsp;&nbsp;
+gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation.BiosReleaseDate|0x3<br>&nbsp;&nbsp;
+gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation.BiosSize|0xFF<br>&nbsp;&nbsp;
+gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation.BiosCharacteristics.\<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     PciIsSupported|1<br>&nbsp;&nbsp;
+gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation.BiosCharacteristics.\<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     PlugAndPlayIsSupported|1
+</span></p>
+
+
+
+
+Note:
+
+In the latest EDKII, the developer can associate a PCD to a C data structure and assign the value to each sub-field directly. 
+
+MinPlatform AdvancedFeaturePkg  .DEC file defines a set of PCD for SMBIOS table data structure. Each field has its own default value. 
+
+By using the structure PCD, a platform may define a global configuration PCD and assign the policy data in DSC file directly. 
+
+From SmBios.h 
+<pre>
+typedef struct {
+  SMBIOS_STRUCTURE          Hdr;
+  SMBIOS_TABLE_STRING       Vendor;
+  SMBIOS_TABLE_STRING       BiosVersion;
+  UINT16                    BiosSegment;
+  SMBIOS_TABLE_STRING       BiosReleaseDate;
+  UINT8                     BiosSize;
+  MISC_BIOS_CHARACTERISTICS BiosCharacteristics;
+  UINT8                     BIOSCharacteristicsExtensionBytes[2];
+  UINT8                     SystemBiosMajorRelease;
+  UINT8                     SystemBiosMinorRelease;
+  UINT8                     EmbeddedControllerFirmwareMajorRelease;
+  UINT8                     EmbeddedControllerFirmwareMinorRelease;
+  //
+  // Add for smbios 3.1.0
+  //
+  EXTENDED_BIOS_ROM_SIZE    ExtendedBiosSize;
+} SMBIOS_TABLE_TYPE0;
+
+</pre>
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
