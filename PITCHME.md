@@ -1695,8 +1695,8 @@ typedef struct {
 
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
  OemSkuTokenSpaceGuid.PcdSetupData|{0x0}|\<br>&nbsp;&nbsp;
- SYSTEM_CONFIGURATION|0x000F0001 &lbrace; <br>&nbsp;&nbsp;                     
-    &lt;HeaderFiles&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ SYSTEM_CONFIGURATION|0x000F0001 &lbrace; &nbsp;&nbsp;                     
+    &nbsp;&nbsp;   &lt;HeaderFiles&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       Guid/SetupVariable.h  <br>&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;Packages&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       MdePkg/MdePkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
