@@ -763,17 +763,19 @@ In order to provide suggestions on the problem statements above, we would like t
 @snapend
 
 
-@snap[north-west span-30 ]
+@snap[north-west span-35 ]
 <br>
 <br>
-@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Basic Boot Components &lpar;MIN&rpar;</b><br><br>&nbsp;</span></p>)
-@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Advance Boot components&lpar;Full&rpar; </b><br><br>&nbsp;</span></p>)
-@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Close Source</b><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70% "><span style="font-size:0.8em;" ><b>Basic Boot Components &lpar;MIN&rpar;</b><br><br>&nbsp;</span></p>)
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Advance Boot components&lpar;Full&rpar; </b><br><br>&nbsp;</span></p>)
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Close Source</b><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
 
 @snap[north-east span-65 ]
+<br>
 <br>
 <br>
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- UEFI, ACPI, PlatformInit<br><br><br></span></p>)
@@ -785,7 +787,6 @@ In order to provide suggestions on the problem statements above, we would like t
 
 @snap[south span-85 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Add / remove features using a build switch<br><br>&nbsp;</span></p>)
-<br>
 @snapend
 
 Note:
