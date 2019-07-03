@@ -775,7 +775,7 @@ In order to provide suggestions on the problem statements above, we would like t
 
 
 
-@snap[north-east span-60 fragment]
+@snap[north-east span-65 fragment]
 <br>
 <br>
 <br>
