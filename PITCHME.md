@@ -760,7 +760,7 @@ In order to provide suggestions on the problem statements above, we would like t
 <br>
 <br>
 <br>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -769,20 +769,20 @@ In order to provide suggestions on the problem statements above, we would like t
 <br>
 <br>
 @box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70% "><span style="font-size:0.8em;" ><b>Basic Boot Components &lpar;MIN&rpar;</b><br>&nbsp;</span></p>)
-@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Advance Boot components&lpar;Full&rpar; </b>><br>&nbsp;</span></p>)
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Advance Boot components&lpar;Full&rpar; </b><br>&nbsp;</span></p>)
 @box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Close Source</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
 
-@snap[north-east span-70 ]
+@snap[north-east span-75 fragment]
 <br>
 <br>
 <br>
 <br>
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- UEFI, ACPI, PlatformInit<br><br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- SMBIOS, S3, OPAL  <br><br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- TXT, AMT, CSM <br><br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- UEFI, ACPI, PlatformInit<br><br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- SMBIOS, S3, OPAL <br> <br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- TXT, AMT, CSM <br><br><br><br> </span></p>)
 
 @snapend
 
