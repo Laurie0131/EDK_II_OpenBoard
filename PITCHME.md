@@ -159,7 +159,7 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 <br>
 @snapend
 
-@snap[south-east span-20 fragment]
+@snap[south-east span-30 fragment]
 <br>
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >GPIO </span> </li>
@@ -350,25 +350,25 @@ Not shown is the edk2 repository since this should always be considered as commo
 ---
 @title[Directory Description]
 <p align="right"><span class="gold" >@size[1.1](<b>Directory Description</b>)</span></span></p>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>edk2-platform: </b>EDK II repo includes open source platform code </span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>@color[yellow](edk2-platform): </b>EDK II repo includes open source platform code </span></p>
 
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >@color[yellow](Platform folder ): contains the platform specific modules by architecture</span> </li>
+  <li><span style="font-size:0.65em" >Platform folder : contains the platform specific modules by architecture</span> </li>
   <ul style="list-style-type:disc; line-height:0.7;">
-    <li><span style="font-size:0.65em" >@color[yellow](MinPlatformPkg ): generic platform instance to control the boot flow.  </span> </li>
-    <li><span style="font-size:0.65em" >@color[yellow](AdvancedFeaturePkg ): package to hold the advanced platform features </span> </li>
-    <li><span style="font-size:0.65em" >@color[yellow](&lt;Generation&gt;OpenBoardPkg ): the silicon generation specific board package. All of the boards based upon this silicon generation can be located here </span> </li>
+    <li><span style="font-size:0.65em" >@color[cyan](MinPlatformPkg ): generic platform instance to control the boot flow.  </span> </li>
+    <li><span style="font-size:0.65em" >@color[cyan](AdvancedFeaturePkg ): package to hold the advanced platform features </span> </li>
+    <li><span style="font-size:0.65em" >@color[cyan](&lt;Generation&gt;OpenBoardPkg ): the silicon generation specific board package. All of the boards based upon this silicon generation can be located here </span> </li>
  </ul>
-  <li><span style="font-size:0.65em" >@color[yellow](Silicon folder ): contains the silicon specific modules </span> </li>
+  <li><span style="font-size:0.65em" >Silicon folder : contains the silicon specific modules </span> </li>
   <ul style="list-style-type:disc; line-height:0.7;">
-    <li><span style="font-size:0.65em" >@color[yellow](&lt;Generation&gt;SiliconPkg ): the silicon generation specific silicon package </span> </li>
+    <li><span style="font-size:0.65em" >@color[cyan](&lt;Generation&gt;SiliconPkg ): the silicon generation specific silicon package </span> </li>
   </ul>
 </ul>
 
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>edk2-non-osi:</b> 
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>@color[yellow](edk2-non-osi):</b> 
 It is the EDK II repo to include any open platform modules which is in a binary format, such as FSP binary, or CPU microcode</span></p>
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >@color[yellow](&lt;Generation&gt;SiliconBinPkg ):It is the silicon generation specific binary package. For example, CPU Microcode or the silicon binary FVs</span> </li>
+  <li><span style="font-size:0.65em" >@color[cyan](&lt;Generation&gt;SiliconBinPkg ):It is the silicon generation specific binary package. For example, CPU Microcode or the silicon binary FVs</span> </li>
 </ul>
 
 
@@ -390,21 +390,21 @@ Note:
 ---
 @title[FSP Directory Description]
 <p align="right"><span class="gold" >@size[1.1](<b>FSP Directory Description</b>)</span></span></p>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>FSP: </b>Intel FSP  repo includes FSP binary platform code </span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>@color[yellow](FSP): </b>Intel FSP  repo includes FSP binary platform code </span></p>
 
 <ul style="list-style-type:disc; line-height:0.8;">
-  <li><span style="font-size:0.65em" >@color[yellow](Platform folder Pkg ): Each FSP project will be hosted in a separate directory</span> </li>
+  <li><span style="font-size:0.65em" >Platform folder Pkg : Each FSP project will be hosted in a separate directory</span> </li>
   <li><span style="font-size:0.65em" >ApolloLakeFspBinPkg Intel® Atom™ processor E3900 product family </span> </li>
   <li><span style="font-size:0.65em" >&nbsp;. &nbsp;. &nbsp;. </span> </li>
   <li><span style="font-size:0.65em" >CoffeeLakeFspBinPkg - 8th Generation Intel® Core™ processors and chipsets @size[.7em]( - formerly Coffee Lake and Whiskey Lake)<br> </span> </li>
-  <li><span style="font-size:0.65em" >@color[yellow](KabylakeFspBinPkg ): 7th Generation Intel® Core™ processors and chipsets</span> </li>
+  <li><span style="font-size:0.65em" >@color[cyan](KabylakeFspBinPkg ): 7th Generation Intel® Core™ processors and chipsets</span> </li>
   <ul style="list-style-type:disc; line-height:0.7;">
     <li><span style="font-size:0.65em" >Include </span> </li>
     <ul style="list-style-type:none; line-height:0.7;">
        <li><span style="font-size:0.65em" > - FSP UPD structure and related definitions used with EDK II build </span> </li>
 	</ul>
     <li><span style="font-size:0.65em" >Doc - Integration Guide .PDF documentation </span> </li>
-    <li><span style="font-size:0.65em" >@color[yellow](FSP.fd ) -Binary to be included with flash device image </span> </li>
+    <li><span style="font-size:0.65em" >@color[cyan](FSP.fd ) -Binary to be included with flash device image </span> </li>
     <li><span style="font-size:0.65em" >FSP.bsf - Configuration File with IDE configuration tool </span> </li>
 
   </ul>
@@ -491,6 +491,48 @@ Note:
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >@color[yellow](&lt;AdvancedCommonFeature&gt; ): The advanced features, such as SMBIOS table, IPMI </span> </li>
   <li><span style="font-size:0.65em" >@color[yellow](Include ): The include file as the package interface.   </span> </li>
+</ul>
+@snapend
+
+
+
+Note:
+
+
+---
+@title[Advanced Feature Package ]
+<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+
+@snap[north-west span-45 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+@color[cyan](&lt;Generation&gt;OpenBoardPkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &lt;BasicCommonBoardFeature&gt;/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &lt;AdvancedCommonBoardFeature&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  @color[cyan](&lt;Board&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Include<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+    Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;BoardSpecificFeature&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    @color[cyan](OpenBoardPkg.dsc)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    @color[cyan](OpenBoardPkg.fdf)
+</span></p>
+<br>
+<br>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >@color[yellow](&lt;BasicCommonBoardFeature&gt; ) and @color[yellow](&lt;AdvancedCommonBoardFeature&gt; ): designate a board generation specific feature. They need to be updated when we enable a board generation. </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](&lt;Board&gt; ): contains all the board specific settings. If we need to port a new board in this generation, copy the &lt;Board&gt; folder and update the copy’s settings
+  </span> </li>
 </ul>
 @snapend
 
