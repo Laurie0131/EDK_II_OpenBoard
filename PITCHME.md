@@ -1675,7 +1675,7 @@ typedef struct {
 <br>
 <br>
 
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-45 ]
@@ -1695,7 +1695,7 @@ typedef struct {
 
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
  OemSkuTokenSpaceGuid.PcdSetupData|{0x0}|\<br>&nbsp;&nbsp;
- SYSTEM_CONFIGURATION|0x000F0001 &lbrace; &nbsp;&nbsp;                     
+ SYSTEM_CONFIGURATION|0x000F0001 &lbrace; &nbsp;&nbsp;
     &nbsp;&nbsp;   &lt;HeaderFiles&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       Guid/SetupVariable.h  <br>&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;Packages&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1705,7 +1705,7 @@ typedef struct {
       LewisburgPkg/PchRcPkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PurleyOpenBoardPkg/PlatPkg.dec<br>&nbsp;&nbsp;
   &rbrace;<br><br>
-<font face="Arial">@size[1.5em](@color[cyan](&nbsp;"C" SetupVariable.h File  )) </font>
+<font face="Arial">@size[1.5em](@color[cyan](&nbsp;&nbsp;"C" SetupVariable.h File  )) </font>
 <br>
 &nbsp;&nbsp;.&nbsp; . &nbsp;.<br>&nbsp;&nbsp;&nbsp;&nbsp;
    UINT8    FanPwmOffset; <br>&nbsp;&nbsp;&nbsp;&nbsp;
