@@ -603,8 +603,7 @@ KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 <p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
   <br>&nbsp;&nbsp;&nbsp;&nbsp;
   <br>&nbsp;&nbsp;&nbsp;&nbsp;
-  <br>&nbsp;&nbsp;&nbsp;&nbsp;
-     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @fa[long-arrow-alt-left fa-3x gp-bullet-yellow]
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @fa[long-arrow-alt-left fa-3x gp-bullet-yellow]
 	<br>&nbsp;&nbsp;&nbsp;&nbsp;
    
 </span></p>
