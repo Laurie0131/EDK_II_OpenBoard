@@ -506,7 +506,7 @@ Note:
 @snap[north-west span-45 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-west span-100 ]
@@ -518,14 +518,12 @@ Note:
   Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &lt;AdvancedCommonBoardFeature&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
   @color[cyan](&lt;Board&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Include<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+    Include<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;BoardSpecificFeature&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     @color[cyan](OpenBoardPkg.dsc)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     @color[cyan](OpenBoardPkg.fdf)
 </span></p>
-<br>
-<br>
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
 
