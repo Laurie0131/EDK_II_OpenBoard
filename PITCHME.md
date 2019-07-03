@@ -1675,7 +1675,7 @@ typedef struct {
 <br>
 <br>
 
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-45 ]
@@ -1688,14 +1688,14 @@ typedef struct {
 @snapend
 
 @snap[north-west span-45 ]
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
 @color[cyan](Purly Pkg  DEC File)<br>
 @size[.8em](&num;&num; `gEfiSetupVariableGuid`)
 </span></p>
 
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
-OemSkuTokenSpaceGuid.PcdSetupData|{0x0}|\<br>&nbsp;&nbsp;
-SYSTEM_CONFIGURATION|0x0F0001 { <br>&nbsp;&nbsp;                     
+ OemSkuTokenSpaceGuid.PcdSetupData|{0x0}|\<br>&nbsp;&nbsp;
+ SYSTEM_CONFIGURATION|0x000F0001 &lbrace; <br>&nbsp;&nbsp;                     
     &lt;HeaderFiles&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       Guid/SetupVariable.h  <br>&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;Packages&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1704,8 +1704,8 @@ SYSTEM_CONFIGURATION|0x0F0001 { <br>&nbsp;&nbsp;
       PurleySktPkg/SocketPkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       LewisburgPkg/PchRcPkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PurleyOpenBoardPkg/PlatPkg.dec<br>&nbsp;&nbsp;
-  }<br>
-<font face="Arial">@size[1.1em](@color[cyan](&nbsp;"C" SetupVariable.h File  )) </font>
+  &rbrace;<br><br>
+<font face="Arial">@size[1.5em](@color[cyan](&nbsp;"C" SetupVariable.h File  )) </font>
 <br>
 &nbsp;&nbsp;.&nbsp; . &nbsp;.<br>&nbsp;&nbsp;&nbsp;&nbsp;
    UINT8    FanPwmOffset; <br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1718,7 +1718,7 @@ SYSTEM_CONFIGURATION|0x0F0001 { <br>&nbsp;&nbsp;
 
 
 @snap[north-east span-45 ]
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
 @color[cyan](StructureConfig.DSC File)
 </span></p>
 <br>
