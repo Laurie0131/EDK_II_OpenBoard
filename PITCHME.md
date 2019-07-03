@@ -894,7 +894,6 @@ edk2-platforms\Platform\Intel\KabylakeOpenBoardPkg\KabylakeRvp3\build_config.cfg
 <br>
 <br>
 <br>
-
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -906,7 +905,7 @@ Kabylake example of Board specific settings:
 <p style="line-height:50% " align="left"><span style="font-size:0.6em; font-family:Consolas;" >
 &lt;workspace&gt;/edk2-platforms/\<br>&nbsp;
 Platform/Intel/KabylakeOpenBoardPkg/\ <br>&nbsp;&nbsp;
-KabylakeRvp3 /  @color[#A8ff60](build_config.cfg) <br><br></p>
+KabylakeRvp3 /  @color[#A8ff60](build_config.cfg) <br></p>
 
 <p style="line-height:40% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 [CONFIG] <br>&nbsp;&nbsp;
@@ -925,6 +924,88 @@ SILENT_MODE = FALSE <br>&nbsp;&nbsp;
 &nbsp;.&nbsp;.&nbsp;.
 </span></p>
 @snapend
+
+
+---?image=assets/images/slides/Slide18.JPG
+@title[Platform Features Table d’hôte ]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Features Table d’hôte </b>)</span><span style="font-size:0.8em;" ></span></p>
+
+@snap[south-west span-100 ]
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-80 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+Platform Firmware Boot Stage PCD : <br>
+@color[yellow](<b>'OpenBoardPkgConfig.dsc `</b>)
+</span></p>
+
+@snap[south-west span-100 ]
+<p style="line-height:40% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+[PcdsFixedAtBuild]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &num;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &num; Please select BootStage here.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &num; Stage 1 - enable debug (system deadloop after debug init)<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &num; Stage 2 - mem init (system deadloop after mem init)<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &num; Stage 3 - boot to UEFI shell only<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &num; Stage 4 - boot to OS<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &num; Stage 5 - boot to OS with security boot enabled<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &num; Stage 6 – Add Advanced features<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdBootStage)|4
+</span></p>
+@snapend
+
+
+Note:
+
+Features added via table d’hôte  by using a PCD. 
+table d’hôte  Pronounced “Tab la dout”
+
+Within the DSC and  FDF choose which modules to include based on PCD
+
+Example
+<pre>
+DSC:
+[PcdsFeatureFlag]
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterMemInit|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdBootToShellOnly|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdUefiSecureBootEnable|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdTpm2Enable|FALSE
+
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootStage >= 1
+ gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|TRUE
+!endif
+
+Example FDF
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootToShellOnly == FALSE
+INF  MdeModulePkg/Universal/FaultTolerantWriteDxe/FaultTolerantWriteSmm.inf
+INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmmRuntimeDxe.inf
+INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
+!endif
+</pre>
+
+
+Depending on the stage # provides some idea regarding what components are needed for a BIOS solution. It can be 3M full featured BIOS, or only 256K if just the basic boot is required, in some cases. 
+
+This work can be done by defining some default configuration in PlatformConfig.dsc. 
+For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to OS (with ACPI/SMM), or PcdBootStage|3 to configure a BIOS to boot to shell only (without ACPI/SMM) 
+
+- Stage I - Minimal Debug
+  - Serial Port, Port 80, External debuggers Optional: Software debugger
+- Stage II  - Memory Functional
+  - Basic hardware initialization including main memory
+- Stage III - Boot to UEFI Shell
+   - Generic DXE driver execution
+- Stage IV - Boot to OS
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
+- Stage VI - Advanced Feature Selection
+  - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
+- Stage VII – Tuning
+   - Size and performance optimizations
+
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
