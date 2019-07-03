@@ -1350,7 +1350,7 @@ Note:
 <!-- .slide: data-transition="none" -->
 @title[Configuration Options 02 ]
 <p align="right"><span class="gold" >@size[1.1](<b>Configuration Options - details</b>)</span><span style="font-size:0.8em;" ></span></p>
-
+<br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 
 @color[yellow](PI PCD) – The PI PCD could be static data fixed at build time or dynamic data updatable at runtime.<br><br>
@@ -1393,7 +1393,7 @@ readiness. If PcdGet is called before UEFI variable services ready, the default 
 <!-- .slide: data-transition="none" -->
 @title[Configuration Options 03 ]
 <p align="right"><span class="gold" >@size[1.1](<b>Configuration Options - details Cont.</b>)</span><span style="font-size:0.8em;" ></span></p>
-
+<br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 @color[yellow](Configuration Block) – It is a data structure to put all policy data in a block without any C-language data pointer in a policy data <br><br>
 @color[yellow](Global NVS) – It is an ACPI region to pass the configuration from the C code to ASL code <br><br>
