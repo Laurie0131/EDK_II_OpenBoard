@@ -1601,23 +1601,23 @@ KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data
 <br>
 <br>
 <br>
-
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
 @snap[north-west span-100 ]
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" ><br>
 Example: `AdvancedFeaturePkg.dec`  for SMBIOS type 0 data structure
 </span></p>
 
 <p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation| \<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        {0x0}|SMBIOS_TABLE_TYPE0|0x80010000 {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <HeaderFiles><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       IndustryStandard/SmBios.h<br>&nbsp;&nbsp;&nbsp;&nbsp;
-    <Packages><br>&nbsp;&nbsp;&nbsp;&nbsp;
+gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation| \<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {0x0}|@color[yellow](SMBIOS_TABLE_TYPE0)|0x80010000 {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;HeaderFiles&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       IndustryStandard/@color[yellow](SmBios.h)<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;Packages&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MdePkg/MdePkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        AdvancedFeaturePkg/AdvancedFeaturePkg.dec<br>&nbsp;&nbsp;
 }<br>&nbsp;&nbsp;
