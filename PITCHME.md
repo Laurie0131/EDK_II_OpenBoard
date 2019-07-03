@@ -604,7 +604,7 @@ KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   <br>&nbsp;&nbsp;&nbsp;&nbsp;
   <br>&nbsp;&nbsp;&nbsp;&nbsp;
   <br>&nbsp;&nbsp;&nbsp;&nbsp;
-    OpenBoardPkg.dsc  &nbsp;&nbsp;&nbsp; @fa[long-arrow-alt-left fa-2x gp-bullet-yellow]
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @fa[long-arrow-alt-left fa-3x gp-bullet-yellow]
 	<br>&nbsp;&nbsp;&nbsp;&nbsp;
    
 </span></p>
