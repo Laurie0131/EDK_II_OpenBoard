@@ -1694,12 +1694,12 @@ typedef struct {
 &num;&num; `gEfiSetupVariableGuid`
 </span></p>
 
-<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 OemSkuTokenSpaceGuid.PcdSetupData|{0x0}|\<br>&nbsp;&nbsp;
 SYSTEM_CONFIGURATION|0x000F0001 {  <br>&nbsp;&nbsp;                     
-&lt;HeaderFiles&gr; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;HeaderFiles&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       Guid/SetupVariable.h  <br>&nbsp;&nbsp;&nbsp;&nbsp;
-    &lt'Packages&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;Packages&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       MdePkg/MdePkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PurleyRcPkg/RcPkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PurleySktPkg/SocketPkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1724,7 +1724,7 @@ SYSTEM_CONFIGURATION|0x000F0001 {  <br>&nbsp;&nbsp;
 @color[cyan](StructureConfig.DSC File)
 </span></p>
 
-<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 gOemSkuTokenSpaceGuid.PcdSetupData.\<br>&nbsp;&nbsp;
 CloudProfile|0x0 <br>
 <br>&nbsp;&nbsp;
