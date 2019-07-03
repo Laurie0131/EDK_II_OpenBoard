@@ -1101,7 +1101,7 @@ Platform/Intel /<br>&nbsp;&nbsp;&nbsp;
 Minnowboard Turbot
 </span></p>
 
-<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+<p style="line-height:40% " align="left"><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 Platform/Intel /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 
   Vlv2TbltDevicePkg /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1127,6 +1127,43 @@ Platform/Intel /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 
 Note:
 
+---
+@title[Example Kabylake Configuration .DSC file ]
+<p align="right"><span class="gold" >@size[1.1](<b>Example Kabylake Configuration .DSC file</b>)</span><span style="font-size:0.8em;" ></span></p>
+
+```
+[PcdsFixedAtBuild]
+  #
+  # Please select BootStage here.
+  # Stage 1 - enable debug (system deadloop after debug init)
+  # Stage 2 - mem init (system deadloop after mem init)
+  # Stage 3 - boot to shell only
+  # Stage 4 - boot to OS
+  # Stage 5 - boot to OS with security boot enabled
+  #
+  gMinPlatformPkgTokenSpaceGuid.PcdBootStage|4
+  
+[PcdsFeatureFlag]
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterMemInit|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdBootToShellOnly|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdUefiSecureBootEnable|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdTpm2Enable|FALSE
+
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootStage >= 1
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|TRUE
+!endif
+
+```
+
+
+@snap[south-east span-45 ]
+<p style="line-height:40% " align="left"><span style="font-size:0.45em;>
+Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkgConfig.dsc">Confg .dsc </a>file
+</span></p>
+@snapend
+
+Note:
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
