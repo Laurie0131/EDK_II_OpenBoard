@@ -522,7 +522,7 @@ Note:
     Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;BoardSpecificFeature&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     @color[cyan](OpenBoardPkg.dsc)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    @color[cyan](OpenBoardPkg.fdf)<br>
+    @color[cyan](OpenBoardPkg.fdf)<br><br>
 </span></p>
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
@@ -562,19 +562,20 @@ Note:
 <br>
 <br>
 <br>
+<br>
 <p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Acpi/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Acpi /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     BoardAcpiDxe/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  FspWapper/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  FspWapper /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     PeiFspPolicyUpdateLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Include<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  OpenBoardPkg.dsc  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  OpenBoardPkg.fdf
+  @color[cyan](KabylakeRvp3)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    BaseGpioExpanderLib / <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PeiI2cAccessLib  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Policy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PolicyInitDxe /
 </span></p>
 @snapend
 
@@ -583,12 +584,13 @@ KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 <br>
 <br>
+<br>
 <p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
-    BaseGpioExpanderLib  <br>&nbsp;&nbsp;&nbsp;&nbsp;
-    PeiI2cAccessLib  <br>&nbsp;&nbsp;
-  Policy<br>&nbsp;&nbsp;&nbsp;&nbsp;
-    PolicyInitDxe
+  @color[cyan](KabylakeRvp3) /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    OpenBoardPkg.dsc  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    OpenBoardPkg.fdf
 </span></p>
 @snapend
 
