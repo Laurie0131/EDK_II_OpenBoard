@@ -906,9 +906,9 @@ Kabylake example of Board specific settings:
 <p style="line-height:50% " align="left"><span style="font-size:0.6em; font-family:Consolas;" >
 &lt;workspace&gt;/edk2-platforms/\<br>&nbsp;
 Platform/Intel/KabylakeOpenBoardPkg/\ <br>&nbsp;&nbsp;
-KabylakeRvp3 /  @color[#A8ff60](build_config.cfg) <br><br><br><br>
+KabylakeRvp3 /  @color[#A8ff60](build_config.cfg) <br><br></p>
 
-</span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+<p style="line-height:40% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 [CONFIG] <br>&nbsp;&nbsp;
 WORKSPACE_PLATFORM_BIN = WORKSPACE_PLATFORM_BIN <br>&nbsp;&nbsp;
 EDK_SETUP_OPTION = <br>&nbsp;&nbsp;
