@@ -900,13 +900,13 @@ edk2-platforms\Platform\Intel\KabylakeOpenBoardPkg\KabylakeRvp3\build_config.cfg
 
 @snap[north-west span-80 ]
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
 Kabylake example of Board specific settings:
 </span></p>
-<p style="line-height:40% " align="left"><span style="font-size:0.6em; font-family:Consolas;" >
+<p style="line-height:50% " align="left"><span style="font-size:0.6em; font-family:Consolas;" >
 &lt;workspace&gt;/edk2-platforms/\<br>&nbsp;
 Platform/Intel/KabylakeOpenBoardPkg/\ <br>&nbsp;&nbsp;
-KabylakeRvp3 /  @color[#A8ff60](build_config.cfg) <br><br><br>
+KabylakeRvp3 /  @color[#A8ff60](build_config.cfg) <br><br><br><br>
 
 </span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 [CONFIG] <br>&nbsp;&nbsp;
