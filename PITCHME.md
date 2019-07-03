@@ -1264,6 +1264,82 @@ file
 
 Note:
 
+
+---?image=assets/images/slides/Slide28.JPG
+@title[Focus - Configuration Section]
+<br>
+<p align="left"><span class="gold" >@size[1.1](<b>Configuration </b>)</span></span></p>
+
+@snap[south-west span-30 ]
+<br>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >Setup Variable</span> </li>
+  <li><span style="font-size:0.65em" >PCD </span> </li>
+  <li><span style="font-size:0.65em" >Policy Hob/PPI/Protocol </span> </li>
+</ul>
+<br>
+<br>
+<br>
+@snapend
+
+
+Note:
+Configuration. From which interface can a platform module get the configuration data? 
+
+there might be many sources of platform configuration data 
+
+- Setup Variable
+- PCD
+- Policy Hob/PPI/Protocol
+
+---
+@title[Configuration Options ]
+<p align="right"><span class="gold" >@size[1.1](<b>Configuration Options</b>)</span><span style="font-size:0.8em;" ></span></p>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+There might be many sources of platform configuration data.  </span></p>
+
+@snap[north-west span-30 ]
+<br>
+<br>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" >PI PCD <br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" >UEFI Variable<br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" >FSP UPD <br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north span-30 ]
+<br>
+<br>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" >Silicon Policy <br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" >Configuration Block <br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" >Global NVS <br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-30 ]
+<br>
+<br>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" >Signed Data Plob <br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" >CMOS <br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" >MACRO <br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+Note:
+- PI PCD – The PI PCD could be static data fixed at build time or dynamic data updatable at runtime.
+- UEFI Variable – The UEFI Variable can be non-volatile data or volatile data, and it is widely used by VFR.
+- FSP UPD – FSP UPD can be static default configuration, or a dynamic updatable UPD.
+- Silicon Policy Hob/PPI/Protocol – It is policy data constructed at runtime or it can be a hook for silicon code
+- Configuration Block – It is a data structure to put all policy data in a block without any C-language data pointer in a policy data
+- Global NVS – It is an ACPI region to pass the configuration from the C code to ASL code
+- Platform signed data blob – It is read only signed data at build time.
+- CMOS – It is simple non-volatile storage, but it is not secure
+- MACRO – C-language MACRO. It is fixed at build time.
+
+
+
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
 <p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
