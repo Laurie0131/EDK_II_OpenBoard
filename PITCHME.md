@@ -522,7 +522,7 @@ Note:
     Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;BoardSpecificFeature&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     @color[cyan](OpenBoardPkg.dsc)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    @color[cyan](OpenBoardPkg.fdf)
+    @color[cyan](OpenBoardPkg.fdf)<br>
 </span></p>
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
@@ -537,6 +537,74 @@ Note:
 
 
 Note:
+
+
+---
+@title[One Feature, one directory Guideline]
+<p align="right"><span class="gold" >@size[1.1](<b>One Feature, one directory Guideline </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Use a hierarchical layout , `KabylakeOpenBoardPkg` example</span></p>
+@snapend
+
+@snap[north-west span-45 ]
+<br>
+<br>
+<br>
+<p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Acpi/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    BoardAcpiDxe/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  FspWapper/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PeiFspPolicyUpdateLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Include<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  OpenBoardPkg.dsc  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  OpenBoardPkg.fdf
+</span></p>
+@snapend
+
+
+@snap[north-east span-55 ]
+<br>
+<br>
+<br>
+<p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    BaseGpioExpanderLib  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PeiI2cAccessLib  <br>&nbsp;&nbsp;
+  Policy<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PolicyInitDxe
+</span></p>
+@snapend
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Only put the basic features into the root directory<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+Use a hierarchical layout - Specifically, only put the basic features into the root directory and put the advanced features into a “Features” directory. 
+
+Slide shows the KabylakeOpenBoardPkg. 
+The common board related ACPI is in Acpi directory. The common board related FSP policy update is in FspWrapper. The library folder includes the board specific GpioExpanderLib and I2cAccessLib. They might be used for other Kabylake generation board. 
+
+The KabylakeRvp3 folder contains all RVP3 related settings, such as GPIO, High Definition Audio (HAD) verb Table, HsioPtss table, SPD table. This folder also has DSC and FDF file. We can build a KabylakeRvp3 binary inside of this folder 
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
