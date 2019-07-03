@@ -1423,7 +1423,147 @@ This signed data blob provides the configuration on a platform. An OEM may updat
 - A MACRO used in #IFDEF can be used to enable/disable features. If the consumer is in C code, it can be replaced by FeaturePcd. It will become if(0) or if(1) finally. The benefit of using PCD is that all the code in both path can be built. 
 
 
+---
+@title[Use PCD instead of UEFI Variable  ]
+<p align="right"><span class="gold" >@size[1.1](<b>Use PCD instead of UEFI Variable </b>)</span><span style="font-size:0.8em;" ></span></p>
 
+@snap[north-west span-45 ]
+<br>
+<br>
+<br>
+<br>
+
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-45 ]
+<br>
+<br>
+<br>
+<br>
+
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-45 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+@color[cyan](UEFI Variable)
+</span></p>
+
+<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+ //<br>&nbsp;&nbsp;
+ // Get config from setup variable<br>&nbsp;&nbsp;
+ //<br>&nbsp;&nbsp;
+ VarDataSize = sizeof (SETUP_DATA);<br>&nbsp;&nbsp;
+ Status = GetVariable (<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	L"Setup",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	&amp;gSetupVariableGuid,<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	NULL,<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	&amp;VarDataSize,<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	&amp;mSystemConfiguration<br>&nbsp;&nbsp;
+ );<br>&nbsp;&nbsp;
+</span></p> 
+@snapend
+
+
+@snap[north-east span-45 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+@color[cyan](PCD)
+</span></p>
+
+<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+ //<br>&nbsp;&nbsp;
+ // Get setup configuration from PCD<br>&nbsp;&nbsp;
+ //<br>&nbsp;&nbsp;
+ CopyMem (<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	&amp;mSystemConfiguration,<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	PcdGetPtr (PcdSetupConfiguration),<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	sizeof(mSystemConfiguration)<br>&nbsp;&nbsp;&nbsp;&nbsp;
+ );
+</span></p> 
+@snapend
+
+
+Note:
+
+IF UEFI Variable is used, people then have to remember clearly on which configuration is stored in which direct location. Also if a platform decides to change the configuration source from one place (UEFI variable) to another (static region in boot block), all impacted platform modules are required to change. This is non-ideal for source code maintenance and development. 
+
+BKM is using PCDs only in platform code, no matter where a platform chooses to store configuration data based upon the production requirement, 
+
+
+Then the code is consistent and easy to maintain, especially if the next generation platform decides to change the location. 
+
+---?image=/assets/images/slides/Slide33.JPG
+@title[PCD Syntax review]
+<p align="right"><span class="gold" ><b>PCD Syntax Review</b></span></p>
+@snap[north-east span-90 fragment]
+<br>
+<br>
+<p align="left" style="line-height:80%"><span style="font-size:0.9em; ">PCD defined in the DEC file from any package</span></p>
+@box[bg-black text-white my-box-pad2  ](<p style="line-height:40%" align="left"><span style="font-size:0.450em; font-family:Consolas; " >&nbsp;&nbsp;[Guids.common]<br>&nbsp;&nbsp;@color[red](PcdTokenSpaceGuidName)={ 0xXXXXXXXX, 0xXXXX, 0xXXXX, { 0xXX, . . .}}<br>&nbsp;&nbsp;. . .<br>&nbsp;&nbsp;[Pcds...]<br>&nbsp;&nbsp;PcdTokenSpaceGuidName.PcdTokenName|Value[|DatumType[|MaxSize]]|Token<br>&nbsp;&nbsp;</span></p>)
+<br>
+@snapend
+
+@snap[north-east span-90 fragment]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p align="left" style="line-height:80%"><span style="font-size:0.9em; ">PCD usage listed in INF file for module</span></p>
+@box[bg-black text-white my-box-pad2  ](<p style="line-height:40%" align="left"><span style="font-size:0.450em; font-family:Consolas; " >&nbsp;&nbsp;[...Pcds...]<br>&nbsp;&nbsp;PcdTokenSpaceGuidName.@color[red](PcdTokenName)|[Value]<br>&nbsp;&nbsp;</span></p>)
+<br>
+@snapend
+
+
+@snap[north-east span-90 fragment]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p align="left" style="line-height:80%"><span style="font-size:0.9em; ">Value of PCD set in @color[yellow](`OpenBoardPkg. . .dsc`)</span></p>
+@box[bg-black text-white my-box-pad2  ](<p style="line-height:40%" align="left"><span style="font-size:0.450em; font-family:Consolas; " >&nbsp;&nbsp;[Pcds...]<br>&nbsp;&nbsp;PcdTokenSpaceGuidName.@color[red](PcdTokenName)|@color[cyan](Value)[|DatumType[|MaximumDatumSize]]</span><br>&nbsp;&nbsp;</p>)
+<br>
+@snapend
+
+
+
+Note:
+
+BKM is to set the desired value in the Platform Specific .DSC file
+
+
+- PCD defined in the DEC file from any package
+- [Guids.common]
+   - PcdTokenSpaceGuidName={ 0x914AEBE7, 0x4635, 0x459b, { 0xAA, . . .}}
+
+- [Pcds...]
+  - PcdTokenSpaceGuidName.PcdTokenName|Value[|DatumType[|MaxSize]]|Token
+  - PCD usage listed in INF file for module
+- […Pcd…] 
+  - PcdTokenSpaceGuidName.PcdTokenName|[Value]
+  - Value of PCD set in NewPlatform.dsc
+- [Pcds...]
+  - PcdTokenSpaceGuidName.PcdTokenName|Value[|DatumType[|MaximumDatumSize]]
+- Example used in new OpenBoardPkg.dsc
+- [PcdsFixedAtBuild.IA32]
+  -  gEfiIchTokenSpaceGuid.PcdIchAcpiIoPortBaseAddress|0x400
+  -  gNewProjectTokenSpaceGuid.PcdFlashAreaBaseAddress|0xFFF00000
+  - gNewProjectTokenSpaceGuid.PcdFlashAreaSize|0x100000
+ 
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
