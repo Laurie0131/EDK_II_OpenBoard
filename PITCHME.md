@@ -440,9 +440,9 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 <p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 @color[cyan](MinPlatformPkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   &lt;BasicCommonFeature&gt;/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  PlatformInit<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInit /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
@@ -480,8 +480,8 @@ Note:
 <p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 @color[cyan](AdvancedFeaturePkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   &lt;AdvancedFeatureCommonFeature&gt;/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Include
+  Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Include /
 </span></p>
 <br>
 <br>
@@ -514,13 +514,13 @@ Note:
 <p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 @color[cyan](&lt;Generation&gt;OpenBoardPkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   &lt;BasicCommonBoardFeature&gt;/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &lt;AdvancedCommonBoardFeature&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  @color[cyan](&lt;Board&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Include<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &lt;BoardSpecificFeature&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &lt;AdvancedCommonBoardFeature&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  @color[cyan](&lt;Board&gt;) /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt;BoardSpecificFeature&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     @color[cyan](OpenBoardPkg.dsc)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     @color[cyan](OpenBoardPkg.fdf)<br><br>
 </span></p>
@@ -566,15 +566,15 @@ Note:
 <p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Acpi /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    BoardAcpiDxe/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    BoardAcpiDxe /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   FspWapper /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    PeiFspPolicyUpdateLib/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  @color[cyan](KabylakeRvp3)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PeiFspPolicyUpdateLib /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  @color[cyan](KabylakeRvp3) /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     BaseGpioExpanderLib / <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     PeiI2cAccessLib  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Policy<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Policy /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     PolicyInitDxe /
 </span></p>
 @snapend
@@ -718,6 +718,82 @@ The KabylakeRvp3 folder contains all RVP3 related settings, such as GPIO, High D
 
 Note:
 This introduces issues when the developer wants to find a  particular driver. 
+
+
+---?image=assets/images/slides/Slide17.JPG
+@title[Focus - Features Section]
+<br>
+<p align="left"><span class="gold" >@size[1.1](<b>Features</b>)</span></span></p>
+
+@snap[north-east span-35 fragment]
+<br>
+<br>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >Minimal /Full BIOS </span> </li>
+  <li><span style="font-size:0.65em" >Feature ON/OFF </span> </li>
+  <li><span style="font-size:0.65em" >Smbios/TPM/SecureBoot/ </span> </li>
+  <li><span style="font-size:0.65em" >. . . </span> </li>
+</ul>
+@snapend
+
+
+
+
+
+Note:
+### Features
+
+In order to provide suggestions on the problem statements above, we would like to focus on the following four areas: 
+- Feature. How does a BIOS provide the feature selection option to a developer? 
+- Configuration. From which interface can a platform module get the configuration data? 
+- Porting. Where are the modules to be ported for a new board? 
+- Tree Structure. What does an EDKII platform package look like? 
+
+
+---?image=assets/images/slides/Slide18.JPG
+@title[Feature –BIOS module selection]
+<p align="right"><span class="gold" >@size[1.1](<b>Feature –BIOS module selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p style="line-height:40% " align="left"><span style="font-size:0.9em;" >Minimum set of features based on Categories </span></p>
+
+@snap[north span-50 ]
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-30 ]
+<br>
+<br>
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Basic Boot Components &lpar;MIN&rpar;</b><br><br>&nbsp;</span></p>)
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Advance Boot components&lpar;Full&rpar; </b><br><br>&nbsp;</span></p>)
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Close Source</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-65 ]
+<br>
+<br>
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- UEFI, ACPI, PlatformInit<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- SMBIOS, S3, OPAL <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- TXT, AMT, CSM <br><br><br><br> </span></p>)
+
+@snapend
+
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Add / remove features using a build switch<br><br>&nbsp;</span></p>)
+<br>
+@snapend
+
+Note:
+
+- Minimal set (basic boot component) – this includes the minimal components needed to boot to the UEFI Shell or to a UEFI OS. The feature set is limited and may only include a basic ACPI table and some required platform initialization. 
+- Full set (advanced boot component) – this entails all of the components needed to make a production BIOS. For example, it may support S3, SMBIOS table, OPAL. (Storage Work Group Storage Security Subsystem Class: Opal  - i.e. Tpm Opal)
+- Most  advanced modules can be open source, too, but there might be a small portion of code that can not be open source, such as the binary elements used by TXT/AMT/CSM 
+
 
 
 
