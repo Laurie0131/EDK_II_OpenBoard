@@ -760,7 +760,7 @@ In order to provide suggestions on the problem statements above, we would like t
 <br>
 <br>
 <br>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -775,7 +775,7 @@ In order to provide suggestions on the problem statements above, we would like t
 
 
 
-@snap[north-east span-55 fragment]
+@snap[north-east span-60 fragment]
 <br>
 <br>
 <br>
