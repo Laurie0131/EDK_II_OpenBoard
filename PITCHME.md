@@ -931,18 +931,18 @@ SILENT_MODE = FALSE <br>&nbsp;&nbsp;
 <p align="right"><span class="gold" >@size[1.1](<b>Platform Features Table d’hôte </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[south-west span-100 ]
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-west span-80 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
-Platform Firmware Boot Stage PCD : <br>
-@color[yellow](<b>'OpenBoardPkgConfig.dsc `</b>)
+Platform Firmware Boot Stage PCD in: <br><br>
+@color[yellow](<b>`OpenBoardPkgConfig.dsc`</b>)
 </span></p>
 
 @snap[south-west span-100 ]
-<p style="line-height:40% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 [PcdsFixedAtBuild]<br>&nbsp;&nbsp;&nbsp;&nbsp;
   &num;<br>&nbsp;&nbsp;&nbsp;&nbsp;
   &num; Please select BootStage here.<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -954,6 +954,7 @@ Platform Firmware Boot Stage PCD : <br>
   &num; Stage 6 – Add Advanced features<br>&nbsp;&nbsp;&nbsp;&nbsp;
   gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdBootStage)|4
 </span></p>
+<br>
 @snapend
 
 
