@@ -1688,16 +1688,15 @@ typedef struct {
 @snapend
 
 @snap[north-west span-45 ]
-<br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
 @color[cyan](Purly Pkg  DEC File)<br>
-&num;&num; `gEfiSetupVariableGuid`
+@size[.8em](&num;&num; `gEfiSetupVariableGuid`)
 </span></p>
 
-<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
 OemSkuTokenSpaceGuid.PcdSetupData|{0x0}|\<br>&nbsp;&nbsp;
-SYSTEM_CONFIGURATION|0x000F0001 {  <br>&nbsp;&nbsp;                     
-&lt;HeaderFiles&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SYSTEM_CONFIGURATION|0x0F0001 { <br>&nbsp;&nbsp;                     
+    &lt;HeaderFiles&gt; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       Guid/SetupVariable.h  <br>&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;Packages&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       MdePkg/MdePkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1706,9 +1705,9 @@ SYSTEM_CONFIGURATION|0x000F0001 {  <br>&nbsp;&nbsp;
       LewisburgPkg/PchRcPkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       PurleyOpenBoardPkg/PlatPkg.dec<br>&nbsp;&nbsp;
   }<br>
-<font face="Arial">@size[1.1em](@color[cyan]("C" SetupVariable.h File  )) </font>
+<font face="Arial">@size[1.1em](@color[cyan](&nbsp;"C" SetupVariable.h File  )) </font>
 <br>
-.&nbsp; . &nbsp;.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;.&nbsp; . &nbsp;.<br>&nbsp;&nbsp;&nbsp;&nbsp;
    UINT8    FanPwmOffset; <br>&nbsp;&nbsp;&nbsp;&nbsp;
    UINT8    WakeOnLanSupport;<br>&nbsp;&nbsp;&nbsp;&nbsp;
    UINT8    Use1GPageTable;<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1719,11 +1718,10 @@ SYSTEM_CONFIGURATION|0x000F0001 {  <br>&nbsp;&nbsp;
 
 
 @snap[north-east span-45 ]
-<br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
 @color[cyan](StructureConfig.DSC File)
 </span></p>
-
+<br>
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 gOemSkuTokenSpaceGuid.PcdSetupData.\<br>&nbsp;&nbsp;
 CloudProfile|0x0 <br>
