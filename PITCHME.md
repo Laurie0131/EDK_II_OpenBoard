@@ -594,6 +594,22 @@ KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 @snapend
 
+
+@snap[north-east span-55 fragment]
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    OpenBoardPkg.dsc  &nbsp;&nbsp;&nbsp; @fa[long-arrow-alt-left fa-2x gp-bullet-yellow]
+	<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   
+</span></p>
+@snapend
+
 @snap[south span-85 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Only put the basic features into the root directory<br><br>&nbsp;</span></p>)
 @snapend
