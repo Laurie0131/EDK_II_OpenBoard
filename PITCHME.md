@@ -1665,6 +1665,86 @@ typedef struct {
 
 </pre>
 
+---
+@title[Example of DSC xRef DEC & .h  files  ]
+<p align="right"><span class="gold" >@size[1.1](<b>Example of DSC xRef DEC & .h  files </b>)</span><span style="font-size:0.8em;" ></span></p>
+
+@snap[north-west span-45 ]
+<br>
+<br>
+<br>
+<br>
+
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-45 ]
+<br>
+<br>
+<br>
+<br>
+
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-45 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+@color[cyan](Purly Pkg  DEC File)<br>
+&num;&num; `gEfiSetupVariableGuid`
+</span></p>
+
+<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+OemSkuTokenSpaceGuid.PcdSetupData|{0x0}|\<br>&nbsp;&nbsp;
+SYSTEM_CONFIGURATION|0x000F0001 {  <br>&nbsp;&nbsp;                     
+&lt;HeaderFiles&gr; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Guid/SetupVariable.h  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    &lt'Packages&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      MdePkg/MdePkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PurleyRcPkg/RcPkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PurleySktPkg/SocketPkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      LewisburgPkg/PchRcPkg.dec<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      PurleyOpenBoardPkg/PlatPkg.dec<br>&nbsp;&nbsp;
+  }<br>
+<font face="Arial">@size[1.1em](@color[cyan]("C" SetupVariable.h File  )) </font>
+<br>
+.&nbsp; . &nbsp;.<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   UINT8    FanPwmOffset; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+   UINT8    WakeOnLanSupport;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   UINT8    Use1GPageTable;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   UINT8    CloudProfile;<br>&nbsp;&nbsp;
+} SYSTEM_CONFIGURATION;
+</span></p> 
+@snapend
+
+
+@snap[north-east span-45 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+@color[cyan](StructureConfig.DSC File)
+</span></p>
+
+<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+gOemSkuTokenSpaceGuid.PcdSetupData.\<br>&nbsp;&nbsp;
+CloudProfile|0x0 <br>
+<br>&nbsp;&nbsp;
+gOemSkuTokenSpaceGuid.PcdSetupData.\<br>&nbsp;&nbsp;
+Use1GPageTable|0x1<br>
+<br>&nbsp;&nbsp;
+gOemSkuTokenSpaceGuid.PcdSetupData.\<br>&nbsp;&nbsp;
+FanPwmOffset|0x0 <br>
+<br>&nbsp;&nbsp;
+gOemSkuTokenSpaceGuid.PcdSetupData.\<br>&nbsp;&nbsp;
+WakeOnLanSupport|0x0
+<br>&nbsp;&nbsp;
+. &nbsp;. &nbsp;.
+
+</span></p> 
+@snapend
+
+
+Note:
+
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
