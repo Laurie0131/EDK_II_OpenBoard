@@ -1154,12 +1154,18 @@ Note:
   gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|TRUE
 !endif
 
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootStage >= 2
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterMemInit|TRUE
+!endif
+
 ```
 
 
 @snap[south-east span-45 ]
-<p style="line-height:40% " align="left"><span style="font-size:0.45em;>
-Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkgConfig.dsc">Confg .dsc </a>file
+<p style="line-height:40% " align="left"><span style="font-size:0.45em;">
+Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkgConfig.dsc">Confg .dsc </a>
+file
 </span></p>
 @snapend
 
