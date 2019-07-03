@@ -827,7 +827,6 @@ The platform may also need to initiliaze General Purpose Input/Ouput (GPIO) pins
 
 @snap[North-west span-80]
 <br>
-<br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
 Many Platforms have a bash or Python script  file to pre & post process the EDK II build process: 
 <a href="https://github.com/tianocore/edk2-platforms/tree/master/Platform/Intel#build">Build Script</a><br>
@@ -839,9 +838,9 @@ Example: Invoked from the @size[.75em](`edk2-platforms/Platform/Intel`)<br>&nbsp
 Configuration  Files:
 </span></p>
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" > `edk2-platforms\Platform\Intel\build.cfg ` - contains the default settings </span> </li>
-  <li><span style="font-size:0.65em" > Default settings are under the `DEFAULT_CONFIG` section</span> </li>
-  <li><span style="font-size:0.65em" > Override the `edk2-platforms/Platform/Intel/. . ./build.cfg` settings from each board in board specific directory</span> </li>
+  <li><span style="font-size:0.6em" > `edk2-platforms\Platform\Intel\build.cfg ` - contains the default settings </span> </li>
+  <li><span style="font-size:0.6em" > Default settings are under the `DEFAULT_CONFIG` section</span> </li>
+  <li><span style="font-size:0.6em" > Override the `edk2-platforms/Platform/Intel/. . ./build.cfg` settings from each board in board specific directory</span> </li>
 </ul>
 @snapend
 
