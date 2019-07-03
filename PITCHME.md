@@ -820,18 +820,22 @@ The platform may also need to initiliaze General Purpose Input/Ouput (GPIO) pins
 @title[Features Build Enabled]
 <p align="right"><span class="gold" >@size[1.1](<b>Features Build Enabled</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
+@snap[North-west span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Platform-Board Build Scripts<br><br>&nbsp;</span></p>)
+@snapend
+
 
 @snap[North-west span-80]
-<br>
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
 Many Platforms have a bash or Python script  file to pre & post process the EDK II build process: 
 <a href="https://github.com/tianocore/edk2-platforms/tree/master/Platform/Intel#build">Build Script</a><br>
 
-Example: Invoked from the @size[.7em](`edk2-platforms/Platform/Intel`)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-          @size[.7em](@color[#A8ff60](`build_bios.py –p <Board-name> `))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               uses config file @color[#A8ff60](`build.cfg`)<br>
+Example: Invoked from the @size[.75em](`edk2-platforms/Platform/Intel`)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+          @size[.75em](@color[#A8ff60](`build_bios.py –p <Board-name> `))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               @size[.75em]( - uses config file @color[#A8ff60](`build.cfg`))<br>
+			   <br>
 Configuration  Files:
 </span></p>
 <ul style="list-style-type:disc; line-height:0.7;">
