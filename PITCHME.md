@@ -639,7 +639,7 @@ The KabylakeRvp3 folder contains all RVP3 related settings, such as GPIO, High D
 @snap[north-west span-35 ]
 <br>
 <p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-Vlv2TbltDevicePkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+@color[cyan](Vlv2TbltDevicePkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
    AcpiPlatform/<br>&nbsp;&nbsp;&nbsp;&nbsp;
    Application /<br>&nbsp;&nbsp;&nbsp;&nbsp;
    BootScriptSaveDxe /<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -694,7 +694,7 @@ Vlv2TbltDevicePkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east span-30 fragment]
+@snap[north-east span-25 fragment]
 <br>
 <p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
   <br>
@@ -705,8 +705,7 @@ Vlv2TbltDevicePkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   <br>
   <br>
   <br>
-  <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @fa[long-arrow-alt-left fa-3x gp-bullet-yellow]
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @fa[long-arrow-alt-left fa-3x gp-bullet-yellow]
   
 </span></p>
 @snapend
