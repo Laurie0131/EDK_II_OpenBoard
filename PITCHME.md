@@ -1158,13 +1158,106 @@ Note:
   gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|FALSE
   gMinPlatformPkgTokenSpaceGuid.PcdStopAfterMemInit|TRUE
 !endif
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootStage >= 3
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterMemInit|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdBootToShellOnly|TRUE
+!endif
+
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootStage >= 4
+  gMinPlatformPkgTokenSpaceGuid.PcdBootToShellOnly|FALSE
+!endif
+
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootStage >= 5
+  gMinPlatformPkgTokenSpaceGuid.PcdUefiSecureBootEnable|TRUE
+  gMinPlatformPkgTokenSpaceGuid.PcdTpm2Enable|TRUE
+!endif
+  
+  gBoardModuleTokenSpaceGuid.PcdTbtEnable|FALSE
+ 
+ 
+  gBoardModuleTokenSpaceGuid.PcdMultiBoardSupport|TRUE
+ 
 
 ```
 
 
 @snap[south-east span-45 ]
-<p style="line-height:40% " align="left"><span style="font-size:0.45em;">
+<p style="line-height:40% " align="left"><span style="font-size:0.55em;">
 Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkgConfig.dsc">Confg .dsc </a>
+file
+</span></p>
+@snapend
+
+Note:
+
+---
+@title[Example Kabylake Configuration .FDF file ]
+<p align="right"><span class="gold" >@size[1.1](<b>Example Kabylake Configuration .FDF file</b>)</span><span style="font-size:0.8em;" ></span></p>
+
+```
+[FD.KabylakeRvp3]
+ #
+  . . .
+[FV.FvPreMemory]
+BlockSize          = $(FLASH_BLOCK_SIZE)
+FvAlignment        = 16
+  . . .
+INF  UefiCpuPkg/SecCore/SecCore.inf
+INF  MdeModulePkg/Core/Pei/PeiMain.inf
+!include $(PLATFORM_PACKAGE)/Include/Fdf/CorePreMemoryInclude.fdf
+
+INF $(PLATFORM_PACKAGE)/PlatformInit/ReportFv/ReportFvPei.inf
+INF $(PLATFORM_PACKAGE)/PlatformInit/PlatformInitPei/PlatformInitPreMem.inf
+INF IntelFsp2WrapperPkg/FspmWrapperPeim/FspmWrapperPeim.inf
+INF $(PLATFORM_PACKAGE)/PlatformInit/SiliconPolicyPei/SiliconPolicyPeiPreMem.inf
+
+. . .
+
+[FV.FvPostMemoryUncompact]
+BlockSize          = $(FLASH_BLOCK_SIZE)
+FvAlignment        = 16
+ERASE_POLARITY     = 1
+ . . .
+
+!include $(PLATFORM_PACKAGE)/Include/Fdf/CorePostMemoryInclude.fdf
+
+# Init Board Config PCD
+INF $(PLATFORM_PACKAGE)/PlatformInit/PlatformInitPei/PlatformInitPostMem.inf
+INF IntelFsp2WrapperPkg/FspsWrapperPeim/FspsWrapperPeim.inf
+INF $(PLATFORM_PACKAGE)/PlatformInit/SiliconPolicyPei/SiliconPolicyPeiPostMem.inf
+
+  . . .
+
+[FV.FvUefiBootUncompact]
+BlockSize          = $(FLASH_BLOCK_SIZE)
+FvAlignment        = 16
+ . . .
+
+!include $(PLATFORM_PACKAGE)/Include/Fdf/CoreUefiBootInclude.fdf
+
+INF  UefiCpuPkg/CpuDxe/CpuDxe.inf
+INF  MdeModulePkg/Bus/Pci/PciHostBridgeDxe/PciHostBridgeDxe.inf
+
+INF  MdeModulePkg/Bus/Pci/SataControllerDxe/SataControllerDxe.inf
+INF  MdeModulePkg/Bus/Ata/AtaBusDxe/AtaBusDxe.inf
+INF  MdeModulePkg/Bus/Ata/AtaAtapiPassThru/AtaAtapiPassThru.inf
+INF  MdeModulePkg/Universal/Console/GraphicsOutputDxe/GraphicsOutputDxe.inf
+
+INF  ShellPkg/Application/Shell/Shell.inf
+
+INF  $(PLATFORM_PACKAGE)/PlatformInit/PlatformInitDxe/PlatformInitDxe.inf
+INF  IntelFsp2WrapperPkg/FspWrapperNotifyDxe/FspWrapperNotifyDxe.inf
+
+INF  $(PLATFORM_PACKAGE)/Test/TestPointStubDxe/TestPointStubDxe.inf
+
+
+
+```
+
+
+@snap[south-east span-45 ]
+<p style="line-height:40% " align="left"><span style="font-size:0.55em;">
+Link to <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkg.fdf"> Kabylake .FDF </a>
 file
 </span></p>
 @snapend
