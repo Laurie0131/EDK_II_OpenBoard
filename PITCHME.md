@@ -837,8 +837,8 @@ Many Platforms have a bash or Python script  file to pre & post process the EDK 
 <a href="https://github.com/tianocore/edk2-platforms/tree/master/Platform/Intel#build">Build Script</a><br>
 <br>
 Example: Invoked from the @size[.75em](`edk2-platforms/Platform/Intel`)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-          @size[.75em](@color[#A8ff60](`build_bios.py –p <Board-name> `))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               @size[.75em]( - uses config file @color[#A8ff60](`build.cfg`))<br>
+          @size[.75em](@color[#A8ff60](`python build_bios.py –p <Board-name> `))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               @size[.75em]( - uses config file @color[#A8ff60](`build.cfg`) from the @color[#A8ff60](`<Board-name>`) directory)<br>
 			   <br>
 </span></p>
 @snapend
