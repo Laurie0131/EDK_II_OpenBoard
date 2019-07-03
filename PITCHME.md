@@ -937,7 +937,7 @@ SILENT_MODE = FALSE <br>&nbsp;&nbsp;
 @snap[north-west span-80 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
-Platform Firmware Boot Stage PCD in: <br><br>
+Platform Firmware Boot Stage PCD in: <br><br><br>
 @color[yellow](<b>`OpenBoardPkgConfig.dsc`</b>)
 </span></p>
 
@@ -1007,6 +1007,46 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 - Stage VII – Tuning
    - Size and performance optimizations
 
+
+---?image=assets/images/slides/Slide18.JPG
+@title[Platform Features à la cart with PCDs ]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Features à la cart with PCDs  </b>)</span><span style="font-size:0.8em;" ></span></p>
+
+@snap[south-west span-100 ]
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-80 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+PThe Platform Config .dsc file controls if feature ON or OFF
+<br><br>
+Example:
+<br>
+@color[yellow](<b>`OpenBoardPkgConfig.dsc`</b> -  à la cart)
+</span></p>
+
+@snap[south-west span-100 ]
+<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+[PcdsFeatureFlag]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdStopAfterDebugInit)|FALSE <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdStopAfterMemInit)|FALSE <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdBootToShellOnly)|FALSE <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdUefiSecureBootEnable)|FALSE <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdTpm2Enable)|FALSE  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootStage >= 1 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdStopAfterDebugInit)|TRUE <br>&nbsp;&nbsp;&nbsp;&nbsp;
+!endif <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ . &nbsp;&nbsp;.&nbsp;&nbsp; .
+
+</span></p>
+<br>
+@snapend
+
+
+Note:
+
+At the same time, a platform firmware may provide an “à la cart” menu so that an advanced user can configure an individual item. For example, PcdUefiSecureBootEnable can be used to configure if a BIOS needs to support UEFI secure boot [AUTH VARIABLE]. PcdTpm2Enable can be used to configure if a BIOS needs to support the TPM2 [TPM2 EDKII]. 
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
