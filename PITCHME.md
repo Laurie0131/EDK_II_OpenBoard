@@ -725,7 +725,7 @@ This introduces issues when the developer wants to find a  particular driver.
 <br>
 <p align="left"><span class="gold" >@size[1.1](<b>Features</b>)</span></span></p>
 
-@snap[north-east span-35 fragment]
+@snap[north-east span-35 ]
 <br>
 <br>
 
@@ -863,8 +863,9 @@ Note:
 ### Building with the python script
 - Open command window, go to the workspace directory, e.g. c:\Kabylake or ~/Kabylake in the case of a linux OS
 - If using a linux OS
-- Type "cd edk2"
-- Type "source edksetup.sh"
+  - Type "cd edk2"
+  - Type "source edksetup.sh"
+
 - Type "cd ../" to go back to the workspace directory
 - Type "cd edk2-platforms/Platform/Intel
 - Type "python build_bios.py -p REPLACE_WITH_BOARD_NAME"
@@ -882,6 +883,41 @@ Each board can have a settings file that will override the edk2-platforms\Platfo
 An example of a board specific settings:
 edk2-platforms\Platform\Intel\KabylakeOpenBoardPkg\KabylakeRvp3\build_config.cfg
 
+---?image=assets/images/slides/Slide18.JPG
+@title[Example Build config file]
+<p align="right"><span class="gold" >@size[1.1](<b>Example Build config file</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+
+@snap[north-west span-80 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-80 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
+Kabylake example of Board specific settings:
+</span></p>
+<p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;
+&lt;workspace&gt;/edk2-platforms/Platform/Intel/KabylakeOpenBoardPkg/\ <br>&nbsp;&nbsp;
+KabylakeRvp3 /  @color[#A8ff60](build_config.cfg) <br>&nbsp;&nbsp;
+ <br>&nbsp;&nbsp;
+[CONFIG] <br>&nbsp;&nbsp;
+WORKSPACE_PLATFORM_BIN = WORKSPACE_PLATFORM_BIN <br>&nbsp;&nbsp;
+EDK_SETUP_OPTION = <br>&nbsp;&nbsp;
+openssl_path = <br>&nbsp;&nbsp;
+PLATFORM_BOARD_PACKAGE = KabylakeOpenBoardPkg <br>&nbsp;&nbsp;
+PROJECT = KabylakeOpenBoardPkg/KabylakeRvp3 <br>&nbsp;&nbsp;
+BOARD = KabylakeRvp3 <br>&nbsp;&nbsp;
+FLASH_MAP_FDF = KabylakeOpenBoardPkg/Include/Fdf/FlashMapInclude.fdf <br>&nbsp;&nbsp;
+PROJECT_DSC = KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkg.dsc <br>&nbsp;&nbsp;
+BOARD_PKG_PCD_DSC = KabylakeOpenBoardPkg/KabylakeRvp3/OpenBoardPkgPcd.dsc <br>&nbsp;&nbsp;
+ADDITIONAL_SCRIPTS = KabylakeOpenBoardPkg/KabylakeRvp3/build_board.py <br>&nbsp;&nbsp;
+PrepRELEASE = DEBUG <br>&nbsp;&nbsp;
+SILENT_MODE = FALSE <br>&nbsp;&nbsp;
+&nbsp;.&nbsp;.&nbsp;.
+</span></p>
+@snapend
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
