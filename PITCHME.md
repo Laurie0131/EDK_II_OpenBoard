@@ -890,7 +890,8 @@ edk2-platforms\Platform\Intel\KabylakeOpenBoardPkg\KabylakeRvp3\build_config.cfg
 @snap[north-west span-80 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-west span-80 ]
@@ -898,8 +899,9 @@ edk2-platforms\Platform\Intel\KabylakeOpenBoardPkg\KabylakeRvp3\build_config.cfg
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
 Kabylake example of Board specific settings:
 </span></p>
-<p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;
-&lt;workspace&gt;/edk2-platforms/Platform/Intel/KabylakeOpenBoardPkg/\ <br>&nbsp;&nbsp;
+<p style="line-height:40% " align="left"><span style="font-size:0.45em; font-family:Consolas;" >&nbsp;&nbsp;
+&lt;workspace&gt;/edk2-platforms/<br>&nbsp;&nbsp;
+Platform/Intel/KabylakeOpenBoardPkg/\ <br>&nbsp;&nbsp;
 KabylakeRvp3 /  @color[#A8ff60](build_config.cfg) <br>&nbsp;&nbsp;
  <br>&nbsp;&nbsp;
 [CONFIG] <br>&nbsp;&nbsp;
