@@ -798,6 +798,80 @@ Note:
 - Most  advanced modules can be open source, too, but there might be a small portion of code that can not be open source, such as the binary elements used by TXT/AMT/CSM 
 
 
+---?image=assets/images/slides/Slide20.JPG
+@title[Basic Boot Components]
+<p align="right"><span class="gold" >@size[1.1](<b>Basic Boot Components</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+
+
+
+Note:
+
+Typically all the Intel Architecture platform firmware basic boot components are almost the same. In the slide, the GREEN part means the generic EDK II core modules. 
+The YELLOW part means the silicon specific modules. And finally, the PURPLE part means the platform/board specific modules 
+
+
+In the UEFI scope, we need the variable, timer, CPU, PCI, either SATA or USB as storage, Graphic or terminal as console output, and finally, USB/PS2 Keyboard or terminal as console input. The SMM portion is required for most X86 platforms in order to support UEFI Authenticated Variables [AUTH VARIABLE]. 
+Most UEFI OSes also require ACPI, so ACPI tables and an SMM driver to enable/disable ACPI are needed. 
+The platform may also need to initiliaze General Purpose Input/Ouput (GPIO) pins or a Super IO (SIO) to enable the basic boot functionality. 
+
+
+
+---?image=assets/images/slides/Slide18.JPG
+@title[Features Build Enabled]
+<p align="right"><span class="gold" >@size[1.1](<b>Features Build Enabled</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+
+
+@snap[North-west span-75]
+<br>
+<br>
+<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.8em;" >
+Many Platforms have a bash or Python script  file to pre & post process the EDK II build process: 
+<a href="https://github.com/tianocore/edk2-platforms/tree/master/Platform/Intel#build">Build Script</a><br>
+
+Example: Invoked from the `edk2-platforms/Platform/Intel`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          @color[#A8ff60](`build_bios.py –p <Board-name> `)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               uses config file @color[#A8ff60](`build.cfg`)<br>
+Configuration  Files:
+</span></p>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" > `edk2-platforms\Platform\Intel\build.cfg ` - contains the default settings </span> </li>
+  <li><span style="font-size:0.65em" > Default settings are under the `DEFAULT_CONFIG` section</span> </li>
+  <li><span style="font-size:0.65em" > Override the `edk2-platforms/Platform/Intel/. . ./build.cfg` settings from each board in board specific directory</span> </li>
+</ul>
+@snapend
+
+
+
+@snap[North-west span-75 fragment]
+<br>
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%" ><span style="font-size:0.8em">Platform-Board Build Scripts<br><br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+### Building with the python script
+- Open command window, go to the workspace directory, e.g. c:\Kabylake or ~/Kabylake in the case of a linux OS
+- If using a linux OS
+- Type "cd edk2"
+- Type "source edksetup.sh"
+- Type "cd ../" to go back to the workspace directory
+- Type "cd edk2-platforms/Platform/Intel
+- Type "python build_bios.py -p REPLACE_WITH_BOARD_NAME"
+
+
+
+#### Configuration Files
+The edk2-platforms\Platform\Intel\build.cfg file contains the default settings used by build_bios.py
+
+The default settings are under the DEFAULT_CONFIG section
+
+Each board can have a settings file that will override the edk2-platforms\Platform\Intel\build.cfg settings
+
+
+An example of a board specific settings:
+edk2-platforms\Platform\Intel\KabylakeOpenBoardPkg\KabylakeRvp3\build_config.cfg
+
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
