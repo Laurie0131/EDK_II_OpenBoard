@@ -1747,7 +1747,7 @@ Note:
 @title[Configuration Multi-SKU PCD – Board ID  ]
 <p align="right"><span class="gold" >@size[1.1](<b>Configuration Multi-SKU PCD – Board ID </b>)</span><span style="font-size:0.8em;" ></span></p>
 
-@snap[north-west span-45 ]
+@snap[north-west span-50 ]
 <br>
 <br>
 <br>
@@ -1765,7 +1765,7 @@ Note:
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-west span-45 ]
+@snap[north-west span-50 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
 @color[cyan](DSC File – SKU Set at BUILD time)
 </span></p>
@@ -1774,8 +1774,8 @@ Note:
  .&nbsp;.&nbsp;.<br>&nbsp;&nbsp;
 SKUID_IDENTIFIER = ?<br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
-[SkuIds]<br<br>&nbsp;&nbsp;>&nbsp;&nbsp;
-0|DEFAULT
+[SkuIds]<br>&nbsp;&nbsp;
+0|DEFAULT<br>&nbsp;&nbsp;
 4|BoardX<br>&nbsp;&nbsp;
 0x42|BoardY<br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
@@ -1797,8 +1797,8 @@ gBoardModuleTokenSpaceGuid.PcdGpioInitValue|\<br>&nbsp;&nbsp;&nbsp;&nbsp;
 @color[cyan](SKU PCD Set Dynamically)
 </span></p>
 <br>
-<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-<br>&nbsp;&nbsp;
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >
+&nbsp;&nbsp;
 BoardXBoardDetect( VOID)<br>&nbsp;&nbsp;
 &lbrace;<br>&nbsp;&nbsp;
 . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
