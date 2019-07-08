@@ -1823,6 +1823,81 @@ Multi-sku PCD concept is defined by PI specification Volume 3, Chapter 8 PCD, EF
 
 The SKU PCD is actually a dynamic PCD. During boot, the board detection takes the responsibility to set the SKU. Once the SKU PCD is set, the configuration associated with this SKU takes effect immediately 
 
+---
+@title[Default Stores PCD – for Configuration   ]
+<p align="right"><span class="gold" >@size[1.1](<b>Default Stores PCD – for Configuration  </b>)</span><span style="font-size:0.8em;" ></span></p>
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<br>
+<br>
+
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-west span-100 ]
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
+@color[cyan](DSC File – )
+</span></p>
+
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+ .&nbsp;.&nbsp;.<br>&nbsp;&nbsp;
+VPD_TOOL_GUID  = 8C3D856A-9 . . .<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+[DefaultStores]<br>&nbsp;&nbsp;
+0|STANDARD<br>&nbsp;&nbsp;
+1|MANUFACTURING<br>&nbsp;&nbsp;
+2|SAFE<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+[PcdsDynamicExVpd.common.DEFAULT]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  gEfiMdeModulePkgTokenSpaceGuid.PcdNvStoreDefaultValueBuffer|*<br>&nbsp;&nbsp;
+[PcdsDynamicEx.common.DEFAULT.STANDARD]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  gOemSkuTokenSpaceGuid.PcdSetupData.CloudProfile|0x0<br>&nbsp;&nbsp;
+  gOemSkuTokenSpaceGuid.PcdSetupData.Use1GPageTable|0x1<br>&nbsp;&nbsp;
+[PcdsDynamicEx.common.DEFAULT.MANUFACTURING]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  gOemSkuTokenSpaceGuid.PcdSetupData.CloudProfile|0x1<br>&nbsp;&nbsp;
+  gOemSkuTokenSpaceGuid.PcdSetupData.Use1GPageTable|0x0<br>&nbsp;&nbsp;
+
+
+
+...&rbrace;<br>&nbsp;&nbsp;
+</span></p> 
+@snapend
+
+
+@snap[north-east span-45 ]
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br><br>
+&nbsp;
+</span></p>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >Special PCD to support the default stores concept in UEFI specification</span> </li>
+  <li><span style="font-size:0.65em" >Can be Dynamically set</span> </li>
+</ul>
+@snapend
+
+
+Note:
+DefaultStores PCD is a special PCD to support the default stores concept in UEFI specification, Chapter 32 Human Interface Infrastructure. Per UEFI specification, there are 3 standard default stores: Standard Default, Manufacturing Default, and Safe Default 
+
+VPD_TOOL_GUID = 8C3D856A-9BE6-468E-850A-24F7A8D38E08 
+
+#### fdf file 
+<pre>
+[FD.Platform] 
+... 
+0x00C50000|0x00030000 
+gEfiMdeModulePkgTokenSpaceGuid.PcdVpdBaseAddress 
+FILE = $(OUTPUT_DIRECTORY)/$(TARGET)_$(TOOL_CHAIN_TAG)/FV/8C3D856A-9BE6-468E-850A-24F7A8D38E08.bin 
+</pre>
+
+Dynampic set in BoardInitPreMem function
+PcdSet16S (PcdSetNvStoreDefaultId 
+ When its value is set in PEI, it will trig the default setting to be applied as the default EFI variable.
+
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
