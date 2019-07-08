@@ -1853,23 +1853,20 @@ VPD_TOOL_GUID  = 8C3D856A-9 . . .<br>&nbsp;&nbsp;
 2|SAFE<br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
-[PcdsDynamicExVpd.common.DEFAULT]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+[PcdsDynamicExVpd.common.@color[yellow](DEFAULT)]<br>&nbsp;&nbsp;&nbsp;&nbsp;
   gEfiMdeModulePkgTokenSpaceGuid.PcdNvStoreDefaultValueBuffer|*<br>&nbsp;&nbsp;
-[PcdsDynamicEx.common.DEFAULT.STANDARD]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+[PcdsDynamicEx.common.DEFAULT.@color[yellow](STANDARD)]<br>&nbsp;&nbsp;&nbsp;&nbsp;
   gOemSkuTokenSpaceGuid.PcdSetupData.CloudProfile|0x0<br>&nbsp;&nbsp;&nbsp;&nbsp;
   gOemSkuTokenSpaceGuid.PcdSetupData.Use1GPageTable|0x1<br>&nbsp;&nbsp;
-[PcdsDynamicEx.common.DEFAULT.MANUFACTURING]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+[PcdsDynamicEx.common.DEFAULT.@color[yellow](MANUFACTURING)]<br>&nbsp;&nbsp;&nbsp;&nbsp;
   gOemSkuTokenSpaceGuid.PcdSetupData.CloudProfile|0x1<br>&nbsp;&nbsp;&nbsp;&nbsp;
   gOemSkuTokenSpaceGuid.PcdSetupData.Use1GPageTable|0x0<br>&nbsp;&nbsp;
 
-
-
-...&rbrace;<br>&nbsp;&nbsp;
 </span></p> 
 @snapend
 
 
-@snap[north-east span-45 ]
+@snap[north-east span-45 fragment ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br><br>
 &nbsp;
 </span></p>
