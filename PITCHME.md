@@ -1833,7 +1833,7 @@ The SKU PCD is actually a dynamic PCD. During boot, the board detection takes th
 <br>
 <br>
 
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -1856,10 +1856,10 @@ VPD_TOOL_GUID  = 8C3D856A-9 . . .<br>&nbsp;&nbsp;
 [PcdsDynamicExVpd.common.DEFAULT]<br>&nbsp;&nbsp;&nbsp;&nbsp;
   gEfiMdeModulePkgTokenSpaceGuid.PcdNvStoreDefaultValueBuffer|*<br>&nbsp;&nbsp;
 [PcdsDynamicEx.common.DEFAULT.STANDARD]<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  gOemSkuTokenSpaceGuid.PcdSetupData.CloudProfile|0x0<br>&nbsp;&nbsp;
+  gOemSkuTokenSpaceGuid.PcdSetupData.CloudProfile|0x0<br>&nbsp;&nbsp;&nbsp;&nbsp;
   gOemSkuTokenSpaceGuid.PcdSetupData.Use1GPageTable|0x1<br>&nbsp;&nbsp;
 [PcdsDynamicEx.common.DEFAULT.MANUFACTURING]<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  gOemSkuTokenSpaceGuid.PcdSetupData.CloudProfile|0x1<br>&nbsp;&nbsp;
+  gOemSkuTokenSpaceGuid.PcdSetupData.CloudProfile|0x1<br>&nbsp;&nbsp;&nbsp;&nbsp;
   gOemSkuTokenSpaceGuid.PcdSetupData.Use1GPageTable|0x0<br>&nbsp;&nbsp;
 
 
