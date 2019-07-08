@@ -834,10 +834,11 @@ The platform may also need to initiliaze General Purpose Input/Ouput (GPIO) pins
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
 Many Platforms have a bash or Python script  file to pre & post process the EDK II build process: 
-<a href="https://github.com/tianocore/edk2-platforms/tree/master/Platform/Intel#build">Build Script</a><br>
-<br>
-Example: Invoked from the @size[.75em](`edk2-platforms/Platform/Intel`)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-          @size[.75em](@color[#A8ff60](`python build_bios.py –p <Board-name> `))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/tianocore/edk2-platforms/tree/master/Platform/Intel#build">Build Script</a></p>
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.75em;" >
+Example: Invoked from the @size[.7em](`edk2-platforms/Platform/Intel`)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+          @size[.7em](@color[#A8ff60](`python build_bios.py –p <Board-name> `))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                @size[.75em]( - uses config file @color[#A8ff60](`build.cfg`) from the @color[#A8ff60](`<Board-name>`) directory)<br>
 			   <br>
 </span></p>
@@ -852,7 +853,6 @@ Configuration  Files:
   <li><span style="font-size:0.6em" > Default settings are under the `DEFAULT_CONFIG` section</span> </li>
   <li><span style="font-size:0.6em" > Override the `edk2-platforms/Platform/Intel/. . ./build.cfg` settings from each board in board specific directory</span> </li>
 </ul>
-<br>
 <br>
 <br>
 @snapend
