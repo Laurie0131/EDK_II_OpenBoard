@@ -838,7 +838,7 @@ Many Platforms have a bash or Python script  file to pre & post process the EDK 
 
 <p style="line-height:60%" align="left" ><span style="font-size:0.75em;" >
 Example: Invoked from the @size[.7em](`edk2-platforms/Platform/Intel`)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-          @size[.7em](@color[#A8ff60](`python build_bios.py –p <Board-name> `))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @size[.7em](@color[#A8ff60](<b>`python build_bios.py –p <Board-name> `</b>))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                @size[.75em]( - uses config file @color[#A8ff60](`build.cfg`) from the @color[#A8ff60](`<Board-name>`) directory)<br>
 			   <br>
 </span></p>
@@ -1534,7 +1534,7 @@ Then the code is consistent and easy to maintain, especially if the next generat
 <br>
 <br>
 <br>
-<p align="left" style="line-height:80%"><span style="font-size:0.9em; ">Value of PCD set in @color[yellow](`OpenBoardPkg. . .dsc`)</span></p>
+<p align="left" style="line-height:80%"><span style="font-size:0.9em; ">Value of PCD set in @color[yellow](<b>`OpenBoardPkg. . .dsc`</b>)</span></p>
 @box[bg-black text-white my-box-pad2  ](<p style="line-height:40%" align="left"><span style="font-size:0.450em; font-family:Consolas; " >&nbsp;&nbsp;[Pcds...]<br>&nbsp;&nbsp;PcdTokenSpaceGuidName.@color[red](PcdTokenName)|@color[cyan](Value)[|DatumType[|MaximumDatumSize]]</span><br>&nbsp;&nbsp;</p>)
 <br>
 @snapend
