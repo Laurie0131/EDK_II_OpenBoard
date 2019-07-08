@@ -1770,7 +1770,7 @@ Note:
 @color[cyan](DSC File – SKU Set at BUILD time)
 </span></p>
 
-<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
  .&nbsp;.&nbsp;.<br>&nbsp;&nbsp;
 SKUID_IDENTIFIER = ?<br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
@@ -1802,11 +1802,11 @@ gBoardModuleTokenSpaceGuid.PcdGpioInitValue|\<br>&nbsp;&nbsp;&nbsp;&nbsp;
 BoardXBoardDetect( VOID)<br>&nbsp;&nbsp;
 &lbrace;<br>&nbsp;&nbsp;
 . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  if (LibPcdGetSku () != 0) &lbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  if (@color[yellow](LibPcdGetSku) () != 0) &lbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     return EFI_SUCCESS;<br>&nbsp;&nbsp;&nbsp;&nbsp;
   &rbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;
   if (IsBoardX ()) &lbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     LibPcdSetSku (BoardIdIsBoardX);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     @color[yellow](LibPcdSetSku) (BoardIdIsBoardX);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      ASSERT (LibPcdGetSku() == <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               BoardIdIsBoardX);<br>&nbsp;&nbsp;&nbsp;&nbsp;
   &rbrace;<br>&nbsp;&nbsp;&nbsp;&nbsp;
