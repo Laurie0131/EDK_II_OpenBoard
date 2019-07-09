@@ -1190,6 +1190,8 @@ file
 
 Note:
 
+Click on link to view the whole .DSC file
+
 ---
 @title[Example Kabylake Configuration .FDF file ]
 <p align="right"><span class="gold" >@size[1.1](<b>Example Kabylake Configuration .FDF file</b>)</span><span style="font-size:0.8em;" ></span></p>
@@ -1263,6 +1265,8 @@ file
 @snapend
 
 Note:
+
+Click on the link to view the whole .FDF file
 
 
 ---?image=assets/images/slides/Slide28.JPG
@@ -1587,7 +1591,7 @@ Then the rest of PlatformInit code (YELLOW box) can just call PcdGet() to get th
 
 If the Platform driver wants to update a PCD value by calling PcdSet() later, the “ConfigConvert” can register a PCD callback function to redirect setting to other source (for example, variable). 
 
-The gist of configuration conversion is that any other platform driver should use PcdGet() to retrieve policy data, and PcdSet() to update policy data. 
+The Key Point is that the purpose of the configuration conversion is that any other platform driver should use PcdGet() to retrieve policy data, and PcdSet() to update policy data. 
 
 KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data, but this might be used for other real platforms. 
 
@@ -1895,6 +1899,49 @@ Dynampic set in BoardInitPreMem function
 PcdSet16S (PcdSetNvStoreDefaultId 
  When its value is set in PEI, it will trig the default setting to be applied as the default EFI variable.
 
+---
+@title[Silicon Policy data flow guidelines]
+<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy data flow guidelines</b>)</span></span></p>
+
+
+
+@snap[north-east span-65 ]
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" ><b>`Typedef` data structure</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" ><b>PCD database, Setup Variable, Binary Blob, etc.</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-45 ]
+<br>
+<br>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon Module Provides Default Silicon Policy Data</b><br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board Module Updates the Silicon Policy Data </b><br><br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+Silicon policy data update is one of the most important tasks as part of bringing up a board. In order to make the board enablement more efficient, we have the below guidelines: 
+
+
+## Silicon Module Provides Default Silicon Policy Data 
+
+A silicon policy data object is created per Silicon module. The data structure should only contain the data. Functions should not be used in silicon policy data. 
+When a silicon module installs this policy data, it should consider the most common usage as the default policy data. 
+
+
+
+## Board Module Updates the Silicon Policy Data 
+
+A board module may get default silicon policy data structures and update them. 
+
+A board module may refer to another source to get the board specific policy data, including but not limited to: 
+- PCD database 
+- Setup Variable 
+- Binary Blob 
+- Built-in C structure. 
+
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
@@ -1954,6 +2001,7 @@ gPlatformModuleTokenSpaceGuid.PcdBootStage
 PCD Is tested within .FDF to see which modules to include 
 </span></p>
 @snapend
+
 
 ---
 @title[EDK II Infrastructure]
