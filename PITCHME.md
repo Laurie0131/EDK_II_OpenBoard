@@ -2450,7 +2450,7 @@ Platform Initialization - Firmware Volume
 
 
 
-@snap[north-east span-65 ]
+@snap[north-east span-65 fragment ]
 <p style="line-height:20%"><br><br><br><br>&nbsp;</p>
 <p style="line-height:32%" align="left"><span style="font-size:0.5em;" ><b>@color[yellow](FvPreMemory) </b>– The PEIM dispatched before the memory initialization. Also included @color[yellow](FSP - FVs) 
 <br><br>&nbsp;</span></p>
@@ -2478,6 +2478,74 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 - FvOsBoot – The DXE driver supporting UEFI OS boot, such as UEFI Windows. 
 - FvSecurity – The security related modules, such as UEFI Secure boot, TPM etc. 
 - FvAdvanced – The advanced feature modules, such as UEFI network, IPMI etc. 
+
+---
+@title[FSP Firmware Volumes ]
+<p align="right"><span class="gold" >@size[1.1](<b>FSP Firmware Volumes </b>)<br></span><span style="font-size:0.75em;" >- Created Pre-Build</span></p>
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-30 ]
+<br>
+<br>
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" ><br>&nbsp;</span></p>)
+<p style="line-height:20%">&nbsp;</p>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" ><br>&nbsp;</span></p>)
+<p style="line-height:20%">&nbsp;</p>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" ><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north span-30 ]
+<br>
+<br>
+<br>
+@box[bg-green-pp text-black rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>FvFspT</b><br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-black rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>FvFspM</b><br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-black rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>FvFspS</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-west span-60 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+&nbsp;MyWorkSpace/<br>&nbsp;&nbsp;
+@color[yellow](edk2)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  - "@color[#FFC000](<font face="Arial">edk2 Common</font>)"<br>&nbsp;&nbsp;
+@color[yellow](edk2-platforms)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ "@color[#FFC000](<font face="Arial">Platform</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          BoardX/ “@color[#FFC000](<font face="Arial">Board</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ "@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/<br>&nbsp;&nbsp;
+@color[yellow](edk2-non-osi)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;
+@color[yellow](FSP)/"@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
+   . . ./<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+Note:
+
+Prior to the EDK II build the Tool RebaseAndPatchFspBinBaseAddress.py will rebase the Fsp.Fd using the board Flashmapinclude.fdf file into 3 FVs
+
+- FvFspT
+– Temp Memory
+- FvFspM
+-> FvPreMemorySilicon
+- FvFspS
+-> FvPostMemorySilicon
 
 
 
