@@ -2499,7 +2499,7 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 </span></p>
 @snapend
 
-@snap[north-east span-40 ]
+@snap[north-east span-35 ]
 <br>
 <br>
 <br>
