@@ -1975,7 +1975,7 @@ The KabylakeSiliconPkg provides the former (PeiFspPolicyInitLib.c), and Kabylake
 @title[Update Silicon Policy example ]
 <p align="right"><span class="gold" >@size[1.1](<b>Update Silicon Policy example</b>)</span><span style="font-size:0.8em;" ></span></p>
 
-@snap[north-west span-50 ]
+@snap[north-west span-49 ]
 <br>
 <br>
 <br>
@@ -1983,7 +1983,7 @@ The KabylakeSiliconPkg provides the former (PeiFspPolicyInitLib.c), and Kabylake
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-east span-50 ]
+@snap[north-east span-49 ]
 <br>
 <br>
 <br>
@@ -1994,12 +1994,12 @@ The KabylakeSiliconPkg provides the former (PeiFspPolicyInitLib.c), and Kabylake
 
 @snap[north-west span-100 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" ><br><br>
-KabylakeOpenBoardPkg/FspWrapper/Library/PeiFspPolicyUpdateLib
+KabylakeOpenBoardPkg/FspWrapper/Library/PeiSiliconPolicyUpdateLibFsp
 </span></p>
 @snapend
 
 
-@snap[north-west span-45 ]
+@snap[north-west span-47 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>&nbsp;
 </span></p>
 
@@ -2011,6 +2011,7 @@ IN OUT FSPM_UPD &ast;FspmUpd <br>&nbsp;&nbsp;
 ) <br>&nbsp;&nbsp;
 &lbrace; <br>&nbsp;&nbsp;
 VOID &ast;Buffer; <br>&nbsp;&nbsp;
+// @color[#A8ff60](Override MemorySpdPtr)<br>&nbsp;&nbsp;
 CopyMem((VOID &ast;)(UINTN)\  <br>&nbsp;&nbsp;&nbsp;&nbsp;
  FspmUpd-&gt;FspmConfig.MemorySpdPtr00,\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
  (VOID *)(UINTN)PcdGet32(PcdMrcSpdData),\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2023,7 +2024,7 @@ CopyMem((VOID &ast;)(UINTN)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east span-45 ]
+@snap[north-east span-47 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>&nbsp;
 </span></p>
 
@@ -2031,6 +2032,8 @@ CopyMem((VOID &ast;)(UINTN)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 <br>&nbsp;&nbsp;
 @color[#A8ff60](. . .) <br>&nbsp;&nbsp;
+// @color[#A8ff60](Updating Dq Pins Interleaved,Rcomp) <br>&nbsp;&nbsp;
+// @color[#A8ff60](Resistor &amp; Rcomp Target Settings )<br>&nbsp;&nbsp;
   <br>&nbsp;&nbsp;&nbsp;&nbsp;
   Buffer = (VOID &ast;) (UINTN) @color[yellow](PcdGet32) \      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           (PcdMrcRcompTarget);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2045,6 +2048,13 @@ CopyMem((VOID &ast;)(UINTN)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
+@snap[south-east span-35 ]
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em;" >
+Link to file: <a href="https://github.com/tianocore/edk2-platforms/blob/master/Platform/Intel/KabylakeOpenBoardPkg/FspWrapper/Library/PeiSiliconPolicyUpdateLibFsp/PeiSaPolicyUpdatePreMem.c">
+PeiSaPolicyUpdatePrMem.c</a>
+</span></p> 
+@snapend
+
 Note:
 One example on how to update silicon policy is shown here
 
@@ -2052,7 +2062,12 @@ One example on how to update silicon policy is shown here
 Code is in: 
 - KabylakeOpenBoardPkg/FspWrapper/Library/PeiFspPolicyUpdateLib/PeiSaPolicyUpdatePreMem.c
 
-
+  //
+  // If SpdAddressTable are not all 0, it means DIMM slots implemented and
+  // MemorySpdPtr* already updated by reading SPD from DIMM in SiliconPolicyInitPreMem.
+  //
+  // If SpdAddressTable all 0, this is memory down design and hardcoded SpdData
+  // should be applied to MemorySpdPtr*.
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
