@@ -2007,17 +2007,17 @@ KabylakeOpenBoardPkg/FspWrapper/Library/PeiFspPolicyUpdateLib
 EFI_STATUS<br>&nbsp;&nbsp;
 EFIAPI <br>&nbsp;&nbsp;
 PeiFspSaPolicyUpdatePreMem ( <br>&nbsp;&nbsp;
-IN OUT FSPM_UPD *FspmUpd <br>&nbsp;&nbsp;
+IN OUT FSPM_UPD &ast;FspmUpd <br>&nbsp;&nbsp;
 ) <br>&nbsp;&nbsp;
 &lbrace; <br>&nbsp;&nbsp;
-VOID *Buffer; <br>&nbsp;&nbsp;
-CopyMem((VOID *)(UINTN)\  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+VOID &ast;Buffer; <br>&nbsp;&nbsp;
+CopyMem((VOID &ast;)(UINTN)\  <br>&nbsp;&nbsp;&nbsp;&nbsp;
  FspmUpd-&gt;FspmConfig.MemorySpdPtr00,\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
  (VOID *)(UINTN)PcdGet32 (PcdMrcSpdData), \ <br>&nbsp;&nbsp;&nbsp;&nbsp;
  PcdGet16 (PcdMrcSpdDataSize)); <br>&nbsp;&nbsp;
-CopyMem((VOID *)(UINTN)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+CopyMem((VOID &ast;)(UINTN)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
  FspmUpd-&gt;FspmConfig.MemorySpdPtr10,\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
- (VOID *)(UINTN)PcdGet32 (PcdMrcSpdData),\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ (VOID &ast;)(UINTN)PcdGet32 (PcdMrcSpdData),\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
  PcdGet16 (PcdMrcSpdDataSize)); <br>&nbsp;&nbsp;
 </span></p> 
 @snapend
@@ -2028,19 +2028,19 @@ CopyMem((VOID *)(UINTN)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >
-&nbsp;&nbsp;
+<br>
+<br>&nbsp;&nbsp;
 . . . <br>&nbsp;&nbsp;
-  <br>&nbsp;&nbsp;
-  Buffer = (VOID *) (UINTN) PcdGet32 \      <br>&nbsp;&nbsp;&nbsp;&nbsp;
-          (PcdMrcRcompTarget);  <br>&nbsp;&nbsp;
-  if (Buffer) &lbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;
-    CopyMem ((VOID *)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      FspmUpd->FspmConfig.RcompTarget, \ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Buffer = (VOID &ast;) (UINTN) PcdGet32 \      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          (PcdMrcRcompTarget);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  if (Buffer) &lbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    CopyMem ((VOID &ast;)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      FspmUpd-&gt;FspmConfig.RcompTarget, \ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       Buffer, 10);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
   &rbrace;  <br>&nbsp;&nbsp;&nbsp;&nbsp;
   return EFI_SUCCESS;  <br>&nbsp;&nbsp;
-&rbrace;   <br>&nbsp;&nbsp;
-
+&rbrace;  
 </span></p> 
 @snapend
 
