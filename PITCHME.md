@@ -2505,11 +2505,11 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 <br>
 <br>
 <br>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" >- Temp Memory<br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%" align="left"><span style="font-size:0.45em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Temp Memory<br>&nbsp;</span></p>)
 <p style="line-height:20%"><br>&nbsp;</p>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" >- -&gt;FvPreMemorySilicon<br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%" align="left"><span style="font-size:0.45em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- -&gt;FvPreMemorySilicon<br>&nbsp;</span></p>)
 <p style="line-height:20%"><br>&nbsp;</p>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" >- -&gt;FvPostMemorySilicon<br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%" align="left"><span style="font-size:0.45em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- -&gt;FvPostMemorySilicon<br>&nbsp;</span></p>)
 @snapend
 
 @snap[north span-30 ]
