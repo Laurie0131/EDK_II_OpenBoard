@@ -2203,6 +2203,151 @@ PCD Is tested within .FDF to see which modules to include
 </span></p>
 @snapend
 
+Note:
+table d’hôte  Pronounced “Tab la dout”
+Image source: http://3.bp.blogspot.com/-nCzQh7Xu3_I/Uzk1a4DRk-I/AAAAAAAABCY/lQvT1cbn8Ug/s1600/5892-Caucasian-Man-Sitting-At-A-Table-And-Reading-A-Menu-At-A-Restaurant-Clipart-Illustration.jpg
+
+
+
+Depending on the stage # provides some idea regarding what components are needed for a BIOS solution. It can be 3M full featured BIOS, or only 256K if just the basic boot is required, in some cases. 
+
+This work can be done by defining some default configuration in PlatformConfig.dsc. 
+For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to OS (with ACPI/SMM), or PcdBootStage|3 to configure a BIOS to boot to shell only (without ACPI/SMM) 
+
+- Stage I - Minimal Debug
+  - Serial Port, Port 80, External debuggers Optional: Software debugger
+- Stage II  - Memory Functional
+  - Basic hardware initialization including main memory
+- Stage III - Boot to UEFI Shell
+   - Generic DXE driver execution
+- Stage IV - Boot to OS
+  - Boot a general purpose operating system with the minimally required feature set. Publish a minimal set of ACPI tables.- Stage V -Security Enabled
+  - UEFI Secure Boot, TCG trusted boot, DMA protection, etc.
+- Stage VI - Advanced Feature Selection
+  - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
+- Stage VII – Tuning
+   - Size and performance optimizations
+
+Within the DSC and  FDF choose which modules to include based on PCD
+Example
+<pre>
+DSC:
+[PcdsFeatureFlag]
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdStopAfterMemInit|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdBootToShellOnly|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdUefiSecureBootEnable|FALSE
+  gMinPlatformPkgTokenSpaceGuid.PcdTpm2Enable|FALSE
+
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootStage >= 1
+ gMinPlatformPkgTokenSpaceGuid.PcdStopAfterDebugInit|TRUE
+!endif
+
+Example FDF
+!if gMinPlatformPkgTokenSpaceGuid.PcdBootToShellOnly == FALSE
+INF  MdeModulePkg/Universal/FaultTolerantWriteDxe/FaultTolerantWriteSmm.inf
+INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmmRuntimeDxe.inf
+INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
+!endif
+</pre>
+
+
+---?image=assets/images/slides/Slide45.JPG
+<!-- .slide: data-transition="none" -->
+@title[Stages vs. Boot Flow]
+<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+Note:
+
+1. enable debug
+2. memory initialization
+3. boot to UEFI shell only
+4. boot to OS
+5. boot to OS w/ security enabled
+6. Advanced Feature Selection
+7. Not shown  Performance Optimizations
+
+
+
++++?image=assets/images/slides/Slide46.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
+@title[Stages vs. Boot Flow 02]
+<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+Note:
+1. enable debug
+2. memory initialization
+3. boot to UEFI shell only
+4. boot to OS
+5. boot to OS w/ security enabled
+6. Advanced Feature Selection
+7. Not shown  Performance Optimizations
+
+
++++?image=assets/images/slides/Slide47.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
+@title[Stages vs. Boot Flow 03]
+<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+Note:
+1. enable debug
+2. memory initialization
+3. boot to UEFI shell only
+4. boot to OS
+5. boot to OS w/ security enabled
+6. Advanced Feature Selection
+7. Not shown  Performance Optimizations
+
++++?image=assets/images/slides/Slide48.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
+@title[Stages vs. Boot Flow 04]
+<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+Note:
+1. enable debug
+2. memory initialization
+3. boot to UEFI shell only
+4. boot to OS
+5. boot to OS w/ security enabled
+6. Advanced Feature Selection
+7. Not shown  Performance Optimizations
+
++++?image=assets/images/slides/Slide49.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
+@title[Stages vs. Boot Flow 05]
+<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+Note:
+1. enable debug
+2. memory initialization
+3. boot to UEFI shell only
+4. boot to OS
+5. boot to OS w/ security enabled
+6. Advanced Feature Selection
+7. Not shown  Performance Optimizations
+
++++?image=assets/images/slides/Slide50.JPG
+<!-- .slide: data-background-transition="none" -->
+<!-- .slide: data-transition="none" -->
+@title[Stages vs. Boot Flow 06]
+<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+Note:
+1. enable debug
+2. memory initialization
+3. boot to UEFI shell only
+4. boot to OS
+5. boot to OS w/ security enabled
+6. Advanced Feature Selection
+7. Not shown  Performance Optimizations
+
+
+
+
 
 ---
 @title[EDK II Infrastructure]
