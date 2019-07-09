@@ -2459,7 +2459,7 @@ Platform Initialization - Firmware Volume
 <p style="line-height:40%" align="left"><span style="font-size:0.5em;" ><b>FvUefiBoot</b> – The DXE driver supporting UEFI boot, such as boo to UEFI shell. 
 <br><br>&nbsp;</span></p>
 <p style="line-height:40%" align="left"><span style="font-size:0.5em;" ><b>FvOsBoot</b> – The DXE driver supporting UEFI OS boot, such as UEFI Windows
-<br><br>&nbsp;</span></p>
+<br>&nbsp;</span></p>
 <p style="line-height:40%" align="left"><span style="font-size:0.5em;" ><b>FvSecurity</b> – The security related modules, such as UEFI Secure boot, TPM etc. 
 <br><br>&nbsp;</span></p>
 <p style="line-height:40%" align="left"><span style="font-size:0.5em;" ><b>FvAdvanced </b>– The advanced feature modules, such as UEFI network, IPMI etc 
