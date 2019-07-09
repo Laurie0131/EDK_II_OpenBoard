@@ -1908,17 +1908,17 @@ PcdSet16S (PcdSetNvStoreDefaultId
 <br>
 <br>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
-<p style="line-height:70%" align="left"><br>&nbsp; </p>
+<p style="line-height:70%" align="left"><br><br><br>&nbsp; </p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
-@snap[north-east span-55 ]
+@snap[north-east span-50 ]
 <br>
 <br>
 <br>
 <p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>`Typedef` data structure</b><br><br>&nbsp;</span></p>
-<p style="line-height:70%" align="left"><br>&nbsp; </p>
+<p style="line-height:70%" align="left"><br><br><br><br>&nbsp; </p>
 <p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>PCD database, Setup Variable, Binary Blob, etc.</b><br><br>&nbsp;</span></p>
 @snapend
 
@@ -1927,9 +1927,9 @@ PcdSet16S (PcdSetNvStoreDefaultId
 <br>
 <br>
 <br>
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>Silicon Module Provides Default Silicon Policy Data</b><br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>&nbsp;Silicon Module Provides<br>&nbsp; Default Silicon Policy Data</b><br><br>&nbsp;</span></p>)
 <p style="line-height:70%" align="left"><br>&nbsp; </p>
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>Board Module Updates the Silicon Policy Data </b><br><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>&nbsp;Board Module Updates <br>&nbsp;the Silicon Policy Data </b><br><br>&nbsp;</span></p>)
 @snapend
 
 Note:
