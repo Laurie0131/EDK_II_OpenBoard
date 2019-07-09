@@ -2079,12 +2079,74 @@ Code is in:
   // If SpdAddressTable all 0, this is memory down design and hardcoded SpdData
   // should be applied to MemorySpdPtr*.
 
+---
+@title[Dynamically set Defaults ]
+<p align="right"><span class="gold" >@size[1.1](<b>Dynamically set Defaults</b>)</span><span style="font-size:0.8em;" ></span></p>
+
+@snap[west span-100 ]
+<br>
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-100 ]
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em;" ><br><br>
+The Default Store PCD is also a dynamic PCD. <br>
+During boot, the board initialization code checks the boot mode and selects the default store.  <br>
+This step must be after SetSku. Otherwise, the default setting may be wrong.
+</span></p>
+@snapend
+
+@snap[west span-100 ]
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;
+. &nbsp;. &nbsp;.<br>&nbsp;
+if (NeedDefaultConfig()) &lbrace; <br>&nbsp;
+PcdSet16S (@collor[yellow](PcdSetNvStoreDefaultId), 0x0); <br>&nbsp;
+&rbrace; <br>&nbsp;
+</span></p>
+@snapend
+
+
+
+Note:
+
+---?image=assets/images/slides/Slide43.JPG
+@title[Board Porting ]
+<br>
+<p align="left"><span class="gold" >@size[1.1](<b>Board Porting</b>)</span><span style="font-size:0.8em;" ></span></p>
+
+@snap[south-east span-33 ]
+<br>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >GPIO </span> </li>
+  <li><span style="font-size:0.65em" >SIO </span> </li>
+  <li><span style="font-size:0.65em" >ACPI </span> </li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+@snapend
+
+Note:
+
+
+Porting. Where are the modules to be ported for a new board? 
+
+Board Specific initialization 
+
+
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
 <p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 @snap[north-west span-70 ]
-<br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >PCD Variable:<br></span>
 <span style="font-size:0.5em; font-family:Consolas;">
@@ -2093,7 +2155,6 @@ gPlatformModuleTokenSpaceGuid.PcdBootStage
 @snapend
 
 @snap[north-west span-50 ]
-<br>
 <br>
 <br>
 <br>
