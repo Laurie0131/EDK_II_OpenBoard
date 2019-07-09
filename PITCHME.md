@@ -1903,21 +1903,33 @@ PcdSet16S (PcdSetNvStoreDefaultId
 @title[Silicon Policy data flow guidelines]
 <p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy data flow guidelines</b>)</span></span></p>
 
-
-
-@snap[north-east span-65 ]
+@snap[north-east span-60 ]
 <br>
 <br>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" ><b>`Typedef` data structure</b><br><br>&nbsp;</span></p>)
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%" align="left"><span style="font-size:0.7em;" ><b>PCD database, Setup Variable, Binary Blob, etc.</b><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+<p style="line-height:70%" align="left"><br>&nbsp; </p>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-55 ]
+<br>
+<br>
+<br>
+<p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>`Typedef` data structure</b><br><br>&nbsp;</span></p>
+<p style="line-height:70%" align="left"><br>&nbsp; </p>
+<p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>PCD database, Setup Variable, Binary Blob, etc.</b><br><br>&nbsp;</span></p>
 @snapend
 
 
 @snap[north-west span-45 ]
 <br>
 <br>
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon Module Provides Default Silicon Policy Data</b><br><br>&nbsp;</span></p>)
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board Module Updates the Silicon Policy Data </b><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>Silicon Module Provides Default Silicon Policy Data</b><br><br>&nbsp;</span></p>)
+<p style="line-height:70%" align="left"><br>&nbsp; </p>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>Board Module Updates the Silicon Policy Data </b><br><br>&nbsp;</span></p>)
 @snapend
 
 Note:
