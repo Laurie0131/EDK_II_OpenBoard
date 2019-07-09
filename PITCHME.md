@@ -2499,7 +2499,19 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 </span></p>
 @snapend
 
-@snap[north-east span-35 ]
+
+
+@snap[north span-30 fragment ]
+<br>
+<br>
+<br>
+<br>
+@box[bg-green-pp text-black rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>FvFspT</b><br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-black rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>FvFspM</b><br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-black rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>FvFspS</b><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-35 fragment]
 <br>
 <br>
 <br>
@@ -2511,17 +2523,6 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 <p style="line-height:20%"><br>&nbsp;</p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%" align="left"><span style="font-size:0.45em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- -&gt;FvPostMemorySilicon<br>&nbsp;</span></p>)
 @snapend
-
-@snap[north span-30 ]
-<br>
-<br>
-<br>
-<br>
-@box[bg-green-pp text-black rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>FvFspT</b><br><br>&nbsp;</span></p>)
-@box[bg-green-pp text-black rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>FvFspM</b><br><br>&nbsp;</span></p>)
-@box[bg-green-pp text-black rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>FvFspS</b><br><br>&nbsp;</span></p>)
-@snapend
-
 
 
 @snap[north-west span-60 ]
