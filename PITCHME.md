@@ -1975,7 +1975,7 @@ The KabylakeSiliconPkg provides the former (PeiFspPolicyInitLib.c), and Kabylake
 @title[Update Silicon Policy example ]
 <p align="right"><span class="gold" >@size[1.1](<b>Update Silicon Policy example</b>)</span><span style="font-size:0.8em;" ></span></p>
 
-@snap[north-west span-45 ]
+@snap[north-west span-50 ]
 <br>
 <br>
 <br>
@@ -1983,17 +1983,17 @@ The KabylakeSiliconPkg provides the former (PeiFspPolicyInitLib.c), and Kabylake
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-east span-45 ]
+@snap[north-east span-50 ]
 <br>
 <br>
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
 @snap[north-west span-100 ]
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" ><br><br>
 KabylakeOpenBoardPkg/FspWrapper/Library/PeiFspPolicyUpdateLib
 </span></p>
 @snapend
@@ -2030,7 +2030,7 @@ CopyMem((VOID &ast;)(UINTN)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >
 <br>
 <br>&nbsp;&nbsp;
-. . . <br>&nbsp;&nbsp;
+@color[#A8ff60](. . .) <br>&nbsp;&nbsp;
   <br>&nbsp;&nbsp;&nbsp;&nbsp;
   Buffer = (VOID &ast;) (UINTN) @color[yellow](PcdGet32) \      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           (PcdMrcRcompTarget);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
