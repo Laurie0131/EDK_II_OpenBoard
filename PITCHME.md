@@ -764,9 +764,11 @@ In order to provide suggestions on the problem statements above, we would like t
 <br>
 <br>
 <br>
-<br>
+<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ></span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
+<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ></span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
+<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ></span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
 @snapend
 
