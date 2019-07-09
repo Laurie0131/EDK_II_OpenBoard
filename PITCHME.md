@@ -111,7 +111,7 @@ Why can’t the platform tree structures bear more similarity?
 @snapend
 
 
-@snap[north-east span-60 ]
+@snap[north-east span-63 ]
 <br>
 <br>
 <br>
@@ -159,7 +159,7 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 <br>
 @snapend
 
-@snap[south-east span-30 fragment]
+@snap[south-east span-33 fragment]
 <br>
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >GPIO </span> </li>
@@ -199,10 +199,14 @@ This is the directory structure of our EDK II platform in relationship to the wh
 @title[Organization]
 <p align="right"><span class="gold" >@size[1.1](<b>Organization</b>)</span></span></p>
 
+
 @snap[north span-50 ]
 <br>
 <br>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -217,13 +221,13 @@ This is the directory structure of our EDK II platform in relationship to the wh
 
 
 
-@snap[north-east span-65 ]
+@snap[north-east span-67 ]
 <br>
 <br>
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- No direct HW requirements<br><br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- Enable a specific <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- Board specific code <br><br><br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >- Hardware specific code </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; No direct HW requirements<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Enable a specific <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Board specific code <br><br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Hardware specific code </span></p>)
 @snapend
 
 
@@ -760,7 +764,9 @@ In order to provide suggestions on the problem statements above, we would like t
 <br>
 <br>
 <br>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70% "><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>&nbsp; </b><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -775,14 +781,14 @@ In order to provide suggestions on the problem statements above, we would like t
 
 
 
-@snap[north-east span-65 fragment]
+@snap[north-east span-62 fragment]
 <br>
 <br>
 <br>
 <br>
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;&nbsp;&nbsp;- UEFI, ACPI, PlatformInit<br><br><br></span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;&nbsp;&nbsp;- SMBIOS, S3, OPAL <br> <br><br><br> </span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;&nbsp;&nbsp;- TXT, AMT, CSM <br><br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;&nbsp;&nbsp; UEFI, ACPI, PlatformInit<br><br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;&nbsp;&nbsp; SMBIOS, S3, OPAL <br> <br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&nbsp;&nbsp;&nbsp; TXT, AMT, CSM <br><br><br><br> </span></p>)
 
 @snapend
 
@@ -1053,7 +1059,7 @@ At the same time, a platform firmware may provide an “à la cart” menu so th
 @title[Where are the DSC & FDF files? ]
 <p align="right"><span class="gold" >@size[1.1](<b>Where are the DSC & FDF files?</b>)</span><span style="font-size:0.8em;" ></span></p>
 
-@snap[north-west span-45 ]
+@snap[north-west span-48 ]
 <br>
 <br>
 <br>
@@ -1062,7 +1068,7 @@ At the same time, a platform firmware may provide an “à la cart” menu so th
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-east span-45 ]
+@snap[north-east span-48 ]
 <br>
 <br>
 <br>
@@ -1095,7 +1101,7 @@ Platform/Intel /<br>&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east span-45 ]
+@snap[north-east span-47 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
 Minnowboard Turbot
@@ -1431,7 +1437,7 @@ This signed data blob provides the configuration on a platform. An OEM may updat
 @title[Use PCD instead of UEFI Variable  ]
 <p align="right"><span class="gold" >@size[1.1](<b>Use PCD instead of UEFI Variable </b>)</span><span style="font-size:0.8em;" ></span></p>
 
-@snap[north-west span-45 ]
+@snap[north-west span-48 ]
 <br>
 <br>
 <br>
@@ -1440,7 +1446,7 @@ This signed data blob provides the configuration on a platform. An OEM may updat
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-east span-45 ]
+@snap[north-east span-48 ]
 <br>
 <br>
 <br>
@@ -1471,7 +1477,7 @@ This signed data blob provides the configuration on a platform. An OEM may updat
 @snapend
 
 
-@snap[north-east span-45 ]
+@snap[north-east span-47 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
 @color[cyan](PCD)
@@ -1615,7 +1621,7 @@ KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data
 Example: `AdvancedFeaturePkg.dec`  for SMBIOS type 0 data structure
 </span></p>
 
-<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
 gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation| \<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         {0x0}|@color[yellow](SMBIOS_TABLE_TYPE0)|0x80010000 {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;HeaderFiles&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1673,7 +1679,7 @@ typedef struct {
 @title[Example of DSC xRef DEC & .h  files  ]
 <p align="right"><span class="gold" >@size[1.1](<b>Example of DSC xRef DEC & .h  files </b>)</span><span style="font-size:0.8em;" ></span></p>
 
-@snap[north-west span-45 ]
+@snap[north-west span-48 ]
 <br>
 <br>
 <br>
@@ -1682,7 +1688,7 @@ typedef struct {
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-east span-45 ]
+@snap[north-east span-48 ]
 <br>
 <br>
 <br>
@@ -1691,7 +1697,7 @@ typedef struct {
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-west span-45 ]
+@snap[north-west span-47 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
 @color[cyan](Purly Pkg  DEC File)<br>
 @size[.8em](&num;&num; `gEfiSetupVariableGuid`)
@@ -1721,7 +1727,7 @@ typedef struct {
 @snapend
 
 
-@snap[north-east span-45 ]
+@snap[north-east span-47 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
 @color[cyan](StructureConfig.DSC File)
 </span></p>
@@ -1751,7 +1757,7 @@ Note:
 @title[Configuration Multi-SKU PCD – Board ID  ]
 <p align="right"><span class="gold" >@size[1.1](<b>Configuration Multi-SKU PCD – Board ID </b>)</span><span style="font-size:0.8em;" ></span></p>
 
-@snap[north-west span-50 ]
+@snap[north-west span-49 ]
 <br>
 <br>
 <br>
@@ -1760,7 +1766,7 @@ Note:
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-east span-45 ]
+@snap[north-east span-48 ]
 <br>
 <br>
 <br>
@@ -1769,7 +1775,7 @@ Note:
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-west span-50 ]
+@snap[north-west span-48 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
 @color[cyan](DSC File – SKU Set at BUILD time)
 </span></p>
@@ -1796,7 +1802,7 @@ gBoardModuleTokenSpaceGuid.PcdGpioInitValue|\<br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east span-45 ]
+@snap[north-east span-47 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
 @color[cyan](SKU PCD Set Dynamically)
 </span></p>
@@ -1837,7 +1843,7 @@ The SKU PCD is actually a dynamic PCD. During boot, the board detection takes th
 <br>
 <br>
 
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -1913,6 +1919,16 @@ PcdSet16S (PcdSetNvStoreDefaultId
 @snapend
 
 
+@snap[north-west span-45 ]
+<br>
+<br>
+<br>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>&nbsp;Silicon Module Provides<br>&nbsp; Default Silicon Policy Data</b><br>&nbsp;</span></p>)
+<p style="line-height:70%" align="left"><br>&nbsp; </p>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>&nbsp;Board Module Updates <br>&nbsp;the Silicon Policy Data </b><br><br>&nbsp;</span></p>)
+@snapend
+
+
 @snap[north-east span-50 ]
 <br>
 <br>
@@ -1922,15 +1938,6 @@ PcdSet16S (PcdSetNvStoreDefaultId
 <p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>PCD database, Setup Variable, Binary Blob, etc.</b><br><br>&nbsp;</span></p>
 @snapend
 
-
-@snap[north-west span-45 ]
-<br>
-<br>
-<br>
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>&nbsp;Silicon Module Provides<br>&nbsp; Default Silicon Policy Data</b><br>&nbsp;</span></p>)
-<p style="line-height:70%" align="left"><br>&nbsp; </p>
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.9em;" ><b>&nbsp;Board Module Updates <br>&nbsp;the Silicon Policy Data </b><br><br>&nbsp;</span></p>)
-@snapend
 
 Note:
 
