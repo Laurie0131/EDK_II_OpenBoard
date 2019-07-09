@@ -2352,9 +2352,9 @@ Note:
 
 @snap[north-east span-60 ]
 <br>
-<br>
-<br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+<br><br>
+<br><br>
+<p style="line-height:80%" align="left" ><span style="font-size:0.9em;" >
 Modules organized by Firmware Volumes according to the different boot stages
 </span>
 <span style="font-size:0.5em; font-family:Consolas;">
@@ -2373,7 +2373,7 @@ In order to separate modules in different boot stages, the BKM is to Standardize
 @title[UEFI Firmware Volumes (FV) - Review]
 <p align="right"><span class="gold" >@size[1.1](<b>UEFI Firmware Volumes (FV) - Review</b>)<br></span><span style="font-size:0.75em;" ></span></p>
 
-@snap[north-west span-60 ]
+@snap[north-west span-70 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 <br>
@@ -2387,8 +2387,8 @@ Platform Initialization - Firmware Volume
   <li><span style="font-size:0.75em" >Flash Device may contain one or more FVs </span> </li>
   <li><span style="font-size:0.75em" >.FDF file controls the layout → .FD image(s) </span> </li>
 </ul>
-
-<p style="line-height:70%" align="left" ><span style="font-size:0.45em;" >
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.5em;" >
 <a href="https://uefi.org/specifications"> PI Spec Vol. 3</a>
 </span></p>
 
