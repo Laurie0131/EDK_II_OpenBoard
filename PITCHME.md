@@ -2570,6 +2570,48 @@ Prior to the EDK II build the Tool RebaseAndPatchFspBinBaseAddress.py will rebas
 -> FvPostMemorySilicon
 
 
+---?image=assets/images/slides/Slide54.JPG
+@title[FSP APIs in FSP Binary]
+<p align="right"><span class="gold" >@size[1.1](<b>FSP APIs in FSP Binary</b>)<br></span><span style="font-size:0.5em;" >Using Intel<sup>&reg;</sup> FSP w/ EDK II: 
+<a href="https://firmware.intel.com/sites/default/files/A_Tour_Beyond_BIOS_Using_the_Intel_Firmware_Support_Package_with_the_EFI_Developer_Kit_II_(FSP2.0).pdf">PDF</a>
+</span></p>
+
+Note:
+Despite the variability of the FSP binaries, the FSP API caller (aka FSP consumer) could be a generic module to invoke the 5 APIs defined in FSP EAS (External Architecture Specification) to finish silicon initialization. 
+5 APIs are:
+  TempRamInit, NotifyPhase, FspMemoryInit, TempRamExit, FspSiliconInit 
+ 
+The flow on this slide describes the FSP, with the FSP binary from the “FSP Producer” in green and the platform code that integrates the binary, or the “FSP Consumer”, in blue 
+
+
+The FSP EAS describes the API interface to the FSP binary that the consumer code will 
+invoke, and it also describes the hand off state from the execution of the FSP binary. The latter information is conveyed in Hand-Off Blocks, or HOB’s. The FSP uses many of the data structures defined in the PI Specification including HOBs, Firmware Volumes, Firmware Files, etc. 
+The FSP binary can be integrated into any firmware solution, such as UEFI firmware (EDK II)
+
+1. Bootloader provided SEC phase starts executing from Reset Vector 
+	a) Switches the mode to 32-bit mode. 
+	b) Initializes the early platform as needed. 
+	c) Finds FSP-T and calls the TempRamInit() API. The bootloader also has the option to initialize the temporary memory directly, in which case this step and step 2 are skipped. 
+2. FSP initializes temporary memory and returns from TempRamInit() API. 
+3. Bootloader initializes the stack in temporary memory. 
+	a) Initializes the platform as needed. 
+	b) Finds FSP-M and calls the FspMemoryInit() API. 
+4. FSP initializes memory and returns from FspMemoryInit() API. 
+5. Bootloader relocates itself to Memory. 
+6. Bootloader calls TempRamExit() API. If Bootloader initialized the temporary memory in step 1.c)… this step and the next step are skipped. 
+7. FSP returns from TempRamExit() API. 
+8. Bootloader finds FSP-S and calls FspSiliconInit() API. 
+9. FSP returns from FspSiliconInit() API. 
+10. Bootloader continues and device enumeration. 
+
+11. Bootloader calls NotifyPhase() API with AfterPciEnumeration parameter. 
+12. Bootloader calls NotifyPhase() API with ReadyToBoot parameter before transferring control to OS loader. 
+13. When booting to a non-UEFI OS, Bootloader calls NotifyPhase() API with EndOfFirmware parameter immediately after ReadyToBoot. 
+14. When booting to a UEFI OS, Bootloader calls NotifyPhase() with EndOfFirmware parameter during ExitBootServices. 
+Another Note: : If FSP returns the reset required status in any of the API, then bootloader performs the reset. Refer to the Integration Guide for more details on Reset Types. 
+
+
+
 
 
 
