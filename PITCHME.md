@@ -2424,7 +2424,8 @@ Platform Initialization - Firmware Volume
 
 
 @snap[north-east span-71 ]
-<br>
+<p style="line-height:20%"><br><br><br>&nbsp;</p>
+
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" ><b>&nbsp; </b><br>&nbsp;</span></p>)
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" ><b>&nbsp; </b><br>&nbsp;</span></p>)
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" ><b>&nbsp; </b><br>&nbsp;</span></p>)
@@ -2436,7 +2437,8 @@ Platform Initialization - Firmware Volume
 
 
 @snap[north-west span-30 ]
-<br>
+<p style="line-height:20%"><br><br><br>&nbsp;</p>
+
 @box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" ><b>Pre-Memory </b><br>&nbsp;</span></p>)
 @box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" ><b>Post-Memory  </b><br>&nbsp;</span></p>)
 @box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.7em;" ><b>UEFI Boot </b><br>&nbsp;</span></p>)
@@ -2449,13 +2451,18 @@ Platform Initialization - Firmware Volume
 
 
 @snap[north-east span-65 ]
-<br>
-<p style="line-height:60%"><span style="font-size:0.6em;" ><b>FvPreMemory </b>– The PEIM dispatched before the memory initialization. Also included FSP - FV <br>&nbsp;</span></p>
-<p style="line-height:60%"><span style="font-size:0.6em;" ><b>FvPostMemory</b> – The PEIM dispatched after the memory initialization. Also included FSP - FV<br>&nbsp;</span></p>
-<p style="line-height:60%"><span style="font-size:0.6em;" ><b>FvUefiBoot</b> – The DXE driver supporting UEFI boot, such as boo to UEFI shell. <br>&nbsp;</span></p>
-<p style="line-height:60%"><span style="font-size:0.6em;" ><b>FvOsBoot</b> – The DXE driver supporting UEFI OS boot, such as UEFI Windows<br>&nbsp;</span></p>
-<p style="line-height:60%"><span style="font-size:0.6em;" ><b>FvSecurity</b> – The security related modules, such as UEFI Secure boot, TPM etc. <br>&nbsp;</span></p>
-<p style="line-height:60%"><span style="font-size:0.6em;" ><b>FvAdvanced </b>– The advanced feature modules, such as UEFI network, IPMI etc <br>&nbsp;</span></p>
+<p style="line-height:20%"><br><br><br>&nbsp;</p>
+<p style="line-height:60%" align="left"><span style="font-size:0.5em;" ><b>FvPreMemory </b>– The PEIM dispatched before the memory initialization. Also included FSP - FV &nbsp;</span></p>
+<p style="line-height:20%"><br>&nbsp;</p>
+<p style="line-height:60%" align="left"><span style="font-size:0.5em;" ><b>FvPostMemory</b> – The PEIM dispatched after the memory initialization. Also included FSP - FV&nbsp;</span></p>
+<p style="line-height:20%"><br>&nbsp;</p>
+<p style="line-height:60%" align="left"><span style="font-size:0.5em;" ><b>FvUefiBoot</b> – The DXE driver supporting UEFI boot, such as boo to UEFI shell. &nbsp;</span></p>
+<p style="line-height:20%"><br>&nbsp;</p>
+<p style="line-height:60%" align="left"><span style="font-size:0.5em;" ><b>FvOsBoot</b> – The DXE driver supporting UEFI OS boot, such as UEFI Windows&nbsp;</span></p>
+<p style="line-height:20%"><br>&nbsp;</p>
+<p style="line-height:60%" align="left"><span style="font-size:0.5em;" ><b>FvSecurity</b> – The security related modules, such as UEFI Secure boot, TPM etc. &nbsp;</span></p>
+<p style="line-height:20%"><br>&nbsp;</p>
+<p style="line-height:60%" align="left"><span style="font-size:0.5em;" ><b>FvAdvanced </b>– The advanced feature modules, such as UEFI network, IPMI etc &nbsp;</span></p>
 @snapend
 
 
