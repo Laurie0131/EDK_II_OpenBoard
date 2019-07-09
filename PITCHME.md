@@ -788,9 +788,9 @@ In order to provide suggestions on the problem statements above, we would like t
 <br>
 <br>
 <br>
-<br>
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > UEFI, ACPI, PlatformInit<br><br><br></span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > SMBIOS, S3, OPAL <br> <br><br><br> </span></p>)
+<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > UEFI, ACPI, PlatformInit<br><br><br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > SMBIOS, S3, OPAL <br> <br><br><br><br> </span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > TXT, AMT, CSM <br><br><br><br> </span></p>)
 
 @snapend
