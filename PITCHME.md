@@ -2633,7 +2633,7 @@ Then the PeiCore will continue dispatching the final PEIMs and jump into the Dxe
 @title[FSP 2.1 Dispatch Mode Boot Flow]
 <p align="right"><span class="gold" >@size[1.1](<b>FSP 2.1 Dispatch Mode Boot Flow</b>)</span><span style="font-size:0.5em;" ></span></p>
 
-<p style="line-height:40%" align="left" ><span style="font-size:0.7em; ">
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; ">
 <b>`gIntelFsp2WrapperTokenSpaceGuid`.@color[yellow](`PcdFspModeSelection`)</b>	0 - dispatch, 1 – API
 </span></p>
 
