@@ -2455,7 +2455,7 @@ Platform Initialization - Firmware Volume
 <p style="line-height:40%" align="left"><span style="font-size:0.5em;" ><b>FvPreMemory </b>– The PEIM dispatched before the memory initialization. Also included FSP - FV 
 <br><br>&nbsp;</span></p>
 <p style="line-height:40%" align="left"><span style="font-size:0.5em;" ><b>FvPostMemory</b> – The PEIM dispatched after the memory initialization. Also included FSP - FV
-<br><br>&nbsp;</span></p>
+<br>&nbsp;</span></p>
 <p style="line-height:40%" align="left"><span style="font-size:0.5em;" ><b>FvUefiBoot</b> – The DXE driver supporting UEFI boot, such as boo to UEFI shell. 
 <br><br>&nbsp;</span></p>
 <p style="line-height:40%" align="left"><span style="font-size:0.5em;" ><b>FvOsBoot</b> – The DXE driver supporting UEFI OS boot, such as UEFI Windows
