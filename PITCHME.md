@@ -2088,13 +2088,16 @@ Code is in:
 <br>
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br>&nbsp;</span></p>)
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-west span-100 ]
-<p style="line-height:80%" align="left" ><span style="font-size:0.8em;" ><br><br>
-The Default Store PCD is also a dynamic PCD. <br>
-During boot, the board initialization code checks the boot mode and selects the default store.  <br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" ><br><br>
+The Default Store PCD is also a dynamic PCD. <br><br>
+During boot, the board initialization code checks the boot mode and selects the default store.  <br><br>
 This step must be after SetSku. Otherwise, the default setting may be wrong.
 </span></p>
 @snapend
@@ -2104,10 +2107,11 @@ This step must be after SetSku. Otherwise, the default setting may be wrong.
 <br>
 <br>
 <br>
+<br>
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;
 . &nbsp;. &nbsp;.<br>&nbsp;
 if (NeedDefaultConfig()) &lbrace; <br>&nbsp;
-PcdSet16S (@collor[yellow](PcdSetNvStoreDefaultId), 0x0); <br>&nbsp;
+PcdSet16S (@color[yellow](PcdSetNvStoreDefaultId), 0x0); <br>&nbsp;
 &rbrace; <br>&nbsp;
 </span></p>
 @snapend
