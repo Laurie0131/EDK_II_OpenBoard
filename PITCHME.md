@@ -2490,7 +2490,7 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 @snapend
 
 
-@snap[north-east span-40 ]
+@snap[north-east span-48 ]
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.75em; ">
@@ -2504,11 +2504,12 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 <br>
 <br>
 <br>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" ><br>&nbsp;</span></p>)
+<br>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" >- Temp Memory<br>&nbsp;</span></p>)
 <p style="line-height:20%"><br>&nbsp;</p>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" ><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" >- -&gt;FvPreMemorySilicon<br>&nbsp;</span></p>)
 <p style="line-height:20%"><br>&nbsp;</p>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" ><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:20%"><span style="font-size:0.39em;" >- -&gt;FvPostMemorySilicon<br>&nbsp;</span></p>)
 @snapend
 
 @snap[north span-30 ]
@@ -2550,6 +2551,7 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; ">
 Pre-Build w/ <b>`RebaseAndPatchFspBinBaseAddress.py `</b>
 </span></p>
+<br>
 @snapend
 
 
