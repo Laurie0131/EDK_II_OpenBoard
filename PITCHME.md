@@ -2013,12 +2013,12 @@ IN OUT FSPM_UPD &ast;FspmUpd <br>&nbsp;&nbsp;
 VOID &ast;Buffer; <br>&nbsp;&nbsp;
 CopyMem((VOID &ast;)(UINTN)\  <br>&nbsp;&nbsp;&nbsp;&nbsp;
  FspmUpd-&gt;FspmConfig.MemorySpdPtr00,\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
- (VOID *)(UINTN)PcdGet32 (PcdMrcSpdData), \ <br>&nbsp;&nbsp;&nbsp;&nbsp;
- PcdGet16 (PcdMrcSpdDataSize)); <br>&nbsp;&nbsp;
+ (VOID *)(UINTN)PcdGet32(PcdMrcSpdData),\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ @color[yellow](PcdGet16) (PcdMrcSpdDataSize)); <br>&nbsp;&nbsp;
 CopyMem((VOID &ast;)(UINTN)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
  FspmUpd-&gt;FspmConfig.MemorySpdPtr10,\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
  (VOID &ast;)(UINTN)PcdGet32 (PcdMrcSpdData),\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
- PcdGet16 (PcdMrcSpdDataSize)); <br>&nbsp;&nbsp;
+ @color[yellow](PcdGet16) (PcdMrcSpdDataSize)); <br>&nbsp;&nbsp;
 </span></p> 
 @snapend
 
@@ -2032,7 +2032,7 @@ CopyMem((VOID &ast;)(UINTN)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
 . . . <br>&nbsp;&nbsp;
   <br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Buffer = (VOID &ast;) (UINTN) PcdGet32 \      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Buffer = (VOID &ast;) (UINTN) @color[yellow](PcdGet32) \      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           (PcdMrcRcompTarget);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
   if (Buffer) &lbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     CopyMem ((VOID &ast;)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
