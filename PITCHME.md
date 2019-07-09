@@ -787,7 +787,7 @@ In order to provide suggestions on the problem statements above, we would like t
 @snap[north-east span-62 fragment]
 <br>
 <br>
-<br>
+
 <p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > UEFI, ACPI, PlatformInit<br><br><br><br></span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > SMBIOS, S3, OPAL <br> <br><br><br><br> </span></p>)
