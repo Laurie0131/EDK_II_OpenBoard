@@ -2300,7 +2300,8 @@ Note:
 6. Advanced Feature Selection
 7. Not shown  Performance Optimizations
 
-+++?image=assets/images/slides/Slide48.JPG
+
++++?image=assets/images/slides/Slide47_1.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 04]
@@ -2315,7 +2316,7 @@ Note:
 6. Advanced Feature Selection
 7. Not shown  Performance Optimizations
 
-+++?image=assets/images/slides/Slide49.JPG
++++?image=assets/images/slides/Slide48.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 05]
@@ -2330,7 +2331,7 @@ Note:
 6. Advanced Feature Selection
 7. Not shown  Performance Optimizations
 
-+++?image=assets/images/slides/Slide50.JPG
++++?image=assets/images/slides/Slide49.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 06]
@@ -2345,7 +2346,56 @@ Note:
 6. Advanced Feature Selection
 7. Not shown  Performance Optimizations
 
+---?image=assets/images/slides/Slide50.JPG
+@title[Staged Approach by Features]
+<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)<br></span><span style="font-size:0.75em;" >- Firmware Volume</span></p>
 
+@snap[north-east span-60 ]
+<br>
+<br>
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+Modules organized by Firmware Volumes according to the different boot stages
+</span>
+<span style="font-size:0.5em; font-family:Consolas;">
+</span></p>
+@snapend
+
+
+Note:
+
+HOW is it implemented??
+
+In order to separate modules in different boot stages, the BKM is to Standardize the firmware layout using Firmware Volumes according to the different boot stages
+
+
+---?image=assets/images/slides/Slide51.JPG
+@title[UEFI Firmware Volumes (FV) - Review]
+<p align="right"><span class="gold" >@size[1.1](<b>UEFI Firmware Volumes (FV) - Review</b>)<br></span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-60 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+<br>
+Platform Initialization - Firmware Volume 
+</span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.75em" >Basic storage repository for data and code is the Firmware Volume (FV)  </span> </li>
+  <li><span style="font-size:0.75em" >Each FV is organized into a file system, each with attributes </span> </li>
+  <li><span style="font-size:0.75em" >One or more Firmware File Sections (FFS) files are combined into a FV  </span> </li>
+  <li><span style="font-size:0.75em" >Flash Device may contain one or more FVs </span> </li>
+  <li><span style="font-size:0.75em" >.FDF file controls the layout → .FD image(s) </span> </li>
+</ul>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.45em;" >
+<a href="https://uefi.org/specifications"> PI Spec Vol. 3</a>
+</span></p>
+
+@snapend
+
+
+Note:
 
 
 
