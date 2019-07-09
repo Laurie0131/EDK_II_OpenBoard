@@ -1954,6 +1954,105 @@ A board module may refer to another source to get the board specific policy data
 - Binary Blob 
 - Built-in C structure. 
 
+---?image=assets/images/slides/Slide40.JPG
+@title[Example: FSP policy in MinPlatformPkg]
+<p align="right"><span class="gold" >@size[1.1](<b>Example: FSP policy in MinPlatformPkg</b>)</span></span></p>
+
+
+Note:
+Take FSP policy in MinPlatformPkg is an example. 
+
+Therein we defined FspPolicyInitLib (FspPolicyInitLib.h) and FspPolicyUpdateLib (FspPolicyUpdateLib.h). 
+
+When the FSP wrapper wants to call MemoryInitAPI, it calls UpdateFspmUpdData() (PeiFspWrapperPlatformLib.c) to get the UPD configuration. 
+
+Then FspmPolicyInit() and FspmPolicyUpdate() are invoked. 
+
+The KabylakeSiliconPkg provides the former (PeiFspPolicyInitLib.c), and KabylakeOpenBoardPkg provides the latter (PeiFspPolicyUpdateLib.c).
+
+
+---
+@title[Update Silicon Policy example ]
+<p align="right"><span class="gold" >@size[1.1](<b>Update Silicon Policy example</b>)</span><span style="font-size:0.8em;" ></span></p>
+
+@snap[north-west span-45 ]
+<br>
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-45 ]
+<br>
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-100 ]
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
+KabylakeOpenBoardPkg/FspWrapper/Library/PeiFspPolicyUpdateLib
+</span></p>
+@snapend
+
+
+@snap[north-west span-45 ]
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>&nbsp;
+</span></p>
+
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+EFI_STATUS<br>&nbsp;&nbsp;
+EFIAPI <br>&nbsp;&nbsp;
+PeiFspSaPolicyUpdatePreMem ( <br>&nbsp;&nbsp;
+IN OUT FSPM_UPD *FspmUpd <br>&nbsp;&nbsp;
+) <br>&nbsp;&nbsp;
+&lbrace; <br>&nbsp;&nbsp;
+VOID *Buffer; <br>&nbsp;&nbsp;
+CopyMem((VOID *)(UINTN)\  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ FspmUpd-&gt;FspmConfig.MemorySpdPtr00,\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ (VOID *)(UINTN)PcdGet32 (PcdMrcSpdData), \ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ PcdGet16 (PcdMrcSpdDataSize)); <br>&nbsp;&nbsp;
+CopyMem((VOID *)(UINTN)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ FspmUpd-&gt;FspmConfig.MemorySpdPtr10,\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ (VOID *)(UINTN)PcdGet32 (PcdMrcSpdData),\ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+ PcdGet16 (PcdMrcSpdDataSize)); <br>&nbsp;&nbsp;
+</span></p> 
+@snapend
+
+
+@snap[north-east span-45 ]
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>&nbsp;
+</span></p>
+
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >
+&nbsp;&nbsp;
+. . . <br>&nbsp;&nbsp;
+  <br>&nbsp;&nbsp;
+  Buffer = (VOID *) (UINTN) PcdGet32 \      <br>&nbsp;&nbsp;&nbsp;&nbsp;
+          (PcdMrcRcompTarget);  <br>&nbsp;&nbsp;
+  if (Buffer) &lbrace; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+    CopyMem ((VOID *)\ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      FspmUpd->FspmConfig.RcompTarget, \ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Buffer, 10);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  &rbrace;  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  return EFI_SUCCESS;  <br>&nbsp;&nbsp;
+&rbrace;   <br>&nbsp;&nbsp;
+
+</span></p> 
+@snapend
+
+
+Note:
+One example on how to update silicon policy is shown here
+
+
+Code is in: 
+- KabylakeOpenBoardPkg/FspWrapper/Library/PeiFspPolicyUpdateLib/PeiSaPolicyUpdatePreMem.c
+
+
 
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
