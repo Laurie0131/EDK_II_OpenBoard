@@ -2768,18 +2768,20 @@ Search INF for string: LIBRARY_CLASS  =
  }
  
 ``` 
+
+
 @snap[north-east span-30 fragment ]
 <br>
 <br>
 <br>
 <br>
-@box[bg-purple-pp text-white my-box-pad2  ](<span style="font-size:0.65em;"> Library Class Section</span>)
+@box[bg-purple-pp text-white my-box-pad2  ](<span style="font-size:0.75em;"><b> Library Class Section</b></span>)
 <br>
 <br>
 <br>
 <br>
 <br>
-@box[bg-green-pp text-white my-box-pad2  ](<span style="font-size:0.65em;"> Components Section</span>)
+@box[bg-green-pp text-white my-box-pad2  ](<span style="font-size:0.75em;"><b> Components Section</b></span>)
 @snapend
 
 Note:
@@ -2813,14 +2815,57 @@ Only one instance of each named library class may be linked to a given module
 
 @snap[south-east span-58 ]
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
+<br>
 @snapend
 
 
-@snap[north-east span-18 ]
+
+@snap[north-west span-60 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+<br>&nbsp;&nbsp;
+MinPlatformPkg<br>&nbsp;&nbsp;&nbsp;
+  Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   BoardnitLib.h<br>&nbsp;&nbsp;&nbsp;
+  Library<br>&nbsp;&nbsp;&nbsp;
+  . . .<br>&nbsp;&nbsp;&nbsp;
+  PlatformInit<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  PlatformInitPreMem<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  PlatformInitPostMem<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitDxe<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitSmm  <br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-56 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+<br>
+BoardDetect()<br>
+BoardDebugInit()<br>
+BoardBootModeDetect()<br>
+BoardInitBeforeMemoryInit()<br>
+BoardInitBeforeTempRamExit()<br>
+BoardInitAfterTempRamExit()<br>
+BoardInitAfterMemoryInit()<br>
+BoardInitBeforeSiliconInit()<br>
+<br><br>
+BoardInitAfterPciEnumeration()<br>
+BoardInitReadyToBoot()<br>
+BoardInitEndOfFirmware()<br>
+</span></p>
+@snapend
+
+
+@snap[north-east span-18 fragment]
 <br><br><br><br><br>
-<p style="line-height:70%" ><span style="font-size:01.9em; font-weight: bold;" >@color[yellow](PEI)</span></p>
-<p style="line-height:40%" ><span style="font-size:0.9em; font-weight: bold;" ><br><br><br><br>&nbsp;</span></p>
-<p style="line-height:70%" ><span style="font-size:01.9em; font-weight: bold;" >@color[yellow](DXE)</span></p>
+<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" >@color[yellow](PEI)</span></p>
+<p style="line-height:40%" ><span style="font-size:0.9em; font-weight: bold;" ><br><br><br><br><br><br><br><br>&nbsp;</span></p>
+<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" >@color[yellow](DXE)</span></p>
 @snapend
 
 
