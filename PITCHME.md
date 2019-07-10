@@ -2770,7 +2770,7 @@ Search INF for string: LIBRARY_CLASS  =
 ``` 
 
 
-@snap[north-east span-30 fragment ]
+@snap[north-east span-35 fragment ]
 <br>
 <br>
 <br>
@@ -2810,12 +2810,7 @@ Only one instance of each named library class may be linked to a given module
 <br>
 <br>
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
-@snapend
-
-
-@snap[south-east span-58 ]
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
-<br>
 @snapend
 
 
@@ -2825,22 +2820,22 @@ Only one instance of each named library class may be linked to a given module
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
 <br>&nbsp;&nbsp;
-MinPlatformPkg<br>&nbsp;&nbsp;&nbsp;
-  Include<br>&nbsp;&nbsp;&nbsp;&nbsp;
-     Library<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	   BoardnitLib.h<br>&nbsp;&nbsp;&nbsp;
-  Library<br>&nbsp;&nbsp;&nbsp;
-  . . .<br>&nbsp;&nbsp;&nbsp;
-  PlatformInit<br>&nbsp;&nbsp;&nbsp;&nbsp;
-    PlatformInitPei<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  PlatformInitPreMem<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  PlatformInitPostMem<br>&nbsp;&nbsp;&nbsp;&nbsp;
-    PlatformInitDxe<br>&nbsp;&nbsp;&nbsp;&nbsp;
-    PlatformInitSmm  <br>&nbsp;&nbsp;
+MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   @color[yellow](BoardnitLib.h)<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  @color[yellow](PlatformInit)/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  PlatformInitPreMem/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  PlatformInitPostMem/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitDxe/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitSmm/  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 @snapend
 
-@snap[north-east span-56 ]
+@snap[north-east span-55 ]
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
@@ -2853,7 +2848,7 @@ BoardInitBeforeTempRamExit()<br>
 BoardInitAfterTempRamExit()<br>
 BoardInitAfterMemoryInit()<br>
 BoardInitBeforeSiliconInit()<br>
-<br><br>
+<br><br><br><br>
 BoardInitAfterPciEnumeration()<br>
 BoardInitReadyToBoot()<br>
 BoardInitEndOfFirmware()<br>
@@ -2872,6 +2867,8 @@ BoardInitEndOfFirmware()<br>
 
 
 Note:
+
+The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
 
 
 ---
