@@ -2825,12 +2825,12 @@ MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
      Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	   @color[yellow](BoardnitLib.h)<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  . . .<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  . . .<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
   @color[yellow](PlatformInit)/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     PlatformInitPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  PlatformInitPreMem/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  PlatformInitPostMem/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    PlatformInitDxe/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  PlatformInitPostMem/<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitDxe/<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     PlatformInitSmm/  <br>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></p>
 @snapend
@@ -2869,6 +2869,79 @@ BoardInitEndOfFirmware()<br>
 Note:
 
 The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
+
+---?image=assets/images/slides/Slide59.JPG
+@title[Platform Initialization Board hook Modules]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-40 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-58 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-west span-60 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+<br>&nbsp;&nbsp;
+MinPlatformPkg/<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+  . . .<br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+  PlatformInit/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  @color[yellow](PlatformInitPreMem)/
+	  <br><br><br><br>
+	  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  @color[yellow](PlatformInitPostMem)/
+</span></p>
+@snapend
+
+@snap[north-east span-55 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+<br>
+@color[yellow](PlatformInitPreMem)/<br>&nbsp;&nbsp;
+BoardDetect()<br>&nbsp;&nbsp;
+BoardDebugInit()<br>&nbsp;&nbsp;
+BoardBootModeDetect()<br>&nbsp;&nbsp;
+BoardInitBeforeMemoryInit()<br>&nbsp;&nbsp;
+. . . <br>&nbsp;&nbsp;
+<font face="Arial">Notify call back </font><br>&nbsp;&nbsp;
+BoardInitAfterMemoryInit()
+<br><br><br><br>
+@color[yellow](PlatformInitPostMem)/<br>&nbsp;&nbsp;
+
+BoardInitBeforeSiliconInit()<br>&nbsp;&nbsp;
+. . . <br>&nbsp;&nbsp;
+BoardInitAfterSiliconInit()<br>
+</span></p>
+@snapend
+
+
+@snap[north-east span-18 fragment]
+<br><br><br><br><br><br>
+<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" >@color[yellow](PEI)</span></p>
+
+@snapend
+
+
+
+
+Note:
+
+The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
+
 
 
 ---
