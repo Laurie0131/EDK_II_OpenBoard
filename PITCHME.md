@@ -2706,9 +2706,9 @@ How? – by using EDK II Libraries for Platform Hooks
 <br>
 <br>
 <p style="line-height:70%" align="left"><span style="font-size:0.9em">Syntax in DSC File</span><br>
-<span style="font-size:0.6em; font-family:Consolas;">
-&nbsp;&nbsp;&nbsp;&nbsp;[libraryclasses] <br>
-&nbsp;&nbsp;&nbsp;&nbsp;LibraryClassName|Path/To/@color[cyan](LibInstanceNameInstance1).inf  </span> </p>  
+<span style="font-size:0.55em; font-family:Consolas;">
+&nbsp;&nbsp;[libraryclasses] <br>
+&nbsp;&nbsp;LibraryClassName|Path/To/@color[cyan](LibInstanceNameInstance1).inf  </span> </p>  
 <br>
 @snapend
 
