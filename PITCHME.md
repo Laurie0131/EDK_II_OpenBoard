@@ -2619,6 +2619,12 @@ Another Note: : If FSP returns the reset required status in any of the API, then
 5 APIs for FSP
 </span></p>
 
+@snap[south-west span-40 ]
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em;" >Using Intel<sup>&reg;</sup> FSP w/ EDK II: 
+<a href="https://firmware.intel.com/sites/default/files/A_Tour_Beyond_BIOS_Using_the_Intel_Firmware_Support_Package_with_the_EFI_Developer_Kit_II_(FSP2.0).pdf">PDF</a>
+</span></p>
+@snapend
+
 Note:
 
 The normal boot flow of FSP2.0 is shown on this slide. In normal boot, the SecPlatformLib (sample at https://github.com/tianocore/edk2/tree/master/IntelFsp2WrapperPkg/Library/SecFspWrapperPlatformSecLibSample ), which is linked by the SecCore (https://github.com/tianocore/edk2/tree/master/UefiCpuPkg/SecCore ), calls first FSP API – TempRamInitApi, and then transfers the control to the PeiCore. SecPlatformLib also registers SecTempRamDonePpi (https://github.com/tianocore/edk2/blob/master/IntelFsp2WrapperPkg/Library/SecFspWrapperPlatformSecLibSample/SecTempRamDone.c ) for TempRamExitApi. 
@@ -2638,7 +2644,7 @@ Then the PeiCore will continue dispatching the final PEIMs and jump into the Dxe
 </span></p>
 
 @snap[south-west span-40 ]
-<p style="line-height:40%" align="left" ><span style="font-size:0.5em; ">
+<p style="line-height:40%" align="left" ><span style="font-size:0.6em; ">
 <a href="https://www.intel.com/FSP">FSP Spec 2.1</a>
 </span></p>
 @snapend
@@ -2665,7 +2671,6 @@ In dispatch mode, the NotifyPhase() API API is not used. Instead, FSP-S contains
 
 @snap[south-east span-25 fragment]
 ![how](/assets/images/How_text.png)
-<br>
 <br>
 <br>
 <br>
@@ -2700,8 +2705,8 @@ How? – by using EDK II Libraries for Platform Hooks
 <br>
 <br>
 <br>
-<p style="line-height:75%" align="left"><span style="font-size:0.9em">Syntax in DSC File</span><br>
-<span style="font-size:0.65em; font-family:Consolas;">
+<p style="line-height:70%" align="left"><span style="font-size:0.9em">Syntax in DSC File</span><br>
+<span style="font-size:0.6em; font-family:Consolas;">
 &nbsp;&nbsp;&nbsp;&nbsp;[libraryclasses] <br>
 &nbsp;&nbsp;&nbsp;&nbsp;LibraryClassName|Path/To/@color[cyan](LibInstanceNameInstance1).inf  </span> </p>  
 <br>
@@ -2709,7 +2714,7 @@ How? – by using EDK II Libraries for Platform Hooks
 
 
 @snap[south span-85 fragment ]
-@box[bg-purple-pp text-white rounded   my-box-pad2 ](<span style="font-size:01.0em" >Search INF files for string:&nbsp;&nbsp; "<b>`LIBRARY_CLASS  =`</b>"&nbsp;</span>)
+@box[bg-purple-pp text-white rounded   my-box-pad2 ](<span style="font-size:01.0em" >Search INF files for string:&nbsp;&nbsp; "<b>`LIBRARY_CLASS  =`</b>"<br>&nbsp;</span>)
 <br>
 @snapend
 
