@@ -50,23 +50,23 @@ Note:
 -->
 <ul style="list-style-type:none">
  <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II Open board platforms <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;infrastructure  & focus areas</span> </li>
- <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II Open board<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;platforms </span></li>
+ <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II open board<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;platforms </span></li>
 </ul>
 
 ---
 @title[Current Issues ]
 <p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
-<span style="font-size:0.75em;" >- Open Source EDK II Platforms</span></p>
+<span style="font-size:0.75em;" > Open Source EDK II Platforms</span></p>
 
 
 @snap[north span-80 ]
 <br>
 <br>
 <br>
-@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;Developers need a way to turn on and off of a feature <br>&nbsp;</span></p>)
-@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;Developers need a way to get the platform  <br>&nbsp;&nbsp;configuration data  <br>&nbsp;</span></p>)
-@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;Developers need to do porting work from an <br>&nbsp;&nbsp;existing board to a new board   <br>&nbsp;</span></p>)
-@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;Developers might need to work on a different board  <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;Developers need a way to turn on and off of a feature. <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;Developers need a way to get platform  <br>&nbsp;&nbsp;configuration data . <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;Developers need to do porting work from an <br>&nbsp;&nbsp;existing board to a new board  . <br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2 fragment ](<p style="line-height:60%" align="left"><span style="font-size:0.75em;" >&nbsp;&nbsp;Developers might need to work on a different board . <br>&nbsp;</span></p>)
 @snapend
 
 
@@ -117,7 +117,7 @@ Why can’t the platform tree structures bear more similarity?
 <br>
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Code structure should be obvious so that the firmware developer can easily turn on or turn off a significant feature<br><br></span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br><br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware code structure should be similar, no matter  the chipset / processor based architecture, i.e. embedded platform, a workstation or server </span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" > Firmware code structure should be independent of processor/silicon architecture or platform type &lpar;embedded, workstation, server, etc.&rpar;</span></p>)
 @snapend
 
 @snap[south span-85 fragment]
@@ -142,8 +142,12 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >Minimal /Full BIOS </span> </li>
   <li><span style="font-size:0.65em" >Feature ON/OFF </span> </li>
-  <li><span style="font-size:0.65em" >Smbios/TPM/SecureBoot/ </span> </li>
-  <li><span style="font-size:0.65em" >. . . </span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+  <li><span style="font-size:0.6em" >SMBIOS</span> </li>
+  <li><span style="font-size:0.6em" >TPM </span> </li>
+  <li><span style="font-size:0.6em" >Secur Boot </span> </li>
+  <li><span style="font-size:0.6em" >. . . </span> </li>
+  </ul>
 </ul>
 @snapend
 
@@ -165,6 +169,7 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
   <li><span style="font-size:0.65em" >GPIO </span> </li>
   <li><span style="font-size:0.65em" >SIO </span> </li>
   <li><span style="font-size:0.65em" >ACPI </span> </li>
+  <li><span style="font-size:0.65em" >Stages </span> </li>
 </ul>
 <br>
 <br>
@@ -370,7 +375,8 @@ Not shown is the edk2 repository since this should always be considered as commo
 </ul>
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>@color[yellow](edk2-non-osi):</b> 
-It is the EDK II repo to include any open platform modules which is in a binary format, such as FSP binary, or CPU microcode</span></p>
+EDK II repo for platform modules in binary format(ex: silicon init binaries).
+</span></p>
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >@color[cyan](&lt;Generation&gt;SiliconBinPkg ):It is the silicon generation specific binary package. For example, CPU Microcode or the silicon binary FVs</span> </li>
 </ul>
@@ -394,7 +400,7 @@ Note:
 ---
 @title[FSP Directory Description]
 <p align="right"><span class="gold" >@size[1.1](<b>FSP Directory Description</b>)</span></span></p>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>@color[yellow](FSP): </b>Intel FSP  repo includes FSP binary platform code </span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>@color[yellow](FSP): </b>repo for Intel® Firmware Support Package (FSP) binaries </span></p>
 
 <ul style="list-style-type:disc; line-height:0.8;">
   <li><span style="font-size:0.65em" >Platform folder Pkg : Each FSP project will be hosted in a separate directory</span> </li>
@@ -443,7 +449,7 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 <br>
 <p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 @color[cyan](MinPlatformPkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  &lt;BasicCommonFeature&gt;/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  <font face="Arial">&lt;Basic Common Feature&gt;/</font><br>&nbsp;&nbsp;&nbsp;&nbsp;
   Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   PlatformInit /<br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -452,7 +458,7 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
 
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >@color[yellow](&lt;BasicCommonFeature&gt; ): The basic features to support OS boot, such as ACPI, flash, and FspWrapper. It also includes the basic security features such as HSTI. </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](&lt;Basic Common eature&gt; ): The basic features to support OS boot, such as ACPI, flash, and FspWrapper. It also includes the basic security features such as Hardware Security Test  Interface (HSTI). </span> </li>
   <li><span style="font-size:0.65em" >@color[yellow](Include ): The include file as the package interface. All interfaces defined in MinPlatformPkg.dec are put to here.  </span> </li>
   <li><span style="font-size:0.65em" >@color[yellow](Library ): It only contains feature independent library, such as PeiLib. If a library is related to a feature, this library is put to <Feature>/Library folder, instead of root Library folder. </span> </li>
   <li><span style="font-size:0.65em" >@color[yellow](PlatformInit ): The common platform initialization module. There is PreMemPEI, PostMemPEI, DXE and SMM version. These modules control boot flow and provide some hook point to let board code do initialization. </span> </li>
@@ -545,7 +551,7 @@ Note:
 
 ---
 @title[One Feature, one directory Guideline]
-<p align="right"><span class="gold" >@size[1.1](<b>One Feature, one directory Guideline </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1](<b>One Feature, One directory Guideline </b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -590,7 +596,7 @@ KabylakeOpenBoardPkg  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 <br>
 <p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-  @color[cyan](KabylakeRvp3) /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  @color[cyan](KabylakeRvp3) / <font face="Arial"> &nbsp;&nbsp;Cont.</font><br>&nbsp;&nbsp;&nbsp;&nbsp;
     Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;
     Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
     OpenBoardPkg.dsc  <br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -629,8 +635,8 @@ The common board related ACPI is in Acpi directory. The common board related FSP
 The KabylakeRvp3 folder contains all RVP3 related settings, such as GPIO, High Definition Audio (HAD) verb Table, HsioPtss table, SPD table. This folder also has DSC and FDF file. We can build a KabylakeRvp3 binary inside of this folder 
 
 ---
-@title[Compare to Minnowboard  MAX/Turbot]
-<p align="right"><span class="gold" >@size[1.1](<b>Compare to Minnowboard  MAX/Turbot</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+@title[Compare to MinnowBoard  MAX/Turbot]
+<p align="right"><span class="gold" >@size[1.1](<b>Compare to MinnowBoard  MAX/Turbot</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -736,8 +742,12 @@ This introduces issues when the developer wants to find a  particular driver.
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >Minimal /Full BIOS </span> </li>
   <li><span style="font-size:0.65em" >Feature ON/OFF </span> </li>
-  <li><span style="font-size:0.65em" >Smbios/TPM/SecureBoot/ </span> </li>
-  <li><span style="font-size:0.65em" >. . . </span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+  <li><span style="font-size:0.6em" >SMBIOS</span> </li>
+  <li><span style="font-size:0.6em" >TPM </span> </li>
+  <li><span style="font-size:0.6em" >Secur Boot </span> </li>
+  <li><span style="font-size:0.6em" >. . . </span> </li>
+  </ul>
 </ul>
 @snapend
 
@@ -756,8 +766,8 @@ In order to provide suggestions on the problem statements above, we would like t
 
 
 ---?image=assets/images/slides/Slide18.JPG
-@title[Feature –BIOS module selection]
-<p align="right"><span class="gold" >@size[1.1](<b>Feature –BIOS module selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+@title[Feature – BIOS Module Selection]
+<p align="right"><span class="gold" >@size[1.1](<b>Feature – BIOS Module Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 <p style="line-height:40% " align="left"><span style="font-size:0.9em;" >Minimum set of features based on Categories </span></p>
 
 @snap[north span-50 ]
@@ -777,7 +787,7 @@ In order to provide suggestions on the problem statements above, we would like t
 <br>
 <br>
 <br>
-@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70% "><span style="font-size:0.8em;" ><b>Basic Boot Components &lpar;MIN&rpar;</b><br>&nbsp;</span></p>)
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Basic Boot Components &lpar;MIN&rpar;</b><br>&nbsp;</span></p>)
 @box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Advance Boot components&lpar;Full&rpar; </b><br>&nbsp;</span></p>)
 @box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Close Source</b><br><br>&nbsp;</span></p>)
 @snapend
@@ -842,7 +852,7 @@ The platform may also need to initiliaze General Purpose Input/Ouput (GPIO) pins
 <br>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
-Many Platforms have a bash or Python script  file to pre & post process the EDK II build process: 
+Many platforms have a script (Python or bash) to pre & post process the EDK II build process:  
 <a href="https://github.com/tianocore/edk2-platforms/tree/master/Platform/Intel#build">Build Script</a></p>
 
 <p style="line-height:60%" align="left" ><span style="font-size:0.75em;" >
@@ -858,7 +868,7 @@ Example: Invoked from the @size[.7em](`edk2-platforms/Platform/Intel`)<br>&nbsp;
 Configuration  Files:
 </span></p>
 <ul style="list-style-type:disc; line-height:0.6;">
-  <li><span style="font-size:0.6em" > `edk2-platforms\Platform\Intel\build.cfg ` - contains the default settings </span> </li>
+  <li><span style="font-size:0.6em" > `edk2-platforms\Platform\Intel\build.cfg ` - default settings </span> </li>
   <li><span style="font-size:0.6em" > Default settings are under the `DEFAULT_CONFIG` section</span> </li>
   <li><span style="font-size:0.6em" > Override the `edk2-platforms/Platform/Intel/. . ./build.cfg` settings from each board in board specific directory</span> </li>
 </ul>
@@ -893,8 +903,8 @@ An example of a board specific settings:
 edk2-platforms\Platform\Intel\KabylakeOpenBoardPkg\KabylakeRvp3\build_config.cfg
 
 ---?image=assets/images/slides/Slide18.JPG
-@title[Example Build config file]
-<p align="right"><span class="gold" >@size[1.1](<b>Example Build config file</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+@title[Example Build Config File]
+<p align="right"><span class="gold" >@size[1.1](<b>Example Build Config File</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-80 ]
 <br>
@@ -1018,8 +1028,8 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 
 ---?image=assets/images/slides/Slide18.JPG
-@title[Platform Features à la cart with PCDs ]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Features à la cart with PCDs  </b>)</span><span style="font-size:0.8em;" ></span></p>
+@title[Platform Features à la carte with PCDs ]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Features à la carte with PCDs  </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[south-west span-100 ]
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -1028,11 +1038,11 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 @snap[north-west span-80 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
-The Platform Config .dsc file controls if feature ON or OFF
+The Platform Config <b>.`dsc`</b> file controls if feature ON or OFF
 <br><br>
 Example:
 <br>
-@color[yellow](<b>`OpenBoardPkgConfig.dsc`</b> -  à la cart)
+@color[yellow](<b>`OpenBoardPkgConfig.dsc`</b> -  à la carte)
 </span></p>
 
 @snap[south-west span-100 ]
@@ -1055,7 +1065,7 @@ Example:
 
 Note:
 
-At the same time, a platform firmware may provide an “à la cart” menu so that an advanced user can configure an individual item. For example, PcdUefiSecureBootEnable can be used to configure if a BIOS needs to support UEFI secure boot [AUTH VARIABLE]. PcdTpm2Enable can be used to configure if a BIOS needs to support the TPM2 [TPM2 EDKII]. 
+At the same time, a platform firmware may provide an “à la carte” menu so that an advanced user can configure an individual item. For example, PcdUefiSecureBootEnable can be used to configure if a BIOS needs to support UEFI secure boot [AUTH VARIABLE]. PcdTpm2Enable can be used to configure if a BIOS needs to support the TPM2 [TPM2 EDKII]. 
 
 
 ---
@@ -1107,7 +1117,7 @@ Platform/Intel /<br>&nbsp;&nbsp;&nbsp;
 @snap[north-east span-47 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
-Minnowboard Turbot
+MinnowBoard Turbot
 </span></p>
 
 <p style="line-height:40% " align="left"><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
@@ -1369,7 +1379,7 @@ Note:
 @color[yellow](PI PCD) – The PI PCD could be static data fixed at build time or dynamic data updatable at runtime.<br><br>
 @color[yellow](UEFI Variable) – The UEFI Variable can be non-volatile data or volatile data, and it is widely used by VFR.<br><br>
 @color[yellow](FSP UPD) – FSP UPD can be static default configuration, or a dynamic updatable UPD.<br><br>
-@color[yellow](Silicon Policy Hob/PPI/Protocol) – It is policy data constructed at runtime or it can be a hook for silicon code<br>
+@color[yellow](Silicon Policy Hob/PPI/Protocol) – It is policy data constructed at runtime or it can be a hook for silicon code.<br>
 </span></p>
 
 Note:
@@ -1408,11 +1418,11 @@ readiness. If PcdGet is called before UEFI variable services ready, the default 
 <p align="right"><span class="gold" >@size[1.1](<b>Configuration Options - details Cont.</b>)</span><span style="font-size:0.8em;" ></span></p>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
-@color[yellow](Configuration Block) – It is a data structure to put all policy data in a block without any C-language data pointer in a policy data <br><br>
-@color[yellow](Global NVS) – It is an ACPI region to pass the configuration from the C code to ASL code <br><br>
-@color[yellow](Platform signed data blob) – It is read only signed data at build time.<br><br>
-@color[yellow](CMOS) – It is simple non-volatile storage, but it is not secure <br><br>
-@color[yellow](MACRO) – C-language MACRO. It is fixed at build time<br>
+@color[yellow](Configuration Block) – data structure,  puts all policy data in a block without any C-language data pointer in policy data. <br><br>
+@color[yellow](Global NVS) – ACPI region,  passes configuration from C code to ASL code. <br><br>
+@color[yellow](Platform signed data blob) – read only, data signed at build time.<br><br>
+@color[yellow](CMOS) – simple non-volatile storage, but it is not secure. <br><br>
+@color[yellow](MACRO) – C-language MACRO, fixed at build time.<br>
 </span></p>
 
 Note:
@@ -1437,8 +1447,8 @@ This signed data blob provides the configuration on a platform. An OEM may updat
 
 
 ---
-@title[Use PCD instead of UEFI Variable  ]
-<p align="right"><span class="gold" >@size[1.1](<b>Use PCD instead of UEFI Variable </b>)</span><span style="font-size:0.8em;" ></span></p>
+@title[Use PCD Instead of UEFI Variable  ]
+<p align="right"><span class="gold" >@size[1.1](<b>Use PCD Instead of UEFI Variable </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-48 ]
 <br>
@@ -1621,7 +1631,7 @@ KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data
 @snap[north-west span-100 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" ><br>
-Example: `AdvancedFeaturePkg.dec`  for SMBIOS type 0 data structure
+Example: <b>`AdvancedFeaturePkg.dec`</b>  for SMBIOS type 0 data structure
 </span></p>
 
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
@@ -1679,8 +1689,8 @@ typedef struct {
 </pre>
 
 ---
-@title[Example of DSC xRef DEC & .h  files  ]
-<p align="right"><span class="gold" >@size[1.1](<b>Example of DSC xRef DEC & .h  files </b>)</span><span style="font-size:0.8em;" ></span></p>
+@title[Example of DSC xRef .DEC & .h  files  ]
+<p align="right"><span class="gold" >@size[1.1](<b>Example of DSC xRef &lpar;DEC & .h &rpar; </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-48 ]
 <br>
@@ -1702,7 +1712,7 @@ typedef struct {
 
 @snap[north-west span-47 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
-@color[cyan](Purly Pkg  DEC File)<br>
+@color[cyan](Purley Pkg  DEC File)<br>
 @size[.8em](&num;&num; `gEfiSetupVariableGuid`)
 </span></p>
 
@@ -1909,8 +1919,8 @@ PcdSet16S (PcdSetNvStoreDefaultId
  When its value is set in PEI, it will trig the default setting to be applied as the default EFI variable.
 
 ---
-@title[Silicon Policy data flow guidelines]
-<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy data flow guidelines</b>)</span></span></p>
+@title[Silicon Policy Data Flow Guidelines]
+<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy Data Flow Guidelines</b>)</span></span></p>
 
 @snap[north-east span-60 ]
 <br>
@@ -1982,8 +1992,8 @@ The KabylakeSiliconPkg provides the former (PeiFspPolicyInitLib.c), and Kabylake
 
 
 ---
-@title[Update Silicon Policy example ]
-<p align="right"><span class="gold" >@size[1.1](<b>Update Silicon Policy example</b>)</span><span style="font-size:0.8em;" ></span></p>
+@title[Update Silicon Policy Example ]
+<p align="right"><span class="gold" >@size[1.1](<b>Update Silicon Policy Example</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-49 ]
 <br>
@@ -2003,7 +2013,7 @@ The KabylakeSiliconPkg provides the former (PeiFspPolicyInitLib.c), and Kabylake
 
 
 @snap[north-west span-100 ]
-<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" ><br><br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.65em;  font-family:Consolas;" ><br><br>
 KabylakeOpenBoardPkg/FspWrapper/Library/PeiSiliconPolicyUpdateLibFsp
 </span></p>
 @snapend
@@ -2080,8 +2090,8 @@ Code is in:
   // should be applied to MemorySpdPtr*.
 
 ---
-@title[Dynamically set Defaults ]
-<p align="right"><span class="gold" >@size[1.1](<b>Dynamically set Defaults</b>)</span><span style="font-size:0.8em;" ></span></p>
+@title[Dynamically Set Defaults ]
+<p align="right"><span class="gold" >@size[1.1](<b>Dynamically Set Defaults</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[west span-100 ]
 <br>
@@ -2131,6 +2141,7 @@ Note:
   <li><span style="font-size:0.65em" >GPIO </span> </li>
   <li><span style="font-size:0.65em" >SIO </span> </li>
   <li><span style="font-size:0.65em" >ACPI </span> </li>
+  <li><span style="font-size:0.65em" >Stages </span> </li>
 </ul>
 <br>
 <br>
@@ -2796,8 +2807,8 @@ Library instances selected in the DSC help with porting
 Only one instance of each named library class may be linked to a given module
 
 ---
-@title[Platform Initialization Board hook Modules]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+@title[Platform Initialization Board Hook Modules]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-40 ]
@@ -2875,8 +2886,8 @@ Note:
 The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
 
 ---
-@title[Platform Initialization Board hook Modules]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+@title[Platform Initialization Board Hook Modules]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-40 ]
@@ -2951,8 +2962,6 @@ Note:
 
 The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
 
-
-
 ---?image=assets/images/slides/Slide5.JPG
 @title[EDK II Open Platform Summary Section]
 <br>
@@ -2965,12 +2974,16 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >Minimal /Full BIOS </span> </li>
   <li><span style="font-size:0.65em" >Feature ON/OFF </span> </li>
-  <li><span style="font-size:0.65em" >Smbios/TPM/SecureBoot/ </span> </li>
-  <li><span style="font-size:0.65em" >. . . </span> </li>
+  <ul style="list-style-type:disc; line-height:0.6;">
+  <li><span style="font-size:0.6em" >SMBIOS</span> </li>
+  <li><span style="font-size:0.6em" >TPM </span> </li>
+  <li><span style="font-size:0.6em" >Secur Boot </span> </li>
+  <li><span style="font-size:0.6em" >. . . </span> </li>
+  </ul>
 </ul>
 @snapend
 
-@snap[south-west span-30]
+@snap[south-west span-30 ]
 <br>
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >Setup Variable</span> </li>
@@ -2988,6 +3001,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
   <li><span style="font-size:0.65em" >GPIO </span> </li>
   <li><span style="font-size:0.65em" >SIO </span> </li>
   <li><span style="font-size:0.65em" >ACPI </span> </li>
+  <li><span style="font-size:0.65em" >Stages </span> </li>
 </ul>
 <br>
 <br>
@@ -2998,6 +3012,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 
 
 Note:
+
 In order to provide suggestions on the problem statements earilier, we need to focus on the following four areas: 
 
 - Feature. How does a BIOS provide the feature selection option to a developer? 
