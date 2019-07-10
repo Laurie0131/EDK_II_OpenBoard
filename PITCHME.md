@@ -2916,10 +2916,10 @@ BoardDetect()<br>&nbsp;&nbsp;
 BoardDebugInit()<br>&nbsp;&nbsp;
 BoardBootModeDetect()<br>&nbsp;&nbsp;
 BoardInitBeforeMemoryInit()<br>&nbsp;&nbsp;
-. . . <br>&nbsp;&nbsp;
+. . . <br><br>&nbsp;&nbsp;
 <font face="Arial">Notify call back </font><br>&nbsp;&nbsp;
 BoardInitAfterMemoryInit()
-<br><br><br><br>
+<br><br><br><br><br>
 @color[yellow](PlatformInitPostMem)/<br>&nbsp;&nbsp;
 
 BoardInitBeforeSiliconInit()<br>&nbsp;&nbsp;
@@ -2930,8 +2930,8 @@ BoardInitAfterSiliconInit()<br>
 
 
 @snap[north-east span-18 fragment]
-<br><br><br><br><br><br>
-<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" >@color[yellow](PEI)</span></p>
+<br><br><br><br><br><br><br><br><br><br>
+<p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" ><br><br>@color[yellow](PEI)</span></p>
 
 @snapend
 
