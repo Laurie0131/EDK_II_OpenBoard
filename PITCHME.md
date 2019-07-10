@@ -2637,7 +2637,101 @@ Then the PeiCore will continue dispatching the final PEIMs and jump into the Dxe
 <b>`gIntelFsp2WrapperTokenSpaceGuid`.@color[yellow](`PcdFspModeSelection`)</b>	0 - dispatch, 1 – API
 </span></p>
 
+@snap[south-west span-40 ]
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em; ">
+<a href="https://www.intel.com/FSP">FSP Spec 2.1</a>
+</span></p>
+<br>
+@snapend
+
 Note:
+
+FSP 2.1 introduces Dispatch Mode Boot Flow
+
+The Pcd - gIntelFsp2WrapperTokenSpaceGuid.PcdFspModeSelection	0 - dispatch, 1 – API (default)  is used
+
+Dispatch mode is an optional boot flow intended to enable FSP to integrate well in to UEFI bootloader implementations. Implementation of this boot flow necesitates that the underlying FSP implementation uses the Pre-EFI Initialization (PEI) environment defined in the PI Specification. 
+
+Blue blocks are from the FSP binary and green blocks are from the bootloader. Blocks with mixed colors indicate that both bootloader and FSP modules are dispatched during that phase of the boot flow. 
+Dispatch mode is intended to implement a boot flow that is as close to a standard UEFI boot flow as possible. In dispatch mode, FSP exposes Firmware Volumes (FV) directly to the bootloader. The PEIM in these FV are executed directly in the context of the PEI environment provided by the bootloader. FSP-T, FSP-M, and FSP-S could contain one or multiple FVs. The exact FVs layout will be described in the Integration Guide. In dispatch mode, the PPI database, PCD database, and HOB list are shared between the bootloader and the FSP. 
+In dispatch mode, the NotifyPhase() API API is not used. Instead, FSP-S contains DXE drivers that implement the native callbacks on equivalent events for each of the NotifyPhase() invocations. 
+
+
+---?image=assets/images/slides/Slide57.JPG
+@title[ Platform Hooks Section]
+<br><br><br><br><br><br><br>
+### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Platform Hooks</span>
+<span style="font-size:0.9em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using EDK II Libraries</span>
+
+
+@snap[south-west span-20 fragment]
+![how](/assets/images/How_text.png)
+<br>
+<br>
+@snapend
+
+Note:
+
+How? – by using EDK II Libraries for Platform Hooks
+
+
+---?image=assets/images/slides/Slide58.JPG
+@title[EDK II Libraries w/ Platform Hooks]
+<p align="right"><span class="gold" >@size[1.1](<b>EDK II Libraries w/ Platform Hooks </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+
+@snap[north-east span-80 fragment ]
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:75%" align="left"><span style="font-size:0.9em">@color[yellow](DSC maps library class to library-instances)</span></p>
+<br>
+@snapend
+
+
+@snap[north-east span-80 fragment ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:75%" align="left"><span style="font-size:0.9em">Syntax in DSC File</span><br>
+<span style="font-size:0.65em; font-family:Consolas;">
+&nbsp;&nbsp;&nbsp;&nbsp;[libraryclasses] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;LibraryClassName|Path/To/@color[cyan](LibInstanceNameInstance1).inf  </span> </p>  
+<br>
+@snapend
+
+
+@snap[south span-85 fragment ]
+@box[bg-purple-pp text-white rounded   ](<span style="font-size:01.0em" >Search INF files for string:&nbsp;&nbsp; "`LIBRARY_CLASS  =`"&nbsp;</span>)
+<br>
+@snapend
+
+
+Note:
+
+DSC maps library-class to library-instances
+Global, by type, individual override
+Effected by size, speed, built in, binary distribution 
+PCI example
+PciCfg – Protocol function call by GUID (PEI)
+PciRootBridgeIo – Protocol function call by GUID (DXE)
+Syntax in DSC file
+	[libraryclasses] 
+	LibraryClassName|Path/To/LibInstanceNameInstance1.inf
+Note: Workspace relative paths!
+Check for existing library instances.
+Search INF for string: LIBRARY_CLASS  =
+
+
+
+
+
 
 
 ---
