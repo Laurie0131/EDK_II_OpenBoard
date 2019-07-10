@@ -2641,7 +2641,6 @@ Then the PeiCore will continue dispatching the final PEIMs and jump into the Dxe
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; ">
 <a href="https://www.intel.com/FSP">FSP Spec 2.1</a>
 </span></p>
-<br>
 @snapend
 
 Note:
@@ -2664,8 +2663,10 @@ In dispatch mode, the NotifyPhase() API API is not used. Instead, FSP-S contains
 <span style="font-size:0.9em" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using EDK II Libraries</span>
 
 
-@snap[south-west span-20 fragment]
+@snap[south-east span-25 fragment]
 ![how](/assets/images/How_text.png)
+<br>
+<br>
 <br>
 <br>
 @snapend
@@ -2708,7 +2709,7 @@ How? – by using EDK II Libraries for Platform Hooks
 
 
 @snap[south span-85 fragment ]
-@box[bg-purple-pp text-white rounded   ](<span style="font-size:01.0em" >Search INF files for string:&nbsp;&nbsp; "`LIBRARY_CLASS  =`"&nbsp;</span>)
+@box[bg-purple-pp text-white rounded   my-box-pad2 ](<span style="font-size:01.0em" >Search INF files for string:&nbsp;&nbsp; "<b>`LIBRARY_CLASS  =`</b>"&nbsp;</span>)
 <br>
 @snapend
 
@@ -2724,8 +2725,12 @@ PciRootBridgeIo – Protocol function call by GUID (DXE)
 Syntax in DSC file
 	[libraryclasses] 
 	LibraryClassName|Path/To/LibInstanceNameInstance1.inf
-Note: Workspace relative paths!
+	
+	
+also note, Workspace relative paths!
+
 Check for existing library instances.
+
 Search INF for string: LIBRARY_CLASS  =
 
 
