@@ -2739,7 +2739,59 @@ Check for existing library instances.
 Search INF for string: LIBRARY_CLASS  =
 
 
+---?image=assets/images/slides/Slide58.JPG
+@title[Library Classes Section in DSC]
+<p align="right"><span class="gold" >@size[1.1](<b>Library Classes Section in DSC </b>)</span><span style="font-size:0.75em;" ></span></p>
 
+<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" >`DebugLib` class example </span></p>
+<br>
+```
+ [LibraryClasses]
+     DebugLib|MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull.inf
+     • • •
+ [LibraryClasses.common.DXE_CORE]
+         • • •
+    DebugLib|IntelFrameworkModulePkg/Library/PeiDxeDebugLibReportStatusCode/
+           PeiDxeDebugLibReportStatusCode.inf  
+        • • •
+ [LibraryClasses.common.DXE_SMM_DRIVER]
+    DebugLib|MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull.inf
+
+```
+<hr>
+```
+ [Components]
+      • • •
+ MyPath/MyModule.inf {
+  <LibraryClasses>
+    DebugLib|MdePkg/Library/BaseDebugLibSerialPort.inf
+ }
+ 
+``` 
+@snap[north-east span-30 fragment ]
+<br>
+<br>
+<br>
+<br>
+@box[bg-purple-pp text-white my-box-pad2  ](<span style="font-size:0.6em;"> Library Class Section</span>)
+<br>
+<br>
+<br>
+<br>
+<br>
+@box[bg-green-pp text-white my-box-pad2  ](<span style="font-size:0.6em;"> Components Section</span>)
+@snapend
+
+Note:
+
+This is an example!!!
+
+Build the slide with each libraryclass
+
+
+Library instances selected in the DSC help with porting
+
+Only one instance of each named library class may be linked to a given module
 
 
 
