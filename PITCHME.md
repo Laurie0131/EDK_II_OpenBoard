@@ -2930,7 +2930,7 @@ BoardInitAfterSiliconInit()<br>
 
 
 @snap[north-east span-18 fragment]
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 <p style="line-height:70%" ><span style="font-size:01.1em; font-weight: bold;" ><br><br>@color[yellow](PEI)</span></p>
 
 @snapend
@@ -2942,6 +2942,71 @@ Note:
 
 The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
 
+
+
+---?image=assets/images/slides/Slide5.JPG
+@title[EDK II Open Platform Summary Section]
+<br>
+<p align="left"><span class="gold" >@size[1.1](<b>EDK II Open Platform <br>Summary</b>)</span></span></p>
+
+@snap[north-east span-35 ]
+<br>
+<br>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >Minimal /Full BIOS </span> </li>
+  <li><span style="font-size:0.65em" >Feature ON/OFF </span> </li>
+  <li><span style="font-size:0.65em" >Smbios/TPM/SecureBoot/ </span> </li>
+  <li><span style="font-size:0.65em" >. . . </span> </li>
+</ul>
+@snapend
+
+@snap[south-west span-30]
+<br>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >Setup Variable</span> </li>
+  <li><span style="font-size:0.65em" >PCD </span> </li>
+  <li><span style="font-size:0.65em" >Policy Hob/PPI/Protocol </span> </li>
+</ul>
+<br>
+<br>
+<br>
+@snapend
+
+@snap[south-east span-33 ]
+<br>
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >GPIO </span> </li>
+  <li><span style="font-size:0.65em" >SIO </span> </li>
+  <li><span style="font-size:0.65em" >ACPI </span> </li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+@snapend
+
+
+
+Note:
+In order to provide suggestions on the problem statements earilier, we need to focus on the following four areas: 
+
+- Feature. How does a BIOS provide the feature selection option to a developer? 
+- Configuration. From which interface can a platform module get the configuration data? 
+- Porting. Where are the modules to be ported for a new board? 
+- Tree Structure. What does an EDKII platform package look like? 
+
+---  
+@title[summary]
+<BR>
+### <p align="center"<span class="gold"   >Summary </span></p><br>
+
+<!---  Add bullets using https://fontawesome.com/cheatsheet certificate
+-->
+<ul style="list-style-type:none">
+ <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II Open board platforms <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;infrastructure  & focus areas</span> </li>
+ <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II Open board<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;platforms </span></li>
+</ul>
 
 
 ---
