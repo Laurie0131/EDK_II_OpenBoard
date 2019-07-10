@@ -2795,7 +2795,7 @@ Library instances selected in the DSC help with porting
 
 Only one instance of each named library class may be linked to a given module
 
----?image=assets/images/slides/Slide59.JPG
+---
 @title[Platform Initialization Board hook Modules]
 <p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
@@ -2814,6 +2814,10 @@ Only one instance of each named library class may be linked to a given module
 @snapend
 
 
+@snap[north-east span-12 ]
+<br>
+![hook](/assets/images/hook.png)
+@snapend
 
 @snap[north-west span-60 ]
 <br>
@@ -2870,7 +2874,7 @@ Note:
 
 The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
 
----?image=assets/images/slides/Slide59.JPG
+---
 @title[Platform Initialization Board hook Modules]
 <p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
@@ -2888,6 +2892,11 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
+
+@snap[north-east span-12 ]
+<br>
+![hook](/assets/images/hook.png)
+@snapend
 
 
 @snap[north-west span-60 ]
@@ -3014,6 +3023,24 @@ In order to provide suggestions on the problem statements earilier, we need to f
 @title[Questions]
 <br>
 ![Questions](/assets/images/questions.JPG) 
+
+---
+@title[return to main]
+<p align="center"><span class="gold"   >@size[1.2em](<b>Return to Main Training Page</b>)</span></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p align="center"><span style="font-size:0.9em">Return to Training Table of contents for next presentation <a href="https://github.com/tianocore-training/Tianocore_Training_Contents/wiki#schedule--outline">link</a></span></p>
+
+@snap[north span-30 ]
+<br>
+<br>
+<br>
+<a href="https://github.com/tianocore-training/Tianocore_Training_Contents/wiki#schedule--outline">
+![trainingLogo](/assets/images/returnTrainingLogo.png)</a>
+@snapend
 
 
 ---?image=assets/images/gitpitch-audience.jpg
