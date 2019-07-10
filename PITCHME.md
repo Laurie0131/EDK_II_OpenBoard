@@ -2739,7 +2739,7 @@ Check for existing library instances.
 Search INF for string: LIBRARY_CLASS  =
 
 
----?image=assets/images/slides/Slide58.JPG
+---?image=assets/images/slides/Slide59.JPG
 @title[Library Classes Section in DSC]
 <p align="right"><span class="gold" >@size[1.1](<b>Library Classes Section in DSC </b>)</span><span style="font-size:0.75em;" ></span></p>
 
@@ -2773,13 +2773,13 @@ Search INF for string: LIBRARY_CLASS  =
 <br>
 <br>
 <br>
-@box[bg-purple-pp text-white my-box-pad2  ](<span style="font-size:0.6em;"> Library Class Section</span>)
+@box[bg-purple-pp text-white my-box-pad2  ](<span style="font-size:0.65em;"> Library Class Section</span>)
 <br>
 <br>
 <br>
 <br>
 <br>
-@box[bg-green-pp text-white my-box-pad2  ](<span style="font-size:0.6em;"> Components Section</span>)
+@box[bg-green-pp text-white my-box-pad2  ](<span style="font-size:0.65em;"> Components Section</span>)
 @snapend
 
 Note:
@@ -2793,7 +2793,40 @@ Library instances selected in the DSC help with porting
 
 Only one instance of each named library class may be linked to a given module
 
+---?image=assets/images/slides/Slide59.JPG
+@title[Platform Initialization Board hook Modules]
+<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
+
+@snap[north-west span-40 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-58 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[south-east span-58 ]
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-18 ]
+<br><br><br><br><br>
+<p style="line-height:70%" ><span style="font-size:01.9em; font-weight: bold;" >@color[yellow](PEI)</span></p>
+<p style="line-height:40%" ><span style="font-size:0.9em; font-weight: bold;" ><br><br><br><br>&nbsp;</span></p>
+<p style="line-height:70%" ><span style="font-size:01.9em; font-weight: bold;" >@color[yellow](DXE)</span></p>
+@snapend
+
+
+
+
+Note:
 
 
 ---
