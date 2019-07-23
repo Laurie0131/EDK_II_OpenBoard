@@ -341,8 +341,8 @@ The architecture is designed to support a maintainer ownership model. For exampl
        &nbsp;. &nbsp;. &nbsp;./<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        Vlv2DeviceRefCodePkg/<br>&nbsp;&nbsp;
 @color[yellow](edk2-non-osi)/<a href="https://github.com/tianocore/edk2-non-osi/tree/devel-MinPlatform">github.com/edk2-non-osi</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-@color[yellow](FSP)/<a href="https://github.com/IntelFsp/FSP">github.com/Intel/FSP</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/<br>&nbsp;&nbsp;
+@color[yellow](FSP)/<a href="https://github.com/IntelFsp/FSP">github.com/Intel/FSP</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
    KabylakeFspBinPkg/<br>&nbsp;&nbsp;
 </span></p>
 @snapend
@@ -353,26 +353,24 @@ The architecture is designed to support a maintainer ownership model. For exampl
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
-&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;
-@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Common</font>)"<br>&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Common</font>)<br><br>
 <br>
-@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Platform</font>)"<br>
-@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Board</font>)" <br>
-@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Common</font>)"<br>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
-@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Silicon</font>)"<br>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
-@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;
+<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Platform</font>)<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Board</font>) <br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Common</font>)<br>
+<br>
+<br>
+<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Silicon</font>)<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Silicon</font>)<br>&nbsp;&nbsp;
 </span></p>
 @snapend
 
