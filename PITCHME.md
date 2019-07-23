@@ -55,7 +55,7 @@ Note:
 
 ---
 @title[Current Issues ]
-<p align="right"><span class="gold" >@size[1.1](<b>Current Issues</b>)</span><br>
+<p align="right"><span class="gold" >@size[1.1em](<b>Current Issues</b>)</span><br>
 <span style="font-size:0.75em;" > Open Source EDK II Platforms</span></p>
 
 
@@ -95,7 +95,7 @@ Why can’t the platform tree structures bear more similarity?
 
 ---
 @title[Goals]
-<p align="right"><span class="gold" >@size[1.1](<b>GOALS</b>)</span><br>
+<p align="right"><span class="gold" >@size[1.1em](<b>GOALS</b>)</span><br>
 <span style="font-size:0.75em;" ></span></p>
 
 
@@ -133,7 +133,7 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 ---?image=assets/images/slides/Slide5.JPG
 @title[Four Focus Areas Section]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Four Focus Areas</b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>Four Focus Areas</b>)</span></span></p>
 
 @snap[north-east span-35 fragment]
 <br>
@@ -191,7 +191,7 @@ In order to provide suggestions on the problem statements earilier, we need to f
 ---?image=assets/images/slides/Slide6.JPG
 @title[Tree Structure Section]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Tree Structure</b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>Tree Structure</b>)</span></span></p>
 
 
 Note:
@@ -202,7 +202,7 @@ This is the directory structure of our EDK II platform in relationship to the wh
 
 ---?image=assets/images/slides/Slide7.JPG
 @title[Organization]
-<p align="right"><span class="gold" >@size[1.1](<b>Organization</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Organization</b>)</span></span></p>
 
 
 @snap[north span-50 ]
@@ -254,7 +254,7 @@ The architecture makes use of four primary classifications of code that are gene
 
 ---?image=assets/images/slides/Slide7.JPG
 @title[Open Source EDK II Workspace]
-<p align="right"><span class="gold" >@size[1.1](<b>Open Source EDK II Workspace</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Open Source EDK II Workspace</b>)</span></span></p>
 
 @snap[north-west span-50 ]
 <br>
@@ -310,7 +310,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
 
 ---?image=assets/images/slides/Slide7.JPG
 @title[Open Board Tree Structure]
-<p align="right"><span class="gold" >@size[1.1](<b>Open Board Tree Structure</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Open Board Tree Structure</b>)</span></span></p>
 
 @snap[north-west span-75 ]
 <br>
@@ -358,7 +358,7 @@ Not shown is the edk2 repository since this should always be considered as commo
 
 ---
 @title[Directory Description]
-<p align="right"><span class="gold" >@size[1.1](<b>Directory Description</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Directory Description</b>)</span></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>@color[yellow](edk2-platform): </b>EDK II repo includes open source platform code </span></p>
 
 <ul style="list-style-type:disc; line-height:0.7;">
@@ -399,7 +399,7 @@ Note:
 
 ---
 @title[FSP Directory Description]
-<p align="right"><span class="gold" >@size[1.1](<b>FSP Directory Description</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>FSP Directory Description</b>)</span></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><b>@color[yellow](FSP): </b>repo for Intel® Firmware Support Package (FSP) binaries </span></p>
 
 <ul style="list-style-type:disc; line-height:0.8;">
@@ -437,7 +437,7 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 
 ---
 @title[Board Package Structure ]
-<p align="right"><span class="gold" >@size[1.1](<b>Board Package Structure </b>)</span><span style="font-size:0.8em;" ><br>- `MinPlatformPkg`</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Board Package Structure </b>)</span><span style="font-size:0.8em;" ><br>- `MinPlatformPkg`</span></p>
 
 @snap[north-west span-45 ]
 <br>
@@ -477,7 +477,7 @@ Note:
 
 ---
 @title[Advanced Feature Package ]
-<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-45 ]
 <br>
@@ -511,7 +511,7 @@ Note:
 
 ---
 @title[Advanced Feature Package ]
-<p align="right"><span class="gold" >@size[1.1](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-45 ]
 <br>
@@ -551,7 +551,7 @@ Note:
 
 ---
 @title[One Feature, one directory Guideline]
-<p align="right"><span class="gold" >@size[1.1](<b>One Feature, One directory Guideline </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>One Feature, One directory Guideline </b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -636,7 +636,7 @@ The KabylakeRvp3 folder contains all RVP3 related settings, such as GPIO, High D
 
 ---
 @title[Compare to MinnowBoard  MAX/Turbot]
-<p align="right"><span class="gold" >@size[1.1](<b>Compare to MinnowBoard  MAX/Turbot</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Compare to MinnowBoard  MAX/Turbot</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -733,7 +733,7 @@ This introduces issues when the developer wants to find a  particular driver.
 ---?image=assets/images/slides/Slide17.JPG
 @title[Focus - Features Section]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Features</b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>Features</b>)</span></span></p>
 
 @snap[north-east span-35 ]
 <br>
@@ -767,7 +767,7 @@ In order to provide suggestions on the problem statements above, we would like t
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Feature – BIOS Module Selection]
-<p align="right"><span class="gold" >@size[1.1](<b>Feature – BIOS Module Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Feature – BIOS Module Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 <p style="line-height:40% " align="left"><span style="font-size:0.9em;" >Minimum set of features based on Categories </span></p>
 
 @snap[north span-50 ]
@@ -819,7 +819,7 @@ Note:
 
 ---?image=assets/images/slides/Slide20.JPG
 @title[Basic Boot Components]
-<p align="right"><span class="gold" >@size[1.1](<b>Basic Boot Components</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Basic Boot Components</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 
 
@@ -837,7 +837,7 @@ The platform may also need to initiliaze General Purpose Input/Ouput (GPIO) pins
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Features Build Enabled]
-<p align="right"><span class="gold" >@size[1.1](<b>Features Build Enabled</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Features Build Enabled</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-85 ]
 <br>
@@ -904,7 +904,7 @@ edk2-platforms\Platform\Intel\KabylakeOpenBoardPkg\KabylakeRvp3\build_config.cfg
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Example Build Config File]
-<p align="right"><span class="gold" >@size[1.1](<b>Example Build Config File</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example Build Config File</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-80 ]
 <br>
@@ -947,7 +947,7 @@ SILENT_MODE = FALSE <br>&nbsp;&nbsp;
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Platform Features Table d’hôte ]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Features Table d’hôte </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Features Table d’hôte </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[south-west span-100 ]
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -1029,7 +1029,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Platform Features à la carte with PCDs ]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Features à la carte with PCDs  </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Features à la carte with PCDs  </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[south-west span-100 ]
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -1070,7 +1070,7 @@ At the same time, a platform firmware may provide an “à la carte” menu so t
 
 ---
 @title[Where are the DSC & FDF files? ]
-<p align="right"><span class="gold" >@size[1.1](<b>Where are the DSC & FDF files?</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Where are the DSC & FDF files?</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-48 ]
 <br>
@@ -1148,7 +1148,7 @@ Note:
 
 ---
 @title[Example Kabylake Configuration .DSC file ]
-<p align="right"><span class="gold" >@size[1.1](<b>Example Kabylake Configuration .DSC file</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example Kabylake Configuration .DSC file</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 ```
 [PcdsFixedAtBuild]
@@ -1213,7 +1213,7 @@ Click on link to view the whole .DSC file
 
 ---
 @title[Example Kabylake Configuration .FDF file ]
-<p align="right"><span class="gold" >@size[1.1](<b>Example Kabylake Configuration .FDF file</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example Kabylake Configuration .FDF file</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 ```
 [FD.KabylakeRvp3]
@@ -1291,7 +1291,7 @@ Click on the link to view the whole .FDF file
 ---?image=assets/images/slides/Slide28.JPG
 @title[Focus - Configuration Section]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Configuration </b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>Configuration </b>)</span></span></p>
 
 @snap[south-west span-30 ]
 <br>
@@ -1317,7 +1317,7 @@ there might be many sources of platform configuration data
 
 ---
 @title[Configuration Options ]
-<p align="right"><span class="gold" >@size[1.1](<b>Configuration Options</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Options</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 There might be many sources of platform configuration data.  </span></p>
@@ -1372,7 +1372,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Configuration Options 02 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Configuration Options - details</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Options - details</b>)</span><span style="font-size:0.8em;" ></span></p>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 
@@ -1415,7 +1415,7 @@ readiness. If PcdGet is called before UEFI variable services ready, the default 
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Configuration Options 03 ]
-<p align="right"><span class="gold" >@size[1.1](<b>Configuration Options - details Cont.</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Options - details Cont.</b>)</span><span style="font-size:0.8em;" ></span></p>
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 @color[yellow](Configuration Block) – data structure,  puts all policy data in a block without any C-language data pointer in policy data. <br><br>
@@ -1448,7 +1448,7 @@ This signed data blob provides the configuration on a platform. An OEM may updat
 
 ---
 @title[Use PCD Instead of UEFI Variable  ]
-<p align="right"><span class="gold" >@size[1.1](<b>Use PCD Instead of UEFI Variable </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Use PCD Instead of UEFI Variable </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-48 ]
 <br>
@@ -1591,7 +1591,7 @@ BKM is to set the desired value in the Platform Specific .DSC file
  
 ---?image=/assets/images/slides/Slide34.JPG
 @title[How to Map PCD ]
-<p align="right"><span class="gold" >@size[1.1](<b>How to Map PCD to Configuration Data</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>How to Map PCD to Configuration Data</b>)</span><span style="font-size:0.8em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 Using "@color[yellow](Callback)" mechanism to convert PCD to Configuration data
 </span></p>
@@ -1617,7 +1617,7 @@ KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data
 
 ---
 @title[“C” Data Structure as PCDs ]
-<p align="right"><span class="gold" >@size[1.1](<b>“C” Data Structure as PCDs</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>“C” Data Structure as PCDs</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -1690,7 +1690,7 @@ typedef struct {
 
 ---
 @title[Example of DSC xRef .DEC & .h  files  ]
-<p align="right"><span class="gold" >@size[1.1](<b>Example of DSC xRef &lpar;DEC & .h &rpar; </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example of DSC xRef &lpar;DEC & .h &rpar; </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-48 ]
 <br>
@@ -1768,7 +1768,7 @@ Note:
 
 ---
 @title[Configuration Multi-SKU PCD – Board ID  ]
-<p align="right"><span class="gold" >@size[1.1](<b>Configuration Multi-SKU PCD – Board ID </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Multi-SKU PCD – Board ID </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-49 ]
 <br>
@@ -1848,7 +1848,7 @@ The SKU PCD is actually a dynamic PCD. During boot, the board detection takes th
 
 ---
 @title[Default Stores PCD – for Configuration   ]
-<p align="right"><span class="gold" >@size[1.1](<b>Default Stores PCD – for Configuration  </b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Default Stores PCD – for Configuration  </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -1920,7 +1920,7 @@ PcdSet16S (PcdSetNvStoreDefaultId
 
 ---
 @title[Silicon Policy Data Flow Guidelines]
-<p align="right"><span class="gold" >@size[1.1](<b>Silicon Policy Data Flow Guidelines</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Silicon Policy Data Flow Guidelines</b>)</span></span></p>
 
 @snap[north-east span-60 ]
 <br>
@@ -1976,7 +1976,7 @@ A board module may refer to another source to get the board specific policy data
 
 ---?image=assets/images/slides/Slide40.JPG
 @title[Example: FSP policy in MinPlatformPkg]
-<p align="right"><span class="gold" >@size[1.1](<b>Example: FSP policy in MinPlatformPkg</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Example: FSP policy in MinPlatformPkg</b>)</span></span></p>
 
 
 Note:
@@ -1993,7 +1993,7 @@ The KabylakeSiliconPkg provides the former (PeiFspPolicyInitLib.c), and Kabylake
 
 ---
 @title[Update Silicon Policy Example ]
-<p align="right"><span class="gold" >@size[1.1](<b>Update Silicon Policy Example</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Update Silicon Policy Example</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-49 ]
 <br>
@@ -2091,7 +2091,7 @@ Code is in:
 
 ---
 @title[Dynamically Set Defaults ]
-<p align="right"><span class="gold" >@size[1.1](<b>Dynamically Set Defaults</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Dynamically Set Defaults</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[west span-100 ]
 <br>
@@ -2133,7 +2133,7 @@ Note:
 ---?image=assets/images/slides/Slide43.JPG
 @title[Board Porting ]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>Board Porting</b>)</span><span style="font-size:0.8em;" ></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>Board Porting</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[south-east span-33 ]
 <br>
@@ -2160,7 +2160,7 @@ Board Specific initialization
 
 ---?image=assets/images/slides/Slide_TableDHote.JPG
 @title[Staged Approach by Features]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)</span><br><span style="font-size:0.75em;" >- Platform Firmware Boot Stage PCD</span></p>
 @snap[north-west span-70 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >PCD Variable:<br></span>
@@ -2266,7 +2266,7 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
 ---?image=assets/images/slides/Slide45.JPG
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 
@@ -2284,7 +2284,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 02]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 1. enable debug
@@ -2300,7 +2300,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 03]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 1. enable debug
@@ -2316,7 +2316,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 04]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 1. enable debug
@@ -2331,7 +2331,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 05]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 1. enable debug
@@ -2346,7 +2346,7 @@ Note:
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 06]
-<p align="right"><span class="gold" >@size[1.1](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 Note:
 1. enable debug
@@ -2359,7 +2359,7 @@ Note:
 
 ---?image=assets/images/slides/Slide50.JPG
 @title[Staged Approach by Features]
-<p align="right"><span class="gold" >@size[1.1](<b>Staged Approach by Features</b>)<br></span><span style="font-size:0.75em;" >- Firmware Volume</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)<br></span><span style="font-size:0.75em;" >- Firmware Volume</span></p>
 
 @snap[north-east span-60 ]
 <br>
@@ -2382,7 +2382,7 @@ In order to separate modules in different boot stages, the BKM is to Standardize
 
 ---?image=assets/images/slides/Slide51.JPG
 @title[UEFI Firmware Volumes (FV) - Review]
-<p align="right"><span class="gold" >@size[1.1](<b>UEFI Firmware Volumes (FV) - Review</b>)<br></span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>UEFI Firmware Volumes (FV) - Review</b>)<br></span><span style="font-size:0.75em;" ></span></p>
 
 @snap[north-west span-70 ]
 <br>
@@ -2431,7 +2431,7 @@ Platform Initialization - Firmware Volume
 
 ---
 @title[Standardize FV By Stages]
-<p align="right"><span class="gold" >@size[1.1](<b>Standardize FV By Stages</b>)</span></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Standardize FV By Stages</b>)</span></span></p>
 
 
 @snap[north-east span-71 ]
@@ -2492,7 +2492,7 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 
 ---
 @title[FSP Firmware Volumes ]
-<p align="right"><span class="gold" >@size[1.1](<b>FSP Firmware Volumes </b>)<br></span><span style="font-size:0.75em;" >- Created Pre-Build</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>FSP Firmware Volumes </b>)<br></span><span style="font-size:0.75em;" >- Created Pre-Build</span></p>
 
 @snap[north-west span-49 ]
 <br>
@@ -2583,7 +2583,7 @@ Prior to the EDK II build the Tool RebaseAndPatchFspBinBaseAddress.py will rebas
 
 ---?image=assets/images/slides/Slide54.JPG
 @title[FSP APIs in FSP Binary]
-<p align="right"><span class="gold" >@size[1.1](<b>FSP APIs in FSP Binary</b>)<br></span><span style="font-size:0.5em;" >Using Intel<sup>&reg;</sup> FSP w/ EDK II: 
+<p align="right"><span class="gold" >@size[1.1em](<b>FSP APIs in FSP Binary</b>)<br></span><span style="font-size:0.5em;" >Using Intel<sup>&reg;</sup> FSP w/ EDK II: 
 <a href="https://firmware.intel.com/sites/default/files/A_Tour_Beyond_BIOS_Using_the_Intel_Firmware_Support_Package_with_the_EFI_Developer_Kit_II_(FSP2.0).pdf">PDF</a>
 </span></p>
 
@@ -2624,7 +2624,7 @@ Another Note: : If FSP returns the reset required status in any of the API, then
 
 ---?image=assets/images/slides/Slide55.JPG
 @title[Boot Flow with FSP API Mode]
-<p align="right"><span class="gold" >@size[1.1](<b>Boot Flow with FSP API Mode</b>)</span><span style="font-size:0.5em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Boot Flow with FSP API Mode</b>)</span><span style="font-size:0.5em;" ></span></p>
 
 <p style="line-height:40%" align="left" ><span style="font-size:0.75em; ">
 5 APIs for FSP
@@ -2648,7 +2648,7 @@ Then the PeiCore will continue dispatching the final PEIMs and jump into the Dxe
 
 ---?image=assets/images/slides/Slide56.JPG
 @title[FSP 2.1 Dispatch Mode Boot Flow]
-<p align="right"><span class="gold" >@size[1.1](<b>FSP 2.1 Dispatch Mode Boot Flow</b>)</span><span style="font-size:0.5em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>FSP 2.1 Dispatch Mode Boot Flow</b>)</span><span style="font-size:0.5em;" ></span></p>
 
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; ">
 <b>`gIntelFsp2WrapperTokenSpaceGuid`.@color[yellow](`PcdFspModeSelection`)</b>	0 - dispatch, 1 – API
@@ -2694,7 +2694,7 @@ How? – by using EDK II Libraries for Platform Hooks
 
 ---?image=assets/images/slides/Slide58.JPG
 @title[EDK II Libraries w/ Platform Hooks]
-<p align="right"><span class="gold" >@size[1.1](<b>EDK II Libraries w/ Platform Hooks </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>EDK II Libraries w/ Platform Hooks </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 
@@ -2752,7 +2752,7 @@ Search INF for string: LIBRARY_CLASS  =
 
 ---?image=assets/images/slides/Slide59.JPG
 @title[Library Classes Section in DSC]
-<p align="right"><span class="gold" >@size[1.1](<b>Library Classes Section in DSC </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Library Classes Section in DSC </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 <p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" >`DebugLib` class example </span></p>
 <br>
@@ -2808,7 +2808,7 @@ Only one instance of each named library class may be linked to a given module
 
 ---
 @title[Platform Initialization Board Hook Modules]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-40 ]
@@ -2887,7 +2887,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 
 ---
 @title[Platform Initialization Board Hook Modules]
-<p align="right"><span class="gold" >@size[1.1](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules</b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[north-west span-40 ]
@@ -2965,7 +2965,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 ---?image=assets/images/slides/Slide5.JPG
 @title[EDK II Open Platform Summary Section]
 <br>
-<p align="left"><span class="gold" >@size[1.1](<b>EDK II Open Platform <br>Summary</b>)</span></span></p>
+<p align="left"><span class="gold" >@size[1.1em](<b>EDK II Open Platform <br>Summary</b>)</span></span></p>
 
 @snap[north-east span-35 ]
 <br>
