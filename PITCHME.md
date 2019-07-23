@@ -325,6 +325,8 @@ The architecture is designed to support a maintainer ownership model. For exampl
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
 &nbsp;&nbsp;
+@color[yellow](edk2)/  <a href="https://github.com/tianocore/edk2"> github.com/edk2</a><br>
+. . .<br>&nbsp;&nbsp;
 @color[yellow](edk2-platforms)/  <a href="https://github.com/tianocore/edk2-platforms"> github.com/edk2-platforms</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
   Platform/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -340,9 +342,8 @@ The architecture is designed to support a maintainer ownership model. For exampl
        Vlv2DeviceRefCodePkg/<br>&nbsp;&nbsp;
 @color[yellow](edk2-non-osi)/<a href="https://github.com/tianocore/edk2-non-osi/tree/devel-MinPlatform">github.com/edk2-non-osi</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     Intel/<br>&nbsp;&nbsp;
 @color[yellow](FSP)/<a href="https://github.com/IntelFsp/FSP">github.com/Intel/FSP</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;. &nbsp;. &nbsp;./<br>&nbsp;&nbsp;
+   KabylakeFspBinPkg/<br>&nbsp;&nbsp;
 </span></p>
 @snapend
 
