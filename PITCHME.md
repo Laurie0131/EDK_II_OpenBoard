@@ -465,7 +465,7 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 
 ---
 @title[Board Package Structure ]
-<p align="right"><span class="gold" >@size[1.1em](<b>Board Package Structure </b>)</span><span style="font-size:0.8em;" ><br>- `MinPlatformPkg`</span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Board Package Structure </b>)</span><span style="font-size:0.8em;" ><br>- <font face="Consolas">MinPlatformPkg</font></span></p>
 
 @snap[north-west span-45 ]
 <br>
@@ -486,7 +486,7 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
 
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >@color[yellow](&lt;Basic Common eature&gt; ): The basic features to support OS boot, such as ACPI, flash, and FspWrapper. It also includes the basic security features such as Hardware Security Test  Interface (HSTI). </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](&lt;Basic Common Feature&gt; ): The basic features to support OS boot, such as ACPI, flash, and FspWrapper. It also includes the basic security features such as Hardware Security Test  Interface (HSTI). </span> </li>
   <li><span style="font-size:0.65em" >@color[yellow](Include ): The include file as the package interface. All interfaces defined in MinPlatformPkg.dec are put to here.  </span> </li>
   <li><span style="font-size:0.65em" >@color[yellow](Library ): It only contains feature independent library, such as PeiLib. If a library is related to a feature, this library is put to <Feature>/Library folder, instead of root Library folder. </span> </li>
   <li><span style="font-size:0.65em" >@color[yellow](PlatformInit ): The common platform initialization module. There is PreMemPEI, PostMemPEI, DXE and SMM version. These modules control boot flow and provide some hook point to let board code do initialization. </span> </li>
@@ -593,7 +593,7 @@ Note:
 @snap[north-west span-100 ]
 <br>
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Use a hierarchical layout , `KabylakeOpenBoardPkg` example</span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Use a hierarchical layout , <font face="Consolas">KabylakeOpenBoardPkg</font> example</span></p>
 @snapend
 
 @snap[north-west span-45 ]
@@ -884,9 +884,9 @@ Many platforms have a script (Python or bash) to pre & post process the EDK II b
 <a href="https://github.com/tianocore/edk2-platforms/tree/master/Platform/Intel#build">Build Script</a></p>
 
 <p style="line-height:60%" align="left" ><span style="font-size:0.75em;" >
-Example: Invoked from the @size[.7em](`edk2-platforms/Platform/Intel`)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
-          @size[.7em](@color[#A8ff60](<b>`python build_bios.py –p <Board-name> `</b>))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               @size[.75em]( - uses config file @color[#A8ff60](`build.cfg`) from the @color[#A8ff60](`<Board-name>`) directory)<br>
+Example: Invoked from the @size[.7em](<font face="Consolas">edk2-platforms/Platform/Intel</font>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+          @size[.7em](@color[#A8ff60](<b><font face="Consolas">python build_bios.py –p <Board-name> </font></b>))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               @size[.75em]( - uses config file @color[#A8ff60](<font face="Consolas">build.cfg</font>) from the @color[#A8ff60](<font face="Consolas"><Board-name></font>) directory)<br>
 			   <br>
 </span></p>
 @snapend
@@ -896,9 +896,9 @@ Example: Invoked from the @size[.7em](`edk2-platforms/Platform/Intel`)<br>&nbsp;
 Configuration  Files:
 </span></p>
 <ul style="list-style-type:disc; line-height:0.6;">
-  <li><span style="font-size:0.6em" > `edk2-platforms\Platform\Intel\build.cfg ` - default settings </span> </li>
-  <li><span style="font-size:0.6em" > Default settings are under the `DEFAULT_CONFIG` section</span> </li>
-  <li><span style="font-size:0.6em" > Override the `edk2-platforms/Platform/Intel/. . ./build.cfg` settings from each board in board specific directory</span> </li>
+  <li><span style="font-size:0.6em" > <font face="Consolas">edk2-platforms\Platform\Intel\build.cfg </font> - default settings </span> </li>
+  <li><span style="font-size:0.6em" > Default settings are under the <font face="Consolas">DEFAULT_CONFIG</font> section</span> </li>
+  <li><span style="font-size:0.6em" > Override the <font face="Consolas">edk2-platforms/Platform/Intel/. . ./build.cfg</font> settings from each board in board specific directory</span> </li>
 </ul>
 <br>
 <br>
@@ -985,7 +985,7 @@ SILENT_MODE = FALSE <br>&nbsp;&nbsp;
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
 Platform Firmware Boot Stage PCD in: <br><br><br>
-@color[yellow](<b>`OpenBoardPkgConfig.dsc`</b>)
+@color[yellow](<b><font face="Consolas">OpenBoardPkgConfig.dsc</font></b>)
 </span></p>
 
 @snap[south-west span-100 ]
@@ -1066,11 +1066,11 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
 @snap[north-west span-80 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
-The Platform Config <b>.`dsc`</b> file controls if feature ON or OFF
+The Platform Config <b>.<font face="Consolas">dsc</font></b> file controls if feature ON or OFF
 <br><br>
 Example:
 <br>
-@color[yellow](<b>`OpenBoardPkgConfig.dsc`</b> -  à la carte)
+@color[yellow](<b><font face="Consolas">OpenBoardPkgConfig.dsc</font></b> -  à la carte)
 </span></p>
 
 @snap[south-west span-100 ]
@@ -1585,7 +1585,7 @@ Then the code is consistent and easy to maintain, especially if the next generat
 <br>
 <br>
 <br>
-<p align="left" style="line-height:80%"><span style="font-size:0.9em; ">Value of PCD set in @color[yellow](<b>`OpenBoardPkg. . .dsc`</b>)</span></p>
+<p align="left" style="line-height:80%"><span style="font-size:0.9em; ">Value of PCD set in @color[yellow](<b><font face="Consolas">OpenBoardPkg. . .dsc</font></b>)</span></p>
 @box[bg-black text-white my-box-pad2  ](<p style="line-height:40%" align="left"><span style="font-size:0.450em; font-family:Consolas; " >&nbsp;&nbsp;[Pcds...]<br>&nbsp;&nbsp;PcdTokenSpaceGuidName.@color[red](PcdTokenName)|@color[cyan](Value)[|DatumType[|MaximumDatumSize]]</span><br>&nbsp;&nbsp;</p>)
 <br>
 @snapend
@@ -1659,7 +1659,7 @@ KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data
 @snap[north-west span-100 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.75em;" ><br>
-Example: <b>`AdvancedFeaturePkg.dec`</b>  for SMBIOS type 0 data structure
+Example: <b><font face="Consolas">AdvancedFeaturePkg.dec</font></b>  for SMBIOS type 0 data structure
 </span></p>
 
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
@@ -1741,7 +1741,7 @@ typedef struct {
 @snap[north-west span-47 ]
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
 @color[cyan](Purley Pkg  DEC File)<br>
-@size[.8em](&num;&num; `gEfiSetupVariableGuid`)
+@size[.8em](&num;&num; <font face="Consolas">gEfiSetupVariableGuid</font>)
 </span></p>
 
 <p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
@@ -1974,7 +1974,7 @@ PcdSet16S (PcdSetNvStoreDefaultId
 <br>
 <br>
 <br>
-<p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>`Typedef` data structure</b><br><br>&nbsp;</span></p>
+<p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b><font face="Consolas">Typedef</font> data structure</b><br><br>&nbsp;</span></p>
 <p style="line-height:70%" align="left"><br><br><br>&nbsp; </p>
 <p style="line-height:70%" align="left"><span style="font-size:0.7em;" ><b>PCD database, Setup Variable, Binary Blob, etc.</b><br><br>&nbsp;</span></p>
 @snapend
@@ -2591,7 +2591,7 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 
 @snap[south-east span-40 ]
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; ">
-Pre-Build w/ <b>`RebaseAndPatchFspBinBaseAddress.py `</b>
+Pre-Build w/ <b><font face="Consolas">RebaseAndPatchFspBinBaseAddress.py </font></b>
 </span></p>
 <br>
 @snapend
@@ -2679,7 +2679,7 @@ Then the PeiCore will continue dispatching the final PEIMs and jump into the Dxe
 <p align="right"><span class="gold" >@size[1.1em](<b>FSP 2.1 Dispatch Mode Boot Flow</b>)</span><span style="font-size:0.5em;" ></span></p>
 
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; ">
-<b>`gIntelFsp2WrapperTokenSpaceGuid`.@color[yellow](`PcdFspModeSelection`)</b>	0 - dispatch, 1 – API
+<b><font face="Consolas">gIntelFsp2WrapperTokenSpaceGuid</font>.@color[yellow](<font face="Consolas">PcdFspModeSelection</font>)</b>	0 - dispatch, 1 – API
 </span></p>
 
 @snap[south-west span-40 ]
@@ -2753,7 +2753,7 @@ How? – by using EDK II Libraries for Platform Hooks
 
 
 @snap[south span-85 fragment ]
-@box[bg-purple-pp text-white rounded   my-box-pad2 ](<span style="font-size:01.0em" >Search INF files for string:&nbsp;&nbsp; "<b>`LIBRARY_CLASS  =`</b>"<br>&nbsp;</span>)
+@box[bg-purple-pp text-white rounded   my-box-pad2 ](<span style="font-size:01.0em" >Search INF files for string:&nbsp;&nbsp; "<font face="Consolas">LIBRARY_CLASS  =</font>"<br>&nbsp;</span>)
 <br>
 @snapend
 
@@ -2782,7 +2782,7 @@ Search INF for string: LIBRARY_CLASS  =
 @title[Library Classes Section in DSC]
 <p align="right"><span class="gold" >@size[1.1em](<b>Library Classes Section in DSC </b>)</span><span style="font-size:0.75em;" ></span></p>
 
-<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" >`DebugLib` class example </span></p>
+<p style="line-height:70%" ><span style="font-size:0.9em; font-weight: bold;" ><font face="Consolas">DebugLib</font> class example </span></p>
 <br>
 ```
  [LibraryClasses]
