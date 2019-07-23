@@ -145,7 +145,7 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
   <ul style="list-style-type:disc; line-height:0.6;">
   <li><span style="font-size:0.6em" >SMBIOS</span> </li>
   <li><span style="font-size:0.6em" >TPM </span> </li>
-  <li><span style="font-size:0.6em" >Secur Boot </span> </li>
+  <li><span style="font-size:0.6em" >Secure Boot </span> </li>
   <li><span style="font-size:0.6em" >. . . </span> </li>
   </ul>
 </ul>
@@ -773,7 +773,7 @@ This introduces issues when the developer wants to find a  particular driver.
   <ul style="list-style-type:disc; line-height:0.6;">
   <li><span style="font-size:0.6em" >SMBIOS</span> </li>
   <li><span style="font-size:0.6em" >TPM </span> </li>
-  <li><span style="font-size:0.6em" >Secur Boot </span> </li>
+  <li><span style="font-size:0.6em" >Secure Boot </span> </li>
   <li><span style="font-size:0.6em" >. . . </span> </li>
   </ul>
 </ul>
@@ -1644,8 +1644,8 @@ KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data
 
 
 ---
-@title[“C” Data Structure as PCDs ]
-<p align="right"><span class="gold" >@size[1.1em](<b>“C” Data Structure as PCDs</b>)</span><span style="font-size:0.8em;" ></span></p>
+@title["C" Data Structure as PCDs ]
+<p align="right"><span class="gold" >@size[1.1em](<b>"C" Data Structure as PCDs</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-100 ]
 <br>
@@ -1662,7 +1662,7 @@ KabylakeOpenBoardPkg does not use a UEFI variable to save the configuration data
 Example: <b><font face="Consolas">AdvancedFeaturePkg.dec</font></b>  for SMBIOS type 0 data structure
 </span></p>
 
-<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" >&nbsp;&nbsp;
+<p style="line-height:35% " align="left"></span><span style="font-size:0.4em; font-family:Consolas;" ><br>&nbsp;&nbsp;
 gAdvancedFeaturePkgTokenSpaceGuid.PcdSmbiosType0BiosInformation| \<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         {0x0}|@color[yellow](SMBIOS_TABLE_TYPE0)|0x80010000 {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;HeaderFiles&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -3005,7 +3005,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
   <ul style="list-style-type:disc; line-height:0.6;">
   <li><span style="font-size:0.6em" >SMBIOS</span> </li>
   <li><span style="font-size:0.6em" >TPM </span> </li>
-  <li><span style="font-size:0.6em" >Secur Boot </span> </li>
+  <li><span style="font-size:0.6em" >Secure Boot </span> </li>
   <li><span style="font-size:0.6em" >. . . </span> </li>
   </ul>
 </ul>
