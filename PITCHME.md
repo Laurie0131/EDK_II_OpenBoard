@@ -347,6 +347,37 @@ The architecture is designed to support a maintainer ownership model. For exampl
 @snapend
 
 
+
+@snap[north-west span-70 fragment]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
+&nbsp;&nbsp;
+@color[yellow](edk2-platforms)/  <a href="https://github.com/tianocore/edk2-platforms"> github.com/edk2-platforms</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       AdvancedFeaturePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeOpenBoardPkg/&nbsp;&nbsp;@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Platform</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          KabylakeRvp3/ &nbsp;&nbsp;@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Board</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/&nbsp;&nbsp;@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Common</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       Vlv2TbltDevicePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       KabylakeSiliconPkg/&nbsp;&nbsp;@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;. &nbsp;. &nbsp;./<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       Vlv2DeviceRefCodePkg/<br>&nbsp;&nbsp;
+@color[yellow](edk2-non-osi)/<a href="https://github.com/tianocore/edk2-non-osi/tree/devel-MinPlatform">github.com/edk2-non-osi</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     Intel/<br>&nbsp;&nbsp;
+@color[yellow](FSP)/<a href="https://github.com/IntelFsp/FSP">github.com/Intel/FSP</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;. &nbsp;. &nbsp;./&nbsp;&nbsp;@color[#A8ff60](&larr;)&nbsp;"@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+
+
 Note:
 This is an example of the MinPlatform for the Intel Architecture (IA)
 With Kabylake and  Vlv2TbltDevicePkg (Minnowboard MAX) as examples
