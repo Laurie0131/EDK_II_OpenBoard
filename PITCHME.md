@@ -1475,8 +1475,8 @@ This signed data blob provides the configuration on a platform. An OEM may updat
 
 
 ---
-@title[Use PCD Instead of UEFI Variable  ]
-<p align="right"><span class="gold" >@size[1.1em](<b>Use PCD Instead of UEFI Variable </b>)</span><span style="font-size:0.8em;" ></span></p>
+@title[TIP: Use PCD Instead of UEFI Variable  ]
+<p align="right"><span class="gold" >@size[1.1em](<b>TIP: Use PCD Instead of UEFI Variable </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[north-west span-48 ]
 <br>
