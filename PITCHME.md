@@ -538,8 +538,8 @@ Note:
 
 
 ---
-@title[Advanced Feature Package ]
-<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+@title[Open Board Package Structure ]
+<p align="right"><span class="gold" >@size[1.1em](<b>Open Board Package Structure </b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
 @snap[north-west span-45 ]
 <br>
@@ -896,7 +896,7 @@ Example: Invoked from the @size[.7em](<font face="Consolas">edk2-platforms/Platf
 Configuration  Files:
 </span></p>
 <ul style="list-style-type:disc; line-height:0.6;">
-  <li><span style="font-size:0.6em" > <font face="Consolas">edk2-platforms\Platform\Intel\build.cfg </font> - default settings </span> </li>
+  <li><span style="font-size:0.6em" > <font face="Consolas">edk2-platforms/Platform/Intel/build.cfg </font> - default settings </span> </li>
   <li><span style="font-size:0.6em" > Default settings are under the <font face="Consolas">DEFAULT_CONFIG</font> section</span> </li>
   <li><span style="font-size:0.6em" > Override the <font face="Consolas">edk2-platforms/Platform/Intel/. . ./build.cfg</font> settings from each board in board specific directory</span> </li>
 </ul>
@@ -908,7 +908,7 @@ Configuration  Files:
 Note:
 
 ### Building with the python script
-- Open command window, go to the workspace directory, e.g. c:\Kabylake or ~/Kabylake in the case of a linux OS
+- Open command window, go to the workspace directory, e.g. c:/Kabylake or ~/Kabylake in the case of a linux OS
 - If using a linux OS
   - Type "cd edk2"
   - Type "source edksetup.sh"
@@ -920,15 +920,15 @@ Note:
 
 
 #### Configuration Files
-The edk2-platforms\Platform\Intel\build.cfg file contains the default settings used by build_bios.py
+The edk2-platforms/Platform/Intel/build.cfg file contains the default settings used by build_bios.py
 
 The default settings are under the DEFAULT_CONFIG section
 
-Each board can have a settings file that will override the edk2-platforms\Platform\Intel\build.cfg settings
+Each board can have a settings file that will override the edk2-platforms/Platform/Intel/build.cfg settings
 
 
 An example of a board specific settings:
-edk2-platforms\Platform\Intel\KabylakeOpenBoardPkg\KabylakeRvp3\build_config.cfg
+edk2-platforms/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/build_config.cfg
 
 ---?image=assets/images/slides/Slide18.JPG
 @title[Example Build Config File]
