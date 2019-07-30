@@ -1,7 +1,7 @@
 ---?image=assets/images/gitpitch-audience.jpg
 @title[EDK_II_OpenBoard_Platform_pres]
 <br><br><br>
-<span style="font-size:0.75em" >This slide deck has moved to:  https://gitpitch.com/tianocore-training/EDK_II_Porting_Projects_pres/master#/
+<span style="font-size:0.75em" >This slide deck has moved to: https://gitpitch.com/tianocore-training/EDK_II_OpenBoard_Platform/master#/
 </span>
 <br><br>
 ## <span class="gold"   >UEFI & EDK II Training</span>
