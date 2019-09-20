@@ -44,12 +44,12 @@ Note:
 ---  
 @title[Lesson Objective]
 <BR>
-### <p align="center"<span class="gold"   >Lesson Objective </span></p><br>
+### <p align="center"<span class="gold"   >Lesson Objective </span></p>
 
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
 <ul style="list-style-type:none">
- <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Introduce Minimum Platform Architecture (MPA)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </li>
+ <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Introduce Minimum Platform Architecture (MPA)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </li>
  <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II Open board platforms <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;infrastructure  & focus areas</span> </li>
  <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II open board<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;platforms </span></li>
 </ul>
@@ -103,7 +103,7 @@ Why can’t the platform tree structures bear more similarity?
 ---
 @title[Goals]
 <p align="right"><span class="gold" >@size[1.1em](<b>GOALS</b>)</span><br>
-<span style="font-size:0.85em;" ><b>Minimum Platform Architecture (MPA)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span></p>
+<span style="font-size:0.85em;" ><b>Minimum Platform Architecture (MPA)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span></p>
 
 
 @snap[north-west span-30 ]
@@ -120,10 +120,9 @@ Why can’t the platform tree structures bear more similarity?
 @snap[north-east span-63 ]
 <br>
 <br>
-<br>
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Code structure should be obvious so that the firmware developer can easily turn on or turn off a significant feature<br></span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware code structure should be independent of processor/silicon architecture or platform type &lpar;embedded, workstation, server, etc.&rpar;</span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br> </span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware code structure should be independent of processor/silicon architecture or platform type &lpar;embedded, workstation, server, etc.&rpar;<br></span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >One instance of code per task</span></p>)
 @snapend
 
