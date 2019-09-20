@@ -103,7 +103,7 @@ Why can’t the platform tree structures bear more similarity?
 ---
 @title[Goals]
 <p align="right"><span class="gold" >@size[1.1em](<b>GOALS</b>)</span><br>
-<span style="font-size:0.75em;" ><b>Minimum Platform Architecture (MPA)</b></span></p>
+<span style="font-size:0.85em;" ><b>Minimum Platform Architecture (MPA)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span></p>
 
 
 @snap[north-west span-30 ]
@@ -111,11 +111,8 @@ Why can’t the platform tree structures bear more similarity?
 <br>
 <br>
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Simple</b><br><br>&nbsp;</span></p>)
-<br>
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Portable</b><br><br>&nbsp;</span></p>)
-<br>
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Consistent</b><br><br>&nbsp;</span></p>)
-<br>
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Code<br>Convergence</b><br>&nbsp;</span></p>)
 @snapend
 
@@ -124,8 +121,8 @@ Why can’t the platform tree structures bear more similarity?
 <br>
 <br>
 <br>
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Code structure should be obvious so that the firmware developer can easily turn on or turn off a significant feature<br><br></span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Code structure should be obvious so that the firmware developer can easily turn on or turn off a significant feature<br></span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br><br> </span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware code structure should be independent of processor/silicon architecture or platform type &lpar;embedded, workstation, server, etc.&rpar;</span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >One instance of code per task</span></p>)
 @snapend
