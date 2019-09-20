@@ -49,6 +49,7 @@ Note:
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
 <ul style="list-style-type:none">
+ <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Introduce Minimum Platform Architecture (MPA)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </li>
  <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II Open board platforms <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;infrastructure  & focus areas</span> </li>
  <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II open board<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;platforms </span></li>
 </ul>
@@ -92,11 +93,17 @@ People may think: How can I know how many modules I need to port, and when have 
 For example, there might be an ATOM based on a server, a Core-i7 based server, or a XEON based server. However, the BIOS from different segments are different. We once compared an ATOM based firwmare with a Core-i7 based firmware. There are ~20 directories under Platform. Only 2 are same, which are “Include”, and “Library”. People might require significant time to ramp up again to get familiar with the new platform structure. 
 Why can’t the platform tree structures bear more similarity? 
 
+---?image=assets/images/binary-strings-black2.jpg
+@title[Introducing MPA]
+<br><br><br><br><br>
+## <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Introducing</span>
+<span style="font-size:0.9em" > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Minimum Platform Architecture (MPA) </span>
+
 
 ---
 @title[Goals]
 <p align="right"><span class="gold" >@size[1.1em](<b>GOALS</b>)</span><br>
-<span style="font-size:0.75em;" ></span></p>
+<span style="font-size:0.75em;" ><b>Minimum Platform Architecture (MPA)</b></span></p>
 
 
 @snap[north-west span-30 ]
@@ -108,6 +115,8 @@ Why can’t the platform tree structures bear more similarity?
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Portable</b><br><br>&nbsp;</span></p>)
 <br>
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Consistent</b><br><br>&nbsp;</span></p>)
+<br>
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Code<br>Convergence</b><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -117,7 +126,8 @@ Why can’t the platform tree structures bear more similarity?
 <br>
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Code structure should be obvious so that the firmware developer can easily turn on or turn off a significant feature<br><br></span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br><br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" > Firmware code structure should be independent of processor/silicon architecture or platform type &lpar;embedded, workstation, server, etc.&rpar;</span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware code structure should be independent of processor/silicon architecture or platform type &lpar;embedded, workstation, server, etc.&rpar;</span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >One instance of code per task</span></p>)
 @snapend
 
 @snap[south span-85 fragment]
@@ -129,6 +139,18 @@ Note:
 ### Goals 
 There is an existing myth that IA firmware is complex and hard to port or enable for a new platform. 
 Goal is to provide some guidance on how to design open source EDK II  IA firmware solution
+
+
+### Minimum Platform Objectives : 
+- Simple - Define a structure that enables developers to consistently navigate source code, execution flow, and the functional results of bootstrapping a system.
+- Portable - Enable a minimal platform where minimal is defined as the minimal firmware implementation required to produce a basic solution that can be further extended to meet a multitude of client, server, and embedded market needs.
+- Consistent  - Enable large granularity binary solutions.
+- Code Convergence - Minimize coupling between common, silicon, platform, and board packages.
+
+
+### Code convergence - The most important aspect of Minimum Platform for Intel product delivery is code convergence. This simply means having one instance of code per task.
+
+
 
 ---?image=assets/images/slides/Slide5.JPG
 @title[Four Focus Areas Section]
