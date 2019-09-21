@@ -152,15 +152,15 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 <span style="font-size:0.99em;" ><b>Code Convergence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </b></span></p>
 
-@snap[north-east span-75 ]
+@snap[north-east span-78 ]
 <br>
 <br>
 <br>
 <br>
-@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.75em;" >System firmware (BIOS ) is the largest payload in the IFWI binary image  &nbsp;</span></p>)
-@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.75em;" >Platform implementation is ~2-3 million lines+ of “C” code <br>&nbsp;</span></p>)
-@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.75em;" >Technology complexity increasing, strains firmware implementation solutions &nbsp;</span></p>)
-@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.75em;" >Limited firmware engineering recourses  <br>&nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.7em;" >System firmware (BIOS ) is the largest payload in the IFWI binary image  &nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.7em;" >Platform implementation is ~2-3 million lines+ of “C” code <br>&nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.7em;" >Technology complexity increasing, strains firmware implementation solutions &nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.7em;" >Limited firmware engineering recourses  <br>&nbsp;</span></p>)
 @snapend
 
 
