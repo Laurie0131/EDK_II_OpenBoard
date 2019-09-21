@@ -121,8 +121,8 @@ Why can’t the platform tree structures bear more similarity?
 <br>
 <br>
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>Code structure should be obvious so that the firmware developer can easily turn on or turn off a significant feature<br></span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br> </span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware code structure should be independent of processor/silicon architecture or platform type &lpar;embedded, workstation, server, etc.&rpar;<br></span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware code structure should be independent of processor/silicon architecture or platform type &lpar;embedded, workstation, server, etc.&rpar;<br><br></span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >One instance of code per task</span></p>)
 @snapend
 
