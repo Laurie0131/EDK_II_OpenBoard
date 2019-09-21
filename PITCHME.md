@@ -149,18 +149,18 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 ---?image=assets/images/slides/Slide6.JPG
 @title[Code Convergence, WHY?]
 <p align="right"><span class="gold" >@size[1.1em](<b>WHY?</b>)</span><br>
-<span style="font-size:0.95em;" ><b>Code Convergence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="font-size:0.99em;" ><b>Code Convergence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </b></span></p>
 
-@snap[north-east span-73 ]
+@snap[north-east span-75 ]
 <br>
 <br>
 <br>
 <br>
-@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.65em;" >System firmware (BIOS ) is the largest payload in the IFWI binary image  &nbsp;</span></p>)
-@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.65em;" >Platform implementation is ~2-3 million lines+ of “C” code <br>&nbsp;</span></p>)
-@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.65em;" >Technology complexity increasing, strains firmware implementation solutions &nbsp;</span></p>)
-@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.65em;" >Limited firmware engineering recourses  <br>&nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.75em;" >System firmware (BIOS ) is the largest payload in the IFWI binary image  &nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.75em;" >Platform implementation is ~2-3 million lines+ of “C” code <br>&nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.75em;" >Technology complexity increasing, strains firmware implementation solutions &nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.75em;" >Limited firmware engineering recourses  <br>&nbsp;</span></p>)
 @snapend
 
 
