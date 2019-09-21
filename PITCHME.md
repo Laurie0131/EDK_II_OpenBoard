@@ -127,7 +127,7 @@ Why can’t the platform tree structures bear more similarity?
 @snapend
 
 @snap[south span-85 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Design open source EDK II  IA firmware<br><br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Design open source EDK II  Intel Architecture firmware<br><br>&nbsp;</span></p>)
 @snapend
 
 Note:
@@ -149,8 +149,11 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 ---?image=assets/images/slides/Slide6.JPG
 @title[Code Convergence, WHY?]
 <p align="right"><span class="gold" >@size[1.1em](<b>WHY?</b>)</span><br>
-<span style="font-size:0.85em;" ><b>Code Convergence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span></p>
-@snap[north-east span-60 ]
+<span style="font-size:0.95em;" ><b>Code Convergence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</b></span></p>
+
+@snap[north-east span-75 ]
+<br>
 <br>
 <br>
 @box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.65em;" >System firmware (BIOS ) is the largest payload in the IFWI binary image  <br>&nbsp;</span></p>)
