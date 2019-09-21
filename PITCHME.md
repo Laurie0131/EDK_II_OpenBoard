@@ -146,6 +146,39 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 
 ### Code convergence - The most important aspect of Minimum Platform for Intel product delivery is code convergence. This simply means having one instance of code per task.
 
+---?image=assets/images/slides/Slide6.JPG
+@title[Code Convergence, WHY?]
+<p align="right"><span class="gold" >@size[1.1em](<b>WHY?</b>)</span><br>
+<span style="font-size:0.85em;" ><b>Code Convergence&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span></p>
+@snap[north-east span-60 ]
+<br>
+<br>
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.65em;" >System firmware (BIOS ) is the largest payload in the IFWI binary image  <br>&nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.65em;" >Platform implementation is ~2-3 million lines+ of “C” code <br>&nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.65em;" >Technology complexity increasing, strains firmware implementation solutions <br>&nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.65em;" >Limited firmware engineering recourses  <br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Copy + Paste + Modify  = Human Errors<br><br>&nbsp;</span></p>)
+@snapend
+
+Note:
+### Why?  Code Convergence is most important
+- BIOS is the largest firmware payload in the IFWI (by binary size and source size)
+- A typical Intel implementation is ~2-3 million lines+ of C code
+- Technology complexity increases over time putting strain on firmware to keep up
+- Engineering resources are always a constrained resource
+ 
+The copy + paste + modify model used today is prone to human error and ripples update tasks across each platform team - this is more work than necessary.
+
+- How often have you seen old product code (or even code names) that no longer apply to the new product stick around for months?
+- How often have you seen a fix in the same code elsewhere not in the current platform code because the current platform code was copied earlier than the fix or not updated after the fix?
+- How often have you understood a flow or code implementation then could not understand elsewhere because it is arbitrarily implemented differently?
+- Have you thought about improving the code base then realized it would need to be merged so many other places. Often this is "too risky" or "there's not enough time to understand your change to merge it" or "there's already too many changes in the other platform so the merge turns into rewriting the change".
+- These are real problems that lead to bugs, poor software quality, loss of engineering time to reverse engineer duplicate flow implementations, etc. Loss of engineering time is significant. Duplicate code affects bug triage/debug time, new platform feature implementation time and quality, training material creation/update work, presentation for change proposal work, etc.
+
 
 
 ---?image=assets/images/slides/Slide5.JPG
