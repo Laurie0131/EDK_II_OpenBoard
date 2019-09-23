@@ -298,7 +298,7 @@ This is the directory structure of our EDK II platform in relationship to the wh
 <p align="right"><span class="gold" >@size[1.1em](<b>Organization</b>)</span></span></p>
 
 
-@snap[north span-50 ]
+@snap[north span-54 ]
 <br>
 <br>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
@@ -329,7 +329,7 @@ This is the directory structure of our EDK II platform in relationship to the wh
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Enable a specific <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Board specific code <br><br><br><br> </span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Hardware specific code </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" ><br>&bull; <b>Advanced features</b> non-essential for "basic OS boot" </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" ><br>&bull; <b>Advanced features</b> non-essential<br>&nbsp;&nbsp;&nbsp; for "basic OS boot" </span></p>)
 @snapend
 
 
