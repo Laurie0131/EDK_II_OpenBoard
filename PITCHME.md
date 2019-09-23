@@ -183,8 +183,48 @@ The copy + paste + modify model used today is prone to human error and ripples u
 - Have you thought about improving the code base then realized it would need to be merged so many other places. Often this is "too risky" or "there's not enough time to understand your change to merge it" or "there's already too many changes in the other platform so the merge turns into rewriting the change".
 - These are real problems that lead to bugs, poor software quality, loss of engineering time to reverse engineer duplicate flow implementations, etc. Loss of engineering time is significant. Duplicate code affects bug triage/debug time, new platform feature implementation time and quality, training material creation/update work, presentation for change proposal work, etc.
 
+---
+@title[Move to Open Source]
+<p align="right"><span class="gold" >@size[1.1em](<b>Why Move to Open Source ? </b>)</span><br>
+<span style="font-size:0.75em;" >  </span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.85em;" >
+@color[cyan](<b>Goal:</b>)
+</span></p>
+ <ul style="list-style-type:none; line-height:0.7;">
+   <li>  <span style="font-size:0.75em;" >Make Intel products easy to work with and more secure. </span></li>
+   <li>  <span style="font-size:0.75em;" >Do firmware development work directly in open source. </span></li>
+ </ul>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.85em;" >
+@color[cyan](<b>Benefits:</b>)
+</span></p>
+ <ul style="list-style-type:none; line-height:0.7;">
+   <li>  <span style="font-size:0.75em;" >Allow improved customer engagements </span></li>
+   <li>  <span style="font-size:0.75em;" >Builds transparency and trust </span></li>
+   <li>  <span style="font-size:0.75em;" >Reduce overhead to transition from internal to external </span></li>
+   <li>  <span style="font-size:0.75em;" >Deploy fixes across the ecosystem more rapidly </span></li>
+ </ul>
 
 
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Easier to access, understand, fix & optimize means improved product quality <br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+### Open source 
+- As firmware engineers we need to make Intel products easy to work with and keep more secure. 
+### Benefits:
+- Open source allows us to improve customer engagement with all customers, build transparency and trust, reduce overhead translating internal and external process, and deploy fixes across the ecosystem more rapidly.
+
+- Main point: Open source is not more work if you do your work in open source. This may be hard to imagine because today's code is too monolithic for this to be possible. A software architecture that allows modular pieces to be integrated from open source into closed source solutions is necessary.
+
+- The easier we make it to access, understand, fix, improve, and optimize Intel firmware (ideally through single instance, high quality code) we can better engage with our customers building real world solutions to improve Intel product quality (all Intel products including those without EDK II firmware).
+
+
+
+---
+Blank page
 ---?image=assets/images/slides/Slide5.JPG
 @title[Four Focus Areas Section]
 <br>
