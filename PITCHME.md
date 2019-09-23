@@ -377,9 +377,15 @@ The architecture makes use of four primary classifications of code that are gene
 
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" > Common - Boot flow, well defined<br>&nbsp;&nbsp;&nbsp; interfaces<br></span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" > Board - Generic board functionality<br>&nbsp;&nbsp;&nbsp; &lpar;e.g. CMOS access code&rpar;<br><br> </span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" > Platform - board-specific details: GPIOs,<br>&nbsp;&nbsp;&nbsp;  memory config, audio verb tables, etc<br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" > Platform Xxx&ast; - board-specific details: GPIOs,<br>&nbsp;&nbsp;&nbsp;  memory config, audio verb tables, etc<br><br> </span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" > Silicon - Hardware specific code for Platform Xxx<br><br><br></span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" > Advanced funtional feature &lpar;e.g. SMBIOS&rpar;</span></p>)
+@snapend
+
+@snap[south-west span-68 ]
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em;" >
+&ast; Where Xxx would be an open platform: KabyLakeOpenBoardPkg, WhiskeyLakeOpenBoardPkg, etc.
+</span></p>
 @snapend
 
 Note:
