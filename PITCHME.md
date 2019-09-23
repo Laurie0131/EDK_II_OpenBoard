@@ -351,10 +351,98 @@ The architecture makes use of four primary classifications of code that are gene
 - Silicon, also often called hardware code, has some tie to a specific class of physical hardware. Sometimes governed by industry standards, sometimes proprietary. Silicon or hardware code is usually not intended to have multiple implementations for the same hardware.
   - Producer(s): Silicon vendor
 
+
+---?image=assets/images/slides/Slide11.JPG
+@title[Package Organization Example]
+<p align="right"><span class="gold" >@size[1.1em](<b>Package Organization Example</b>)</span></span></p>
+
+@snap[north span-54 ]
+<p style="line-height:10%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
+</span></p>
+
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-30 ]
+<p style="line-height:10%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
+</span></p>
+
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>MinPlatformPkg</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>BoardModulePkg</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>XxxOpenBoardPkg</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>XxxSiliconPkg</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>YyyFeaturePkg</b><br><br>&nbsp;</span></p>)
+
+@snapend
+
+
+
+@snap[north-east span-67 ]
+<p style="line-height:10%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
+</span></p>
+
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Common - Boot flow, well defined interfaces<br><br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Board - Generic board functionality<br>&nbsp;&nbsp;&nbsp; (e.g. CMOS access code) <br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Platform - board-specific details: GPIOs,<br>&nbsp;&nbsp;&nbsp;  memory config, audio verb tables, etc<br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Silicon - Hardware specific code for Xxx</span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Advanced funtional feature </span></p>)
+@snapend
+
+Note:
+
+A example platform packages is broken into the following:
+- Minimum Platform Package (MinPlatformPkg) - Provides a consistent boot flow and well-defined interfaces to board support functions.
+- Board Package (xxxBoardPkg) - Provides board-specific details such as GPIOs, memory configuration, audio verb tables, etc. Implements board interfaces (in particular BoardInitLib) invoked by the Minimum Platform Package.
+- Board Module Package (BoardModulePkg) - Generic board functionality (e.g. CMOS access code) that is used by boards to perform board-specific tasks.
+- Advanced Feature Packages (xxxFeaturePkg) - Packages of platform functionality that is non-essential for "basic OS boot" (stage IV boot as described in the Minimum Platform spec).
+ 
+### xxxOpenBoardPkg
+- This package should be as minimal as possible.
+- The xxx represents a product family. For example, KabylakeOpenBoardPkg.
+- The contents specific to each board in the family are entirely maintained in a dedicated board directory in the package. For example, KabylakeOpenBoardPkg/KabylakeRvp3.
+- Any libraries or content specific to the individual board should be maintained in xxxBoardPkg/BoardName.
+- Any libraries or content specific to the board product family should be maintained in xxxBoardPkg.
+ 
+#### BoardModulePkg
+This Directory should only contain generic code that is commonly used in board initialization but not specific to any particular board.
+It should not contain advanced features.
+ 
+### YyyFeaturePkg
+- The organization of features is expected to change over time.
+- Currently, the thought is to maintain cohesiveness in each package with no coupling between packages and constrain the number of packages based on feature domain such as:
+- DebugFeaturePkg - ACPI debug, RAM debug, USB debug, etc.
+- werManagementFeaturePkg - S3 support, etc.
+- UserInterfaceFeaturePkg - User authentication, Setup menu, etc.
+-  etc. . .
+
+It is expected that features within a similar domain will typically share resources such as GUIDs and helper libraries.
+
+The lack of coupling between feature packages is achieved through feature integration code.
+
+- For example, if Feature A and Feature B are in different packages and Feature A needs to be configured based on some result from Feature B then Feature B should not set a PCD defined for Feature A.
+- Each feature should present a configuration interface (e.g. PCD).
+- A board integration layer can operate on feature input and output configuration interfaces.
+- In the previous case, Feature A --output--> Integration Code --input--> Feature B.
+- This allows Feature A to change its configuration interface without impacting other feature code and only integration code.
+    - Features should be more stable (less change) than integration code.
+- The integration code could simply be a board module (e.g. AdvancedFeatureConfigurationPei) that is included when the boot stage is >=6
+
+
+- Each feature package should have a Readme.md that describes the purpose and scope of the feature package and each feature should have a section that describes the feature purpose and follows the template in the Minimum Platform spec.
+- Feature must have dependencies explicitly identified in its DEPEX section. It must allow being reordered arbitrarily in FDFs and still function properly.
+- Feature entry points should be in the main feature module entry point specified in the INF.
+
+
+
 ---
 blank slide
 
----?image=assets/images/slides/Slide7.JPG
+---?image=assets/images/slides/Slide10.JPG
 @title[Open Source EDK II Workspace]
 <p align="right"><span class="gold" >@size[1.1em](<b>Open Source EDK II Workspace</b>)</span></span></p>
 
