@@ -384,7 +384,7 @@ The architecture makes use of four primary classifications of code that are gene
 
 @snap[south-west span-100 ]
 <p style="line-height:40%" align="right" ><span style="font-size:0.5em;" >
-&ast; Where Xxx would be an open platform: <font face="Consolas">abyLakeOpenBoardPkg, WhiskeyLakeOpenBoardPkg</font>, etc.
+&ast; Where Xxx would be an open platform: <font face="Consolas">KabyLakeOpenBoardPkg, WhiskeyLakeOpenBoardPkg</font>, etc.
 </span></p>
 @snapend
 
@@ -438,9 +438,9 @@ The lack of coupling between feature packages is achieved through feature integr
 <p align="right"><span class="gold" >@size[1.1em](<b>MPA Dependency Rules</b>)</span></span></p>
 
 @snap[south-west span-35 ]
-<p style="line-height:40%" align="left" ><span style="font-size:0.5em;" >
+<p style="line-height:38%" align="left" ><span style="font-size:0.47em;" >
 Key: <br>
-Bottom triangles can only depend on shapes above them except for @color[yellow](<font face="Consolas">XxxOpenBoardPkg</font>) can also depend on advanced feature packages
+Bottom triangles can only depend on shapes above them except for @color[yellow](<font face="Consolas">XxxOpenBoardPkg</font>) can also depend on Advanced feature packages
 </span></p>
 @snapend
 
