@@ -281,7 +281,7 @@ In order to provide suggestions on the problem statements earilier, we need to f
 - Tree Structure. What does an EDKII platform package look like? 
 
 
----?image=assets/images/slides/Slide10.JPG
+---?image=assets/images/slides/Slide9.JPG
 @title[Tree Structure Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Tree Structure</b>)</span></span></p>
@@ -293,7 +293,7 @@ Tree Structure. What does an EDK II platform package look like?
 
 This is the directory structure of our EDK II platform in relationship to the whole and other areas, such as the boot flow, or kernel, or core.
 
----?image=assets/images/slides/Slide7.JPG
+---?image=assets/images/slides/Slide10.JPG
 @title[Organization]
 <p align="right"><span class="gold" >@size[1.1em](<b>Organization</b>)</span></span></p>
 
@@ -329,7 +329,7 @@ This is the directory structure of our EDK II platform in relationship to the wh
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Enable a specific <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Board specific code <br><br><br><br> </span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Hardware specific code </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; <b>Advanced features</b> of platform functionality that is non-essential for "basic OS boot" </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br>&bull; <b>Advanced features</b> of platform functionality that is non-essential for "basic OS boot" </span></p>)
 @snapend
 
 
