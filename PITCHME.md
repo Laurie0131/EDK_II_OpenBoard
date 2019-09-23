@@ -463,8 +463,6 @@ Note:
   -  cannot directly depend on any other xxxFeaturePkg.
 
 
----
-blank slide
 
 ---?image=assets/images/slides/Slide10.JPG
 @title[Open Source EDK II Workspace]
@@ -480,7 +478,7 @@ blank slide
 @snap[north span-30 ]
 <br>
 <br>
-@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
 @box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
 @box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board</b><br><br>&nbsp;</span></p>)
 @box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
@@ -488,7 +486,7 @@ blank slide
 
 
 
-@snap[north-west span-60 ]
+@snap[north-west span-65 ]
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;">
@@ -498,7 +496,9 @@ blank slide
 @color[yellow](edk2-platforms)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Platform/ "@color[#FFC000](<font face="Arial">Platform</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       MinPlatformPkg/ “@color[#FFC000](<font face="Arial">Common</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       BoardModulePkg/ “@color[#FFC000](<font face="Arial">Common</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       XxxOpenBoardPkg/ “@color[#FFC000](<font face="Arial">Platform</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           BoardX/ “@color[#FFC000](<font face="Arial">Board</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/ "@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -521,6 +521,8 @@ Build –p .dsc from the BOARD Directory
 
 The architecture is designed to support a maintainer ownership model. For example, board developers should not directly modify (fork) the platform, silicon, or common code. More details on conventional usage of the package classifications can be found in supplemental literature from UEFI Forum, TianoCore.org, and others.
 
+---
+blank slide
 
 ---?image=assets/images/slides/Slide7.JPG
 @title[Open Board Tree Structure]
