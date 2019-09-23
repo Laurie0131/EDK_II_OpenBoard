@@ -190,7 +190,7 @@ The copy + paste + modify model used today is prone to human error and ripples u
 <p style="line-height:70%" align="left" ><span style="font-size:0.85em;" >
 @color[cyan](<b>Goal:</b>)
 </span></p>
- <ul style="list-style-type:none; line-height:0.7;">
+ <ul style="list-style-type:none; line-height:0.75;">
    <li>  <span style="font-size:0.75em;" >Make Intel products easy to work with and more secure. </span></li>
    <li>  <span style="font-size:0.75em;" >Do firmware development work directly in open source. </span></li>
  </ul>
@@ -198,7 +198,7 @@ The copy + paste + modify model used today is prone to human error and ripples u
 <p style="line-height:70%" align="left" ><span style="font-size:0.85em;" >
 @color[cyan](<b>Benefits:</b>)
 </span></p>
- <ul style="list-style-type:none; line-height:0.7;">
+ <ul style="list-style-type:none; line-height:0.75;">
    <li>  <span style="font-size:0.75em;" >Allow improved customer engagements </span></li>
    <li>  <span style="font-size:0.75em;" >Builds transparency and trust </span></li>
    <li>  <span style="font-size:0.75em;" >Reduce overhead to transition from internal to external </span></li>
@@ -207,7 +207,7 @@ The copy + paste + modify model used today is prone to human error and ripples u
 
 
 @snap[south span-85 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Easier to access, understand, fix & optimize means improved product quality <br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em">Easier to access, understand, fix & optimize means improved product quality <br>&nbsp;</span></p>)
 @snapend
 
 
@@ -223,9 +223,7 @@ Note:
 
 
 
----
-Blank page
----?image=assets/images/slides/Slide5.JPG
+---?image=assets/images/slides/Slide8.JPG
 @title[Four Focus Areas Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Four Focus Areas</b>)</span></span></p>
@@ -283,7 +281,7 @@ In order to provide suggestions on the problem statements earilier, we need to f
 - Tree Structure. What does an EDKII platform package look like? 
 
 
----?image=assets/images/slides/Slide6.JPG
+---?image=assets/images/slides/Slide10.JPG
 @title[Tree Structure Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Tree Structure</b>)</span></span></p>
@@ -307,6 +305,7 @@ This is the directory structure of our EDK II platform in relationship to the wh
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -317,6 +316,8 @@ This is the directory structure of our EDK II platform in relationship to the wh
 @box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
 @box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board</b><br><br>&nbsp;</span></p>)
 @box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Features</b><br><br>&nbsp;</span></p>)
+
 @snapend
 
 
@@ -328,6 +329,7 @@ This is the directory structure of our EDK II platform in relationship to the wh
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Enable a specific <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Board specific code <br><br><br><br> </span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Hardware specific code </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; <b>Advanced features</b> of platform functionality that is non-essential for "basic OS boot" </span></p>)
 @snapend
 
 
@@ -346,6 +348,8 @@ The architecture makes use of four primary classifications of code that are gene
 - Silicon, also often called hardware code, has some tie to a specific class of physical hardware. Sometimes governed by industry standards, sometimes proprietary. Silicon or hardware code is usually not intended to have multiple implementations for the same hardware.
   - Producer(s): Silicon vendor
 
+---
+blank slide
 
 ---?image=assets/images/slides/Slide7.JPG
 @title[Open Source EDK II Workspace]
