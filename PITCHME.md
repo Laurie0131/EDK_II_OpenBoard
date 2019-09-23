@@ -1037,7 +1037,7 @@ Note:
 This introduces issues when the developer wants to find a  particular driver. 
 
 
----?image=assets/images/slides/Slide17.JPG
+---?image=assets/images/slides/Slide23.JPG
 @title[Focus - Features Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Features</b>)</span></span></p>
@@ -1124,7 +1124,7 @@ Note:
 - Most  advanced modules can be open source, too, but there might be a small portion of code that can not be open source, such as the binary elements used by TXT/AMT/CSM 
 
 
----?image=assets/images/slides/Slide20.JPG
+---?image=assets/images/slides/Slide25.JPG
 @title[Basic Boot Components]
 <p align="right"><span class="gold" >@size[1.1em](<b>Basic Boot Components</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
@@ -1142,7 +1142,7 @@ The platform may also need to initiliaze General Purpose Input/Ouput (GPIO) pins
 
 
 
----?image=assets/images/slides/Slide18.JPG
+---?image=assets/images/slides/Slide24.JPG
 @title[Features Build Enabled]
 <p align="right"><span class="gold" >@size[1.1em](<b>Features Build Enabled</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
@@ -1209,7 +1209,7 @@ Each board can have a settings file that will override the edk2-platforms/Platfo
 An example of a board specific settings:
 edk2-platforms/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/build_config.cfg
 
----?image=assets/images/slides/Slide18.JPG
+---?image=assets/images/slides/Slide24.JPG
 @title[Example Build Config File]
 <p align="right"><span class="gold" >@size[1.1em](<b>Example Build Config File</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
@@ -1252,7 +1252,7 @@ SILENT_MODE = FALSE <br>&nbsp;&nbsp;
 @snapend
 
 
----?image=assets/images/slides/Slide18.JPG
+---?image=assets/images/slides/Slide24.JPG
 @title[Platform Features Table d’hôte ]
 <p align="right"><span class="gold" >@size[1.1em](<b>Platform Features Table d’hôte </b>)</span><span style="font-size:0.8em;" ></span></p>
 
@@ -1334,7 +1334,7 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
    - Size and performance optimizations
 
 
----?image=assets/images/slides/Slide18.JPG
+---?image=assets/images/slides/Slide24.JPG
 @title[Platform Features à la carte with PCDs ]
 <p align="right"><span class="gold" >@size[1.1em](<b>Platform Features à la carte with PCDs  </b>)</span><span style="font-size:0.8em;" ></span></p>
 
@@ -1595,7 +1595,7 @@ Note:
 Click on the link to view the whole .FDF file
 
 
----?image=assets/images/slides/Slide28.JPG
+---?image=assets/images/slides/Slide33.JPG
 @title[Focus - Configuration Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Configuration </b>)</span></span></p>
@@ -1825,7 +1825,7 @@ BKM is using PCDs only in platform code, no matter where a platform chooses to s
 
 Then the code is consistent and easy to maintain, especially if the next generation platform decides to change the location. 
 
----?image=/assets/images/slides/Slide33.JPG
+---?image=/assets/images/slides/Slide38.JPG
 @title[PCD Syntax review]
 <p align="right"><span class="gold" ><b>PCD Syntax Review</b></span></p>
 @snap[north-east span-90 fragment]
@@ -1896,7 +1896,7 @@ BKM is to set the desired value in the Platform Specific .DSC file
 
 
  
----?image=/assets/images/slides/Slide34.JPG
+---?image=/assets/images/slides/Slide39.JPG
 @title[How to Map PCD ]
 <p align="right"><span class="gold" >@size[1.1em](<b>How to Map PCD to Configuration Data</b>)</span><span style="font-size:0.8em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
@@ -2281,7 +2281,7 @@ A board module may refer to another source to get the board specific policy data
 - Binary Blob 
 - Built-in C structure. 
 
----?image=assets/images/slides/Slide40.JPG
+---?image=assets/images/slides/Slide45.JPG
 @title[Example: FSP policy in MinPlatformPkg]
 <p align="right"><span class="gold" >@size[1.1em](<b>Example: FSP policy in MinPlatformPkg</b>)</span></span></p>
 
@@ -2437,7 +2437,7 @@ PcdSet16S (@color[yellow](PcdSetNvStoreDefaultId), 0x0); <br>&nbsp;
 
 Note:
 
----?image=assets/images/slides/Slide43.JPG
+---?image=assets/images/slides/Slide48.JPG
 @title[Board Porting ]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Board Porting</b>)</span><span style="font-size:0.8em;" ></span></p>
@@ -2570,7 +2570,7 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
 </pre>
 
 
----?image=assets/images/slides/Slide45.JPG
+---?image=assets/images/slides/Slide50.JPG
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow]
 <p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
@@ -2587,7 +2587,7 @@ Note:
 
 
 
-+++?image=assets/images/slides/Slide46.JPG
++++?image=assets/images/slides/Slide51.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 02]
@@ -2603,7 +2603,7 @@ Note:
 7. Not shown  Performance Optimizations
 
 
-+++?image=assets/images/slides/Slide47.JPG
++++?image=assets/images/slides/Slide52.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 03]
@@ -2619,7 +2619,7 @@ Note:
 7. Not shown  Performance Optimizations
 
 
-+++?image=assets/images/slides/Slide47_1.JPG
++++?image=assets/images/slides/Slide53.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 04]
@@ -2634,7 +2634,7 @@ Note:
 6. Advanced Feature Selection
 7. Not shown  Performance Optimizations
 
-+++?image=assets/images/slides/Slide48.JPG
++++?image=assets/images/slides/Slide54.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 05]
@@ -2649,7 +2649,7 @@ Note:
 6. Advanced Feature Selection
 7. Not shown  Performance Optimizations
 
-+++?image=assets/images/slides/Slide49.JPG
++++?image=assets/images/slides/Slide55.JPG
 <!-- .slide: data-background-transition="none" -->
 <!-- .slide: data-transition="none" -->
 @title[Stages vs. Boot Flow 06]
@@ -2664,7 +2664,39 @@ Note:
 6. Advanced Feature Selection
 7. Not shown  Performance Optimizations
 
----?image=assets/images/slides/Slide50.JPG
+---?image=assets/images/slides/Slide56.JPG
+@title[MinPlatform + Intel® FSP Boot Flow]
+<p align="right"><span class="gold" >@size[1.1em](<b>MinPlatform @color[yellow](+) Intel® FSP Boot Flow</b>)<br></span><span style="font-size:0.75em;" >- Staged Approach</span></p>
+
+Note:
+
+- What? A specification that describes a scalable platform architecture for UEFI firmware.
+- Why? Creates a baseline to incrementally tackle UEFI security opens with production code.
+- How? Structured basic solution enables more sophisticated later solutions.
+
+Firmware Volumes follow the boot flow stages
+
+Example of adding Network Stack
+
+- Stage 1
+  - enable debug
+- Stage 2
+  - memory initialization
+- Stage 3
+  - boot to UEFI shell only
+- Stage 4
+  - boot to OS
+- Stage 5
+  - boot to OS w/ security enabled
+- Stage 6
+  - Advanced Feature Selection
+- Stage 7
+  - Performance Optimizations
+
+
+
+
+---?image=assets/images/slides/Slide57.JPG
 @title[Staged Approach by Features]
 <p align="right"><span class="gold" >@size[1.1em](<b>Staged Approach by Features</b>)<br></span><span style="font-size:0.75em;" >- Firmware Volume</span></p>
 
@@ -2687,7 +2719,7 @@ HOW is it implemented??
 In order to separate modules in different boot stages, the BKM is to Standardize the firmware layout using Firmware Volumes according to the different boot stages
 
 
----?image=assets/images/slides/Slide51.JPG
+---?image=assets/images/slides/Slide58.JPG
 @title[UEFI Firmware Volumes (FV) - Review]
 <p align="right"><span class="gold" >@size[1.1em](<b>UEFI Firmware Volumes (FV) - Review</b>)<br></span><span style="font-size:0.75em;" ></span></p>
 
@@ -2851,14 +2883,14 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 @color[yellow](edk2)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
   - "@color[#FFC000](<font face="Arial">edk2 Common</font>)"<br>&nbsp;&nbsp;
 @color[yellow](edk2-platforms)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Platform/ "@color[#FFC000](<font face="Arial">Platform</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     Intel/MinPlatformPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Platform/Intel / "@color[#FFC000](<font face="Arial">Platform</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     KabyLakeOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        include/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          @color[#A8ff60](flashmapinclude.fdf) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @color[#A8ff60](flashmapinclude.fdf) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           BoardXPkg/ “@color[#FFC000](<font face="Arial">Board</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Silicon/ "@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       MinPlatformPkg/<br>&nbsp;&nbsp;
+  Silicon/Intel "@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     KabyLakeSiliconPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      . . . /<br>&nbsp;&nbsp;
 @color[yellow](edk2-non-osi)/<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;
@@ -2888,7 +2920,7 @@ Prior to the EDK II build the Tool RebaseAndPatchFspBinBaseAddress.py will rebas
 -> FvPostMemorySilicon
 
 
----?image=assets/images/slides/Slide54.JPG
+---?image=assets/images/slides/Slide61.JPG
 @title[FSP APIs in FSP Binary]
 <p align="right"><span class="gold" >@size[1.1em](<b>FSP APIs in FSP Binary</b>)<br></span><span style="font-size:0.5em;" >Using Intel<sup>&reg;</sup> FSP w/ EDK II: 
 <a href="https://firmware.intel.com/sites/default/files/A_Tour_Beyond_BIOS_Using_the_Intel_Firmware_Support_Package_with_the_EFI_Developer_Kit_II_(FSP2.0).pdf">PDF</a>
@@ -2929,7 +2961,7 @@ The FSP binary can be integrated into any firmware solution, such as UEFI firmwa
 Another Note: : If FSP returns the reset required status in any of the API, then bootloader performs the reset. Refer to the Integration Guide for more details on Reset Types. 
 
 
----?image=assets/images/slides/Slide55.JPG
+---?image=assets/images/slides/Slide62.JPG
 @title[Boot Flow with FSP API Mode]
 <p align="right"><span class="gold" >@size[1.1em](<b>Boot Flow with FSP API Mode</b>)</span><span style="font-size:0.5em;" ></span></p>
 
@@ -2953,7 +2985,7 @@ Once the PeiCore gets permanent memory, PeiCore does TemporaryRam migration and 
 
 Then the PeiCore will continue dispatching the final PEIMs and jump into the DxeCore. Then the DxeCore launches FspWrapperNotifyDxe (https://github.com/tianocore/edk2/tree/master/IntelFsp2WrapperPkg/FspWrapperNotifyDxe ). FspWrapperNotifyDxe registers a callback function for the last FSP API – FspNotifyApi, for AfterPciEnumeration, ReadyToBoot, and EndOfFirmware. 
 
----?image=assets/images/slides/Slide56.JPG
+---?image=assets/images/slides/Slide63.JPG
 @title[FSP 2.1 Dispatch Mode Boot Flow]
 <p align="right"><span class="gold" >@size[1.1em](<b>FSP 2.1 Dispatch Mode Boot Flow</b>)</span><span style="font-size:0.5em;" ></span></p>
 
@@ -2980,7 +3012,7 @@ Dispatch mode is intended to implement a boot flow that is as close to a standar
 In dispatch mode, the NotifyPhase() API API is not used. Instead, FSP-S contains DXE drivers that implement the native callbacks on equivalent events for each of the NotifyPhase() invocations. 
 
 
----?image=assets/images/slides/Slide57.JPG
+---?image=assets/images/slides/Slide64.JPG
 @title[ Platform Hooks Section]
 <br><br><br><br><br><br><br>
 ### <span class="gold"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Platform Hooks</span>
@@ -2999,7 +3031,7 @@ Note:
 How? – by using EDK II Libraries for Platform Hooks
 
 
----?image=assets/images/slides/Slide58.JPG
+---?image=assets/images/slides/Slide65.JPG
 @title[EDK II Libraries w/ Platform Hooks]
 <p align="right"><span class="gold" >@size[1.1em](<b>EDK II Libraries w/ Platform Hooks </b>)</span><span style="font-size:0.75em;" ></span></p>
 
@@ -3057,7 +3089,7 @@ Check for existing library instances.
 Search INF for string: LIBRARY_CLASS  =
 
 
----?image=assets/images/slides/Slide59.JPG
+---?image=assets/images/slides/Slide66.JPG
 @title[Library Classes Section in DSC]
 <p align="right"><span class="gold" >@size[1.1em](<b>Library Classes Section in DSC </b>)</span><span style="font-size:0.75em;" ></span></p>
 
@@ -3269,7 +3301,7 @@ Note:
 
 The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
 
----?image=assets/images/slides/Slide5.JPG
+---?image=assets/images/slides/Slide8.JPG
 @title[EDK II Open Platform Summary Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>EDK II Open Platform <br>Summary</b>)</span></span></p>
@@ -3330,15 +3362,15 @@ In order to provide suggestions on the problem statements earilier, we need to f
 ---  
 @title[summary]
 <BR>
-### <p align="center"<span class="gold"   >Summary </span></p><br>
+### <p align="center"<span class="gold"   >Summary </span></p>
 
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
 <ul style="list-style-type:none">
+ <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Introduce Minimum Platform Architecture (MPA)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </li>
  <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II Open board platforms <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;infrastructure  & focus areas</span> </li>
- <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II Open board<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;platforms </span></li>
+ <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II open board<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;platforms </span></li>
 </ul>
-
 
 
 ---?image=assets/images/gitpitch-audience.jpg
