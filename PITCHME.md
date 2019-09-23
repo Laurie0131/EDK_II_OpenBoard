@@ -361,11 +361,11 @@ The architecture makes use of four primary classifications of code that are gene
 <p style="line-height:10%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
 </span></p>
 
-@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>MinPlatformPkg</b><br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>BoardModulePkg</b><br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>XxxOpenBoardPkg</b><br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>XxxSiliconPkg</b><br>&nbsp;</span></p>)
-@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>YyyFeaturePkg</b><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em; font-family:Consolas;" ><b>MinPlatformPkg</b><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em; font-family:Consolas;" ><b>BoardModulePkg</b><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em; font-family:Consolas;" ><b>XxxOpenBoardPkg</b><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em; font-family:Consolas;" ><b>XxxSiliconPkg</b><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em; font-family:Consolas;" ><b>YyyFeaturePkg</b><br>&nbsp;</span></p>)
 
 @snapend
 
@@ -384,7 +384,7 @@ The architecture makes use of four primary classifications of code that are gene
 
 @snap[south-west span-100 ]
 <p style="line-height:40%" align="right" ><span style="font-size:0.5em;" >
-&ast; Where Xxx would be an open platform: KabyLakeOpenBoardPkg, WhiskeyLakeOpenBoardPkg, etc.
+&ast; Where Xxx would be an open platform: <font face="Consolas">abyLakeOpenBoardPkg, WhiskeyLakeOpenBoardPkg</font>, etc.
 </span></p>
 @snapend
 
@@ -432,6 +432,35 @@ The lack of coupling between feature packages is achieved through feature integr
 - Feature must have dependencies explicitly identified in its DEPEX section. It must allow being reordered arbitrarily in FDFs and still function properly.
 - Feature entry points should be in the main feature module entry point specified in the INF.
 
+
+---?image=assets/images/slides/Slide12.JPG
+@title[MPA Dependency Rules]
+<p align="right"><span class="gold" >@size[1.1em](<b>MPA Dependency Rules</b>)</span></span></p>
+
+@snap[south-west span-35 ]
+<p style="line-height:40%" align="left" ><span style="font-size:0.5em;" >
+Key: <br>
+Bottom triangles can only depend on shapes above them except for @color[yellow](<font face="Consolas">XxxOpenBoardPkg</font>) can also depend on advanced feature packages
+</span></p>
+@snapend
+
+@snap[south-east span-40 ]
+<p style="line-height:40%" align="right" ><span style="font-size:0.5em;" >
+<font face="Consolas">BoardAbc</font> – directory for <font face="Consolas">OpenBoardPkg.dsc</font>
+</span></p>
+@snapend
+
+
+Note:
+
+- The packages must be flexible. In particular, the organization of advanced feature is expected to change over time dynamically adjusting to business and technical demands. Therefore, the following dependency rules are in place:
+- MinPlatformPkg should only depend upon EDK II Green H packages (i.e. MdePkg and MdeModulePkg)
+- BoardModulePkg can only depend Green H packages and MinPlatformPkg
+- xxxOpenBoardPkg can depend on non-deprecated packages in edk2, MinPlatformPkg, and xxxFeaturePkg instances.
+- BoardAbc is the directory for the OpenBoardPkg.dsc file and has implied dependency xxxOpenBoardPkg, MinPlatformPkg and XxxFeaturePkg
+- xxxFeaturePkg 
+  -  can only depend on non-deprecated packages in edk2.
+  -  cannot directly depend on any other xxxFeaturePkg.
 
 
 ---
