@@ -3089,7 +3089,7 @@ Check for existing library instances.
 Search INF for string: LIBRARY_CLASS  =
 
 
----?image=assets/images/slides/Slide65.JPG
+---
 @title[Library Classes Section in DSC]
 <p align="right"><span class="gold" >@size[1.1em](<b>Library Classes Section in DSC </b>)</span><span style="font-size:0.75em;" ></span></p>
 
@@ -3118,6 +3118,11 @@ Search INF for string: LIBRARY_CLASS  =
  }
  
 ``` 
+
+@snap[north-east span-12 ]
+<br>
+![hook](/assets/images/hook.png)
+@snapend
 
 
 @snap[north-east span-35 fragment ]
