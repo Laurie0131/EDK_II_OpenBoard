@@ -382,8 +382,8 @@ The architecture makes use of four primary classifications of code that are gene
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" > Advanced funtional feature &lpar;e.g. SMBIOS&rpar;</span></p>)
 @snapend
 
-@snap[south-west span-68 ]
-<p style="line-height:40%" align="left" ><span style="font-size:0.5em;" >
+@snap[south-west span-100 ]
+<p style="line-height:40%" align="right" ><span style="font-size:0.5em;" >
 &ast; Where Xxx would be an open platform: KabyLakeOpenBoardPkg, WhiskeyLakeOpenBoardPkg, etc.
 </span></p>
 @snapend
