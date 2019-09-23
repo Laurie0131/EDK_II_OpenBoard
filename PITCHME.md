@@ -2886,7 +2886,7 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
   Platform/Intel / "@color[#FFC000](<font face="Arial">Platform</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      KabyLakeOpenBoardPkg<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        include/  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          @color[#A8ff60](flashmapinclude.fdf) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          @color[#A8ff60](FlashMapInclude.fdf) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           BoardXPkg/ “@color[#FFC000](<font face="Arial">Board</font>)”<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/Intel "@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      KabyLakeSiliconPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -2902,7 +2902,7 @@ In order to separate modules in different boot stage, BKM to Standardize the fir
 
 @snap[south-east span-40 ]
 <p style="line-height:40%" align="left" ><span style="font-size:0.5em; ">
-Pre-Build w/ <b><font face="Consolas">RebaseAndPatchFspBinBaseAddress.py </font></b>
+Pre-Build w/ <font face="Consolas">RebaseAndPatchFspBinBaseAddress.py </font>
 </span></p>
 <br>
 @snapend
@@ -3089,7 +3089,7 @@ Check for existing library instances.
 Search INF for string: LIBRARY_CLASS  =
 
 
----?image=assets/images/slides/Slide66.JPG
+---?image=assets/images/slides/Slide65.JPG
 @title[Library Classes Section in DSC]
 <p align="right"><span class="gold" >@size[1.1em](<b>Library Classes Section in DSC </b>)</span><span style="font-size:0.75em;" ></span></p>
 
