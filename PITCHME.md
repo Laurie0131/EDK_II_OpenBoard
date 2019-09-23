@@ -521,10 +521,9 @@ Build –p .dsc from the BOARD Directory
 
 The architecture is designed to support a maintainer ownership model. For example, board developers should not directly modify (fork) the platform, silicon, or common code. More details on conventional usage of the package classifications can be found in supplemental literature from UEFI Forum, TianoCore.org, and others.
 
----
-blank slide
 
----?image=assets/images/slides/Slide7.JPG
+
+---?image=assets/images/slides/Slide10.JPG
 @title[Open Board Tree Structure]
 <p align="right"><span class="gold" >@size[1.1em](<b>Open Board Tree Structure</b>)</span></span></p>
 
@@ -546,7 +545,7 @@ blank slide
 @color[yellow](edk2-platforms)/  <a href="https://github.com/tianocore/edk2-platforms"> github.com/edk2-platforms</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
   Platform/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       AdvancedFeaturePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       BoardModulePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           KabylakeRvp3/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -608,8 +607,9 @@ Not shown is the edk2 repository since this should always be considered as commo
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >Platform folder : contains the platform specific modules by architecture</span> </li>
   <ul style="list-style-type:disc; line-height:0.7;">
+    <li><span style="font-size:0.65em" >@color[cyan](BoardModulePkg ): generic Board functionality (board lib interfaces) </span> </li>
     <li><span style="font-size:0.65em" >@color[cyan](MinPlatformPkg ): generic platform instance to control the boot flow.  </span> </li>
-    <li><span style="font-size:0.65em" >@color[cyan](AdvancedFeaturePkg ): package to hold the advanced platform features </span> </li>
+    <li><span style="font-size:0.65em" >@color[cyan](XxxFeaturePkg ): package to hold the Xxx advanced platform features </span> </li>
     <li><span style="font-size:0.65em" >@color[cyan](&lt;Generation&gt;OpenBoardPkg ): the silicon generation specific board package. All of the boards based upon this silicon generation can be located here </span> </li>
  </ul>
   <li><span style="font-size:0.65em" >Silicon folder : contains the silicon specific modules </span> </li>
@@ -718,6 +718,50 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 @snapend
 
 Note:
+
+---
+@title[Board Module Package Structure ]
+<p align="right"><span class="gold" >@size[1.1em](<b>Board Module Package Structure </b>)</span><span style="font-size:0.8em;" ><br>- <font face="Consolas">BoardModulePkg</font></span></p>
+
+@snap[north-west span-45 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+@color[cyan](MinPlatformPkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    BiosIdLib /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    CmosAccessib /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformCmosAccessLibNull /
+</span></p>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >@color[yellow](Include ): The include file as the package interface. All interfaces defined in BoardModlePkg.dec are put to here.  </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](Library ): It only contains board generic features as independent library, such as BiosIdLib and Cmos Access Lib</span> </li>
+</ul>
+@snapend
+
+@snap[north-east span-40 fragment]
+<br>
+<br>
+<br>
+
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:80%"><span style="font-size:0.75em">Board Generic Functionality<br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+
+
+---
+blank slide
 
 ---
 @title[Advanced Feature Package ]
