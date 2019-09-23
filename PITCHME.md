@@ -356,7 +356,7 @@ The architecture makes use of four primary classifications of code that are gene
 @title[Package Organization Example]
 <p align="right"><span class="gold" >@size[1.1em](<b>Package Organization Example</b>)</span></span></p>
 
-@snap[north span-54 ]
+@snap[north span-60 ]
 <p style="line-height:10%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
 </span></p>
 
@@ -372,11 +372,11 @@ The architecture makes use of four primary classifications of code that are gene
 <p style="line-height:10%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
 </span></p>
 
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>MinPlatformPkg</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>BoardModulePkg</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>XxxOpenBoardPkg</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>XxxSiliconPkg</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>YyyFeaturePkg</b><br><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>MinPlatformPkg</b><br><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>BoardModulePkg</b><br><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>XxxOpenBoardPkg</b><br><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>XxxSiliconPkg</b><br><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>YyyFeaturePkg</b><br><br>&nbsp;</span></p>)
 
 @snapend
 
@@ -386,11 +386,11 @@ The architecture makes use of four primary classifications of code that are gene
 <p style="line-height:10%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
 </span></p>
 
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Common - Boot flow, well defined interfaces<br><br><br></span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Board - Generic board functionality<br>&nbsp;&nbsp;&nbsp; (e.g. CMOS access code) <br><br> </span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Platform - board-specific details: GPIOs,<br>&nbsp;&nbsp;&nbsp;  memory config, audio verb tables, etc<br><br> </span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Silicon - Hardware specific code for Xxx</span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Advanced funtional feature </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" ><br>&bull; Common - Boot flow, well defined<br>&nbsp;&nbsp;&nbsp; interfaces<br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Board - Generic board functionality<br>&nbsp;&nbsp;&nbsp; &lpar;e.g. CMOS access code&rpar; <br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Platform - board-specific details: GPIOs,<br>&nbsp;&nbsp;&nbsp;  memory config, audio verb tables, etc<br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Silicon - Hardware specific code for Xxx<br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Advanced funtional feature &lpar;e.g. SMBIOS&rpar;</span></p>)
 @snapend
 
 Note:
