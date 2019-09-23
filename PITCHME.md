@@ -375,9 +375,9 @@ The architecture makes use of four primary classifications of code that are gene
 <p style="line-height:10%" align="left" ><span style="font-size:0.7em;" ><br><br><br>&nbsp;
 </span></p>
 
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Common - Boot flow, well defined<br>&nbsp;&nbsp;&nbsp; interfaces<br><br></span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Board - Generic board functionality<br>&nbsp;&nbsp;&nbsp; &lpar;e.g. CMOS access code&rpar;<br><br> <br> </span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Platform - board-specific details: GPIOs,<br>&nbsp;&nbsp;&nbsp;  memory config, audio verb tables, etc<br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Common - Boot flow, well defined<br>&nbsp;&nbsp;&nbsp; interfaces<br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Board - Generic board functionality<br>&nbsp;&nbsp;&nbsp; &lpar;e.g. CMOS access code&rpar;<br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Platform - board-specific details: GPIOs,<br>&nbsp;&nbsp;&nbsp;  memory config, audio verb tables, etc<br><br> </span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Silicon - Hardware specific code for Xxx<br><br></span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Advanced funtional feature <br>&nbsp;&nbsp;&nbsp; &lpar;e.g. SMBIOS&rpar;</span></p>)
 @snapend
