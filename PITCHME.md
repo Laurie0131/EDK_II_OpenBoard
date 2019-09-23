@@ -763,45 +763,8 @@ Note:
 
 
 ---
-blank slide
-
----
-@title[Advanced Feature Package ]
-<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
-
-@snap[north-west span-45 ]
-<br>
-<br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
-@snapend
-
-@snap[north-west span-100 ]
-<br>
-<p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-@color[cyan](AdvancedFeaturePkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  &lt;AdvancedFeatureCommonFeature&gt;/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Include /
-</span></p>
-<br>
-<br>
-
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
-
-<ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >@color[yellow](&lt;AdvancedCommonFeature&gt; ): The advanced features, such as SMBIOS table, IPMI </span> </li>
-  <li><span style="font-size:0.65em" >@color[yellow](Include ): The include file as the package interface.   </span> </li>
-</ul>
-@snapend
-
-
-
-Note:
-
-
----
 @title[Open Board Package Structure ]
-<p align="right"><span class="gold" >@size[1.1em](<b>Open Board Package Structure </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Open Board Package Structure </b>)</span><span style="font-size:0.8em;" ><br>- <font face="Consolas">KabyLakeOpenBoardPkg</font></span></p>
 
 @snap[north-west span-45 ]
 <br>
@@ -817,7 +780,7 @@ Note:
   Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   &lt;AdvancedCommonBoardFeature&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  @color[cyan](&lt;Board&gt;) /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  @color[cyan](&lt;BoardX&gt;) /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &lt;BoardSpecificFeature&gt; /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -837,6 +800,60 @@ Note:
 
 
 Note:
+
+
+---
+@title[Advanced Feature Package ]
+<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Package </b>)</span><span style="font-size:0.8em;" ><br></span></p>
+
+@snap[north-west span-45 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-west span-100 ]
+<br>
+<p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
+@color[cyan](XxxFeaturePkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Readme.md /
+</span></p>
+<br>
+<br>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
+
+<ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >@color[yellow](Include ): The include file as the package interface.   </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](Library ): Implementation of feature as a library.    </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](Readme.md ): Describes the purpose and scope of the feature package with a list of dependencies    </span> </li>
+</ul>
+@snapend
+
+
+
+Note:
+
+- Advanced features should be designed such that they are easily portable between minimum platform compliant implementations. In consideration of portability, it is recommended to encapsulate each feature within a dedicated package. Such encapsulation enables rapid integration of the feature and a focused area for feature-related changes. For example, feature declarations for build elements such as GUIDs, PCDs, PPIs, and protocols are scoped within the feature package DEC file. Including the feature and consequently the
+package imports the feature tokens within the available namespace and changes affecting the feature are localized to the package which in turn exposes the change to all feature consumers.
+
+### Readme.md:
+- Firmware Volumes - The binary containers needed for the feature.
+- Modules  - The EDK II component binaries and static libraries required.
+- Required Functions - Functions that are useful for understanding, porting, or debugging the feature and how these key functions are integrated into the Stage I-V required functions.
+- Configuration - The configurable parameters for a given feature.
+- Data Flows - The architecturally defined data structures and flows for a given feature.
+- Control Flows - Key control flows for the feature.
+- Build Files - The DSC/FDF for integrating the feature.
+- Test Point Results - The test that can verify porting is complete for the feature.
+- Functional Exit Criteria - The testable functionality for the feature.
+- Feature Enabling Checklist - The required activities to achieve desired functionality for the feature.
+- Common Optimizations - Common size or performance tuning options for this feature.
+
+
+
 
 
 ---
