@@ -475,14 +475,6 @@ Note:
 @snapend
 
 
-@snap[north span-30 ]
-<br>
-<br>
-@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board</b><br><br>&nbsp;</span></p>)
-@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
-@snapend
 
 
 
@@ -509,6 +501,16 @@ Note:
 @color[yellow](FSP)/"@color[#FFC000](<font face="Arial">Silicon</font>)"<br>&nbsp;&nbsp;&nbsp;&nbsp;
    . . ./<br>&nbsp;&nbsp;
 </span></p>
+@snapend
+
+
+@snap[north span-30 ]
+<br>
+<br>
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Board</b><br><br>&nbsp;</span></p>)
+@box[bg-gold2 text-white rounded my-box-pad2 fragment ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Silicon</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -572,10 +574,10 @@ The architecture is designed to support a maintainer ownership model. For exampl
 <br>
 <br>
 <br>
-<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Common Board</font>)<br>
 @color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Platform</font>)<br>
 @color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Board</font>) <br>
-@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Common</font>)<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Common Platform</font>)<br>
 <br>
 <br>
 <br>
@@ -714,7 +716,7 @@ Intel® Firmware Support Package (Intel® FSP) includes:
 <br>
 <br>
 
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:80%"><span style="font-size:0.8em">Basic Common Features<br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:80%"><span style="font-size:0.75em">Platform Common Features<br>&nbsp;</span></p>)
 @snapend
 
 Note:
@@ -726,13 +728,13 @@ Note:
 @snap[north-west span-45 ]
 <br>
 <br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-west span-100 ]
 <br>
 <p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-@color[cyan](MinPlatformPkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+@color[cyan](BoardModulePkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
   Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     BiosIdLib /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -740,10 +742,10 @@ Note:
     PlatformCmosAccessLibNull /
 </span></p>
 
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Where: </span></p>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>Where: </span></p>
 
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >@color[yellow](Include ): The include file as the package interface. All interfaces defined in BoardModlePkg.dec are put to here.  </span> </li>
+  <li><span style="font-size:0.65em" >@color[yellow](Include ): The include file as the package interface. All interfaces defined in <font face="Consolas">BoardModlePkg.dec</font> are put to here.  </span> </li>
   <li><span style="font-size:0.65em" >@color[yellow](Library ): It only contains board generic features as independent library, such as BiosIdLib and Cmos Access Lib</span> </li>
 </ul>
 @snapend
