@@ -325,11 +325,11 @@ This is the directory structure of our EDK II platform in relationship to the wh
 @snap[north-east span-67 ]
 <br>
 <br>
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; No direct HW requirements<br><br><br></span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Enable a specific <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Board specific code <br><br><br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" >&bull; Hardware specific code </span></p>)
-@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br>&bull; <b>Advanced features</b> of platform functionality that is non-essential for "basic OS boot" </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; No direct HW requirements<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Enable a specific <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Board specific code <br><br><br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Hardware specific code </span></p>)
+@css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" ><br>&bull; <b>Advanced features</b> non-essential for "basic OS boot" </span></p>)
 @snapend
 
 
