@@ -299,7 +299,8 @@ This is the directory structure of our EDK II platform in relationship to the wh
 
 
 @snap[north span-54 ]
-<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
+</span></p>
 
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
@@ -310,7 +311,8 @@ This is the directory structure of our EDK II platform in relationship to the wh
 
 
 @snap[north-west span-30 ]
-<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
+</span></p>
 
 @box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Common</b><br><br>&nbsp;</span></p>)
 @box[bg-gold2 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Platform</b><br><br>&nbsp;</span></p>)
@@ -323,7 +325,8 @@ This is the directory structure of our EDK II platform in relationship to the wh
 
 
 @snap[north-east span-67 ]
-<br>
+<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" ><br><br>&nbsp;
+</span></p>
 
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; No direct HW requirements<br><br><br></span></p>)
 @css[text-white fragment](<p style="line-height:60%" align="left" ><span style="font-size:0.67em;" >&bull; Enable a specific <br>&nbsp;&nbsp;&nbsp;platform's capabilities <br><br><br> </span></p>)
