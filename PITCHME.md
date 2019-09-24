@@ -224,11 +224,11 @@ Note:
 
 ---?image=assets/images/slides/Slide7_1.JPG
 @title[MinPlatform + Intel® Firmware Support Package]
-<p align="right"><span class="gold" >@size[1.1em](<bMinPlatform @color[yellow](+) Intel® Firmware Support Package/b>)</span><br>
+<p align="right"><span class="gold" >@size[1.1em](<b>MinPlatform @color[yellow](+) Intel® Firmware Support Package</b>)</span><br>
 <span style="font-size:0.7em;" ><b>(Intel® FSP)</b></span></p>
 
-@snap[south-east span-40 ]
-<p style="line-height:60%" align="left" ><span style="font-size:0.65em;" >
+@snap[south-east span-50 ]
+<p style="line-height:55%" align="left" ><span style="font-size:0.6em;" >
 <b>Consistent</b> boot flows and interfaces<br>
 <b>Approachable</b> across the ecosystem<br>
 <b>Scalable</b> from pre-silicon to derivatives
@@ -237,7 +237,7 @@ Note:
 
 
 @snap[south-west span-40 ]
-<p style="line-height:60%" align="left" ><span style="font-size:0.65em;" >
+<p style="line-height:55%" align="left" ><span style="font-size:0.6em;" >
 Intel Open Platform Firmware Stack - MinPlatform
 </span></p>
 @snapend
