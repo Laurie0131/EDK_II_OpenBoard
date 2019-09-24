@@ -477,14 +477,15 @@ The lack of coupling between feature packages is achieved through feature integr
 - Feature entry points should be in the main feature module entry point specified in the INF.
 
 
----?image=assets/images/slides/Slide12.JPG
+---?image=assets/images/slides/Slide13.JPG
 @title[MPA Dependency Rules]
 <p align="right"><span class="gold" >@size[1.1em](<b>MPA Dependency Rules</b>)</span></span></p>
 
 @snap[south-west span-35 ]
 <p style="line-height:38%" align="left" ><span style="font-size:0.47em;" >
 Key: <br>
-Bottom triangles can only depend on shapes above them except for @color[yellow](<font face="Consolas">XxxOpenBoardPkg</font>) can also depend on Advanced feature packages
+Bottom triangles can only depend on shapes above them <br>
+<font face="Consolas">XxxFeaturePkg </font> - represents multiple feature package intances
 </span></p>
 @snapend
 
@@ -500,7 +501,7 @@ Note:
 - The packages must be flexible. In particular, the organization of advanced feature is expected to change over time dynamically adjusting to business and technical demands. Therefore, the following dependency rules are in place:
 - MinPlatformPkg should only depend upon EDK II Green H packages (i.e. MdePkg and MdeModulePkg)
 - BoardModulePkg can only depend Green H packages and MinPlatformPkg
-- xxxOpenBoardPkg can depend on non-deprecated packages in edk2, MinPlatformPkg, and xxxFeaturePkg instances.
+- xxxOpenBoardPkg can depend on non-deprecated packages in edk2, MinPlatformPkg, BoardModulePkg, and xxxFeaturePkg instances
 - BoardAbc is the directory for the OpenBoardPkg.dsc file and has implied dependency xxxOpenBoardPkg, MinPlatformPkg and XxxFeaturePkg
 - xxxFeaturePkg 
   -  can only depend on non-deprecated packages in edk2.
