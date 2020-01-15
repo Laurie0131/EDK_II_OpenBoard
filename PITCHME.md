@@ -121,7 +121,7 @@ Why can’t the platform tree structures bear more similarity?
 
 @snap[north-east span-67 ]
 <br>
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>Enable developers to consistently navigate code, boot flow, and the functional results<br></span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>Enable developers to consistently navigate code, boot flow, and the functional results<br><br></span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Enable developers to quickly produce a baseline that is extensible with minimal UEFI or EDK II knowledge<br><br> </span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Minimize coupling between common, silicon, platform, board, and feature packages<br><br></span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Enable large granularity binary reuse &lpar;FV binaries&rpar;<br><br></span></p>)
