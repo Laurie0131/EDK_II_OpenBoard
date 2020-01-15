@@ -103,9 +103,8 @@ Why can’t the platform tree structures bear more similarity?
 ---
 @title[Goals]
 <p align="right"><span class="gold" >@size[1.1em](<b>GOALS</b>)</span><br></p>
-@snap[north-west span-30 ]
-<br>
-<span style="font-size:0.85em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Minimum Platform Architecture (MPA)</b></span></p>
+@snap[north-west span-100 ]
+<p style="line-height:20% "><span style="font-size:0.85em;" ><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Minimum Platform Architecture (MPA)</b></span></p>
 @snapend
 
 
@@ -124,8 +123,8 @@ Why can’t the platform tree structures bear more similarity?
 <br>
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>Enable developers to consistently navigate code, boot flow, and the functional results<br></span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Enable developers to quickly produce a baseline that is extensible with minimal UEFI or EDK II knowledge<br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Minimize coupling between common, silicon, platform, board, and feature packages<br></span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Enable large granularity binary reuse (FV binaries</span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Minimize coupling between common, silicon, platform, board, and feature packages<br><br><br></span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Enable large granularity binary reuse (FV binaries)<br><br></span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Enable validating the correctness of a port</span></p>)
 @snapend
 
