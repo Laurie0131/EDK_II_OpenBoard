@@ -102,24 +102,25 @@ Why can’t the platform tree structures bear more similarity?
 
 ---
 @title[Goals]
-<p align="right"><span class="gold" >@size[1.1em](<b>GOALS</b>)</span><br>
-<span style="font-size:0.85em;" ><b>Minimum Platform Architecture (MPA)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>GOALS</b>)</span><br></p>
+@snap[north-west span-30 ]
+<br>
+<span style="font-size:0.85em;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Minimum Platform Architecture (MPA)</b></span></p>
+@snapend
 
 
 @snap[north-west span-30 ]
 <br>
 <br>
-<br>
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Structured</b><br><br>&nbsp;</span></p>)
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Approachable</b><br><br>&nbsp;</span></p>)
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Portable</b><br><br>&nbsp;</span></p>)
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Reusable<br>Convergence</b><br>&nbsp;</span></p>)
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Testable<br>Convergence</b><br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Reusable<br></b><br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Testable<br></b><br>&nbsp;</span></p>)
 @snapend
 
 
 @snap[north-east span-67 ]
-<br>
 <br>
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>Enable developers to consistently navigate code, boot flow, and the functional results<br></span></p>)
 @css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Enable developers to quickly produce a baseline that is extensible with minimal UEFI or EDK II knowledge<br><br> </span></p>)
