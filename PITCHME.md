@@ -13,7 +13,7 @@
 Note:
   PITCHME.md for UEFI / EDK II Training  EDK II OpenBoard Platform and Porting  
 
-  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2020, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -110,20 +110,22 @@ Why can’t the platform tree structures bear more similarity?
 <br>
 <br>
 <br>
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Simple</b><br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><b>Structured</b><br><br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Approachable</b><br><br>&nbsp;</span></p>)
 @box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Portable</b><br><br>&nbsp;</span></p>)
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Consistent</b><br><br>&nbsp;</span></p>)
-@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Code<br>Convergence</b><br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Reusable<br>Convergence</b><br>&nbsp;</span></p>)
+@box[bg-green-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.9em;" ><b>Testable<br>Convergence</b><br>&nbsp;</span></p>)
 @snapend
 
 
 @snap[north-east span-67 ]
 <br>
 <br>
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>Code structure should be obvious so that the firmware developer can easily turn on or turn off a significant feature<br></span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware developer can easily port and enable a new board.<br><br> </span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Firmware code structure should be independent of processor/silicon architecture or platform type &lpar;embedded, workstation, server, etc.&rpar;<br></span></p>)
-@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >One instance of code per task</span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>Enable developers to consistently navigate code, boot flow, and the functional results<br></span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Enable developers to quickly produce a baseline that is extensible with minimal UEFI or EDK II knowledge<br><br> </span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Minimize coupling between common, silicon, platform, board, and feature packages<br></span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Enable large granularity binary reuse (FV binaries</span></p>)
+@css[text-white fragment](<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >Enable validating the correctness of a port</span></p>)
 @snapend
 
 @snap[south span-85 fragment]
@@ -985,101 +987,6 @@ Slide shows the KabylakeOpenBoardPkg.
 The common board related ACPI is in Acpi directory. The common board related FSP policy update is in FspWrapper. The library folder includes the board specific GpioExpanderLib and I2cAccessLib. They might be used for other Kabylake generation board. 
 
 The KabylakeRvp3 folder contains all RVP3 related settings, such as GPIO, High Definition Audio (HAD) verb Table, HsioPtss table, SPD table. This folder also has DSC and FDF file. We can build a KabylakeRvp3 binary inside of this folder 
-
----
-@title[Compare to MinnowBoard  MAX/Turbot]
-<p align="right"><span class="gold" >@size[1.1em](<b>Compare to MinnowBoard  MAX/Turbot</b>)</span><span style="font-size:0.8em;" ><br></span></p>
-
-@snap[north-west span-100 ]
-<br>
-<br>
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
-@snapend
-
-
-
-@snap[north-west span-35 ]
-<br>
-<p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-@color[cyan](Vlv2TbltDevicePkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   AcpiPlatform/<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   Application /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   BootScriptSaveDxe /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   FspAzaliaConfigData /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   FspSupport /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   FvbRuntimeDxe /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   FvInfoPei  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   IntelGopDepex /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   Logo /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   Metronome /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-   MonoStatusCode /
-</span></p>
-@snapend
-
-@snap[north span-35 ]
-<br>
-<p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-  Override /<br>&nbsp;&nbsp;
-  PciPlatform /<br>&nbsp;&nbsp;
-  PlatformCpuInfoDxe /<br>&nbsp;&nbsp;
-  PlatformDxe /<br>&nbsp;&nbsp;
-  PlatformGopPolicy /<br>&nbsp;&nbsp;
-  PlatformInfoDxe /<br>&nbsp;&nbsp;
-  PlatformInitPei /<br>&nbsp;&nbsp;
-  PlatformPei /<br>&nbsp;&nbsp;
-  PlatformSetupDxe /<br>&nbsp;&nbsp;
-  PlatformSmm /<br>&nbsp;&nbsp;
-  PpmPolicy /<br>&nbsp;&nbsp;
-  SaveMemoryConfig /<br>&nbsp;&nbsp;
-  SmBiosMiscDxe /<br>&nbsp;&nbsp;
-</span></p>
-@snapend
-
-
-@snap[north-east span-35 ]
-<br>
-<p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-  SmmSwDispatch2OnSmm /<br>&nbsp;&nbsp;
-  SwDispatchThunk /<br>&nbsp;&nbsp;
-  SmramSaveInfoHandlerSmm /<br>&nbsp;&nbsp;
-  Stitch /<br>&nbsp;&nbsp;
-  UiApp /<br>&nbsp;&nbsp;
-  VlvPlatformInitDxe /<br>&nbsp;&nbsp;
-  Wpce791 /<br>&nbsp;&nbsp;
-<br>&nbsp;&nbsp;
-  PlatformPkg.dec  <br>&nbsp;&nbsp;
-  PlatformPkg.dsc  <br>&nbsp;&nbsp;
-  PlatformPkg.fdf
-</span></p>
-@snapend
-
-
-@snap[north-east span-25 fragment]
-<br>
-<p style="line-height:40% " align="left"><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @fa[long-arrow-alt-left fa-3x gp-bullet-yellow]
-  
-</span></p>
-@snapend
-
-@snap[south span-85 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">This introduces issues when searching for a driver<br><br>&nbsp;</span></p>)
-<br>
-@snapend
-
-
-Note:
-This introduces issues when the developer wants to find a  particular driver. 
 
 
 ---?image=assets/images/slides/Slide23.JPG
@@ -3482,7 +3389,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWIS
 ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF ADVISED OF THE POSSIBILITY 
 OF SUCH DAMAGE.
 
-Copyright (c) 2019, Intel Corporation. All rights reserved.
+Copyright (c) 2020, Intel Corporation. All rights reserved.
 **/
 
 ```
