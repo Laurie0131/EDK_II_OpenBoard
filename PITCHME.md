@@ -1913,7 +1913,7 @@ Note:
 
 
 
-@snap[north-east span-62 fragment]
+@snap[north-east span-62 ]
 <br>
 <br>
 <br>
@@ -1946,85 +1946,6 @@ FSP UPD – FSP UPD can be static default configuration, or a dynamic updatable 
 
 - Policy data: Silicon Policy Hob/PPI/Protocol are useful in order to let one silicon code module support multiple boards. It is the interface between silicon code and platform code. A platform needs to convert policy configuration in PCD into a Silicon Policy PPI/Protocol. 
 - Silicon Hook: Sometimes, we observe that Silicon Policy PPI or Protocol provides a silicon hook for platform. This hook may perform some additional action based on a platform setting, or retrieve some system information. In most cases, we suggest to separate the hook function from policy data. 
-
-
-
-+++
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->
-@title[Configuration Options 02 ]
-<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Options - details</b>)</span><span style="font-size:0.8em;" ></span></p>
-<br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
-
-@color[yellow](PI PCD) – The PI PCD could be static data fixed at build time or dynamic data updatable at runtime.<br><br>
-@color[yellow](UEFI Variable) – The UEFI Variable can be non-volatile data or volatile data, and it is widely used by VFR.<br><br>
-@color[yellow](FSP UPD) – FSP UPD can be static default configuration, or a dynamic updatable UPD.<br><br>
-@color[yellow](Silicon Policy Hob/PPI/Protocol) – It is policy data constructed at runtime or it can be a hook for silicon code.<br>
-</span></p>
-
-Note:
-
-##### PI PCD – The PI PCD could be static data fixed at build time or dynamic data updatable at runtime. 
-- PcdsFeatureFlag: This type PCD only supports 1/0. Caller uses FeaturePcdGet() to retrieve the value. This type of PCD is mapped to be a MACRO so that a compiler optimization can remove the code scoped by “if(FALSE)”. It is not allowed to set as a PcdsFeatureFlag. 
-- PcdsFixedAtBuild: This type of PCD can be mapped to a global variable if the caller uses PcdGet(), or a MACRO if the caller uses FixedPcdGet(). As such, this type of PCD can be used in a data structure definition. It is not allowed to be set as PcdsFixedAtBuild. 
-- PcdsPatchableInModule: This type of PCD is mapped to a global variable. It is allowed for use by both PcdGet and PcdSet. If PcdSet is called, it only changes the module-level PCD value instead of a system-level PCD value. Only the current module sees the PCD change. Other modules still see the original value. 
-- PcdsDynamicDefault: PcdsDynamicDefault is mapped to a PPI or protocol. It is allowed for both PcdGet and PcdSet. PcdSet changes the system-level PCD value immediately. This type of PCD value is volatile. The changed value will not be saved in the next boot. 
-- PcdsDynamicHii: PcdsDynamicHii is mapped to a UEFI variable. It is non-volatile. As such, the changed value can be saved in the next boot. However, the tricky thing is that this PCD value depends on the UEFI variable services 
-
-readiness. If PcdGet is called before UEFI variable services ready, the default PCD value will be returned instead of the updated PCD value. We suggest that the platform owner be very very careful of this trap. If DXE PcdGet is required before the UEFI variable services are ready, we suggest that the platform define PcdsDynamicDefault, and then use get variable data in the PEI phase to fill in this PCD value. 
-- PcdsDynamicVpd: PcdsDynamicVpd is to map configuration data to a static flash region so that a tool can modify the PcdsDynamicVpd after the flash image is generated. This is used by a BIOS that needs to support binary configuration after build. Intel FSP is an example of using PcdsDynamicVpd. 
-- PcdsDynamicEx: PcdsDynamicEx is to support external module for binary build. If an EFI module (DXE Driver or PEIM) is not built with the system firmware, the dynamic PCD must be declared as PcdsDynamicEx. If a platform wants to include this binary EFI module, the binary module INF must be included in DSC file. As such, the PCD database will include the external PCD declared in this binary module. 
-- SkuIds: SkuIds is a special usage of PCD. The use case of Multi-SKU PCD is to build one UEFI firmware boots on multiple board with different configuration in each board. It can support multiple board configurations generated at build time and support runtime selection to make one configuration take effect finally. The good point is that it is very straightforward for each board, if board configuration can be determined. 
-- DefaultStores: DefaultStores is a special usage of PCD (gEfiMdeModulePkgTokenSpaceGuid.PcdSetNvStoreDefaultId). The use case of DefaultStores is to create different default stores in different boot mode, such as standard boot, manufacturing boot mode, or safe boot mode. The configuration data is set to (gEfiMdeModulePkgTokenSpaceGuid.PcdNvStoreDefaultValueBuffer). All those default stores are configured at build time and selected at runtime according to the boot mode. The default store PCD can be consumed by the HiiDatabase to support BIOS setup “load default” operation. 
-
-
-##### UEFI Variable – The UEFI Variable can be non-volatile data or volatile data, and it is widely used by VFR. 
-- In most cases, a non-volatile variable is used to store the user updatable configuration in a setup page. One example is VT enable/disable. This is purely a platform choice. We suggest that the platform map variable configuration to PCD, and use a PcdSet callback to set the variable data. The benefit is that if a new platform just wants to use a static setting, it can remove the variable easily. 
-- A non-volatile variable may also be used to store the system configuration generated at runtime, for example, memory configuration data. In order to maintain security, we suggest that platform to lock the configuration variable before exiting PM auth/EndOfDxe event, by using the EDKII_VARIABLE_LOCK protocol. 
-- A volatile variable is generated at runtime. A platform setup driver may use this information to control a VFR page to suppress or gray out a menu, or to display the system information, like CPU/SA/PCH stepping and features. 
-
-##### FSP UPD – FSP UPD can be static default configuration, or a dynamic updatable UPD. 
-- FSP UPD is used to pass configuration from the FSP wrapper into a FSP binary. A platform needs to convert the policy configuration in PCD to a FSP UPD before calling a FSP API, like FspMemoryInit, FspSiliconInit. 
-- PcdsDynamicVpd.Upd: For a FSP binary, we use DynamicVpd.Upd to mark the configuration that needs to be in the UPD region. (Please be aware that UPD is not a standard PCD concept, it is an FSP extension) 
-
-##### Silicon Policy Hob/PPI/Protocol – It is policy data constructed at runtime or it can be a hook for silicon code. 
-- Policy data: Silicon Policy Hob/PPI/Protocol are useful in order to let one silicon code module support multiple boards. It is the interface between silicon code and platform code. A platform needs to convert policy configuration in PCD into a Silicon Policy PPI/Protocol. 
-- Silicon Hook: Sometimes, we observe that Silicon Policy PPI or Protocol provides a silicon hook for platform. This hook may perform some additional action based on a platform setting, or retrieve some system information. In most cases, we suggest to separate the hook function from policy data. 
-
-+++
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->
-@title[Configuration Options 03 ]
-<p align="right"><span class="gold" >@size[1.1em](<b>Configuration Options - details Cont.</b>)</span><span style="font-size:0.8em;" ></span></p>
-<br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
-@color[yellow](Configuration Block) – data structure,  puts all policy data in a block without any C-language data pointer in policy data. <br><br>
-@color[yellow](Global NVS) – ACPI region,  passes configuration from C code to ASL code. <br><br>
-@color[yellow](Platform signed data blob) – read only, data signed at build time.<br><br>
-@color[yellow](CMOS) – simple non-volatile storage, but it is not secure. <br><br>
-@color[yellow](MACRO) – C-language MACRO, fixed at build time.<br>
-</span></p>
-
-Note:
-
-##### Configuration Block – It is a data structure to put all policy data in a block without any C-language data pointer in a policy data. 
-- The Configuration Block is a new idea to resolve data pointer issues objserved in earlier HOB usage. Previously, a silicon code module would define a root policy data object with some data pointers to sub-regions. For example, a PCH policy data may include a pointer to USB policy data, a pointer to SATA policy data, and a pointer to PCIExpress policy data. This HOB policy data pointer needs to be relocated after memory initialization, such as the Memory Reference Code (MRC), is done, because the PEI core needs to move data from temporary memory or Cache-As-RAM (CAR) to DRAM. If the platform code forgets to move the policy data and fix the pointer, the following code might retrieve the wrong policy data pointer. With the configuration block, the silicon and platform needn’t worry about the invalid policy data pointer issue because the data pointer is eliminated. The PCH policy data block may include a USB policy data block, a SATA policy data and a PCIExpress policy data. Configuration Blocks can be mapped and used by either Hob/PPI/Protocol or PCD. 
-##### Global NVS – It is an ACPI region to pass the configuration from the C code to ASL code. 
-- Global NVS can be used for turning some feature on/off. An example includes returning different _STA values. 0x0 means the device does not exist. 0xF means the device exists. 
-
-It can be used as the policy data, for example CriticalTemperature value. A platform C code module may convert the configuration from PCD to Global NVS. 
-- Since the name has “global”, we observe that may platform put all different features into one big data structure. It is discouraged. We recommend each separate feature can have its own NVS data structure. It is easy for feature on/off control. 
-
-##### Platform signed data blob – It is read only signed data at build time. 
-
-This signed data blob provides the configuration on a platform. An OEM may update the configuration for different boards. We suggest the platform map the signed data blob to PCDs so that a platform consumer can just use PcdGet to get the configuration without knowing the data source. The benefit is that all the platform code can be consistent, irrespective of whether the configuration data is from a signed data blob, a BIOS boot block static region, or a UEFI variable. 
-##### CMOS – It is simple non-volatile storage, but it is not secure. 
-- The most useful usage of CMOS is to use CMOS-CLEAR to determine if an end user wants to use the default variable configuration. This is a consistent user experience from old legacy BIOS. The new platform can use a special function key or a special GPIO as indicator of this logic. 
-- The benefit of CMOS is that the CMOS can be accessed at early SEC phase without rich API requirements. Beyond that usage, though, we do not suggest a platform use CMOS to store configuration data. 
-##### MACRO – C-language MACRO. It is fixed at build time. 
-- A MACRO can be used as static data configuration. It is useful if the MACRO is only used in one module and does not require user configuration. However, if the MACRO is used across many modules or is configurable, like PCIE_BASE, we suggest using PCD. 
-- A MACRO used in #IFDEF can be used to enable/disable features. If the consumer is in C code, it can be replaced by FeaturePcd. It will become if(0) or if(1) finally. The benefit of using PCD is that all the code in both path can be built. 
 
 
 ---
@@ -2099,7 +2020,7 @@ BKM is using PCDs only in platform code, no matter where a platform chooses to s
 
 Then the code is consistent and easy to maintain, especially if the next generation platform decides to change the location. 
 
----?image=/assets/images/slides/Slide38.JPG
+---?image=/assets/images/slides/Slide43.JPG
 @title[PCD Syntax review]
 <p align="right"><span class="gold" ><b>PCD Syntax Review</b></span></p>
 @snap[north-east span-90 fragment]
