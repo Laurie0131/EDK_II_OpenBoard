@@ -3493,10 +3493,7 @@ Once the library hook is found, update that platform hook function for the board
 
 @snapend
 
-@snap[north-east span-10 ]
-<br>
-<p style="line-height:45%" align="right" ><span style="font-size:0.8em" ><br>@color[yellow](&#10105;)</span></p>
-@snapend
+
 
 Note:
 http://sustituciondepuestosclaves.wikispaces.com/Metodo+de+Sustitucion+de+Puestos+Claves 
