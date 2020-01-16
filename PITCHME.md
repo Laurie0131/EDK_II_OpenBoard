@@ -1106,11 +1106,12 @@ Note:
 @title[Minimum Platform Feature Selection]
 <p align="right"><span class="gold" >@size[1.1em](<b>Minimum Platform Feature Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
-@snap[north-west span-80 ]
+@snap[north-west span-85 ]
 <br>
 <br>
-<ul style="list-style-type:none; line-height:0.8;">
-  <li><span style="font-size:0.8em" >Minium Platform </span> </li>
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em;" >
+Minium Platform
+</span></p>
 
   <ul style="list-style-type:disc; line-height:0.7;">
 
@@ -1122,9 +1123,8 @@ Note:
       <li><span style="font-size:0.65em" >Modified in DSC file for the board, if different than the default value </span> </li>
     </ul>
   </ul>
-</ul>
 
-<p style="line-height:80%" align="left" ><span style="font-size:0.8em;" >
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em;" ><br>
 Silicon  – FSP Integration from &lt;Generation&gt;FspBinPkg documentation package
 <br><br><br>&nbsp;
 </span></p>
