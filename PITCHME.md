@@ -1529,7 +1529,7 @@ Links to all the PCDs requirements according to stages
 @snap[north-west span-100 ]
 <br>
 <br>
-<p style="line-height:85%" align="left" ><span style="font-size:0.9em;">
+<p style="line-height:85%" align="left" ><span style="font-size:0.85em;">
 Porting requires becoming familiar with the chosen reference platforms DSC and FDF files. 
 </span></p>
 @snapend
@@ -1541,7 +1541,7 @@ Porting requires becoming familiar with the chosen reference platforms DSC and F
 <br>
 <br>
 <br>
-@box[bg-royal text-white waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.75em;" >@size[1.3em](DSC files)<br><br>Control what gets compiled and linked<br><br>&nbsp;</span></p>)
+@box[bg-royal text-white waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.75em;" >@size[1.3em](DSC files)<br><br>Control what gets compiled<br> and linked<br>&nbsp;</span></p>)
 @snapend
 
 
@@ -1552,7 +1552,7 @@ Porting requires becoming familiar with the chosen reference platforms DSC and F
 <br>
 <br>
 <br>
-@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:70%" align="center"><span style="font-size:0.75em;" >@size[1.3em](FDF files)<br><br>Control what gets put in the system FLASH image<br>&nbsp;</span></p>)
+@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:70%" align="center"><span style="font-size:0.75em;" >@size[1.3em](FDF files)<br><br>Control what gets put in the system FLASH image<br><br>&nbsp;</span></p>)
 @snapend
 
 Note:
@@ -1575,7 +1575,7 @@ Note:
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
-@snap[north-east span-48 ]
+@snap[north-east span-38 ]
 <br>
 <br>
 <br>
@@ -1607,9 +1607,9 @@ Platform/Intel /<br>&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east span-47 ]
+@snap[north-east span-36 ]
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
 </span></p>
 
 <p style="line-height:40% " align="left"><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
@@ -1628,7 +1628,7 @@ edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north span-45 ]
+@snap[north-east  span-45 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
 </span></p>
@@ -1637,14 +1637,14 @@ edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
  
 <br>
-<br><br>
+<br><br><br><br>
 
-       @color[cyan](&larr;)<b>Modify PCD Here  </b><br>
+       @color[#A8ff60](&larr;)@color[yellow](<b>&nbsp;&nbsp;Modify PCD Here  </b>)<br>
        <br>
-       @color[cyan](&larr;)<b>Add Features Here  </b><br><br>
+       @color[#A8ff60](&larr;)@color[yellow](<b>&nbsp;&nbsp;Add Features Here  </b>)<br><br>
 
        <br>
-       @color[cyan](&larr;)<b>Add Features Here  </b> 
+       @color[#A8ff60](&larr;)@color[yellow](<b>&nbsp;&nbsp;Add Features Here  </b> )
 
 </span></p>
 
