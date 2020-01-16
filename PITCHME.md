@@ -1541,7 +1541,7 @@ Porting requires becoming familiar with the chosen reference platforms DSC and F
 <br>
 <br>
 <br>
-@box[bg-royal text-white waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.75em;" >@size[1.3em](DSC files)<br><br>Control what gets compiled<br> and linked<br>&nbsp;</span></p>)
+@box[bg-royal text-white waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.75em;" >@size[1.3em](DSC files)<br><br>Control what gets compiled<br> and linked<br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -1801,16 +1801,17 @@ Note:
 Click on the link to view the whole .FDF file
 
 
----?image=assets/images/slides/Slide33.JPG
+---?image=assets/images/slides/Slide39.JPG
 @title[Focus - Configuration Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Configuration </b>)</span></span></p>
 
+
 @snap[south-west span-30 ]
 <br>
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >Setup Variable</span> </li>
-  <li><span style="font-size:0.65em" >PCD </span> </li>
+  <li><span style="font-size:0.65em" >Staged</span> </li>
+  <li><span style="font-size:0.65em" >Defined PCD </span> </li>
   <li><span style="font-size:0.65em" >Policy Hob/PPI/Protocol </span> </li>
 </ul>
 <br>
@@ -1879,6 +1880,72 @@ Note:
 - Platform signed data blob – It is read only signed data at build time.
 - CMOS – It is simple non-volatile storage, but it is not secure
 - MACRO – C-language MACRO. It is fixed at build time.
+
+
+
+---
+@title[MPA Configuration Options]
+<p align="right"><span class="gold" >@size[1.1em](<b>MPA Configuration Options</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p style="line-height:40% " align="left"><span style="font-size:0.9em;" >Platform configuration data for Minimum Platform </span></p>
+
+@snap[north span-55 ]
+<br>
+<br>
+
+<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
+<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
+<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-west span-35 ]
+<br>
+<br>
+<br>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>PI PCD</b><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>FSP UPD, Silicon Policy, Hob</b><br>&nbsp;</span></p>)
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Global NVS</b><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-62 fragment]
+<br>
+<br>
+
+<p style="line-height:30% " align="left"><span style="font-size:0.9em;" ><br><br></span></p>
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > The PI PCD could be static data fixed at build time or dynamic data updatable at runtime.<br><br><br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > FSP UPD can be static default configuration, or a dynamic updatable UPD. It is policy data constructed at runtime or it can be a hook for silicon code <br> <br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > ACPI region, passes configuration from C code to ASL code.<br><br> </span></p>)
+
+@snapend
+
+Note:
+
+PI PCD – The PI PCD could be static data fixed at build time or dynamic data updatable at runtime.
+
+
+##### PI PCD – The PI PCD could be static data fixed at build time or dynamic data updatable at runtime. 
+- PcdsFeatureFlag: This type PCD only supports 1/0. Caller uses FeaturePcdGet() to retrieve the value. This type of PCD is mapped to be a MACRO so that a compiler optimization can remove the code scoped by “if(FALSE)”. It is not allowed to set as a PcdsFeatureFlag. 
+- PcdsFixedAtBuild: This type of PCD can be mapped to a global variable if the caller uses PcdGet(), or a MACRO if the caller uses FixedPcdGet(). As such, this type of PCD can be used in a data structure definition. It is not allowed to be set as PcdsFixedAtBuild. 
+- PcdsPatchableInModule: This type of PCD is mapped to a global variable. It is allowed for use by both PcdGet and PcdSet. If PcdSet is called, it only changes the module-level PCD value instead of a system-level PCD value. Only the current module sees the PCD change. Other modules still see the original value. 
+- PcdsDynamicDefault: PcdsDynamicDefault is mapped to a PPI or protocol. It is allowed for both PcdGet and PcdSet. PcdSet changes the system-level PCD value immediately. This type of PCD value is volatile. The changed value will not be saved in the next boot. 
+- PcdsDynamicHii: PcdsDynamicHii is mapped to a UEFI variable. It is non-volatile. As such, the changed value can be saved in the next boot. However, the tricky thing is that this PCD value depends on the UEFI variable services 
+
+
+FSP UPD – FSP UPD can be static default configuration, or a dynamic updatable UPD.
+##### FSP UPD – FSP UPD can be static default configuration, or a dynamic updatable UPD. 
+- FSP UPD is used to pass configuration from the FSP wrapper into a FSP binary. A platform needs to convert the policy configuration in PCD to a FSP UPD before calling a FSP API, like FspMemoryInit, FspSiliconInit. 
+- PcdsDynamicVpd.Upd: For a FSP binary, we use DynamicVpd.Upd to mark the configuration that needs to be in the UPD region. (Please be aware that UPD is not a standard PCD concept, it is an FSP extension) 
+
+#### Silicon Policy Hob/PPI/Protocol – It is policy data constructed at runtime or it can be a hook for silicon code
+
+- Policy data: Silicon Policy Hob/PPI/Protocol are useful in order to let one silicon code module support multiple boards. It is the interface between silicon code and platform code. A platform needs to convert policy configuration in PCD into a Silicon Policy PPI/Protocol. 
+- Silicon Hook: Sometimes, we observe that Silicon Policy PPI or Protocol provides a silicon hook for platform. This hook may perform some additional action based on a platform setting, or retrieve some system information. In most cases, we suggest to separate the hook function from policy data. 
+
 
 
 +++
