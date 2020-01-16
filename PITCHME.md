@@ -3666,16 +3666,16 @@ Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
 <br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
 @color[#A8ff60](&larr;)<br>
 <br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-@color[#A8ff60](&rarr;)<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-@color[#A8ff60](&vert;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+@color[#A8ff60](&rarr;)<br>
+@color[#A8ff60](&vert;) <br>
 @color[#A8ff60](&rarr;)
 
 <br>&nbsp;&nbsp;
