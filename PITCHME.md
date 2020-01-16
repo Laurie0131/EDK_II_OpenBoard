@@ -1521,47 +1521,46 @@ Link to Required PCDs according to stages
 Note:
 Links to all the PCDs requirements according to stages
 
-
-
 ---?image=assets/images/slides/Slide26.JPG
-@title[Minimum Platform Stage Selection]
-<p align="right"><span class="gold" >@size[1.1em](<b>Minimum Platform Stage Selection </b>)</span><span style="font-size:0.8em;" ></span></p>
+@title[Build Control Files ]
+<p align="right"><span class="gold" >@size[1.1em](<b>Build Control Files</b>)</span><span style="font-size:0.75em;" ></span></p>
 
-@snap[south-west span-100 ]
-@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+
+@snap[north-west span-100 ]
+<br>
+<br>
+<p style="line-height:85%" align="left" ><span style="font-size:0.9em;">
+Porting requires becoming familiar with the chosen reference platforms DSC and FDF files. 
+</span></p>
 @snapend
 
-@snap[north-west span-80 ]
+@snap[north-west span-45 fragment ]
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
-The Platform Config <b>.<font face="Consolas">dsc</font></b> file controls if feature ON or OFF
-<br><br>
-Example:
 <br>
-@color[yellow](<b><font face="Consolas">OpenBoardPkgConfig.dsc</font></b> -  à la carte)
-</span></p>
-
-@snap[south-west span-100 ]
-<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-[PcdsFeatureFlag]<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdStopAfterDebugInit)|FALSE <br>&nbsp;&nbsp;&nbsp;&nbsp;
-  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdStopAfterMemInit)|FALSE <br>&nbsp;&nbsp;&nbsp;&nbsp;
-  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdBootToShellOnly)|FALSE <br>&nbsp;&nbsp;&nbsp;&nbsp;
-  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdUefiSecureBootEnable)|FALSE <br>&nbsp;&nbsp;&nbsp;&nbsp;
-  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdTpm2Enable)|FALSE  <br>&nbsp;&nbsp;&nbsp;&nbsp;
-!if gMinPlatformPkgTokenSpaceGuid.PcdBootStage >= 1 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  gMinPlatformPkgTokenSpaceGuid.@color[yellow](PcdStopAfterDebugInit)|TRUE <br>&nbsp;&nbsp;&nbsp;&nbsp;
-!endif <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- . &nbsp;&nbsp;.&nbsp;&nbsp; .
-
-</span></p>
 <br>
+<br>
+<br>
+<br>
+@box[bg-royal text-white waved my-box-pad2 ](<p style="line-height:70%" align="center"><span style="font-size:0.75em;" >@size[1.3em](DSC files)<br><br>Control what gets compiled and linked<br><br>&nbsp;</span></p>)
 @snapend
 
+
+@snap[north-east span-45 fragment ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@box[bg-royal text-white waved my-box-pad2  ](<p style="line-height:70%" align="center"><span style="font-size:0.75em;" >@size[1.3em](FDF files)<br><br>Control what gets put in the system FLASH image<br>&nbsp;</span></p>)
+@snapend
 
 Note:
+- DSC files control what gets compiled and linked
+- FDF files control what gets put in the system FLASH image
 
-At the same time, a platform firmware may provide an “à la carte” menu so that an advanced user can configure an individual item. For example, PcdUefiSecureBootEnable can be used to configure if a BIOS needs to support UEFI secure boot [AUTH VARIABLE]. PcdTpm2Enable can be used to configure if a BIOS needs to support the TPM2 [TPM2 EDKII]. 
+
+
 
 
 ---
@@ -1573,7 +1572,6 @@ At the same time, a platform firmware may provide an “à la carte” menu so t
 <br>
 <br>
 <br>
-
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -1582,7 +1580,6 @@ At the same time, a platform firmware may provide an “à la carte” menu so t
 <br>
 <br>
 <br>
-
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
@@ -1596,7 +1593,7 @@ Platform/Intel /<br>&nbsp;&nbsp;&nbsp;
  KabyLakeOpenBoardPkg /<br>&nbsp;&nbsp;&nbsp;&nbsp;
  
   KabyLakeRvp3 /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     OpenBoardPkg@color[yellow](Config).dsc <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     OpenBoardPkgConfig.dsc <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
      OpenBoardPkgPcd.dsc  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      OpenBoardPkgBuildOption.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1613,30 +1610,50 @@ Platform/Intel /<br>&nbsp;&nbsp;&nbsp;
 @snap[north-east span-47 ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
-MinnowBoard Turbot
 </span></p>
 
 <p style="line-height:40% " align="left"><span style="font-size:0.45em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-Platform/Intel /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+edk2-platforms/Platform/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Intel/@color[yellow](MinPlatformPkg)/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      @color[cyan](Fdf)/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      @color[cyan](Dsc)/<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Intel/@color[yellow](YyyAdvancedPkg)/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      @color[cyan](Fdf)/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      @color[cyan](Dsc)/<br>&nbsp;&nbsp;
+</span></p>
+@snapend
 
-  Vlv2TbltDevicePkg /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     PlatformPkg.dec<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-     PlatformPkg@color[yellow](Config).dsc<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+@snap[north span-45 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+</span></p>
+<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>
+<br>
+<br>
+ 
+<br>
+<br><br>
 
-     PlatformPkgIa32.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     PlatformPkgX64.dsc<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     PlatformPkgGcc.dsc<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       @color[cyan](&larr;)<b>Modify PCD Here  </b><br>
+       <br>
+       @color[cyan](&larr;)<b>Add Features Here  </b><br><br>
 
-     PlatformPkg.fdf <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-     PlatformPkgGcc.fdf
+       <br>
+       @color[cyan](&larr;)<b>Add Features Here  </b> 
 
 </span></p>
 
 @snapend
 
+
+
 @snap[south span-95 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">..Config.dsc File Controls if feature ON or OFF <br><br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">OpenBoardPkg.dsc File Controls if feature ON or OFF <br><br>&nbsp;</span></p>)
 @snapend
 
 
