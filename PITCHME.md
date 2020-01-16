@@ -1064,8 +1064,8 @@ In order to provide suggestions on the problem statements above, we would like t
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
 <p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br><br></span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
-<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br><br></span></p>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
+<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -1087,7 +1087,7 @@ In order to provide suggestions on the problem statements above, we would like t
 <p style="line-height:30% " align="left"><span style="font-size:0.9em;" ><br><br></span></p>
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Manage Stage I-V options<br><br><br><br></span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Add rich feature sets &lpar;Stage VI&rpar; <br> <br><br><br> </span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Remove undesired features &lpar;Stage VII&rpar;<br><br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Remove undesired features <br>&lpar;Stage VII&rpar;<br><br><br> </span></p>)
 
 @snapend
 
