@@ -1056,13 +1056,13 @@ In order to provide suggestions on the problem statements above, we would like t
 <p align="right"><span class="gold" >@size[1.1em](<b>Feature – Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 <p style="line-height:40% " align="left"><span style="font-size:0.9em;" >There are three phases of feature selection  </span></p>
 
-@snap[north span-50 ]
+@snap[north span-53 ]
 <br>
 <br>
 
 <p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
-<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br><br></span></p>
+<p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
 <p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
