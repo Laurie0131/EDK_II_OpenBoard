@@ -1628,7 +1628,7 @@ edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east  span-70 ]
+@snap[north-east  span-65 fragment ]
 <br>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 </span></p>
@@ -1637,7 +1637,7 @@ edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
  
 <br>
-<br><br><br><br>
+<br><br><br><br><br><br>
 
        @color[#A8ff60](&larr;)@color[yellow](<b>&nbsp;&nbsp;Modify PCD Here  </b>)<br>
        <br>
