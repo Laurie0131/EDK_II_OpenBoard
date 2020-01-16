@@ -1628,9 +1628,9 @@ edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east  span-45 ]
+@snap[north-east  span-70 ]
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
 </span></p>
 <p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>
 <br>
