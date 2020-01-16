@@ -1918,7 +1918,7 @@ Note:
 <br>
 <br>
 <p style="line-height:30% " align="left"><span style="font-size:0.9em;" ><br></span></p>
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > The PI PCD could be static data fixed at build time or dynamic data updatable at runtime.<br><br><br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > The PI PCD could be static data fixed at build time or dynamic data updatable at runtime.<br><br></span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > FSP UPD can be static default configuration, or a dynamic updatable UPD. It is policy data constructed at runtime or it can be a hook for silicon code <br> <br><br> </span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > ACPI region, passes configuration from C code to ASL code.<br><br> </span></p>)
 
