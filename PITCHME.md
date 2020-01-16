@@ -1456,10 +1456,12 @@ Link to Required PCDs according to stages
 <br>
 <br>
 <br>
+<br>
 @box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-48 ]
+<br>
 <br>
 <br>
 <br>
@@ -1476,12 +1478,12 @@ Link to Required PCDs according to stages
 <br>
 <br>
 <br>
-<br>
+
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/3_stage_1_minimum_debug/35_configuration.html">		
 &#8227;</a> &nbsp;&nbsp;Flash Map Config<br> 
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/3_stage_1_minimum_debug/36_data_flows.html">
-&#8227;</a> &nbsp;&nbsp;Debug Config<br>
+&#8227;</a> &nbsp;&nbsp;Debug Config
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/4_stage_2_memory_functional/45_configuration.html">		
 &#8227;</a> &nbsp;&nbsp;Intel® FSP Config<br>
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/4_stage_2_memory_functional/45_configuration.html"> 
@@ -1489,7 +1491,7 @@ Link to Required PCDs according to stages
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/55_configuration.html"> 
 &#8227;</a> &nbsp;&nbsp;UEFI FV<br>
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/55_configuration.html"> 
-&#8227;</a> Driver Related
+&#8227;</a> &nbsp;&nbsp;Driver Related
 </span></p>
 @snapend
 
