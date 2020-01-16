@@ -3617,7 +3617,7 @@ Because this flow needs to involve the board initialization,  there is a set of 
 @snapend
 
 
-@snap[north-east span-98 ]
+@snap[north-east span-97 ]
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
@@ -3658,7 +3658,7 @@ Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
 @snapend
 
 
-@snap[north-east span-90 fragment]
+@snap[north-east span-99 fragment]
 <br>
 <br>
 <p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
@@ -3667,16 +3667,16 @@ Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
-@color[#A8ff60](&larr;)<br>
-<br>&nbsp;&nbsp;
-<br>&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br>
-@color[#A8ff60](&rarr;)<br>
+@color[#A8ff60](&larr;----------)<br>
+@color[#A8ff60](&vert;)<br>
+@color[#A8ff60](&vert;)<br>
+@color[#A8ff60](&vert;)<br>
+@color[#A8ff60](&vert;)<br>
+@color[#A8ff60](&vert;)<br>
+@color[#A8ff60](&vert;)<br>
+@color[#A8ff60](---------------&rarr;)<br>
 @color[#A8ff60](&vert;) <br>
-@color[#A8ff60](&rarr;)
+@color[#A8ff60](---------------&rarr;)
 
 <br>&nbsp;&nbsp;
 </span></p>
