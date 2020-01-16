@@ -2091,7 +2091,7 @@ BKM is to set the desired value in the Platform Specific .DSC file
 
 
  
----?image=/assets/images/slides/Slide39.JPG
+---?image=/assets/images/slides/Slide44.JPG
 @title[How to Map PCD ]
 <p align="right"><span class="gold" >@size[1.1em](<b>How to Map PCD to Configuration Data</b>)</span><span style="font-size:0.8em;" ></span></p>
 <p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
@@ -2476,7 +2476,7 @@ A board module may refer to another source to get the board specific policy data
 - Binary Blob 
 - Built-in C structure. 
 
----?image=assets/images/slides/Slide45.JPG
+---?image=assets/images/slides/Slide50.JPG
 @title[Example: FSP policy in MinPlatformPkg]
 <p align="right"><span class="gold" >@size[1.1em](<b>Example: FSP policy in MinPlatformPkg</b>)</span></span></p>
 
@@ -2632,14 +2632,15 @@ PcdSet16S (@color[yellow](PcdSetNvStoreDefaultId), 0x0); <br>&nbsp;
 
 Note:
 
----?image=assets/images/slides/Slide48.JPG
+---?image=assets/images/slides/Slide53.JPG
 @title[Board Porting ]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Board Porting</b>)</span><span style="font-size:0.8em;" ></span></p>
 
-@snap[south-east span-33 ]
+@snap[south-east span-33 fragment]
 <br>
 <ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >Staged </span> </li>
   <li><span style="font-size:0.65em" >GPIO </span> </li>
   <li><span style="font-size:0.65em" >SIO </span> </li>
   <li><span style="font-size:0.65em" >ACPI </span> </li>
@@ -2765,101 +2766,7 @@ INF  MdeModulePkg/Universal/Variable/RuntimeDxe/VariableSmm.inf
 </pre>
 
 
----?image=assets/images/slides/Slide50.JPG
-<!-- .slide: data-transition="none" -->
-@title[Stages vs. Boot Flow]
-<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
-
-Note:
-
-1. enable debug
-2. memory initialization
-3. boot to UEFI shell only
-4. boot to OS
-5. boot to OS w/ security enabled
-6. Advanced Feature Selection
-7. Not shown  Performance Optimizations
-
-
-
-+++?image=assets/images/slides/Slide51.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->
-@title[Stages vs. Boot Flow 02]
-<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
-
-Note:
-1. enable debug
-2. memory initialization
-3. boot to UEFI shell only
-4. boot to OS
-5. boot to OS w/ security enabled
-6. Advanced Feature Selection
-7. Not shown  Performance Optimizations
-
-
-+++?image=assets/images/slides/Slide52.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->
-@title[Stages vs. Boot Flow 03]
-<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
-
-Note:
-1. enable debug
-2. memory initialization
-3. boot to UEFI shell only
-4. boot to OS
-5. boot to OS w/ security enabled
-6. Advanced Feature Selection
-7. Not shown  Performance Optimizations
-
-
-+++?image=assets/images/slides/Slide53.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->
-@title[Stages vs. Boot Flow 04]
-<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
-
-Note:
-1. enable debug
-2. memory initialization
-3. boot to UEFI shell only
-4. boot to OS
-5. boot to OS w/ security enabled
-6. Advanced Feature Selection
-7. Not shown  Performance Optimizations
-
-+++?image=assets/images/slides/Slide54.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->
-@title[Stages vs. Boot Flow 05]
-<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
-
-Note:
-1. enable debug
-2. memory initialization
-3. boot to UEFI shell only
-4. boot to OS
-5. boot to OS w/ security enabled
-6. Advanced Feature Selection
-7. Not shown  Performance Optimizations
-
-+++?image=assets/images/slides/Slide55.JPG
-<!-- .slide: data-background-transition="none" -->
-<!-- .slide: data-transition="none" -->
-@title[Stages vs. Boot Flow 06]
-<p align="right"><span class="gold" >@size[1.1em](<b>Stages vs. Boot Flow</b>)</span><span style="font-size:0.75em;" ></span></p>
-
-Note:
-1. enable debug
-2. memory initialization
-3. boot to UEFI shell only
-4. boot to OS
-5. boot to OS w/ security enabled
-6. Advanced Feature Selection
-7. Not shown  Performance Optimizations
-
----?image=assets/images/slides/Slide56.JPG
+---?image=assets/images/slides/Slide55.JPG
 @title[MinPlatform + Intel® FSP Boot Flow]
 <p align="right"><span class="gold" >@size[1.1em](<b>MinPlatform @color[yellow](+) Intel® FSP Boot Flow</b>)<br></span><span style="font-size:0.75em;" >- Staged Approach</span></p>
 
@@ -2890,6 +2797,13 @@ Example of adding Network Stack
 
 
 
+---?image=assets/images/slides/Slide56.JPG
+@title[Stages Organize the MPA Specification]
+<p align="right"><span class="gold" >@size[1.1em](<b>Stages Organize the MPA Specification</b>)<br></span><span style="font-size:0.75em;" ></span></p>
+
+Note:
+
+Follow the flow chart with examples
 
 ---?image=assets/images/slides/Slide57.JPG
 @title[Staged Approach by Features]
@@ -3501,22 +3415,302 @@ Note:
 
 The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
 
----?image=assets/images/slides/Slide8.JPG
-@title[EDK II Open Platform Summary Section]
+
+
+---?image=assets/images/slides/Slide69.JPG
+@title[How to find the Platform Hooks: Process of Porting ]
+<p align="right"><span class="gold" >@size[1.1em](<bHow to find the Platform Hooks: Process of Porting </b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Check the Board/Platform .FDF file layout<br><br>&nbsp;</span></p>)
+@snapend
+
+Note:
+
+Where’s the platform code start? or the first point where the platform code is executed?
+
+As the foundational stage for further functionality, Stage I may include additional content beyond what is strictly required to meet the stage objective. Typically this will include silicon initialization code that may be packaged in a variety of mechanisms including varying size binary blobs. 
+
+The Stage I modules will be combined into FVs to make up the Stage I components
+
+
+
+---?image=assets/images/slides/Slide70.JPG
+@title[Investigate the FDF then DSC files]
+<p align="right"><span class="gold" >@size[1.1em](<b> Investigate the FDF  then DSC Files</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+@snap[north-west span-66 ]
 <br>
-<p align="left"><span class="gold" >@size[1.1em](<b>EDK II Open Platform <br>Summary</b>)</span></span></p>
+<br>
+<p style="line-height:80%" align="left" ><span style="font-size:0.85em; ">
+<b>Porting process per stage: find and update platform hooks</b>
+</span></p>
+
+<ul style="list-style-type:none; line-height:0.8;">
+  <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10102;)&nbsp;Locate FVs for each stage</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10103;)&nbsp;Modules for each FV contents</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10104;)&nbsp;Module Locations</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10105;)&nbsp;Platform Porting Libraries per Module</span> </li>
+  <li class="fragment"><span style="font-size:0.7em" >@color[yellow](&#10106;)&nbsp;Update the Hook Function for Board</span> </li>
+</ul>
+
+@snapend
+
+@snap[south span-90 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Also check the reference platform BUILD directory <br>&nbsp;</span></p>)
+@snapend
+
+Note:
+The process for porting each stage will be to investigate the FDF and the DSC files to locate FVs, Modules and Libraries associated with each stage.
+Once the library hook is found, update that platform hook function for the board being ported.
+
+### Porting Process per Stage Find: 
+1. Locate FVs for each stage in the FDF file
+2. find Modules for each FV contents in the FDF
+3. Find Module Locations in the platform DSC file - Should point to an inf file that is probably in the Common i.e. MinplatformPkg or edk2 modules
+4. Find Platform Porting Libraries per Module in th DSC - library could be in minPlatform with hook into the platform specific code.
+5. Update the Hook Function for Board,  should be in a .c file coorsponding to the library
+
+
+---?image=assets/images/slides/Slide71.JPG
+@title[How to search for Libraries in the Workspace]
+<p align="right"><span class="gold" >@size[1.1em](<b>How to search for Libraries in the Workspace</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-67 ]
+<br>
+<br>
+<br>
+<ul style="list-style-type:none; line-height:0.7;">
+  <li><span style="font-size:0.7em" >1. Search the workspace .DSC files for the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string of the library<br></span> </li><br>
+  <li><span style="font-size:0.7em" >2. Open the .DSC files associated with the <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open board platform project<br></span> </li><br>
+  <li><span style="font-size:0.7em" >3. Determine which Library is used and that <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;should have the build path in the workspace<br></span> </li><br>
+  <li><span style="font-size:0.7em" >4. DSC file will have similar to:</span> </li>
+  <li><span style="font-size:0.5em; font-family:Consolas;" >&nbsp;&nbsp;&nbsp;&nbsp;@color[yellow](SomeLib)|Path_to_the_Library_used.inf<br></span> </li><br>
+  <li><span style="font-size:0.7em" >5. Verify the instance used from the <font face="Consolas">Build</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; directory:</span> </li>
+</ul>
+
+@snapend
+
+@snap[north-east span-10 ]
+<br>
+<p style="line-height:45%" align="right" ><span style="font-size:0.8em" ><br>@color[yellow](&#10105;)</span></p>
+@snapend
+
+Note:
+http://sustituciondepuestosclaves.wikispaces.com/Metodo+de+Sustitucion+de+Puestos+Claves 
+
+Another Note: use Regular expressions to find multiple strings:
+Example, to fine the strings “Hob” and “Serial”
+
+    Serial.*Hob|Hob.*Serial  
+
+reg exp to find string1 "Serial" string2 "Hob"
+
+
+
+
+---
+@title[Platform Initialization Board Hook Modules - Stage 1 ]
+<p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules <br>- Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-49 ]
+<br>
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+MinPlatformPkg/<br>&nbsp;&nbsp;
+  Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+     Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	   @color[yellow](BoardnitLib.h)<br>&nbsp;&nbsp;
+  Library/<br>&nbsp;&nbsp;
+  . . .<br>&nbsp;&nbsp;
+  @color[cyan](PlatformInit/)<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  PlatformInitPreMem/<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-46 ]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+BoardDetect&lpar;&rpar;<br>
+BoardDebugInit&lpar;&rpar;<br>
+BoardBootModeDetect&lpar;&rpar;<br>
+BoardInitBeforeMemoryInit&lpar;&rpar;<br>
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+
+
+
+@snap[north-east span-72 fragment]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+<br>
+<br>
+<br>
+<font face="Arial">@size[1.7](@color[#A8ff60]( <b>&larr;</b>)) &nbsp;&nbsp;// hooks</font><br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-46 ]
+<br>
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+BoardDetect&lpar;&rpar;<br>
+BoardDebugInit&lpar;&rpar;<br>
+BoardBootModeDetect&lpar;&rpar;<br>
+BoardInitBeforeMemoryInit&lpar;&rpar;<br>
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-12 ]
+<br>
+![hook](/assets/images/hook.png)
+@snapend
+
+
+
+
+@snap[south span-95 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em">PlatformInit folder <font face="Consolas">@size[.8em](PlatformInit)</font> controls<br> the platform initialization flow<br>&nbsp;</span></p>)
+@snapend
+
+
+
+
+Note:
+
+The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, PlatformInitDxe and PlatformInitSmm control the platform initialization flow. 
+
+Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
+
+
+---
+@title[Hook - Board Detection ]
+<p align="right"><span class="gold" >@size[1.1em](<b>Hook - Board Detection </b>)</span><span style="font-size:0.75em;" ><br> - Kabylake example</span></p>
+
+
+@snap[north-west span-49 ]
+<br>
+<br>
+@box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+MinPlatformPkg/<br>&nbsp;&nbsp;
+ . . .<br>&nbsp;&nbsp;
+  PlatformInit/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    PlatformInitPei -&gt;  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         PlatformInitPreMem.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 @color[cyan](BoardDetect&lpar;&rpar;)<br>
+KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;
+ . . .<br>&nbsp;&nbsp;
+  KabylakeRvp3/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+    Library/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      BoardInitLib -&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        PeiBoardInitPreMemLib.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 @color[cyan](BoardDetect&lpar;&rpar;)  <br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        PeiKabylakeRvp3Detect.c<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 @color[yellow](KabylakeRvp3BoardDetect&lpar;&rpar;)
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-47 ]
+<br>
+<br>
+<br>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em; ">
+Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
+   <font face="Consolas">@size[.8em](LibPcdGetSku&lpar;&rpar; & LibPcdSetSku&lpar;&rpar;)</font><br><br>
+
+<font face="Consolas">@size[.8em](KabylakeRvp3BoardDetect&lpar;&rpar;)</font> function reads Board ID from embedded controller (EC) using the LPC bus  <br><br>
+@size[.8em](<font face="Consolas">LibPcdSetSku&lpar;&rpar;</font> stores Board ID)<br>
+@size[.8em](<font face="Consolas">LibPcdGetSku&lpar;&rpar;</font> used from that point on)
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
+@snap[north-east span-12 ]
+<br>
+![hook](/assets/images/hook.png)
+@snapend
+
+Note:
+
+
+
+- In order to determine which board specific driver needs to run and which does not need to run, there must be some code to detect the board type. 
+- The board detection code is board specific. It should be under the board specific directory 
+
+- Uses PCD calls to set / get Board Sku for Storing Board ID
+	LibPcdGetSku() & LibPcdSetSku()
+
+- For the Kabylake example the lower function KabylakeRvp3BoardDetect() will read the ID from the EC using the LPC bus. 
+- Then is updates LibPcdSetSku() with the Board ID
+- LibPcdGetSku() can then be used elsewhere
+
+- The EC implements an embedded controller interface at ports 0x60/0x64 and a ACPI compliant
+system management controller at ports 0x62/0x66. Port 0x66 is the command and status port,
+port 0x62 is the data port.
+
+- Another NOTE: The SKU ID check should only happen in board specific drivers. The SKU ID check is NOT allowed in any common board code or common platform code. 
+
+
+- SkuIds is a special usage of PCD. It can support multiple configurations generated at build time, and it supports runtime selection to make one configuration take effect finally. 
+- Multi-sku PCD concept is defined by PI specification Volume 3, Chapter 8 PCD, EFI_PCD_PROTOCOL.SetSku () 
+
+
+
+---?image=assets/images/slides/Slide10.JPG
+@title[Minimum Platform Architecture Summary Section]
+<br>
+<p align="left"><span class="gold" >@size[1.1em](<b>Minimum Platform <br>Architecture <br>Summary</b>)</span></span></p>
 
 @snap[north-east span-35 ]
 <br>
 <br>
 
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >Minimal /Full BIOS </span> </li>
+  <li><span style="font-size:0.65em" >Staged Minimal Baseline </span> </li>
   <li><span style="font-size:0.65em" >Feature ON/OFF </span> </li>
   <ul style="list-style-type:disc; line-height:0.6;">
-  <li><span style="font-size:0.6em" >SMBIOS</span> </li>
-  <li><span style="font-size:0.6em" >TPM </span> </li>
-  <li><span style="font-size:0.6em" >Secure Boot </span> </li>
+  <li><span style="font-size:0.6em" >Debug</span> </li>
+  <li><span style="font-size:0.6em" >I/O Devices  </span> </li>
+  <li><span style="font-size:0.6em" >User Interface </span> </li>
   <li><span style="font-size:0.6em" >. . . </span> </li>
   </ul>
 </ul>
@@ -3525,8 +3719,8 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 @snap[south-west span-30 ]
 <br>
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >Setup Variable</span> </li>
-  <li><span style="font-size:0.65em" >PCD </span> </li>
+  <li><span style="font-size:0.65em" >Staged</span> </li>
+  <li><span style="font-size:0.65em" >Defined PCD </span> </li>
   <li><span style="font-size:0.65em" >Policy Hob/PPI/Protocol </span> </li>
 </ul>
 <br>
@@ -3537,6 +3731,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 @snap[south-east span-33 ]
 <br>
 <ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >Staged </span> </li>
   <li><span style="font-size:0.65em" >GPIO </span> </li>
   <li><span style="font-size:0.65em" >SIO </span> </li>
   <li><span style="font-size:0.65em" >ACPI </span> </li>
@@ -3551,13 +3746,13 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 
 
 Note:
-
 In order to provide suggestions on the problem statements earilier, we need to focus on the following four areas: 
 
 - Feature. How does a BIOS provide the feature selection option to a developer? 
 - Configuration. From which interface can a platform module get the configuration data? 
 - Porting. Where are the modules to be ported for a new board? 
 - Tree Structure. What does an EDKII platform package look like? 
+
 
 ---  
 @title[summary]
@@ -3567,9 +3762,9 @@ In order to provide suggestions on the problem statements earilier, we need to f
 <!---  Add bullets using https://fontawesome.com/cheatsheet certificate
 -->
 <ul style="list-style-type:none">
- <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Introduce Minimum Platform Architecture (MPA)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </li>
- <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;Explain the EDK II Open board platforms <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;infrastructure  & focus areas</span> </li>
- <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;Describe Intel® FSP with  the EDK II open board<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;platforms </span></li>
+ <li>@fa[certificate gp-bullet-yellow]<span style="font-size:0.9em">&nbsp;&nbsp;Minimum Platform Architecture (MPA) is an Open source Intel platform code base for use with EDK II</span> </li>
+ <li>@fa[certificate gp-bullet-green]<span style="font-size:0.9em">&nbsp;&nbsp;EDK II Minplatform’s infrastructure focus areas: Tree, Features, Configuration & Porting</span> </li>
+ <li>@fa[certificate gp-bullet-cyan]<span style="font-size:0.9em">&nbsp;&nbsp;MinPlatform uses Intel® FSP for processor, silicon and memory init & uses silicon policy guildlines for data flow</span></li>
 </ul>
 
 
@@ -3638,7 +3833,7 @@ Copyright (c) 2020, Intel Corporation. All rights reserved.
 ```
 ---
 <br>
-
+<br>
 Backup
 
 ---?image=assets/images/slides/Slide81.JPG
