@@ -1888,14 +1888,14 @@ Note:
 <p align="right"><span class="gold" >@size[1.1em](<b>MPA Configuration Options</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 <p style="line-height:40% " align="left"><span style="font-size:0.9em;" >Platform configuration data for Minimum Platform </span></p>
 
-@snap[north span-55 ]
+@snap[north-east span-75 ]
 <br>
 <br>
-
+<br>
 <p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
 <p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
-@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br>&nbsp;</span></p>)
+@box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
 <p style="line-height:20% " align="left"><span style="font-size:0.9em;" ><br></span></p>
 @box[bg-grey-15 text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em;" ><b>&nbsp;</b><br><br>&nbsp;</span></p>)
 @snapend
@@ -1905,7 +1905,8 @@ Note:
 <br>
 <br>
 <br>
-@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>PI PCD</b><br>&nbsp;</span></p>)
+<br>
+@box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>PI PCD</b><br><br>&nbsp;</span></p>)
 @box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>FSP UPD, Silicon Policy, Hob</b><br>&nbsp;</span></p>)
 @box[bg-royal text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Global NVS</b><br><br>&nbsp;</span></p>)
 @snapend
@@ -1915,8 +1916,8 @@ Note:
 @snap[north-east span-62 fragment]
 <br>
 <br>
-
-<p style="line-height:30% " align="left"><span style="font-size:0.9em;" ><br><br></span></p>
+<br>
+<p style="line-height:30% " align="left"><span style="font-size:0.9em;" ><br></span></p>
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > The PI PCD could be static data fixed at build time or dynamic data updatable at runtime.<br><br><br><br></span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > FSP UPD can be static default configuration, or a dynamic updatable UPD. It is policy data constructed at runtime or it can be a hook for silicon code <br> <br><br> </span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > ACPI region, passes configuration from C code to ASL code.<br><br> </span></p>)
