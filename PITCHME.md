@@ -1445,7 +1445,7 @@ Note:
 @title[Required set of PCDs in MPA Spec ]
 <p align="right"><span class="gold" >@size[1.1em](<b>Required set of PCDs in MPA Spec  </b>)</span><span style="font-size:0.8em;" ></span></p>
 
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br><br>
 Link to Required PCDs according to stages
 </span></p>
 
@@ -1457,7 +1457,7 @@ Link to Required PCDs according to stages
 <br>
 <br>
 <br>
-@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-48 ]
@@ -1467,7 +1467,7 @@ Link to Required PCDs according to stages
 <br>
 <br>
 <br>
-@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -1478,7 +1478,6 @@ Link to Required PCDs according to stages
 <br>
 <br>
 <br>
-
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/3_stage_1_minimum_debug/35_configuration.html">		
 &#8227;</a> &nbsp;&nbsp;Flash Map Config<br> 
