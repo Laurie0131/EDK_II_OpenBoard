@@ -1105,6 +1105,9 @@ Note:
 ---?image=assets/images/slides/Slide26.JPG
 @title[Minimum Platform Feature Selection]
 <p align="right"><span class="gold" >@size[1.1em](<b>Minimum Platform Feature Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+@snap[north-west span-70 ]
+<br>
+<br>
 <ul style="list-style-type:disc; line-height:0.75;">
   <li><span style="font-size:0.8em" >Minium Platform </span> </li>
 
@@ -1124,9 +1127,11 @@ Note:
 Silicon  – FSP Integration from &lt;Generation&gt;FspBinPkg documentation package
 <br><br><br>&nbsp;
 </span></p>
+@snapend
 
-@snap[south span-85 fragment]
+@snap[south span-95 fragment]
 @box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">All initial porting features selection should be done this way<br><br>&nbsp;</span></p>)
+<br>
 @snapend
 
 
