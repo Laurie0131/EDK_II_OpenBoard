@@ -1164,27 +1164,62 @@ in the FDF - include the advanced feature .fdf in the appropriate FV according t
 
 Advanced features implement DSC and FDF files that you can include in your board DSC and FDF files in the correct spots 
 
+---?image=assets/images/slides/Slide28.JPG
+@title[Optimization Feature Selection]
+<p align="right"><span class="gold" >@size[1.1em](<b>Optimization Feature Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
+@snap[north-west span-75 ]
+<br>
+<br>
+<p style="line-height:80%" align="left" ><span style="font-size:0.85em;" >
+Minimum Platform takes advantage of UEFI and EDK II features to enable feature selection to be done by post-processing the built binaries<br>
+Essentially, after your system is functioning well, you can remove features using the FMMT tool to remove the drivers that are included as you build up the desired functionality<br>
+For example, if you need UEFI Shell during power-on, testing, etc.  But you don’t want it for final product.  Minimum Platform architecture makes it easy to locate and remove the shell by post-processing the image<br>
+</span></p>
 
----?image=assets/images/slides/Slide26.JPG
-@title[Basic Boot Components]
-<p align="right"><span class="gold" >@size[1.1em](<b>Basic Boot Components</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p style="line-height:80%" align="left" ><span style="font-size:0.65em;" >
+Link for <a href="https://github.com/tianocore/edk2-staging/tree/FceFmmt">FMMT Tool</a>
+</span></p>
+
+@snapend
 
 
 
 Note:
 
-Typically all the Intel Architecture platform firmware basic boot components are almost the same. In the slide, the GREEN part means the generic EDK II core modules. 
-The YELLOW part means the silicon specific modules. And finally, the PURPLE part means the platform/board specific modules 
+The canonical example is that you need UEFI Shell during power-on, testing, etc.  But you don’t want it for final product.  Minimum Platform architecture makes it easy to locate and remove the shell by post-processing the image
+
+---?image=assets/images/slides/Slide29.JPG
+@title[Full Customization Feature Selection]
+<p align="right"><span class="gold" >@size[1.1em](<b>Full Customization Feature Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+
+@snap[north-west span-75 ]
+<br>
+<br>
+<p style="line-height:80%" align="left" ><span style="font-size:0.85em;" >
+Feature modifications only at the Board / Platform DSC <br><br>
+Preferred modifications at Board (e.g. BoardAbc)
+
+</span></p>
+@snapend
 
 
-In the UEFI scope, we need the variable, timer, CPU, PCI, either SATA or USB as storage, Graphic or terminal as console output, and finally, USB/PS2 Keyboard or terminal as console input. The SMM portion is required for most X86 platforms in order to support UEFI Authenticated Variables [AUTH VARIABLE]. 
-Most UEFI OSes also require ACPI, so ACPI tables and an SMM driver to enable/disable ACPI are needed. 
-The platform may also need to initiliaze General Purpose Input/Ouput (GPIO) pins or a Super IO (SIO) to enable the basic boot functionality. 
+
+Note:
+
+
+We don’t talk much about it, but after you have developed advanced UEFI and EDK II understanding, you can throw away the spec and fully customize your solution using the full power of the architecture
+The main reason to mention it is that if you find yourself modifying DEC, DSC, FDF, and INF files, you shouldn’t be.
 
 
 
----?image=assets/images/slides/Slide24.JPG
+Start with Changes only in BoardAbc but if Many Changes are needed in XxxOpenBoardPkg then upstream – talk to the maintainers of the XxxOpenBoard or Port XxxOpenBoardPkg to NEWOpenBoardPkg
+
+
+
+
+
+---?image=assets/images/slides/Slide26.JPG
 @title[Features Build Enabled]
 <p align="right"><span class="gold" >@size[1.1em](<b>Features Build Enabled</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
@@ -1251,7 +1286,7 @@ Each board can have a settings file that will override the edk2-platforms/Platfo
 An example of a board specific settings:
 edk2-platforms/Platform/Intel/KabylakeOpenBoardPkg/KabylakeRvp3/build_config.cfg
 
----?image=assets/images/slides/Slide24.JPG
+---?image=assets/images/slides/Slide26.JPG
 @title[Example Build Config File]
 <p align="right"><span class="gold" >@size[1.1em](<b>Example Build Config File</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
@@ -1294,9 +1329,9 @@ SILENT_MODE = FALSE <br>&nbsp;&nbsp;
 @snapend
 
 
----?image=assets/images/slides/Slide24.JPG
-@title[Platform Features Table d’hôte ]
-<p align="right"><span class="gold" >@size[1.1em](<b>Platform Features Table d’hôte </b>)</span><span style="font-size:0.8em;" ></span></p>
+---?image=assets/images/slides/Slide26.JPG
+@title[Minimum Platform Stage Selection ]
+<p align="right"><span class="gold" >@size[1.1em](<b>Minimum Platform Stage Selection</b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[south-west span-100 ]
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -1374,11 +1409,131 @@ For example, PcdBootStage|4 can be used to configure a BIOS to support a boot to
   - Firmware update, power management, networking support, manageability, testability, reliability, availability, serviceability, non-essential provisioning and resiliency mechanisms
 - Stage VII – Tuning
    - Size and performance optimizations
+   
+   
+---?image=assets/images/slides/Slide26.JPG
+@title[Minimum Platform Stage Selection ]
+<p align="right"><span class="gold" >@size[1.1em](<b>Minimum Platform Stage Selection</b>)</span><span style="font-size:0.8em;" ></span></p>
+
+@snap[north-west span-80 ]
+<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+Stage selection allows developers to bring up a system in a familiar matter:
+
+</span></p>
+
+  <ul style="list-style-type:disc; line-height:0.7;">
+    <li><span style="font-size:0.75em" >Set to Stage I.  Boot, verify serial debug capability, ready for silicon debug </span> </li>
+    <li><span style="font-size:0.75em" >Set to Stage II.  Boot, verify memory and silicon functionality </span> </li>
+    <li><span style="font-size:0.75em" >Set to Stage III.  Boot, verify board porting from shell: devices, GPIO, etc </span> </li>
+    <li><span style="font-size:0.75em" >Set to Stage IV.  Boot, verify ACPI porting, MADT, DSDT methods, etc. </span> </li>
+  </ul>
+  
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" ><br>
+Developers can exercise functionality gradually.<br>
+Verification at each stage
+</span></p>
+
+@snapend
+
+Note:
+- Advanced Configuration and Power Interface Specification (ACPI)
+- Multiple APIC Description Table (MADT)
+- Differentiated System Description Table (DSDT)
+
+---?image=assets/images/slides/Slide26.JPG
+@title[Required set of PCDs in MPA Spec ]
+<p align="right"><span class="gold" >@size[1.1em](<b>Required set of PCDs in MPA Spec  </b>)</span><span style="font-size:0.8em;" ></span></p>
+
+<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+Link to Required PCDs according to stages
+</span></p>
 
 
----?image=assets/images/slides/Slide24.JPG
-@title[Platform Features à la carte with PCDs ]
-<p align="right"><span class="gold" >@size[1.1em](<b>Platform Features à la carte with PCDs  </b>)</span><span style="font-size:0.8em;" ></span></p>
+@snap[north-west span-48 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+@snap[north-east span-48 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@snapend
+
+
+
+@snap[north-east span-98 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/3_stage_1_minimum_debug/35_configuration.html">		
+Flash Map Config</a><br> 
+Debug Config</a><br>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/4_stage_2_memory_functional/45_configuration.html">		
+Intel® FSP Config</a><br>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/4_stage_2_memory_functional/45_configuration.html"> 
+Post Memory FV</a><br>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/55_configuration.html"> 
+UEFI FV</a><br>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/55_configuration.html"> 
+Driver Related</a>
+</span></p>
+@snapend
+
+
+@snap[north-east span-46 ]
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_boot_to_os/65_configuration.html"> 
+Memory Type Information</a><br>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_boot_to_os/65_configuration.html"> 
+OS Firmware Volumes</a><br>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_security_enable/75_configuration.html"> 
+Security Flash Map</a><br>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_security_enable/75_configuration.html"> 
+Stage 5 Features</a><br>
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/8_stage_6_advanced_feature_selection/83_configuration.html">
+Advanced Feature FV</a>
+</span></p>
+@snapend
+
+
+
+Note:
+Links to all the PCDs requirements according to stages
+
+
+
+---?image=assets/images/slides/Slide26.JPG
+@title[Minimum Platform Stage Selection]
+<p align="right"><span class="gold" >@size[1.1em](<b>Minimum Platform Stage Selection </b>)</span><span style="font-size:0.8em;" ></span></p>
 
 @snap[south-west span-100 ]
 @box[bg-black text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
@@ -3483,3 +3638,23 @@ Copyright (c) 2020, Intel Corporation. All rights reserved.
 **/
 
 ```
+---
+<br>
+
+Backup
+
+---?image=assets/images/slides/Slide81.JPG
+@title[Basic Boot Components]
+<p align="right"><span class="gold" >@size[1.1em](<b>Basic Boot Components</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+
+
+
+Note:
+
+Typically all the Intel Architecture platform firmware basic boot components are almost the same. In the slide, the GREEN part means the generic EDK II core modules. 
+The YELLOW part means the silicon specific modules. And finally, the PURPLE part means the platform/board specific modules 
+
+
+In the UEFI scope, we need the variable, timer, CPU, PCI, either SATA or USB as storage, Graphic or terminal as console output, and finally, USB/PS2 Keyboard or terminal as console input. The SMM portion is required for most X86 platforms in order to support UEFI Authenticated Variables [AUTH VARIABLE]. 
+Most UEFI OSes also require ACPI, so ACPI tables and an SMM driver to enable/disable ACPI are needed. 
+The platform may also need to initiliaze General Purpose Input/Ouput (GPIO) pins or a Super IO (SIO) to enable the basic boot functionality. 
