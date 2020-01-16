@@ -1619,7 +1619,7 @@ edk2-platforms/Platform/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
       @color[cyan](Fdf)/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       @color[cyan](Dsc)/<br>&nbsp;&nbsp;
 <br>&nbsp;&nbsp;
-edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+edk2-platforms/@color[yellow](Features)/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
   Intel/@color[yellow](YyyAdvancedPkg)/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     Include/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       @color[cyan](Fdf)/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -1628,7 +1628,7 @@ edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east  span-62 fragment ]
+@snap[north-east  span-72 fragment ]
 <br>
 <p style="line-height:05%" align="left" ><span style="font-size:0.8em;" ><br>
 </span></p>
@@ -1639,12 +1639,12 @@ edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 <br>
 <br><br><br><br><br>
 
-       @color[#A8ff60](&larr;)@color[yellow](<b>&nbsp;&nbsp;Modify PCD Here  </b>)<br>
+       @color[#A8ff60](&larr;)@color[#FFC000](<b>&nbsp;&nbsp;Modify PCD Here  </b>)<br>
        <br>
-       @color[#A8ff60](&larr;)@color[yellow](<b>&nbsp;&nbsp;Add Features Here  </b>)<br><br>
+       @color[#A8ff60](&larr;)@color[#FFC000](<b>&nbsp;&nbsp;Add Features Here  </b>)<br><br>
 
        <br>
-       @color[#A8ff60](&larr;)@color[yellow](<b>&nbsp;&nbsp;Add Features Here  </b> )
+       @color[#A8ff60](&larr;)@color[#FFC000](<b>&nbsp;&nbsp;Add Features Here  </b> )
 
 </span></p>
 
