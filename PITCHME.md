@@ -1628,7 +1628,7 @@ edk2-platforms/@color[yellow](Features)/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east  span-72 fragment ]
+@snap[north-east  span-70 fragment ]
 <br>
 <p style="line-height:05%" align="left" ><span style="font-size:0.8em;" ><br>
 </span></p>
