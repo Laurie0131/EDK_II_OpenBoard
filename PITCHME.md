@@ -621,12 +621,12 @@ The architecture is designed to support a maintainer ownership model. For exampl
        KabylakeOpenBoardPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           KabylakeRvp3/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
        MinPlatformPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       Vlv2TbltDevicePkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+       <br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
      Intel/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       KabylakeSiliconPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       &nbsp;. &nbsp;. &nbsp;./<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-       Vlv2DeviceRefCodePkg/<br>&nbsp;&nbsp;
+       KabylakeSiliconPkg/<br>&nbsp;&nbsp;&nbsp;&nbsp;
+  Features/ Intel /     . &nbsp;. &nbsp;. &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <br>&nbsp;&nbsp;
 @color[yellow](edk2-non-osi)/<a href="https://github.com/tianocore/edk2-non-osi/tree/devel-MinPlatform">github.com/edk2-non-osi</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
   Silicon/<br>&nbsp;&nbsp;
 @color[yellow](FSP)/<a href="https://github.com/IntelFsp/FSP">github.com/Intel/FSP</a><br>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -652,7 +652,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
 <br>
 <br>
 @color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Silicon</font>)<br>
-<br>
+@color[#A8ff60](&larr;)&nbsp;@color[#FFC000](<font face="Arial">Advanced Features</font>)<br>
 <br>
 <br>
 <br>
