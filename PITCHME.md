@@ -1087,7 +1087,7 @@ In order to provide suggestions on the problem statements above, we would like t
 <p style="line-height:30% " align="left"><span style="font-size:0.9em;" ><br><br></span></p>
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Manage Stage I-V options<br><br><br><br></span></p>)
 @css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Add rich feature sets &lpar;Stage VI&rpar; <br> <br><br> </span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Remove undesired features <br>&lpar;Stage VII&rpar;<br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Remove undesired features <br>&lpar;Stage VII&rpar;<br><br> </span></p>)
 
 @snapend
 
