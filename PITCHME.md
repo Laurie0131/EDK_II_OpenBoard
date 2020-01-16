@@ -1105,10 +1105,11 @@ Note:
 ---?image=assets/images/slides/Slide26.JPG
 @title[Minimum Platform Feature Selection]
 <p align="right"><span class="gold" >@size[1.1em](<b>Minimum Platform Feature Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
-@snap[north-west span-70 ]
+
+@snap[north-west span-85 ]
 <br>
 <br>
-<ul style="list-style-type:disc; line-height:0.75;">
+<ul style="list-style-type:disc; line-height:0.8;">
   <li><span style="font-size:0.8em" >Minium Platform </span> </li>
 
   <ul style="list-style-type:disc; line-height:0.7;">
@@ -1116,14 +1117,14 @@ Note:
     <li><span style="font-size:0.75em" >Minimum feature selection should be exclusively implemented as Platform Configuration Database (PCD) </span> </li>
     <li><span style="font-size:0.75em" >Required PCD are identified in the MPA specification </span> </li>
     <li><span style="font-size:0.75em" >PCDs: </span> </li>
-    <ul style="list-style-type:disc; line-height:0.6;">
-      <li><span style="font-size:0.6em" >Declared with defaults in DEC files in different packages </span> </li>
-      <li><span style="font-size:0.6em" >Modified in DSC file for the board, if different than the default value </span> </li>
+    <ul style="list-style-type:disc; line-height:0.65;">
+      <li><span style="font-size:0.65em" >Declared with defaults in DEC files in different packages </span> </li>
+      <li><span style="font-size:0.65em" >Modified in DSC file for the board, if different than the default value </span> </li>
     </ul>
   </ul>
 </ul>
 
-<p style="line-height:60%" align="left" ><span style="font-size:0.75em;" >
+<p style="line-height:80%" align="left" ><span style="font-size:0.8em;" >
 Silicon  – FSP Integration from &lt;Generation&gt;FspBinPkg documentation package
 <br><br><br>&nbsp;
 </span></p>
