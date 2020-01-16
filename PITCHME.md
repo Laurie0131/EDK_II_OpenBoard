@@ -160,7 +160,7 @@ Goal is to provide some guidance on how to design open source EDK II  IA firmwar
 <br>
 <br>
 @box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.7em;" >System firmware (BIOS ) is the largest payload in the IFWI binary image  &nbsp;</span></p>)
-@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.7em;" >Platform implementation is ~2-3 million lines+ of “C” code <br>&nbsp;</span></p>)
+@box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.7em;" >Platform implementation is ~2-3 <b>million</b> lines+ of “C” code <br>&nbsp;</span></p>)
 @box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.7em;" >Technology complexity increasing, strains firmware implementation solutions &nbsp;</span></p>)
 @box[bg-grey-85-trans text-black rounded my-box-pad2 fragment ](<p style="line-height:60% "><span style="font-size:0.7em;" >Limited firmware engineering recourses  <br>&nbsp;</span></p>)
 @snapend
@@ -224,7 +224,7 @@ Note:
 - The easier we make it to access, understand, fix, improve, and optimize Intel firmware (ideally through single instance, high quality code) we can better engage with our customers building real world solutions to improve Intel product quality (all Intel products including those without EDK II firmware).
 
 
----?image=assets/images/slides/Slide7_1.JPG
+---?image=assets/images/slides/Slide8.JPG
 @title[MinPlatform + Intel® Firmware Support Package]
 <p align="right"><span class="gold" >@size[1.001em](<b>MinPlatform @color[yellow](+) Intel® Firmware Support Package</b>)</span><br>
 <span style="font-size:0.7em;" ><b>(Intel® FSP)</b></span></p>
@@ -268,8 +268,30 @@ Note:
   - Scalable from pre-silicon to derivatives
 
 
+---?image=assets/images/slides/Slide9.JPG
+@title[What are Minimum Platform Stages?]
+<p align="right"><span class="gold" >@size[1.001em](<b>What are Minimum Platform Stages?</b>)</span><br>
+<span style="font-size:0.7em;" ></span></p>
 
----?image=assets/images/slides/Slide8.JPG
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:60%"><span style="font-size:0.8em">Stages reflect firmware development lifecycle and how a system bootstraps itself<br>&nbsp;</span></p>)
+@snapend
+
+Note:
+Open source - As firmware engineers we need to make Intel products easy to work with and keep more secure. 
+
+
+Benefits:
+
+Open source allows us to improve customer engagement with all customers, build transparency and trust, reduce overhead translating internal and external process, and deploy fixes across the ecosystem more rapidly.
+
+Main point: Open source is not more work if you do your work in open source. This may be hard to imagine because today's code is too monolithic for this to be possible. A software architecture that allows modular pieces to be integrated from open source into closed source solutions is necessary.
+
+The easier we make it to access, understand, fix, improve, and optimize Intel firmware (ideally through single instance, high quality code) we can better engage with our customers building real world solutions to improve Intel product quality (all Intel products including those without EDK II firmware).
+
+
+
+---?image=assets/images/slides/Slide10.JPG
 @title[Four Focus Areas Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Four Focus Areas</b>)</span></span></p>
@@ -279,12 +301,12 @@ Note:
 <br>
 
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >Minimal /Full BIOS </span> </li>
+  <li><span style="font-size:0.65em" >Staged Minimal Baseline </span> </li>
   <li><span style="font-size:0.65em" >Feature ON/OFF </span> </li>
   <ul style="list-style-type:disc; line-height:0.6;">
-  <li><span style="font-size:0.6em" >SMBIOS</span> </li>
-  <li><span style="font-size:0.6em" >TPM </span> </li>
-  <li><span style="font-size:0.6em" >Secure Boot </span> </li>
+  <li><span style="font-size:0.6em" >Debug</span> </li>
+  <li><span style="font-size:0.6em" >I/O Devices  </span> </li>
+  <li><span style="font-size:0.6em" >User Interface </span> </li>
   <li><span style="font-size:0.6em" >. . . </span> </li>
   </ul>
 </ul>
@@ -293,8 +315,8 @@ Note:
 @snap[south-west span-30 fragment]
 <br>
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >Setup Variable</span> </li>
-  <li><span style="font-size:0.65em" >PCD </span> </li>
+  <li><span style="font-size:0.65em" >Staged</span> </li>
+  <li><span style="font-size:0.65em" >Defined PCD </span> </li>
   <li><span style="font-size:0.65em" >Policy Hob/PPI/Protocol </span> </li>
 </ul>
 <br>
@@ -305,6 +327,7 @@ Note:
 @snap[south-east span-33 fragment]
 <br>
 <ul style="list-style-type:disc; line-height:0.7;">
+  <li><span style="font-size:0.65em" >Staged </span> </li>
   <li><span style="font-size:0.65em" >GPIO </span> </li>
   <li><span style="font-size:0.65em" >SIO </span> </li>
   <li><span style="font-size:0.65em" >ACPI </span> </li>
@@ -327,7 +350,7 @@ In order to provide suggestions on the problem statements earilier, we need to f
 - Tree Structure. What does an EDKII platform package look like? 
 
 
----?image=assets/images/slides/Slide9.JPG
+---?image=assets/images/slides/Slide11.JPG
 @title[Tree Structure Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Tree Structure</b>)</span></span></p>
@@ -339,7 +362,7 @@ Tree Structure. What does an EDK II platform package look like?
 
 This is the directory structure of our EDK II platform in relationship to the whole and other areas, such as the boot flow, or kernel, or core.
 
----?image=assets/images/slides/Slide10.JPG
+---?image=assets/images/slides/Slide12.JPG
 @title[Organization]
 <p align="right"><span class="gold" >@size[1.1em](<b>Organization</b>)</span></span></p>
 
@@ -398,7 +421,7 @@ The architecture makes use of four primary classifications of code that are gene
   - Producer(s): Silicon vendor
 
 
----?image=assets/images/slides/Slide11.JPG
+---?image=assets/images/slides/Slide13.JPG
 @title[Package Organization Example]
 <p align="right"><span class="gold" >@size[1.1em](<b>Package Organization Example</b>)</span></span></p>
 
@@ -479,21 +502,21 @@ The lack of coupling between feature packages is achieved through feature integr
 - Feature entry points should be in the main feature module entry point specified in the INF.
 
 
----?image=assets/images/slides/Slide13.JPG
+---?image=assets/images/slides/Slide14.JPG
 @title[MPA Dependency Rules]
 <p align="right"><span class="gold" >@size[1.1em](<b>MPA Dependency Rules</b>)</span></span></p>
 
 @snap[south-west span-35 ]
 <p style="line-height:38%" align="left" ><span style="font-size:0.47em;" >
 Key: <br>
-Bottom triangles can only depend on shapes above them <br>
-<font face="Consolas">XxxFeaturePkg </font> - represents multiple feature package intances
+Bottom shapes can only depend on shapes above them <br>
+<font face="Consolas">XxxFeaturePkg </font> - represents multiple feature package intances that are mutually exclusive to each other
 </span></p>
 @snapend
 
 @snap[south-east span-40 ]
 <p style="line-height:40%" align="right" ><span style="font-size:0.5em;" >
-<font face="Consolas">BoardAbc</font> – directory for <font face="Consolas">OpenBoardPkg.dsc</font>
+<font face="Consolas">BoardAbc</font> – directory for <font face="Consolas">@color[cyan](OpenBoardPkg.dsc)</font>
 </span></p>
 @snapend
 
@@ -511,7 +534,7 @@ Note:
 
 
 
----?image=assets/images/slides/Slide10.JPG
+---?image=assets/images/slides/Slide13.JPG
 @title[Open Source EDK II Workspace]
 <p align="right"><span class="gold" >@size[1.1em](<b>Open Source EDK II Workspace</b>)</span></span></p>
 
@@ -572,7 +595,7 @@ The architecture is designed to support a maintainer ownership model. For exampl
 
 
 
----?image=assets/images/slides/Slide10.JPG
+---?image=assets/images/slides/Slide13.JPG
 @title[Open Board Tree Structure]
 <p align="right"><span class="gold" >@size[1.1em](<b>Open Board Tree Structure</b>)</span></span></p>
 
@@ -658,12 +681,15 @@ Not shown is the edk2 repository since this should always be considered as commo
   <ul style="list-style-type:disc; line-height:0.7;">
     <li><span style="font-size:0.65em" >@color[cyan](BoardModulePkg ): generic Board functionality (board lib interfaces) </span> </li>
     <li><span style="font-size:0.65em" >@color[cyan](MinPlatformPkg ): generic platform instance to control the boot flow.  </span> </li>
-    <li><span style="font-size:0.65em" >@color[cyan](XxxFeaturePkg ): package to hold the Xxx advanced platform features </span> </li>
     <li><span style="font-size:0.65em" >@color[cyan](&lt;Generation&gt;OpenBoardPkg ): the silicon generation specific board package. All of the boards based upon this silicon generation can be located here </span> </li>
  </ul>
   <li><span style="font-size:0.65em" >Silicon folder : contains the silicon specific modules </span> </li>
   <ul style="list-style-type:disc; line-height:0.7;">
     <li><span style="font-size:0.65em" >@color[cyan](&lt;Generation&gt;SiliconPkg ): the silicon generation specific silicon package </span> </li>
+  </ul>
+  <li><span style="font-size:0.65em" >Features/Intel Folder : contains Advanced features packages </span> </li>
+  <ul style="list-style-type:disc; line-height:0.7;">
+    <li><span style="font-size:0.65em" >@color[cyan](&lt;XxxFeature&gt;Pkg ): package and modules for advanced features </span> </li>
   </ul>
 </ul>
 
@@ -862,9 +888,10 @@ Note:
 @snap[north-west span-100 ]
 <br>
 <p style="line-height:40% "><span style="font-size:0.5em; font-family:Consolas;" ><br>&nbsp;&nbsp;
-@color[cyan](XxxFeaturePkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;
-  Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;
+Features/Intel/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+@color[cyan](XxxFeaturePkg)  /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Include /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  Library /<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   Readme.md /
 </span></p>
 <br>
@@ -989,27 +1016,27 @@ The common board related ACPI is in Acpi directory. The common board related FSP
 The KabylakeRvp3 folder contains all RVP3 related settings, such as GPIO, High Definition Audio (HAD) verb Table, HsioPtss table, SPD table. This folder also has DSC and FDF file. We can build a KabylakeRvp3 binary inside of this folder 
 
 
----?image=assets/images/slides/Slide23.JPG
+---?image=assets/images/slides/Slide24.JPG
 @title[Focus - Features Section]
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Features</b>)</span></span></p>
 
-@snap[north-east span-35 ]
+
+@snap[north-east span-35 fragment]
 <br>
 <br>
 
 <ul style="list-style-type:disc; line-height:0.7;">
-  <li><span style="font-size:0.65em" >Minimal /Full BIOS </span> </li>
+  <li><span style="font-size:0.65em" >Staged Minimal Baseline </span> </li>
   <li><span style="font-size:0.65em" >Feature ON/OFF </span> </li>
   <ul style="list-style-type:disc; line-height:0.6;">
-  <li><span style="font-size:0.6em" >SMBIOS</span> </li>
-  <li><span style="font-size:0.6em" >TPM </span> </li>
-  <li><span style="font-size:0.6em" >Secure Boot </span> </li>
+  <li><span style="font-size:0.6em" >Debug</span> </li>
+  <li><span style="font-size:0.6em" >I/O Devices  </span> </li>
+  <li><span style="font-size:0.6em" >User Interface </span> </li>
   <li><span style="font-size:0.6em" >. . . </span> </li>
   </ul>
 </ul>
 @snapend
-
 
 
 
@@ -1024,10 +1051,10 @@ In order to provide suggestions on the problem statements above, we would like t
 - Tree Structure. What does an EDKII platform package look like? 
 
 
----?image=assets/images/slides/Slide18.JPG
+---?image=assets/images/slides/Slide25.JPG
 @title[Feature – BIOS Module Selection]
-<p align="right"><span class="gold" >@size[1.1em](<b>Feature – BIOS Module Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
-<p style="line-height:40% " align="left"><span style="font-size:0.9em;" >Minimum set of features based on Categories </span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>Feature – Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p style="line-height:40% " align="left"><span style="font-size:0.9em;" >There are three phases of feature selection  </span></p>
 
 @snap[north span-50 ]
 <br>
@@ -1046,9 +1073,9 @@ In order to provide suggestions on the problem statements above, we would like t
 <br>
 <br>
 <br>
-@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Basic Boot Components &lpar;MIN&rpar;</b><br>&nbsp;</span></p>)
-@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Advance Boot components&lpar;Full&rpar; </b><br>&nbsp;</span></p>)
-@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Close Source</b><br><br>&nbsp;</span></p>)
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Minimum</b><br>&nbsp;</span></p>)
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Advanced Feature Selection </b><br>&nbsp;</span></p>)
+@box[bg-lt-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:70%"><span style="font-size:0.8em;" ><b>Optimnization</b><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -1058,15 +1085,15 @@ In order to provide suggestions on the problem statements above, we would like t
 <br>
 
 <p style="line-height:30% " align="left"><span style="font-size:0.9em;" ><br><br></span></p>
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > UEFI, ACPI, PlatformInit<br><br><br><br></span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > SMBIOS, S3, OPAL <br> <br><br><br> </span></p>)
-@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > TXT, AMT, CSM <br><br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Manage Stage I-V options<br><br><br><br></span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Add rich feature sets &lpar;Stage VI&rpar; <br> <br><br><br> </span></p>)
+@css[text-white ](<p style="line-height:60%" align="left" ><span style="font-size:0.7em;" > Remove undesired features &lpar;Stage VII&rpar;<br><br><br><br> </span></p>)
 
 @snapend
 
 
 @snap[south span-85 fragment]
-@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Add / remove features using a build switch<br><br>&nbsp;</span></p>)
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">Select features through build, prune in binary<br><br>&nbsp;</span></p>)
 @snapend
 
 Note:
@@ -1075,8 +1102,65 @@ Note:
 - Full set (advanced boot component) – this entails all of the components needed to make a production BIOS. For example, it may support S3, SMBIOS table, OPAL. (Storage Work Group Storage Security Subsystem Class: Opal  - i.e. Tpm Opal)
 - Most  advanced modules can be open source, too, but there might be a small portion of code that can not be open source, such as the binary elements used by TXT/AMT/CSM 
 
+---?image=assets/images/slides/Slide26.JPG
+@title[Minimum Platform Feature Selection]
+<p align="right"><span class="gold" >@size[1.1em](<b>Minimum Platform Feature Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<ul style="list-style-type:disc; line-height:0.75;">
+  <li><span style="font-size:0.8em" >Minium Platform </span> </li>
 
----?image=assets/images/slides/Slide25.JPG
+  <ul style="list-style-type:disc; line-height:0.7;">
+
+    <li><span style="font-size:0.75em" >Minimum feature selection should be exclusively implemented as Platform Configuration Database (PCD) </span> </li>
+    <li><span style="font-size:0.75em" >Required PCD are identified in the MPA specification </span> </li>
+    <li><span style="font-size:0.75em" >PCDs: </span> </li>
+    <ul style="list-style-type:disc; line-height:0.6;">
+      <li><span style="font-size:0.6em" >Declared with defaults in DEC files in different packages </span> </li>
+      <li><span style="font-size:0.6em" >Modified in DSC file for the board, if different than the default value </span> </li>
+    </ul>
+  </ul>
+</ul>
+
+<p style="line-height:60%" align="left" ><span style="font-size:0.75em;" >
+Silicon  – FSP Integration from &lt;Generation&gt;FspBinPkg documentation package
+<br><br><br>&nbsp;
+</span></p>
+
+@snap[south span-85 fragment]
+@box[bg-purple-pp text-white rounded my-box-pad2  ](<p style="line-height:40%"><span style="font-size:0.8em">All initial porting features selection should be done this way<br><br>&nbsp;</span></p>)
+@snapend
+
+
+Note:
+
+
+Minimum Platform 
+- Minimum feature selection should be exclusively implemented as Platform Configuration Database (PCD)
+- Required PCD are identified in the MPA specification
+- PCDs:
+  - Declared with defaults in DEC files in different packages
+  - Modified in DSC file for the board, if different than the default value
+
+Silicon  – FSP Integration from <Generation>FspBinPkg documentation package
+
+---?image=assets/images/slides/Slide27.JPG
+@title[Advanced Feature Selection]
+<p align="right"><span class="gold" >@size[1.1em](<b>Advanced Feature Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
+<p style="line-height:80%" align="left" ><span style="font-size:0.85em;" >
+Advanced features implement DSC and FDF files that you can include in your board DSC and FDF files in the correct spots 
+</span></p>
+
+
+Note:
+
+In the DSC - include the advanced feature .DSC file in the correct spot - usually at the end of the file is okay
+
+in the FDF - include the advanced feature .fdf in the appropriate FV according to the porting stage that the feature needs to be enabled.
+
+Advanced features implement DSC and FDF files that you can include in your board DSC and FDF files in the correct spots 
+
+
+
+---?image=assets/images/slides/Slide26.JPG
 @title[Basic Boot Components]
 <p align="right"><span class="gold" >@size[1.1em](<b>Basic Boot Components</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
