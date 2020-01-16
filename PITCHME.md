@@ -1630,7 +1630,7 @@ edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 
 @snap[north-east  span-65 fragment ]
 <br>
-<p style="line-height:70%" align="left" ><span style="font-size:0.8em;" >
+<p style="line-height:10%" align="left" ><span style="font-size:0.8em;" ><br>
 </span></p>
 <p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>
 <br>
