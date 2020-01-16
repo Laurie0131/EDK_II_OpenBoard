@@ -1171,10 +1171,10 @@ Advanced features implement DSC and FDF files that you can include in your board
 @snap[north-west span-75 ]
 <br>
 <br>
-<p style="line-height:80%" align="left" ><span style="font-size:0.85em;" >
-Minimum Platform takes advantage of UEFI and EDK II features to enable feature selection to be done by post-processing the built binaries<br>
-Essentially, after your system is functioning well, you can remove features using the FMMT tool to remove the drivers that are included as you build up the desired functionality<br>
-For example, if you need UEFI Shell during power-on, testing, etc.  But you don’t want it for final product.  Minimum Platform architecture makes it easy to locate and remove the shell by post-processing the image<br>
+<p style="line-height:70%" align="left" ><span style="font-size:0.75em;" >
+Minimum Platform takes advantage of UEFI and EDK II features to enable feature selection to be done by post-processing the built binaries<br><br>
+@size[.8em](Essentially, after your system is functioning well, you can remove features using the FMMT tool to remove the drivers that are included as you build up the desired functionality)<br><br>
+@size[.8em](For example, if you need UEFI Shell during power-on, testing, etc.  But you don’t want it for final product.  Minimum Platform architecture makes it easy to locate and remove the shell by post-processing the image)<br>
 </span></p>
 
 <p style="line-height:80%" align="left" ><span style="font-size:0.65em;" >
@@ -1193,7 +1193,7 @@ The canonical example is that you need UEFI Shell during power-on, testing, etc.
 @title[Full Customization Feature Selection]
 <p align="right"><span class="gold" >@size[1.1em](<b>Full Customization Feature Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
-@snap[north-west span-75 ]
+@snap[north-west span-80 ]
 <br>
 <br>
 <p style="line-height:80%" align="left" ><span style="font-size:0.85em;" >
