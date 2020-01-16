@@ -1193,7 +1193,7 @@ The canonical example is that you need UEFI Shell during power-on, testing, etc.
 @title[Full Customization Feature Selection]
 <p align="right"><span class="gold" >@size[1.1em](<b>Full Customization Feature Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
-@snap[north-west span-80 ]
+@snap[north-west span-90 ]
 <br>
 <br>
 <p style="line-height:80%" align="left" ><span style="font-size:0.85em;" >
@@ -1456,10 +1456,7 @@ Link to Required PCDs according to stages
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 @snap[north-east span-48 ]
@@ -1468,10 +1465,7 @@ Link to Required PCDs according to stages
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
+@box[bg-blue-pp text-white rounded my-box-pad2  ](<p style="line-height:60% "><span style="font-size:0.9em;" ><br><br><br><br><br><br><br><br><br><br>&nbsp;</span></p>)
 @snapend
 
 
@@ -1483,20 +1477,19 @@ Link to Required PCDs according to stages
 <br>
 <br>
 <br>
-<br>
-<br>
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/3_stage_1_minimum_debug/35_configuration.html">		
-Flash Map Config</a><br> 
-Debug Config</a><br>
+&#8227;</a> &nbsp;&nbsp;Flash Map Config<br> 
+<a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/3_stage_1_minimum_debug/36_data_flows.html">
+&#8227;</a> &nbsp;&nbsp;Debug Config<br>
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/4_stage_2_memory_functional/45_configuration.html">		
-Intel® FSP Config</a><br>
+&#8227;</a> &nbsp;&nbsp;Intel® FSP Config<br>
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/4_stage_2_memory_functional/45_configuration.html"> 
-Post Memory FV</a><br>
+&#8227;</a> &nbsp;&nbsp;Post Memory FV<br>
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/55_configuration.html"> 
-UEFI FV</a><br>
+&#8227;</a> &nbsp;&nbsp;UEFI FV<br>
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/5_stage_3_boot_to_uefi_shell/55_configuration.html"> 
-Driver Related</a>
+&#8227;</a> Driver Related
 </span></p>
 @snapend
 
@@ -1508,19 +1501,17 @@ Driver Related</a>
 <br>
 <br>
 <br>
-<br>
-<br>
 <p style="line-height:65%" align="left" ><span style="font-size:0.7em;" >
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_boot_to_os/65_configuration.html"> 
-Memory Type Information</a><br>
+&#8227;</a> &nbsp;&nbsp;Memory Type Information<br>
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/6_stage_4_boot_to_os/65_configuration.html"> 
-OS Firmware Volumes</a><br>
+&#8227;</a> &nbsp;&nbsp;OS Firmware Volumes<br>
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_security_enable/75_configuration.html"> 
-Security Flash Map</a><br>
+&#8227;</a> &nbsp;&nbsp;Security Flash Map<br>
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/7_stage_5_security_enable/75_configuration.html"> 
-Stage 5 Features</a><br>
+&#8227;</a> &nbsp;&nbsp;Stage 5 Features<br>
 <a href="https://edk2-docs.gitbooks.io/edk-ii-minimum-platform-specification/8_stage_6_advanced_feature_selection/83_configuration.html">
-Advanced Feature FV</a>
+&#8227;</a> &nbsp;&nbsp;Advanced Feature FV
 </span></p>
 @snapend
 
