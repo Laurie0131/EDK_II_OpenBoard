@@ -1628,11 +1628,11 @@ edk2-platforms/Features/ <br>&nbsp;&nbsp;&nbsp;&nbsp;
 @snapend
 
 
-@snap[north-east  span-65 fragment ]
+@snap[north-east  span-62 fragment ]
 <br>
-<p style="line-height:10%" align="left" ><span style="font-size:0.8em;" ><br>
+<p style="line-height:05%" align="left" ><span style="font-size:0.8em;" ><br>
 </span></p>
-<p style="line-height:40% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>
+<p style="line-height:38% " align="left"></span><span style="font-size:0.45em; font-family:Consolas;" ><br>
 <br>
 <br>
  
