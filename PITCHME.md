@@ -3658,6 +3658,30 @@ Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
 @snapend
 
 
+@snap[north-east span-90 fragment]
+<br>
+<br>
+<p style="line-height:50%" align="left" ><span style="font-size:0.5em; font-family:Consolas;"><br>
+<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+@color[#A8ff60](&larr;)<br>
+<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+@color[#A8ff60](&rarr;)<br>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+@color[#A8ff60](&vert;) <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+@color[#A8ff60](&rarr;)
+
+<br>&nbsp;&nbsp;
+</span></p>
+@snapend
+
 
 Note:
 
