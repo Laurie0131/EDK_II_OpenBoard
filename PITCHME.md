@@ -2637,7 +2637,7 @@ Note:
 <br>
 <p align="left"><span class="gold" >@size[1.1em](<b>Board Porting</b>)</span><span style="font-size:0.8em;" ></span></p>
 
-@snap[south-east span-33 fragment]
+@snap[south-east span-33 ]
 <br>
 <ul style="list-style-type:disc; line-height:0.7;">
   <li><span style="font-size:0.65em" >Staged </span> </li>
@@ -3419,7 +3419,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 
 ---?image=assets/images/slides/Slide69.JPG
 @title[How to find the Platform Hooks: Process of Porting ]
-<p align="right"><span class="gold" >@size[1.1em](<bHow to find the Platform Hooks: Process of Porting </b>)</span><span style="font-size:0.75em;" ></span></p>
+<p align="right"><span class="gold" >@size[1.1em](<b>How to find the Platform Hooks: Process of Porting </b>)</span><span style="font-size:0.75em;" ></span></p>
 
 
 @snap[south span-85 fragment]
@@ -3510,8 +3510,7 @@ reg exp to find string1 "Serial" string2 "Hob"
 
 
 
-
----
+---?image=assets/images/slides/Slide72.JPG
 @title[Platform Initialization Board Hook Modules - Stage 1 ]
 <p align="right"><span class="gold" >@size[1.1em](<b>Platform Initialization Board Hook Modules <br>- Stage 1</b>)</span><span style="font-size:0.75em;" ></span></p>
 
@@ -3590,10 +3589,7 @@ BoardInitBeforeMemoryInit&lpar;&rpar;<br>
 </span></p>
 @snapend
 
-@snap[north-east span-12 ]
-<br>
-![hook](/assets/images/hook.png)
-@snapend
+
 
 
 
@@ -3612,7 +3608,7 @@ The PlatformInit folder (Intel/MinPlatformPkg/PlatformInit) - PlatformInitPei, P
 Because this flow needs to involve the board initialization,  there is a set of  board hook points defined in BoardInitLib (MinPlatformPkg/Include/Library/BoardInitLib.h) 
 
 
----
+---?image=assets/images/slides/Slide72.JPG
 @title[Hook - Board Detection ]
 <p align="right"><span class="gold" >@size[1.1em](<b>Hook - Board Detection </b>)</span><span style="font-size:0.75em;" ><br> - Kabylake example</span></p>
 
@@ -3664,10 +3660,7 @@ Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
 </span></p>
 @snapend
 
-@snap[north-east span-12 ]
-<br>
-![hook](/assets/images/hook.png)
-@snapend
+
 
 Note:
 
