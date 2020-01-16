@@ -1106,10 +1106,10 @@ Note:
 @title[Minimum Platform Feature Selection]
 <p align="right"><span class="gold" >@size[1.1em](<b>Minimum Platform Feature Selection</b>)</span><span style="font-size:0.8em;" ><br></span></p>
 
-@snap[north-west span-85 ]
+@snap[north-west span-80 ]
 <br>
 <br>
-<ul style="list-style-type:disc; line-height:0.8;">
+<ul style="list-style-type:none; line-height:0.8;">
   <li><span style="font-size:0.8em" >Minium Platform </span> </li>
 
   <ul style="list-style-type:disc; line-height:0.7;">
