@@ -3674,9 +3674,9 @@ Uses PCD Library calls to set / get Board SKU for Storing Board ID<br>
 @color[#A8ff60](&vert;)<br>
 @color[#A8ff60](&vert;)<br>
 @color[#A8ff60](&vert;)<br>
-@color[#A8ff60](---------------&rarr;)<br>
+@color[#A8ff60](-----------&rarr;)<br>
 @color[#A8ff60](&vert;) <br>
-@color[#A8ff60](---------------&rarr;)
+@color[#A8ff60](-----------&rarr;)
 
 <br>&nbsp;&nbsp;
 </span></p>
